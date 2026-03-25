@@ -1,0 +1,64 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Clear browser cache",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "3.0",
+        "description": "CMD-SHIFT-h",
+        "enabled": true,
+        "id": "U01C51",
+        "text": "\ue03d\ue008h",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "1.0",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_10RJ3AW.png"
+        ],
+        "h": "0.145",
+        "id": "10RJ3AW",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.175",
+        "x": "0.504",
+        "y": "0.461"
+    },
+    {
+        "capture_id": "10RJ3AW",
+        "children": [],
+        "delay": "2",
+        "description": "Clear history",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_10RJ3TW.png"
+        ],
+        "id": "10RJ3TW",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "6",
+        "description": "6",
+        "enabled": true,
+        "id": "UC5J45",
+        "type": "Delay"
+    }
+]

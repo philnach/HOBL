@@ -1,0 +1,57 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-02",
+        "description": "Open productivity apps",
+        "enabled": true,
+        "id": "UTHH70",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJCA",
+        "include_path": "..\\prod_outlook_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJJ2",
+        "include_path": "..\\prod_excel_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJLM",
+        "include_path": "..\\prod_word_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJWC",
+        "include_path": "..\\prod_powerpoint_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHK0Y",
+        "include_path": "..\\prod_onenote_open",
+        "type": "Include"
+    }
+]

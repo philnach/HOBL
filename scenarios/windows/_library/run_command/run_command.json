@@ -1,0 +1,71 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-03",
+        "description": "",
+        "enabled": true,
+        "id": "10EWR1F",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Command to execute",
+        "enabled": true,
+        "id": "10EX950",
+        "name": "[command]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open run dialog box",
+        "enabled": true,
+        "id": "10EWRYA",
+        "text": "\ue03dr",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Clear input",
+        "enabled": true,
+        "id": "10JM0HX",
+        "text": "\ue003",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Input command",
+        "enabled": true,
+        "id": "10EXCPY",
+        "text": "[command]",
+        "type": "Type",
+        "typing_delay": "20"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Submit",
+        "enabled": true,
+        "id": "10EXVL3",
+        "text": "\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "10RA2J6",
+        "type": "Delay"
+    }
+]

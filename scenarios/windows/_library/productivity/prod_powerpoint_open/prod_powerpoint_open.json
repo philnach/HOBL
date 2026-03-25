@@ -1,0 +1,125 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-24",
+        "description": "Open PowerPoint",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MRY5",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UHA57R",
+        "include_path": "..\\prod_powerpoint_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "UHA529",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "12",
+        "description": "ESC-ESC",
+        "enabled": true,
+        "id": "UWK9JX",
+        "text": "\ue00c\ue00c",
+        "type": "Type",
+        "typing_delay": "1000"
+    },
+    {
+        "children": [],
+        "delay": "9",
+        "description": "ALT-foo",
+        "enabled": true,
+        "id": "UH9EL7",
+        "text": "\ue00a\ue00afoo",
+        "type": "Type",
+        "typing_delay": "1000"
+    },
+    {
+        "id": "113C5MV",
+        "type": "If",
+        "description": "",
+        "enabled": true,
+        "left_term": "[global:platform]",
+        "eval_method": "==",
+        "right_term": "W365",
+        "children": [
+            {
+                "id": "113C60L",
+                "type": "Type",
+                "description": "W365 sample.pptx",
+                "enabled": true,
+                "delay": "14",
+                "text": "[global:onedrive_path]\\abl_docs\\sample.pptx\ue007",
+                "typing_delay": "[typing_delay]",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "113C5NC",
+        "type": "Else",
+        "description": "",
+        "enabled": true,
+        "children": [
+            {
+                "children": [],
+                "delay": "14",
+                "description": "sample.pptx",
+                "enabled": true,
+                "id": "UH86K8",
+                "text": "[userprofile]\\onedrive\\abl_docs\\sample.pptx\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ]
+    },
+    {
+        "id": "113C5MW",
+        "type": "End If",
+        "description": "",
+        "enabled": true,
+        "children": []
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MT1Y",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "prod"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "open_powerpoint"
+            }
+        ],
+        "type": "Include"
+    }
+]

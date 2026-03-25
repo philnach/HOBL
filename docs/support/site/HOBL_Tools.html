@@ -1,0 +1,1472 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="HOBL_Scenarios.html">
+      
+      
+        <link rel="next" href="HOBL_UI.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>HOBL Tools - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hobl-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOBL Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL.html" class="md-nav__link">
+        HOBL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Parameters.html" class="md-nav__link">
+        HOBL Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Prep.html" class="md-nav__link">
+        HOBL Prep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Release_Notes.html" class="md-nav__link">
+        HOBL 25 Release Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Scenarios.html" class="md-nav__link">
+        HOBL Scenarios
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOBL Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HOBL_Tools.html" class="md-nav__link md-nav__link--active">
+        HOBL Tools
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adb_disconnect" class="md-nav__link">
+    adb_disconnect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agt" class="md-nav__link">
+    agt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android_volume" class="md-nav__link">
+    android_volume
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio_volume" class="md-nav__link">
+    audio_volume
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto_charge" class="md-nav__link">
+    auto_charge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto_recharge" class="md-nav__link">
+    auto_recharge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery_bar" class="md-nav__link">
+    battery_bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery_stats" class="md-nav__link">
+    battery_stats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bat_logger" class="md-nav__link">
+    bat_logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect_logs" class="md-nav__link">
+    collect_logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_trace" class="md-nav__link">
+    custom_trace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug_logs" class="md-nav__link">
+    debug_logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detect_devices" class="md-nav__link">
+    detect_devices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display_brightness" class="md-nav__link">
+    display_brightness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dumpcap" class="md-nav__link">
+    dumpcap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etl_trace" class="md-nav__link">
+    etl_trace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frame_data" class="md-nav__link">
+    frame_data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill_teams" class="md-nav__link">
+    kill_teams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill_widgets" class="md-nav__link">
+    kill_widgets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxim" class="md-nav__link">
+    maxim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media_perf" class="md-nav__link">
+    media_perf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mep_toggle" class="md-nav__link">
+    mep_toggle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netsh" class="md-nav__link">
+    netsh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network_ping" class="md-nav__link">
+    network_ping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net_speed_test" class="md-nav__link">
+    net_speed_test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net_stat" class="md-nav__link">
+    net_stat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf" class="md-nav__link">
+    perf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfmon_util" class="md-nav__link">
+    perfmon_util
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf_utc" class="md-nav__link">
+    perf_utc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phm" class="md-nav__link">
+    phm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pktmon_count" class="md-nav__link">
+    pktmon_count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pktmon_log" class="md-nav__link">
+    pktmon_log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postures_screen_rotation" class="md-nav__link">
+    postures_screen_rotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powercfg" class="md-nav__link">
+    powercfg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_heavy" class="md-nav__link">
+    power_heavy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_light" class="md-nav__link">
+    power_light
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_mode" class="md-nav__link">
+    power_mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random_fail" class="md-nav__link">
+    random_fail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_report" class="md-nav__link">
+    run_report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam_bat" class="md-nav__link">
+    sam_bat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshot" class="md-nav__link">
+    screenshot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_check" class="md-nav__link">
+    screen_check
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_record" class="md-nav__link">
+    screen_record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serialize_copyback" class="md-nav__link">
+    serialize_copyback
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socwatch" class="md-nav__link">
+    socwatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study_report" class="md-nav__link">
+    study_report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface_logger" class="md-nav__link">
+    surface_logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system_deck" class="md-nav__link">
+    system_deck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tearcheck" class="md-nav__link">
+    tearcheck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeout_wake" class="md-nav__link">
+    timeout_wake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_template" class="md-nav__link">
+    tool_template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_test" class="md-nav__link">
+    tool_test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch_activation" class="md-nav__link">
+    touch_activation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttd" class="md-nav__link">
+    ttd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video_record" class="md-nav__link">
+    video_record
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI.html" class="md-nav__link">
+        HOBL UI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI_Release_Notes.html" class="md-nav__link">
+        HOBL UI Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adb_disconnect" class="md-nav__link">
+    adb_disconnect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agt" class="md-nav__link">
+    agt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android_volume" class="md-nav__link">
+    android_volume
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio_volume" class="md-nav__link">
+    audio_volume
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto_charge" class="md-nav__link">
+    auto_charge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto_recharge" class="md-nav__link">
+    auto_recharge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery_bar" class="md-nav__link">
+    battery_bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery_stats" class="md-nav__link">
+    battery_stats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bat_logger" class="md-nav__link">
+    bat_logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collect_logs" class="md-nav__link">
+    collect_logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom_trace" class="md-nav__link">
+    custom_trace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug_logs" class="md-nav__link">
+    debug_logs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detect_devices" class="md-nav__link">
+    detect_devices
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display_brightness" class="md-nav__link">
+    display_brightness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dumpcap" class="md-nav__link">
+    dumpcap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etl_trace" class="md-nav__link">
+    etl_trace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frame_data" class="md-nav__link">
+    frame_data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill_teams" class="md-nav__link">
+    kill_teams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill_widgets" class="md-nav__link">
+    kill_widgets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maxim" class="md-nav__link">
+    maxim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#media_perf" class="md-nav__link">
+    media_perf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mep_toggle" class="md-nav__link">
+    mep_toggle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netsh" class="md-nav__link">
+    netsh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network_ping" class="md-nav__link">
+    network_ping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net_speed_test" class="md-nav__link">
+    net_speed_test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#net_stat" class="md-nav__link">
+    net_stat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf" class="md-nav__link">
+    perf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perfmon_util" class="md-nav__link">
+    perfmon_util
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf_utc" class="md-nav__link">
+    perf_utc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phm" class="md-nav__link">
+    phm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pktmon_count" class="md-nav__link">
+    pktmon_count
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pktmon_log" class="md-nav__link">
+    pktmon_log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postures_screen_rotation" class="md-nav__link">
+    postures_screen_rotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powercfg" class="md-nav__link">
+    powercfg
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_heavy" class="md-nav__link">
+    power_heavy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_light" class="md-nav__link">
+    power_light
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power_mode" class="md-nav__link">
+    power_mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random_fail" class="md-nav__link">
+    random_fail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run_report" class="md-nav__link">
+    run_report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam_bat" class="md-nav__link">
+    sam_bat
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshot" class="md-nav__link">
+    screenshot
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_check" class="md-nav__link">
+    screen_check
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_record" class="md-nav__link">
+    screen_record
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serialize_copyback" class="md-nav__link">
+    serialize_copyback
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#socwatch" class="md-nav__link">
+    socwatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study_report" class="md-nav__link">
+    study_report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#surface_logger" class="md-nav__link">
+    surface_logger
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system_deck" class="md-nav__link">
+    system_deck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tearcheck" class="md-nav__link">
+    tearcheck
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeout_wake" class="md-nav__link">
+    timeout_wake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_template" class="md-nav__link">
+    tool_template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool_test" class="md-nav__link">
+    tool_test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch_activation" class="md-nav__link">
+    touch_activation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ttd" class="md-nav__link">
+    ttd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video_record" class="md-nav__link">
+    video_record
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hobl-tools">HOBL Tools</h1>
+<h2 id="adb_disconnect">adb_disconnect</h2>
+<p>Deprecated.</p>
+<h2 id="agt">agt</h2>
+<p>AMD-only</p>
+<h2 id="android_volume">android_volume</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>music_vol</code> -  <strong>Default:</strong> <code>7</code> </p>
+<p><code>call_vol</code> -  <strong>Default:</strong> <code>5</code> </p>
+<p><code>ring_vol</code> -  <strong>Default:</strong> <code>3</code> </p>
+<p><code>alarm_vol</code> -  <strong>Default:</strong> <code>4</code> </p>
+<h2 id="audio_volume">audio_volume</h2>
+<p>Set specified audio volume.</p>
+<p><u>Parameters:</u></p>
+<p><code>volume</code> -  <strong>Default:</strong> <code>Unknown</code> </p>
+<h2 id="auto_charge">auto_charge</h2>
+<p>Turn off charger before scenario, turn it on after.</p>
+<p><u>Parameters:</u></p>
+<p><code>delay</code> -  <strong>Default:</strong> <code>5</code> </p>
+<p><code>mode</code> -  <strong>Default:</strong> <code>DC</code> </p>
+<h2 id="auto_recharge">auto_recharge</h2>
+<p>Pause run and recharge device when battery drops below [charge_threshold], then resume.</p>
+<p><u>Parameters:</u></p>
+<p><code>charge_threshold</code> -  <strong>Default:</strong> <code>40</code> </p>
+<p><code>resume_threshold</code> -  <strong>Default:</strong> <code>95</code> </p>
+<p><code>charge_on_call</code> -  <strong>Default:</strong> `` </p>
+<p><code>charge_off_call</code> -  <strong>Default:</strong> `` </p>
+<h2 id="battery_bar">battery_bar</h2>
+<p>Overlays a widget showing battery level.</p>
+<p><u>Parameters:</u></p>
+<p><code>version</code> -  <strong>Default:</strong> <code>v1.0.0</code> </p>
+<h2 id="battery_stats">battery_stats</h2>
+<p>Deprecated.</p>
+<h2 id="bat_logger">bat_logger</h2>
+<p>Surface only.  Logs battery details over time.</p>
+<h2 id="collect_logs">collect_logs</h2>
+<p>Collect various system logs in the case of scenario failure.</p>
+<h2 id="custom_trace">custom_trace</h2>
+<p>Periodically start ETL traces.</p>
+<p><u>Parameters:</u></p>
+<p><code>providers</code> - ETL provider files to use <strong>Default:</strong> <code>power_light.wprp</code>  <strong>Options:</strong> <code>abl_perf.wprp, full_th.wprp, full_th_wpp.wprp, MediaEngine.WPRP, multimedia.wprp, perf_utc.wprp, pmu.wprp, power.wprp, power_Cortana.wprp, power_heavy.wprp, power_heavy_modified - Copy.wprp, power_heavy_modified.wprp, Power_Light.wprp, Power_Light_cpu.wprp, power_memory.wprp, power_with_webview2_updated.wprp, productivity_perf.wprp, stack_walk.wprp, web_perf.wprp</code></p>
+<p><code>trace_duration</code> - The duration of the trace in seconds <strong>Default:</strong> <code>300</code> </p>
+<p><code>start_delay</code> - The start delay before the trace starts in seconds <strong>Default:</strong> <code>0</code> </p>
+<p><code>enable_check</code> - Check the result of the trace. 0 = no check, 1 = check <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>single_run</code> - Run the trace only once. 0 = no, 1 = yes <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="debug_logs">debug_logs</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>bugreport</code> -  <strong>Default:</strong> <code>1</code> </p>
+<p><code>appVersion</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="detect_devices">detect_devices</h2>
+<p>Deprecated.</p>
+<h2 id="display_brightness">display_brightness</h2>
+<p>Map display brightness slider percentage to nits value specified by scenarios.</p>
+<p><u>Parameters:</u></p>
+<p><code>brightness</code> -  <strong>Default:</strong> <code>150nits</code> </p>
+<p><code>nits_map</code> -  <strong>Default:</strong> <code>100nits:50% 150nits:65%</code> </p>
+<h2 id="dumpcap">dumpcap</h2>
+<p>Dump Wireshark capture.</p>
+<p><u>Parameters:</u></p>
+<p><code>interface</code> -  <strong>Default:</strong> <code>Wi-Fi</code> </p>
+<h2 id="etl_trace">etl_trace</h2>
+<p>Collect ETL trace from specified [providers].</p>
+<p><u>Parameters:</u></p>
+<p><code>providers</code> - ETL provider files to use <strong>Default:</strong> <code>`  **Options:**</code>abl_perf.wprp, full_th.wprp, full_th_wpp.wprp, MediaEngine.WPRP, multimedia.wprp, perf_utc.wprp, pmu.wprp, power.wprp, power_Cortana.wprp, power_heavy.wprp, power_heavy_modified - Copy.wprp, power_heavy_modified.wprp, Power_Light.wprp, Power_Light_cpu.wprp, power_memory.wprp, power_with_webview2_updated.wprp, productivity_perf.wprp, stack_walk.wprp, web_perf.wprp`</p>
+<h2 id="frame_data">frame_data</h2>
+<p>Collect and parse framerate and timing data.  Does not have a significant impact on power consumption.</p>
+<h2 id="kill_teams">kill_teams</h2>
+<p>Kill all instances of Teams processes.</p>
+<p><u>Parameters:</u></p>
+<p><code>restart</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="kill_widgets">kill_widgets</h2>
+<p>Stops the Windows Widgets from running.</p>
+<h2 id="maxim">maxim</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>delay</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="media_perf">media_perf</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>autoxa_path</code> -  <strong>Default:</strong> <code>C:\"Media eXperience Analyzer\AutoXA.exe"</code> </p>
+<h2 id="mep_toggle">mep_toggle</h2>
+<p>Enable/disable specified MEP features.</p>
+<p><u>Parameters:</u></p>
+<p><code>framing</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>eye_gaze</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>blur</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>portraitlight</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>creative</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>portraitblur</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>standardblur</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>standardeye</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>enhancedeye</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>illustrated</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>animated</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>watercolor</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="netsh">netsh</h2>
+<p>Get ETL trace of wns_client.</p>
+<h2 id="network_ping">network_ping</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>dut_ip</code> -  <strong>Default:</strong> `` </p>
+<h2 id="net_speed_test">net_speed_test</h2>
+<p>Run speedtest.exe to gauge internet bandwidth.</p>
+<h2 id="net_stat">net_stat</h2>
+<p>Reports number of bytes transferred over Wi-Fi vs Cellular.</p>
+<h2 id="perf">perf</h2>
+<p>Calculates a MOS score from an abl_perf run.</p>
+<p><u>Parameters:</u></p>
+<p><code>provider</code> -  <strong>Default:</strong> <code>abl_perf.wprp</code> </p>
+<h2 id="perfmon_util">perfmon_util</h2>
+<p>Trace specified performance counters that report utilization.</p>
+<p><u>Parameters:</u></p>
+<p><code>counters</code> -  <strong>Default:</strong> <code>"\Processor(_Total)\% Processor Time" "\Memory\Available Bytes" "\GPU Engine(*engtype_3D)\Utilization Percentage"</code> </p>
+<h2 id="perf_utc">perf_utc</h2>
+<p>Collects and processes UTC Perftrack scenarios</p>
+<p><u>Parameters:</u></p>
+<p><code>provider</code> -  <strong>Default:</strong> <code>perf_utc.wprp</code> </p>
+<h2 id="phm">phm</h2>
+<p>Run Intel's Power House Mountain tool.</p>
+<p><u>Parameters:</u></p>
+<p><code>node</code> -  <strong>Default:</strong> <code>C:\Program Files\nodejs\node.exe</code> </p>
+<p><code>phm_args</code> -  <strong>Default:</strong> <code>!cpup</code> </p>
+<p><code>phm_base_path</code> -  <strong>Default:</strong> <code>C:\Program Files\PowerhouseMountain\</code> </p>
+<p><code>phm_server</code> -  <strong>Default:</strong> <code>app.js</code> </p>
+<p><code>phm_trace</code> -  <strong>Default:</strong> <code>phm-client.js</code> </p>
+<p><code>phm_dut_trace_path</code> -  <strong>Default:</strong> <code>C:\Program Files\PowerhouseMountain\traces</code> </p>
+<h2 id="pktmon_count">pktmon_count</h2>
+<p>Count types of network packets transmitted and received.</p>
+<p><u>Parameters:</u></p>
+<p><code>comp</code> -  <strong>Default:</strong> `` </p>
+<h2 id="pktmon_log">pktmon_log</h2>
+<p>Use pktmon to log network traffic.</p>
+<p><u>Parameters:</u></p>
+<p><code>comp</code> -  <strong>Default:</strong> `` </p>
+<h2 id="postures_screen_rotation">postures_screen_rotation</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>posture_code</code> -  <strong>Default:</strong> <code>5</code> </p>
+<h2 id="powercfg">powercfg</h2>
+<p>Collect sleep study and battery reports.</p>
+<p><u>Parameters:</u></p>
+<p><code>battery_report</code> -  <strong>Default:</strong> <code>1</code> </p>
+<h2 id="power_heavy">power_heavy</h2>
+<p>Collect and parse a detailed power trace.  Has a significant impact on power consumption.</p>
+<p><u>Parameters:</u></p>
+<p><code>soc</code> -  <strong>Default:</strong> `` </p>
+<p><code>wifi</code> -  <strong>Default:</strong> `` </p>
+<p><code>memory</code> -  <strong>Default:</strong> `` </p>
+<p><code>display</code> -  <strong>Default:</strong> `` </p>
+<p><code>storage</code> -  <strong>Default:</strong> `` </p>
+<p><code>total</code> -  <strong>Default:</strong> `` </p>
+<p><code>total_active</code> -  <strong>Default:</strong> `` </p>
+<p><code>total_standby</code> -  <strong>Default:</strong> `` </p>
+<h2 id="power_light">power_light</h2>
+<p>Collect and parse a lightweight power trace.  Does not have a significant impact on power consumption.</p>
+<p><u>Parameters:</u></p>
+<p><code>soc</code> -  <strong>Default:</strong> `` </p>
+<p><code>wifi</code> -  <strong>Default:</strong> `` </p>
+<p><code>cellular</code> -  <strong>Default:</strong> `` </p>
+<p><code>memory</code> -  <strong>Default:</strong> `` </p>
+<p><code>backlight</code> -  <strong>Default:</strong> `` </p>
+<p><code>display</code> -  <strong>Default:</strong> `` </p>
+<p><code>storage</code> -  <strong>Default:</strong> `` </p>
+<p><code>sam</code> -  <strong>Default:</strong> `` </p>
+<p><code>blade</code> -  <strong>Default:</strong> `` </p>
+<p><code>retimers</code> -  <strong>Default:</strong> `` </p>
+<p><code>total</code> -  <strong>Default:</strong> `` </p>
+<p><code>total_active</code> -  <strong>Default:</strong> `` </p>
+<p><code>total_standby</code> -  <strong>Default:</strong> `` </p>
+<h2 id="power_mode">power_mode</h2>
+<p>Switch to specified power mode (recommended, better, best). Returns to last mode on test end.</p>
+<p><u>Parameters:</u></p>
+<p><code>mode</code> - The power mode to switch to (recommended, better, best). <strong>Default:</strong> <code>recommended</code>  <strong>Options:</strong> <code>recommended, better, best</code></p>
+<h2 id="random_fail">random_fail</h2>
+<p>Randomly fail a test, for devolpment/debug purposes.</p>
+<h2 id="run_report">run_report</h2>
+<p>Generate a report for the test run.</p>
+<p><u>Parameters:</u></p>
+<p><code>script</code> -  <strong>Default:</strong> `` </p>
+<p><code>goals</code> -  <strong>Default:</strong> `` </p>
+<p><code>template</code> -  <strong>Default:</strong> `` </p>
+<p><code>report_level</code> -  <strong>Default:</strong> <code>2</code> </p>
+<p><code>result_path</code> -  <strong>Default:</strong> `` </p>
+<p><code>phase_power_type</code> -  <strong>Default:</strong> <code>Total</code> </p>
+<p><code>fail_on</code> -  <strong>Default:</strong> `` </p>
+<p><code>files</code> -  <strong>Default:</strong> <code>run_info.csv study_vars.csv rundown.csv *power_data.csv maxim_summary*.csv *power_light_summary.csv *e3_power_summary.csv *ConfigPre.csv *ConfigPost.csv *top_processes.csv *socwatch.csv *.csv</code> </p>
+<p><code>name_prefix</code> -  <strong>Default:</strong> `` </p>
+<h2 id="sam_bat">sam_bat</h2>
+<p>Deprecated.</p>
+<h2 id="screenshot">screenshot</h2>
+<p>Record periodic screen shots, for debug purposes.</p>
+<p><u>Parameters:</u></p>
+<p><code>pause</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="screen_check">screen_check</h2>
+<p>Take period screen shots and compare with expectations to determine if test ran correctly.</p>
+<p><u>Parameters:</u></p>
+<p><code>enable_strategic_screenshot</code> -  <strong>Default:</strong> <code>1</code> </p>
+<p><code>exceptions</code> -  <strong>Default:</strong> `` </p>
+<h2 id="screen_record">screen_record</h2>
+<p>Records a screen cast from the DUT for debug purposes.  Has considerable power impact.</p>
+<h2 id="serialize_copyback">serialize_copyback</h2>
+<p>Deprecated.</p>
+<p><u>Parameters:</u></p>
+<p><code>counter</code> -  <strong>Default:</strong> <code>900</code> </p>
+<p><code>lock_path</code> -  <strong>Default:</strong> `` </p>
+<h2 id="socwatch">socwatch</h2>
+<p>Run Intel's SOCWatch tool.</p>
+<p><u>Parameters:</u></p>
+<p><code>delay</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>additional_args</code> -  <strong>Default:</strong> <code>-f cpu-pkgc-dbg -f pcie -f platform-ltr -f panel-srr -f cpu-cstate -f cpu-pstate -f gfx-cstate -f gfx-pstate -f acpi-dstate -f sstate -f ddr-bw -f timer-resolution -f cpu-gpu-concurrency -f pch-slps0 -f pcie-lpm -f hw-gfx-pstate -f ddr-bw -f pch-ip-active-all -f pch-ip-status -f sys -f sa-freq -f pch-all</code> </p>
+<h2 id="study_report">study_report</h2>
+<p>Generate a report for the study (all runs in the same study directory).</p>
+<p><u>Parameters:</u></p>
+<p><code>result_path</code> -  <strong>Default:</strong> `` </p>
+<p><code>template</code> -  <strong>Default:</strong> <code>docs\hobl_study_report_template.xlsx</code> </p>
+<p><code>weights</code> -  <strong>Default:</strong> `` </p>
+<p><code>trend</code> -  <strong>Default:</strong> `` </p>
+<p><code>goals</code> -  <strong>Default:</strong> `` </p>
+<p><code>adders</code> -  <strong>Default:</strong> `` </p>
+<p><code>name</code> -  <strong>Default:</strong> `` </p>
+<p><code>active_target</code> -  <strong>Default:</strong> `` </p>
+<p><code>hobl_target</code> -  <strong>Default:</strong> `` </p>
+<p><code>battery_capacity</code> -  <strong>Default:</strong> `` </p>
+<p><code>battery_min_capacity</code> -  <strong>Default:</strong> `` </p>
+<p><code>battery_derating</code> -  <strong>Default:</strong> `` </p>
+<p><code>battery_reserve</code> -  <strong>Default:</strong> `` </p>
+<p><code>os_shutdown_reserve</code> -  <strong>Default:</strong> `` </p>
+<p><code>hibernate_timeout</code> -  <strong>Default:</strong> `` </p>
+<p><code>hibernate_budget_target</code> -  <strong>Default:</strong> `` </p>
+<p><code>device_name</code> -  <strong>Default:</strong> `` </p>
+<p><code>comments</code> -  <strong>Default:</strong> `` </p>
+<p><code>csv_path</code> -  <strong>Default:</strong> `` </p>
+<p><code>enable_phase_report</code> -  <strong>Default:</strong> <code>1</code> </p>
+<p><code>uploader</code> -  <strong>Default:</strong> `` </p>
+<h2 id="surface_logger">surface_logger</h2>
+<p>Surface-only.  Run SurfaceLogger tool for debug.</p>
+<p><u>Parameters:</u></p>
+<p><code>start_args</code> -  <strong>Default:</strong> <code>-Start SSHLogs -Method Tracelog -Drivers SurfaceSerialHubDriver</code> </p>
+<p><code>stop_args</code> -  <strong>Default:</strong> <code>-Stop SSHLogs -Method Tracelog</code> </p>
+<h2 id="system_deck">system_deck</h2>
+<p>AMD-only.</p>
+<h2 id="tearcheck">tearcheck</h2>
+<p>Check stdin for 'teardown' and end test when consumed</p>
+<h2 id="timeout_wake">timeout_wake</h2>
+<p>Deprecated. Wake the DUT on timeout.</p>
+<h2 id="tool_template">tool_template</h2>
+<p>A template that can be used for creating new tools.</p>
+<p><u>Parameters:</u></p>
+<p><code>example_parameter</code> -  <strong>Default:</strong> <code>example value</code> </p>
+<h2 id="tool_test">tool_test</h2>
+<p>A template that can be used for creating new tools.</p>
+<p><u>Parameters:</u></p>
+<p><code>example_parameter</code> -  <strong>Default:</strong> <code>example value</code> </p>
+<h2 id="touch_activation">touch_activation</h2>
+<p>Surface-only.  Digitizer debug.</p>
+<p><u>Parameters:</u></p>
+<p><code>single_touch_time</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>multi_touch_time</code> -  <strong>Default:</strong> <code>48</code> </p>
+<p><code>pen_track_time</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>idle_time</code> -  <strong>Default:</strong> <code>12</code> </p>
+<p><code>sid</code> -  <strong>Default:</strong> <code>3</code> </p>
+<p><code>control_list</code> -  <strong>Default:</strong> `` </p>
+<p><code>start_delay</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>timer</code> -  <strong>Default:</strong> `` </p>
+<h2 id="ttd">ttd</h2>
+<p>Run TTD (Time Travel Debugging)</p>
+<p><u>Parameters:</u></p>
+<p><code>start</code> - Start time during test execution in seconds. <strong>Default:</strong> <code>0</code> </p>
+<p><code>end</code> - End time during test execution in seconds. <strong>Default:</strong> <code>0</code> </p>
+<p><code>process</code> - Process to attach to. <strong>Default:</strong> `` </p>
+<h2 id="video_record">video_record</h2>
+<p>Record a video of the scenario using a camera attached to the Host USB, or an RTSP stream.</p>
+<p><u>Parameters:</u></p>
+<p><code>camera_num</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>rtsp_url</code> -  <strong>Default:</strong> `` </p>
+<p><code>camera_name</code> -  <strong>Default:</strong> `` </p>
+<p><code>fps</code> -  <strong>Default:</strong> <code>5</code> </p>
+<p><code>xres</code> -  <strong>Default:</strong> <code>1920</code> </p>
+<p><code>yres</code> -  <strong>Default:</strong> <code>1080</code> </p>
+<p><code>quality</code> -  <strong>Default:</strong> <code>25</code> </p>
+<p><code>rotation</code> -  <strong>Default:</strong> <code>0</code> </p>
+<p><code>show</code> -  <strong>Default:</strong> <code>0</code> </p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

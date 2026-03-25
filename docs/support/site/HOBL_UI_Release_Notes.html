@@ -1,0 +1,983 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="HOBL_UI.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>HOBL UI Release Notes - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hobl-ui-release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOBL UI Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL.html" class="md-nav__link">
+        HOBL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Parameters.html" class="md-nav__link">
+        HOBL Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Prep.html" class="md-nav__link">
+        HOBL Prep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Release_Notes.html" class="md-nav__link">
+        HOBL 25 Release Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Scenarios.html" class="md-nav__link">
+        HOBL Scenarios
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Tools.html" class="md-nav__link">
+        HOBL Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI.html" class="md-nav__link">
+        HOBL UI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOBL UI Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HOBL_UI_Release_Notes.html" class="md-nav__link md-nav__link--active">
+        HOBL UI Release Notes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#063-4232024" class="md-nav__link">
+    0.63 (4/23/2024)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-3262024" class="md-nav__link">
+    0.60 (3/26/2024)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#054" class="md-nav__link">
+    0.54
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051" class="md-nav__link">
+    0.51
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050" class="md-nav__link">
+    0.50
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#049" class="md-nav__link">
+    0.49
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#048" class="md-nav__link">
+    0.48
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#047" class="md-nav__link">
+    0.47
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#046" class="md-nav__link">
+    0.46
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#045" class="md-nav__link">
+    0.45
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#044" class="md-nav__link">
+    0.44
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#043" class="md-nav__link">
+    0.43
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#042" class="md-nav__link">
+    0.42
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#041" class="md-nav__link">
+    0.41
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#040" class="md-nav__link">
+    0.40
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#035" class="md-nav__link">
+    0.35
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#030" class="md-nav__link">
+    0.30
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020" class="md-nav__link">
+    0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#014" class="md-nav__link">
+    0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#013_beta" class="md-nav__link">
+    0.13_beta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#012" class="md-nav__link">
+    0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#011" class="md-nav__link">
+    0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08" class="md-nav__link">
+    0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    0.6
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#063-4232024" class="md-nav__link">
+    0.63 (4/23/2024)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060-3262024" class="md-nav__link">
+    0.60 (3/26/2024)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#054" class="md-nav__link">
+    0.54
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051" class="md-nav__link">
+    0.51
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050" class="md-nav__link">
+    0.50
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#049" class="md-nav__link">
+    0.49
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#048" class="md-nav__link">
+    0.48
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#047" class="md-nav__link">
+    0.47
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#046" class="md-nav__link">
+    0.46
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#045" class="md-nav__link">
+    0.45
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#044" class="md-nav__link">
+    0.44
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#043" class="md-nav__link">
+    0.43
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#042" class="md-nav__link">
+    0.42
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#041" class="md-nav__link">
+    0.41
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#040" class="md-nav__link">
+    0.40
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#035" class="md-nav__link">
+    0.35
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#030" class="md-nav__link">
+    0.30
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020" class="md-nav__link">
+    0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#014" class="md-nav__link">
+    0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#013_beta" class="md-nav__link">
+    0.13_beta
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#012" class="md-nav__link">
+    0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#011" class="md-nav__link">
+    0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#09" class="md-nav__link">
+    0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#08" class="md-nav__link">
+    0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#07" class="md-nav__link">
+    0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#06" class="md-nav__link">
+    0.6
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hobl-ui-release-notes">HOBL UI Release Notes</h1>
+<h2 id="063-4232024">0.63 (4/23/2024)</h2>
+<ul>
+<li>Analysis page<ul>
+<li>From Results or Jobs, you can now right-click in a folder and select "Create Analysis".  This will prompt you to select metrics for the columns, rows, and any filters to roll up.  Multiple metrics can be selected.</li>
+<li>Resulting table will be shown on Analysis page, and will auto-update as new jobs finish.</li>
+<li>Matching metrics are averaged.</li>
+<li>Rows can be selected for filtering or plotting.</li>
+<li>Double click cell to see individual values or link to run folders.</li>
+</ul>
+</li>
+<li>Confirmation dialog before running multiple profiles.</li>
+<li>Serializing jobs based on dut_ip rather than profile name.</li>
+<li>Changing profile assignment changes it for all profiles associated with the same DUT.</li>
+</ul>
+<h2 id="060-3262024">0.60 (3/26/2024)</h2>
+<ul>
+<li>Devices page adds Battery Status and Charge information.  This is obtained by polling the device every 15 minutes via the "device_ping" hobl command.  This can be disabled by setting the parameter "global:disable_device_ping=1" in a profile.</li>
+<li>The error signature of failed tests are rolled up and presented in their own column in the UI for easier triage.</li>
+<li>On the Job Create page, there is a separate column for tools.  It will show the tools (blue) and prep_tools (yellow) currently set in the profile and plan, and allow you to add or remove tools there.  You can also click a tool to set its parameters.</li>
+<li>Support for installation as an app.</li>
+</ul>
+<h2 id="054">0.54</h2>
+<ul>
+<li>Support for authentication and authorization.  Disabled by default.</li>
+<li>Ability to view camera feed in Scenarios page while scenarios are running.</li>
+</ul>
+<h2 id="051">0.51</h2>
+<ul>
+<li>Support for dialog popups, such as with "manual" HOBL scenario.</li>
+<li>Searchable and indexed documentation.</li>
+<li>Update results page to include file pinning and deletion, alignment changes for multiple files, and minimizing the file explorer.</li>
+<li>Added checks within the profile copy page to ensure the profile name is different and valid.</li>
+<li>Added "Rerun Failed Scenarios" button to scenarios page.</li>
+<li>Fixed issue re-ordering scenarios on Create Job page.</li>
+<li>Fixed confusion with results file views sticking when moving to other directories.</li>
+<li>Fixed issue trying to open breadcrumb of result path in new tab.</li>
+</ul>
+<h2 id="050">0.50</h2>
+<ul>
+<li>Devices page added to show what each device is doing.</li>
+<li>New button on Jobs page to rerun failed scenarios.</li>
+</ul>
+<h2 id="049">0.49</h2>
+<ul>
+<li>Button to copy current path to clipboard in Results view</li>
+<li>Ability to right-click and copy folders in Results view</li>
+</ul>
+<h2 id="048">0.48</h2>
+<ul>
+<li>API endpoints for launch plans and getting status to support auto-launching of plans from HOBL and email notifications with status.</li>
+</ul>
+<h2 id="047">0.47</h2>
+<ul>
+<li>Further improvements to file handling in Results pages.</li>
+<li>Can hit enter in Results search box to perform search.  Clear button added.</li>
+<li>Plan and Scenario selection inputs on Launch page improved.</li>
+</ul>
+<h2 id="046">0.46</h2>
+<ul>
+<li>Improvements to file handling and viewing in Results pages.</li>
+<li>If INFO view of a log or ini file shows no lines, then raw content will be displayed.</li>
+</ul>
+<h2 id="045">0.45</h2>
+<ul>
+<li>Trace viewing features including: Adding and overlaying traces, selecting series', and showing average for zoomed region.</li>
+<li>Recursive results search.</li>
+</ul>
+<h2 id="044">0.44</h2>
+<ul>
+<li>Added support for hyperlinks in log file.</li>
+</ul>
+<h2 id="043">0.43</h2>
+<ul>
+<li>Fixed issue sorting files by name on Results page</li>
+<li>Job Launch page - Separation of plans and scenarios into categories.</li>
+<li>Job Launch page - Display of result directory.</li>
+<li>Job Launch page - Ability to override Study Type, so that multiple studies of different types can be queued up.</li>
+<li>Job Launch page - Add button for scenarios to allow multiple additions of same scenario and to prevent accidental addition by selecting wrong scenario.</li>
+</ul>
+<h2 id="042">0.42</h2>
+<ul>
+<li>Fixed bug with ordering files and folders by date</li>
+<li>Installer now sets scheduled task to "poke" site every minute, which will terminate any zombie scenarios and allow jobs to continue.</li>
+</ul>
+<h2 id="041">0.41</h2>
+<ul>
+<li>Fixed bug with critical section implementation.</li>
+</ul>
+<h2 id="040">0.40</h2>
+<ul>
+<li>Implemented critical section for launching scenarios to prevent multiple scenarios running on DUT at same time.</li>
+<li>Fixed bug on reloading test plans that prevented rows from being re-ordered.</li>
+<li>Option to download any file or folder from Results view.</li>
+</ul>
+<h2 id="035">0.35</h2>
+<ul>
+<li>Fixed auto-scrolling of the log window on the Scenarios page.</li>
+<li>Prevent user from trying to PASS/FAIL a file by popping up an alert that says it can only be done on folders.</li>
+<li>Updated .net version dependency for UpdateIcon that may have prevented it from changing the File Explorer icon properly on hosts that didn't have the old library present.</li>
+</ul>
+<h2 id="030">0.30</h2>
+<ul>
+<li>Features in this release requires HOBL version 2022.2.1 or higher.</li>
+<li>Added descriptive browser tab titles so that when you open multiple tabs you can tell which one has the content you are looking for.</li>
+<li>Ability to bulk PASS/FAIL run folders on Results page.  Just hold shift or control to multi-select folders, then press the "mark PASS" or "mark FAIL" button.</li>
+<li>Added syntax highlighting for log files.</li>
+<li>Added tag to prevent browser caching when downloading files.</li>
+<li>Results now list "Created" time instead of "Modified" time, to allow chronological viewing of execution flow.</li>
+<li>When terminating a job, Poke will automatically happen to allow progress in the case the job had already exited.</li>
+<li>New Job page will show params color-coded on individual lines for improved readability.</li>
+<li>New Job page adds "+" button to open a dialog to select available parameters instead of having to memorize or look at code.  Unlisted sections or parameters can still be entered.</li>
+</ul>
+<h2 id="020">0.20</h2>
+<ul>
+<li>Fixed exception when clicking "New Job" from Jobs page when a profile cookie wasn't present.</li>
+<li>Fixed issue when copying profiles and simultaneously removing values.  Removed values weren't saved.  Now they are.</li>
+<li>Updated to .NET 6 libraries to comply with security requirements.</li>
+<li>On Profiles page, the Profile column will now expand to the longest name.  Columns are now resizable by dragging grab handle.</li>
+<li>Pause and Resume has been added to the Jobs and Scenarios pages.</li>
+<li>Jobs page now lists jobs in order of most recent on top, by popular demand.</li>
+</ul>
+<h2 id="014">0.14</h2>
+<ul>
+<li>Support for viewing RTSP camera from context menu of profile.  Requires running RTSPtoWS server found in hobl\utilities.</li>
+<li>Support for "Quick Actions" (3-dot icon on far right).  These will quickly run common jobs for toggling charger, reboot, etc.</li>
+<li>Support for Quick Assist to remote into a DUT over the internet.</li>
+<li>Added version number in bottom left.</li>
+<li>Profile .ini files will be written to disk (c:\profiles) when Editing is saved, in addition to when they are launched.</li>
+</ul>
+<h2 id="013_beta">0.13_beta</h2>
+<ul>
+<li>Profile page icons will now work when there is only 1 profile under a folder.</li>
+<li>Partial live camera support</li>
+</ul>
+<h2 id="012">0.12</h2>
+<ul>
+<li>Proper accounting of Pending jobs on the Jobs page in the case of runs with multiple attempts fail.</li>
+<li>Icons on the buttons on the Jobs page.</li>
+<li>"Poke Jobs" button on the Jobs page that will check for and terminate orphaned processes (such as if host reboots).</li>
+</ul>
+<h2 id="011">0.11</h2>
+<ul>
+<li>Added more default parameters to profile</li>
+<li>Added support for reference videos in the Documentation section</li>
+</ul>
+<h2 id="010">0.10</h2>
+<ul>
+<li>Fixed crashes when Profile page buttons were pressed with no profiles selected.</li>
+<li>Recent runs page will default to descending ordering.</li>
+<li>Initial documentation support.  Pulls html files from c:\hobl\docs\support.</li>
+<li>Removed Details button on Profile page.</li>
+</ul>
+<h2 id="09">0.9</h2>
+<ul>
+<li>Modified Summary page to only update once per minute.</li>
+<li>Modified RecentRuns page to never update.</li>
+</ul>
+<h2 id="08">0.8</h2>
+<ul>
+<li>On Jobs page, last scenario run will remain under the "Active Scenario" column, even after it has completed, so user will know what custom plans might were run.</li>
+<li>The job's standard output will now be visible in the log view on the Scenarios page, so that any syntax errors or other exceptions can be visible.  However, the "Debug" button will need to be pressed to see these.</li>
+<li>Standard output logs over 1 week old will automatically be deleted, to prevent pile up.  They are now kept in a c:\hobl_scratch folder instead of c:\temp.</li>
+<li>CSV file viewing now formatted into columns.</li>
+<li>Default to downloading files that are not known to be viewable in web, such as .xlsx and .etl.</li>
+<li>Support for watchdog scheduled task that will terminate zombied jobs and continue with plans.  This should automate recovery from server reboots, for example.</li>
+<li>Marking PASS or FAIL will now change folder icon in File Explorer as well.</li>
+<li>Selection in log on Scenarios page, will pause log updates.  Clearing the selection will resume.</li>
+<li>Fixed issue with copying profiles, where dropdown selections were not carried over.</li>
+<li>Fixed errors in Summary view.</li>
+<li>Fixed length of parameters box in Job Create page.</li>
+</ul>
+<h2 id="07">0.7</h2>
+<ul>
+<li>Can support different urls and ports via an environment variable, HOBLWEB_URL.  The default is "http://localhost:80".  If your environment blocks port 80, then set the enironment variable to something like "http://localhost:5000".</li>
+<li>Optimize single device job launch by going directly to scenarios page after launch.</li>
+<li>Scenarios page has a "Relaunch" button to launch that same plan on that same device.</li>
+<li>Some cosmetic fixes.</li>
+</ul>
+<h2 id="06">0.6</h2>
+<ul>
+<li>Recent Runs view is operational.</li>
+<li>Added Active Scenario filter box on Jobs page.</li>
+<li>Summary view is operational.</li>
+<li>Fixed profile export download error in stand-alone version.</li>
+<li>Fixed profile export so that it exports full folder hierarchy.</li>
+<li>Fixed profile import bug regarding null values in csv causing null entries in DB.</li>
+<li>Fixed issues with parameter entry on Launch page.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

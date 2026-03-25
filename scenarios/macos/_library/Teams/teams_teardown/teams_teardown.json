@@ -1,0 +1,60 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to collect MS Teams logs of the meeting after exiting the meeting.",
+        "enabled": true,
+        "id": "1514CAT",
+        "multiple": false,
+        "name": "[teams:collect_MSTeams_Logs]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "13AJYX7",
+        "include_path": "..\\teams_leave_meeting",
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13AK0CR",
+                "include_path": "..\\teams_collect_logs",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "12HNEFM",
+        "left_term": "[teams:collect_MSTeams_Logs]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12HNEFN",
+        "type": "End If"
+    }
+]

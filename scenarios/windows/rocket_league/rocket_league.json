@@ -1,0 +1,207 @@
+[
+    {
+        "author": "Eric F",
+        "capture_device": "WON_WF_OLED",
+        "children": [],
+        "create_date": "2025-10-22",
+        "description": "",
+        "enabled": true,
+        "id": "17HXT2M",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "17HY125",
+        "name": "[duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "600"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Close Rocket League",
+                "enabled": true,
+                "file_name": [
+                    "code_17HYFU6.py"
+                ],
+                "id": "186M239",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_17HXU4R.png"
+                ],
+                "h": "1",
+                "id": "17HXU4R",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "17HXU4R",
+                "children": [],
+                "delay": "4",
+                "description": "Windows icon",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_17HXTLU.png"
+                ],
+                "id": "17HXTLU",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Rocket League",
+                "enabled": true,
+                "id": "17HXV6P",
+                "text": "Rocket\ue00dLeague\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "45",
+                "description": "",
+                "enabled": true,
+                "id": "17HXWJ9",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Press any button",
+                "enabled": true,
+                "id": "18KLL26",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "OK not logged in popup",
+                "enabled": true,
+                "id": "18KLKM1",
+                "text": "\ue007\ue007",
+                "type": "Type",
+                "typing_delay": "1000"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "PLAY",
+                "enabled": true,
+                "id": "18KLM5W",
+                "text": "\ue013\ue013\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "PLAY OFFLINE",
+                "enabled": true,
+                "id": "18KMAUC",
+                "text": "\ue014\ue014\ue014\ue014\ue014\ue014\ue012\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "EXHIBITION",
+                "enabled": true,
+                "id": "18KMCNP",
+                "text": "\ue012\ue012\ue012\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "CREATE MATCH",
+                "enabled": true,
+                "id": "18KMELJ",
+                "text": "\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "id": "18EPYPX",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "SPECTATE",
+                "enabled": true,
+                "id": "18KMFF5",
+                "text": "\ue015\ue015\ue015\ue015\ue015\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17HY711",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "[duration]",
+                "description": "",
+                "enabled": true,
+                "id": "17HY1W1",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17HY735",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Close Rocket League",
+                "enabled": true,
+                "file_name": [
+                    "code_17HYFU6.py"
+                ],
+                "id": "17HYFU6",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17HY81V",
+        "type": "Teardown"
+    }
+]

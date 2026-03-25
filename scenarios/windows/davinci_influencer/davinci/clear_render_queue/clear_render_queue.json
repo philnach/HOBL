@@ -1,0 +1,100 @@
+[
+    {
+        "author": "wssi",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-30",
+        "description": "Clear render queue",
+        "enabled": true,
+        "id": "11T29HF",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to deliver page",
+        "enabled": true,
+        "id": "11T2E6X",
+        "text": "*",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_12K31M8.png"
+        ],
+        "h": "0.249",
+        "id": "12K31M8",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.157",
+        "x": "0.847",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "12K31M8",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12K31XY.png"
+        ],
+        "id": "12K31XY",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_11T2ETN.png"
+        ],
+        "h": "1",
+        "id": "11T2ETN",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "11T2ETN",
+        "children": [],
+        "delay": "2",
+        "description": "on render queue dropdown",
+        "enabled": false,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T2FTL.png"
+        ],
+        "id": "11T2FTL",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.959",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Clear render queue",
+        "enabled": true,
+        "id": "11T2H96",
+        "text": "\ue013\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

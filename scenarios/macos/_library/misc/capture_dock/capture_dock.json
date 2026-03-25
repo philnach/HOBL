@@ -1,0 +1,28 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "MacBook Air M3 15-in",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "Capture the Dock",
+        "enabled": true,
+        "id": "TYH82P",
+        "type": "Information"
+    },
+    {
+        "id": "10RH3M0",
+        "type": "Capture",
+        "description": "Dock",
+        "enabled": true,
+        "delay": "0.5",
+        "x": "0.000",
+        "y": "0.880",
+        "w": "1.000",
+        "h": "0.120",
+        "file_name": [
+            "image_10RH3M0.png"
+        ],
+        "recapture": false,
+        "children": []
+    }
+]

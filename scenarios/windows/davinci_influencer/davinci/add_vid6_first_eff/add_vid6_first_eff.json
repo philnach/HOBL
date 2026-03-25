@@ -1,0 +1,396 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "clip6 add first effect",
+        "enabled": true,
+        "id": "10PKH4C",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "go to fusion page",
+        "enabled": true,
+        "id": "10T5YLN",
+        "text": "%",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Add Film Damage",
+        "enabled": true,
+        "id": "10U8C4K",
+        "text": "\ue009\ue008f",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Digital Glitch",
+        "enabled": true,
+        "id": "11UEF1Y",
+        "text": "D",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_11UEM4L.png"
+        ],
+        "h": "0.164",
+        "id": "11UEM4L",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.262",
+        "x": "0.727",
+        "y": "0.215"
+    },
+    {
+        "capture_id": "11UEM4L",
+        "children": [],
+        "delay": "2",
+        "description": "X Value",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MY4X5.png"
+        ],
+        "id": "12MY4X5",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.718",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Edit size",
+        "enabled": true,
+        "id": "11UEMRH",
+        "text": "\ue004\ue0040.8",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_12MY5HK.png"
+        ],
+        "h": "0.255",
+        "id": "12MY5HK",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.194",
+        "x": "0.012",
+        "y": "0.683"
+    },
+    {
+        "capture_id": "12MY5HK",
+        "children": [],
+        "delay": "2",
+        "description": "on Digital Glitch ",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UENVK.png"
+        ],
+        "id": "11UENVK",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Large Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_11UEPU8.png"
+        ],
+        "h": "0.195",
+        "id": "11UEPU8",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.207",
+        "x": "0.724",
+        "y": "0.200"
+    },
+    {
+        "capture_id": "11UEPU8",
+        "children": [],
+        "delay": "2",
+        "description": "Large Text Box",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UEULR.png"
+        ],
+        "id": "11UEULR",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UEPW4",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Speed Ramp",
+        "enabled": true,
+        "id": "11UER1P",
+        "text": "\ue003Speed\ue00dRamp",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Small Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_11UERXU.png"
+        ],
+        "h": "0.220",
+        "id": "11UERXU",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.207",
+        "x": "0.724",
+        "y": "0.590"
+    },
+    {
+        "capture_id": "11UERXU",
+        "children": [],
+        "delay": "2",
+        "description": "Small Text Box",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UEUW0.png"
+        ],
+        "id": "11UEUW0",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UEVCE",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Film Damage",
+        "enabled": true,
+        "id": "11UEVJJ",
+        "text": "\ue003Film\ue00dDamage",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "12MY5HK",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UEW6M.png"
+        ],
+        "id": "11UEW6M",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go back to Cut Page",
+        "enabled": true,
+        "id": "10T6246",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "Make Playhead move",
+        "enabled": true,
+        "id": "11E3LF7",
+        "text": "\ue00d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Make playhead stop",
+        "enabled": true,
+        "id": "11E3LJ3",
+        "text": "\ue00d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Cut",
+        "enabled": true,
+        "id": "11E3VF2",
+        "text": "\ue009\\",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "4.5",
+        "description": "Make Playhead move",
+        "enabled": true,
+        "id": "11E3MXR",
+        "text": "\ue00d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Make playhead stop",
+        "enabled": true,
+        "id": "11E3N76",
+        "text": "\ue00d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Cut",
+        "enabled": true,
+        "id": "11E3VUR",
+        "text": "\ue009\\",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to edit tab",
+        "enabled": true,
+        "id": "11E40LN",
+        "text": "$",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Select middle clip",
+        "enabled": true,
+        "id": "11E6NEY",
+        "text": "\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue012\ue00a\ue008v",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "4",
+        "description": "Change Speed",
+        "enabled": true,
+        "id": "11E469P",
+        "text": "r800\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to Cut Page",
+        "enabled": true,
+        "id": "11E6V9A",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to deleted clip",
+        "enabled": true,
+        "id": "11T5HAM",
+        "text": "\ue012\ue012",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select clip",
+        "enabled": true,
+        "id": "11T5J2A",
+        "text": "\ue00a\ue008v",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Remove clip",
+        "enabled": true,
+        "id": "11E470V",
+        "text": "\ue017",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Gaussian Blur effect",
+        "enabled": false,
+        "id": "10T61KK",
+        "text": "\ue009\ue008b",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

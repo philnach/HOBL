@@ -1,0 +1,272 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-16",
+        "description": "Many tabs for background memory pressure",
+        "enabled": true,
+        "id": "1HU1718",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HX8NJL",
+        "name": "[default_typing_delay]",
+        "type": "Set",
+        "value": "[global:typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Fast typing to reduce irrelevant time",
+        "enabled": true,
+        "id": "1HX4YN4",
+        "name": "[global:typing_delay]",
+        "type": "Set",
+        "value": "20"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "1HUH3ET",
+        "include_path": "scenarios\\windows\\_library\\web\\web_clear_cache",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "First tab page load - Google Apollo",
+        "enabled": true,
+        "id": "1HY0CLN",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "1HY0C8U",
+        "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_google_images_apollo",
+        "params": [
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "0"
+            },
+            {
+                "name": "[load_only]",
+                "val_options": "0,1",
+                "value": "1"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "3"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Reddit page load",
+                "enabled": true,
+                "id": "1HWPE9R",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1HWPE85",
+                "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_reddit",
+                "params": [
+                    {
+                        "name": "[new_tab]",
+                        "val_options": "0, 1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "4"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Instagram page load",
+                "enabled": true,
+                "id": "1HUFUL5",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1HVHAR0",
+                "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_instagram",
+                "params": [
+                    {
+                        "name": "[new_tab]",
+                        "val_options": "0, 1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "5"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Wikipedia page load",
+                "enabled": true,
+                "id": "1HUFUVR",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1HVHC3J",
+                "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_wikipedia",
+                "params": [
+                    {
+                        "name": "[new_tab]",
+                        "val_options": "0, 1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "3"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "YouTube NASA page load",
+                "enabled": true,
+                "id": "1HWM3X3",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1HVKU6A",
+                "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_youtube_nasa",
+                "params": [
+                    {
+                        "name": "[new_tab]",
+                        "val_options": "0, 1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "6"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "TheVerge page load",
+                "enabled": true,
+                "id": "1HUFWPU",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1HVHCCP",
+                "include_path": "scenarios\\windows\\_library\\web\\site\\web_site_the_verge",
+                "params": [
+                    {
+                        "name": "[new_tab]",
+                        "val_options": "0, 1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "4"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "count": "6",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HVX5UV",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1HVX5UW",
+        "type": "End Loop"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Revert back to the default typing delay",
+        "enabled": true,
+        "id": "1HX8P2U",
+        "name": "[global:typing_delay]",
+        "type": "Set",
+        "value": "[default_typing_delay]"
+    }
+]

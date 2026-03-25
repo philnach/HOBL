@@ -1,0 +1,489 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "macbook_pro_m4max",
+        "children": [],
+        "create_date": "2025-10-03",
+        "description": "",
+        "enabled": true,
+        "id": "16KJEU9",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "License Key For Puget Bench",
+        "enabled": true,
+        "id": "16T6RL3",
+        "name": "[puget_license]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "10.0",
+        "description": "Launch PugetBench",
+        "enabled": true,
+        "file_name": [
+            "code_16KJEV9.py"
+        ],
+        "id": "16KJEV9",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Maximize Window",
+        "enabled": true,
+        "id": "16KJF92",
+        "text": "\ue03ef",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Left Screen",
+        "enabled": true,
+        "file_name": [
+            "image_16KJNYY.png"
+        ],
+        "h": "0.522",
+        "id": "16KJNYY",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.210",
+        "x": "0.003",
+        "y": "0.003"
+    },
+    {
+        "capture_id": "16KJNYY",
+        "children": [],
+        "delay": "2",
+        "description": "Select Photoshop",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_16KJP9W.png"
+        ],
+        "id": "16KJP9W",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top right for  Upload Toggle",
+        "enabled": true,
+        "file_name": [
+            "image_16KJPL8.png"
+        ],
+        "h": "0.647",
+        "id": "16KJPL8",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.501",
+        "x": "0.503",
+        "y": "0.001"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "16KJPL8",
+                "children": [],
+                "delay": "2",
+                "description": "Try to Toggle Off Upload",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_16KJRJE.png"
+                ],
+                "id": "16KJRJE",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.680",
+                "y": "0.724"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "16KJPWW",
+        "type": "Try"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "16KJPWX",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "16KJPWY",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "16KJPX0",
+        "type": "End Try"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Right to Verify Upload Toggle",
+        "enabled": true,
+        "file_name": [
+            "image_16KJT2F.png"
+        ],
+        "h": "0.601",
+        "id": "16KJT2F",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.464",
+        "x": "0.538",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "16KJT2F",
+        "children": [],
+        "delay": "2",
+        "description": "Upload Toggled Off",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_16KJTUV.png"
+        ],
+        "h": "0.043",
+        "id": "16KJTUV",
+        "match_threshold": "",
+        "scale": "",
+        "type": "Check",
+        "w": "0.060",
+        "x": "0.690",
+        "y": "0.315"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Loop Counter",
+        "enabled": true,
+        "id": "16KJUTT",
+        "name": "[i]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Programs to Select From",
+                "enabled": true,
+                "file_name": [
+                    "image_16KJVET.png"
+                ],
+                "h": "0.512",
+                "id": "16KJVET",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.209",
+                "x": "0.000",
+                "y": "0.001"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KJVET",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Select Photoshop",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KJWFF.png"
+                        ],
+                        "id": "16KJWFF",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "Photoshop",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "16KJVV1",
+                "left_term": "[i]",
+                "right_term": "0",
+                "type": "If"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KJVET",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Select After Effects",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KJXE3.png"
+                        ],
+                        "id": "16KJXK3",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "16KJWYR",
+                "left_term": "[i]",
+                "right_term": "1",
+                "type": "Else If"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KJVET",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Select Premiere Pro",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KJY7V.png"
+                        ],
+                        "id": "16KJY7V",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "16KJY31",
+                "left_term": "[i]",
+                "right_term": "2",
+                "type": "Else If"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KJVET",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Select Davinci Resolve",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KJYML.png"
+                        ],
+                        "id": "16KJYML",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "16KJYF0",
+                "left_term": "[i]",
+                "right_term": "3",
+                "type": "Else If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "16KJVV2",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "id": "16KJYYL",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Region for Downloading Assets",
+                "enabled": true,
+                "file_name": [
+                    "image_16KK0N8.png"
+                ],
+                "h": "0.446",
+                "id": "16KK0N8",
+                "recapture": true,
+                "type": "Capture",
+                "w": "0.413",
+                "x": "0.584",
+                "y": "0.55"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KK0N8",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Attempt to Download Assets",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KK1AT.png"
+                        ],
+                        "id": "16KK1AT",
+                        "match_threshold": ".80",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "16KK0YP",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "16KK0N8",
+                        "children": [],
+                        "delay": "2",
+                        "description": "If Start Test is Present",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_16KL8E2.png"
+                        ],
+                        "h": "0.056",
+                        "id": "16KK24Y",
+                        "match_threshold": "",
+                        "scale": "",
+                        "type": "Check",
+                        "w": "0.070",
+                        "x": "0.857",
+                        "y": "0.855"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "16KK0YR",
+                "type": "Except"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.5",
+                        "description": "For Waiting for Download to Finish",
+                        "enabled": true,
+                        "file_name": [
+                            "image_16KK2LU.png"
+                        ],
+                        "h": "0.417",
+                        "id": "16KK2LU",
+                        "recapture": true,
+                        "type": "Capture",
+                        "w": "0.322",
+                        "x": "0.676",
+                        "y": "0.581"
+                    },
+                    {
+                        "capture_id": "16KK2LU",
+                        "children": [],
+                        "delay": "30",
+                        "description": "Wait for Start Test Button",
+                        "enabled": true,
+                        "file_name": [
+                            "image_16KL8E2.png"
+                        ],
+                        "h": "0.417",
+                        "id": "16KK3HA",
+                        "match_threshold": ".80",
+                        "timeout": "3600",
+                        "type": "Check Until Found",
+                        "w": "0.322",
+                        "x": "0.676",
+                        "y": "0.581"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "16KK0YT",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "16KK0YU",
+                "type": "End Try"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Increment Loop Counter",
+                "enabled": true,
+                "id": "16KK4JU",
+                "name": "[i]",
+                "type": "Increment",
+                "value": "1"
+            }
+        ],
+        "count": "4",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "16KJV68",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "16KJV69",
+        "type": "End Loop"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Add Prep Status Control File",
+        "enabled": true,
+        "file_name": [
+            "code_16KK4WC.py"
+        ],
+        "id": "16KK4WC",
+        "type": "Code"
+    }
+]

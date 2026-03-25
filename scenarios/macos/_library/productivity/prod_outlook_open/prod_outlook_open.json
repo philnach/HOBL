@@ -1,0 +1,69 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2026-03-16",
+        "description": "Open Outlook",
+        "enabled": true,
+        "id": "Y7RIJNF",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "LPVYHJG",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "WJKZJV5",
+        "include_path": "..\\prod_outlook_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "11",
+        "description": "",
+        "enabled": true,
+        "id": "MSRZOFZ",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "ESC",
+        "enabled": true,
+        "id": "O2G98SJ",
+        "text": "\ue00c",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "M1FRUAD",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "productivity"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "outlook_open"
+            }
+        ],
+        "type": "Include"
+    }
+]

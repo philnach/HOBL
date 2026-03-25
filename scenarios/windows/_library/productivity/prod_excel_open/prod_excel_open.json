@@ -1,0 +1,125 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-24",
+        "description": "Open Excel",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MNVK",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UHA0T5",
+        "include_path": "..\\prod_excel_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "4",
+        "enabled": true,
+        "id": "UHA0F6",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "7",
+        "description": "ESC",
+        "enabled": true,
+        "id": "UWK6LK",
+        "text": "\ue00c",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "6",
+        "description": "ALT-foo",
+        "enabled": true,
+        "id": "UH7L0X",
+        "text": "\ue00a\ue00afoo",
+        "type": "Type",
+        "typing_delay": "1000"
+    },
+    {
+        "id": "1139TP5",
+        "type": "If",
+        "description": "",
+        "enabled": true,
+        "left_term": "[global:platform]",
+        "eval_method": "==",
+        "right_term": "W365",
+        "children": [
+            {
+                "id": "1139U3T",
+                "type": "Type",
+                "description": "W365 FamilyBudget.xlsx",
+                "enabled": true,
+                "delay": "14",
+                "text": "[onedrive_path]\\abl_docs\\FamilyBudget.xlsx\ue007",
+                "typing_delay": "[typing_delay]",
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "1139UYK",
+        "type": "Else",
+        "description": "",
+        "enabled": true,
+        "children": [
+            {
+                "children": [],
+                "delay": "14",
+                "description": "FamilyBudget.xlsx",
+                "enabled": true,
+                "id": "UH86K8",
+                "text": "[userprofile]\\onedrive\\abl_docs\\FamilyBudget.xlsx\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ]
+    },
+    {
+        "id": "1139TP7",
+        "type": "End If",
+        "description": "",
+        "enabled": true,
+        "children": []
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MNY6",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "prod"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "open_excel"
+            }
+        ],
+        "type": "Include"
+    }
+]

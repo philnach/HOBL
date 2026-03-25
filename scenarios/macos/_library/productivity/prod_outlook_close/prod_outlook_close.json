@@ -1,0 +1,30 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2026-03-16",
+        "description": "Close Outlook",
+        "enabled": true,
+        "id": "DL9EKQC",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "CMD+Q to quit Outlook",
+        "enabled": true,
+        "id": "HZF6DOE",
+        "text": "\ue03dq",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "Wait for app to close",
+        "enabled": true,
+        "id": "VI39334",
+        "type": "Delay"
+    }
+]

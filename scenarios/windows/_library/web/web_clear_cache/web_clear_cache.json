@@ -1,0 +1,160 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Clear browser cache",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "CTRL-l",
+        "enabled": true,
+        "id": "U01C51",
+        "text": "\ue009l",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "1.5",
+                "description": "clearBrowserData url",
+                "enabled": true,
+                "id": "137EHFW",
+                "text": "chrome://settings/clearBrowserData\ue007",
+                "type": "Type",
+                "typing_delay": "40"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "6",
+                "enabled": true,
+                "id": "137EJCM",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Dialog",
+                "enabled": true,
+                "file_name": [
+                    "image_137EX2J.png"
+                ],
+                "h": "0.328",
+                "id": "137EX2J",
+                "recapture": true,
+                "type": "Capture",
+                "w": "0.5",
+                "x": "0.297",
+                "y": "0.580"
+            },
+            {
+                "capture_id": "137EX2J",
+                "children": [],
+                "delay": "0.5",
+                "description": "Delete data",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_137F58V.png"
+                ],
+                "id": "137F58V",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Chrome",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "137ECM8",
+        "left_term": "[global:browser]",
+        "right_term": "Chrome",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "1.5",
+                "description": "clearBrowserData url",
+                "enabled": true,
+                "id": "U01FVT",
+                "text": "edge://settings/clearBrowserData\ue007",
+                "type": "Type",
+                "typing_delay": "40"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "6",
+                "enabled": true,
+                "id": "U7K9KM",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Dialog",
+                "enabled": true,
+                "file_name": [
+                    "image_U07X27.png"
+                ],
+                "h": "0.328",
+                "id": "U07X27",
+                "recapture": true,
+                "type": "Capture",
+                "w": "0.5",
+                "x": "0.297",
+                "y": "0.580"
+            },
+            {
+                "capture_id": "U07X27",
+                "children": [],
+                "delay": "0.5",
+                "description": "Clear now",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_U07XPP.png",
+                    "image_1FH5XM0.png"
+                ],
+                "id": "U07XPP",
+                "match_threshold": ".60",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "137EC6W",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "137ECM9",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "5",
+        "enabled": true,
+        "id": "UC5J45",
+        "type": "Delay"
+    }
+]

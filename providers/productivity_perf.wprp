@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<WindowsPerformanceRecorder Team="MST PnP" Company="Intel Corporation" Copyright="Intel Corporation" Version="1.0">
+  <Profiles>
+    <SystemCollector Id="SystemCollector_General" Name="NT Kernel Logger">
+      <BufferSize Value="512"/>
+      <Buffers Value="80"/>
+    </SystemCollector>
+
+    <EventCollector Id="EventCollector_ProductivityPerf" Name="Productivity Perf Collector">
+      <BufferSize Value="512"/>
+      <Buffers Value="80"/>
+    </EventCollector>
+
+    <!-- System Providers -->
+    <SystemProvider Id="SystemProvider_General">
+      <Keywords>
+        <Keyword Value="CpuConfig"/>
+        <Keyword Value="ProcessThread"/>
+      </Keywords>
+    </SystemProvider>
+
+    <!-- Event Providers -->
+    <EventProvider Id="EventProvider_Office" Name="8736922d-e8b2-47eb-8564-23e77e728cf3" NonPagedMemory="true" Level="4">
+      <Keywords>
+        <Keyword Value="0x8000000000000004" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Microsoft.Office.Logging.Common" Name="D983C416-203F-496D-AAC3-910FB89AA2DA">
+      <Keywords>
+        <Keyword Value="0x0000000000000020"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Win32k" Name="8c416c79-d49b-4f01-a467-e56d3aa8234c" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x40820000"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Dwm-Core" Name="9e9bba3c-2e38-40cb-99f4-9e8281425164" Level="4">
+      <Keywords>
+        <Keyword Value="0x1"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_UTC" Name="UTC" NonPagedMemory="true" Level="4" />
+
+    <!-- Profiles -->
+    <Profile Id="ProductivityPerf.Verbose.Memory" LoggingMode="Memory" Name="ProductivityPerf" Description="Productivity performance capture" DetailLevel="Verbose" >
+      <ProblemCategories>
+        <ProblemCategory Value="First Level Triage"/>
+      </ProblemCategories>
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector_General">
+          <SystemProviderId Value="SystemProvider_General"/>
+        </SystemCollectorId>
+        <EventCollectorId Value="EventCollector_ProductivityPerf">
+          <EventProviders>
+			<EventProviderId Value="EventProvider_Office" />
+            <EventProviderId Value="EventProvider_Microsoft.Office.Logging.Common"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Win32k"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Dwm-Core"/>
+            <EventProviderId Value="EventProvider_UTC"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+    <Profile Base="ProductivityPerf.Verbose.Memory" Id="ProductivityPerf.Verbose.File" LoggingMode="File" Name="ProductivityPerf" Description="Productivity performance capture" DetailLevel="Verbose" >
+    </Profile>
+  </Profiles>
+
+  <TraceMergeProperties>
+    <TraceMergeProperty  Id="TraceMerge_Default" Name="TraceMerge_Default" Base="">
+      <FileCompression Value="true"/>
+      <CustomEvents>
+        <CustomEvent Value="ImageId"/>
+        <CustomEvent Value="BuildInfo"/>
+        <CustomEvent Value="VolumeMapping"/>
+        <CustomEvent Value="EventMetadata"/>
+        <CustomEvent Value="PerfTrackMetadata"/>
+        <CustomEvent Value="WinSAT"/>
+        <CustomEvent Value="NetworkInterface"/>
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+</WindowsPerformanceRecorder>

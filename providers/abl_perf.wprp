@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<WindowsPerformanceRecorder Team="MST PnP" Company="Intel Corporation" Copyright="Intel Corporation" Version="1.0">
+  <Profiles>
+    <SystemCollector Id="SystemCollector_General" Name="NT Kernel Logger">
+      <BufferSize Value="512"/>
+      <Buffers Value="80"/>
+    </SystemCollector>
+
+    <EventCollector Id="EventCollector_ABLPerf" Name="ABL Perf Collector">
+      <BufferSize Value="512"/>
+      <Buffers Value="80"/>
+    </EventCollector>
+
+    <!-- System Providers -->
+    <SystemProvider Id="SystemProvider_General">
+      <Keywords>
+        <Keyword Value="CpuConfig"/>
+        <Keyword Value="ProcessThread"/>
+      </Keywords>
+    </SystemProvider>
+
+    <!-- Event Providers -->
+    <EventProvider Id="EventProvider_Office" Name="8736922d-e8b2-47eb-8564-23e77e728cf3" NonPagedMemory="true" Level="4">
+      <Keywords>
+        <Keyword Value="0x8000000000000004" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_OfficeLoggingLiblet" Name="f50d9315-e17e-43c1-8370-3edf6cc057be" Level="4">
+      <Keywords>
+        <Keyword Value="0x2000"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Win32k" Name="8c416c79-d49b-4f01-a467-e56d3aa8234c" Level="4" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x40820000"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Dwm-Core" Name="9e9bba3c-2e38-40cb-99f4-9e8281425164" Level="4"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-DxgKrnl" Name="Microsoft-Windows-DxgKrnl" Level="5" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x75"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0x75"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_Anaheim" Name="3A5F2396-5C8F-4F1F-9B67-6CCA6C990E61">
+      <Keywords>
+        <Keyword Value="0x8000000000010000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ChromiumPerfInfo" Name="9988fd77-a8d6-42e6-85f7-c42dd9fc1150"/>
+    <EventProvider Id="EventProvider_InputInject" Name="150A3791-7792-452D-858C-15D647ECB48F"/>
+
+    <!-- Profiles -->
+    <Profile Id="ABLPerf.Verbose.Memory" LoggingMode="Memory" Name="ABLPerf" Description="ABL performance capture" DetailLevel="Verbose" >
+      <ProblemCategories>
+        <ProblemCategory Value="First Level Triage"/>
+      </ProblemCategories>
+      <Collectors>
+        <SystemCollectorId Value="SystemCollector_General">
+          <SystemProviderId Value="SystemProvider_General"/>
+        </SystemCollectorId>
+        <EventCollectorId Value="EventCollector_ABLPerf">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_Office"/>
+            <EventProviderId Value="EventProvider_OfficeLoggingLiblet"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Win32k"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Dwm-Core"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-DxgKrnl"/>
+            <EventProviderId Value="EventProvider_Anaheim"/>
+            <EventProviderId Value="EventProvider_ChromiumPerfInfo"/>
+            <EventProviderId Value="EventProvider_InputInject"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+    <Profile Base="ABLPerf.Verbose.Memory" Id="ABLPerf.Verbose.File" LoggingMode="File" Name="ABLPerf" Description="ABL performance capture" DetailLevel="Verbose" >
+    </Profile>
+  </Profiles>
+
+  <TraceMergeProperties>
+    <TraceMergeProperty
+        Id="TraceMerge_Default"
+        Name="TraceMerge_Default"
+        >
+      <CustomEvents>
+        <CustomEvent Value="ImageId"/>
+        <CustomEvent Value="BuildInfo"/>
+        <CustomEvent Value="VolumeMapping"/>
+        <CustomEvent Value="EventMetadata"/>
+        <CustomEvent Value="PerfTrackMetadata"/>
+        <CustomEvent Value="WinSAT"/>
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+</WindowsPerformanceRecorder>

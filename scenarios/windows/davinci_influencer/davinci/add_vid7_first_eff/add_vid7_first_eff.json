@@ -1,0 +1,412 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "clip7 add first effect",
+        "enabled": true,
+        "id": "10PKH4C",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open duration dialog",
+        "enabled": true,
+        "id": "112MK6E",
+        "text": "\ue009d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Edit clip duration",
+        "enabled": true,
+        "id": "112MKAA",
+        "text": "\ue003300\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "go to fusion page",
+        "enabled": true,
+        "id": "10T5YLN",
+        "text": "%",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "add glow",
+        "enabled": true,
+        "id": "10U9F8P",
+        "text": "B",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add mirror effect",
+        "enabled": true,
+        "id": "10U94CV",
+        "text": "\ue008M",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_112KF46.png"
+        ],
+        "h": "0.155",
+        "id": "112KF46",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.251",
+        "x": "0.716",
+        "y": "0.285"
+    },
+    {
+        "capture_id": "112KF46",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_112K0AN.png"
+        ],
+        "id": "112K0AN",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.325",
+        "y": "0.500"
+    },
+    {
+        "capture_id": "112KF46",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_112KFUM.png"
+        ],
+        "id": "112KFUM",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select the x value",
+        "enabled": true,
+        "id": "112KHH9",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Edit x value",
+        "enabled": true,
+        "id": "112KHKH",
+        "text": "\ue0030.4\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Gaussian Blur effect",
+        "enabled": false,
+        "id": "10T61KK",
+        "text": "\ue009\ue008b",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_12MY8Y9.png"
+        ],
+        "h": "0.197",
+        "id": "12MY8Y9",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.204",
+        "x": "0.168",
+        "y": "0.676"
+    },
+    {
+        "capture_id": "12MY8Y9",
+        "children": [],
+        "delay": "2",
+        "description": "on Mirror Node",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UFEE4.png"
+        ],
+        "id": "11UFEE4",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Digital Glitch",
+        "enabled": true,
+        "id": "11UFFC6",
+        "text": "D",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Merge Settings",
+        "enabled": true,
+        "file_name": [
+            "image_12MYA28.png"
+        ],
+        "h": "0.217",
+        "id": "12MYA28",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.236",
+        "x": "0.757",
+        "y": "0.157"
+    },
+    {
+        "capture_id": "12MYA28",
+        "children": [],
+        "delay": "2",
+        "description": "X Coordinate",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MYA88.png"
+        ],
+        "id": "12MYA88",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.718",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UFLL5",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change X coordinate",
+        "enabled": true,
+        "id": "11UFLPE",
+        "text": "0.4\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Timeline Nodes",
+        "enabled": true,
+        "file_name": [
+            "image_12MYATM.png"
+        ],
+        "h": "0.227",
+        "id": "12MYATM",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.166",
+        "x": "0.012",
+        "y": "0.681"
+    },
+    {
+        "capture_id": "12MYATM",
+        "children": [],
+        "delay": "2",
+        "description": "on Digital Glitch",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UFNY0.png"
+        ],
+        "id": "11UFNY0",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Large Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_11UFPU9.png"
+        ],
+        "h": "0.195",
+        "id": "11UFPU9",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.232",
+        "x": "0.724",
+        "y": "0.200"
+    },
+    {
+        "capture_id": "11UFPU9",
+        "children": [],
+        "delay": "2",
+        "description": "Large Text Box",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UFPY4.png"
+        ],
+        "id": "11UFPY4",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UFR3T",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Mirrors",
+        "enabled": true,
+        "id": "11UFR8T",
+        "text": "\ue003Mirrors",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Small Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_11UFTAA.png"
+        ],
+        "h": "0.220",
+        "id": "11UFTAA",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.207",
+        "x": "0.724",
+        "y": "0.590"
+    },
+    {
+        "capture_id": "11UFTAA",
+        "children": [],
+        "delay": "2",
+        "description": "Small Text Box",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UFTFT.png"
+        ],
+        "id": "11UFTFT",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UFTNU",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Glow",
+        "enabled": true,
+        "id": "11UFTTN",
+        "text": "\ue003Glow",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "12MYATM",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UFWLA.png"
+        ],
+        "id": "11UFWLA",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go back to Cut Page",
+        "enabled": true,
+        "id": "10T6246",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

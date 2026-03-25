@@ -1,0 +1,119 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2025-12-23",
+        "description": "Open OneNote",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MVKY",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UHA64V",
+        "include_path": "..\\prod_onenote_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "UHA612",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "ESC",
+        "enabled": true,
+        "id": "UWK84K",
+        "text": "\ue00c",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "9",
+        "description": "CMD+O to open file",
+        "enabled": false,
+        "id": "UFN19V",
+        "text": "\ue03do",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "CMD+SHIFT+G for Go to folder",
+        "enabled": false,
+        "id": "UFN2CA",
+        "text": "\ue03d\ue008g",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Path to document",
+        "enabled": false,
+        "id": "UFN2CY",
+        "text": "/Users/Shared/abl_docs/onenote_productivity.one",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Enter",
+        "enabled": false,
+        "id": "UFN34E",
+        "text": "\ue006",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Enter again to open",
+        "enabled": false,
+        "id": "UFN35F",
+        "text": "\ue006",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "",
+        "enabled": true,
+        "id": "V2MWCX",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "Productivity-OneNote"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "Open"
+            }
+        ],
+        "type": "Include"
+    }
+]

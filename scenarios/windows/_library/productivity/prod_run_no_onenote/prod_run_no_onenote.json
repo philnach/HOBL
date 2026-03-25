@@ -1,0 +1,84 @@
+[
+    {
+        "id": "UTHAJ0",
+        "type": "Information",
+        "description": "Run productivity apps (no OneNote)",
+        "enabled": true,
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "create_date": "2025-03-02",
+        "children": []
+    },
+    {
+        "id": "UTHFFH",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_outlook_switchto",
+        "children": []
+    },
+    {
+        "id": "UTHEC2",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_outlook_run",
+        "children": []
+    },
+    {
+        "id": "UTHFKR",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_excel_switchto",
+        "children": []
+    },
+    {
+        "id": "UTHEHN",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_excel_run",
+        "children": []
+    },
+    {
+        "id": "UTHFP2",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_word_switchto",
+        "children": []
+    },
+    {
+        "id": "UTHEN0",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_word_run",
+        "children": []
+    },
+    {
+        "id": "UTHFUP",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_powerpoint_switchto",
+        "children": []
+    },
+    {
+        "id": "UTHEUJ",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\prod_powerpoint_run",
+        "children": []
+    }
+]

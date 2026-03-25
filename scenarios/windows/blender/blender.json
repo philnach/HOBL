@@ -1,0 +1,80 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-06-02",
+        "description": "",
+        "enabled": true,
+        "id": "10CJK1M",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Selecting GPU or CPU",
+        "enabled": true,
+        "id": "10CJLHE",
+        "name": "[benchmark_option]",
+        "type": "Set Default",
+        "val_options": "CPU, OPTIX, CUDA, HIP, METAL, ONEAPI",
+        "value": "CPU"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "15.0",
+                "description": "Launch Blender",
+                "enabled": true,
+                "file_name": [
+                    "code_10CK3TA.py"
+                ],
+                "id": "10CK3TA",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "10CJKMK",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Start Blender Benchmark",
+                "enabled": true,
+                "file_name": [
+                    "code_10V9XFL.py"
+                ],
+                "id": "10V9XFL",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "10CJKMY",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Parse Result",
+                "enabled": true,
+                "file_name": [
+                    "code_10WJE37.py"
+                ],
+                "id": "10WJE37",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "10CJKNC",
+        "type": "Teardown"
+    }
+]

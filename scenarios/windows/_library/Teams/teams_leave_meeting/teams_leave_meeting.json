@@ -1,0 +1,248 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Params",
+        "enabled": true,
+        "id": "1H3F60V",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key.",
+        "enabled": true,
+        "id": "1514A8P",
+        "multiple": false,
+        "name": "[teams:access_key]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "-1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the DUT share its screen in the meeting.",
+        "enabled": true,
+        "id": "1514EE8",
+        "multiple": false,
+        "name": "[teams:send_screen]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the call health data collected.",
+        "enabled": true,
+        "id": "195MFHA",
+        "multiple": false,
+        "name": "[teams:collect_call_health]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "195LWKH",
+                        "include_path": "scenarios\\windows\\_library\\Teams\\teams_collect_call_health",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "",
+                        "enabled": true,
+                        "id": "195MKNE",
+                        "type": "Delay"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "195MKH8",
+                "left_term": "[teams:collect_call_health]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "195MKH9",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Delay stopping screen share",
+                        "enabled": true,
+                        "id": "16J5WR4",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1398KN4",
+                        "include_path": "scenarios\\windows\\_library\\Teams\\teams_stop_screenshare",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "YV24TM",
+                "left_term": "[teams:send_screen]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YV24TP",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1A76J8N",
+        "type": "Try"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A76J8P",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A76J8R",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A76J8T",
+        "type": "End Try"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Send Request to delete Bots Meeting",
+        "enabled": true,
+        "file_name": [
+            "code_YTVVTX.py"
+        ],
+        "id": "YTVVTX",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "",
+        "enabled": true,
+        "id": "YTW1E6",
+        "type": "Delay"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "YTV4N8",
+                "enabled": true,
+                "file_name": [
+                    "image_YTV4N8.png"
+                ],
+                "h": "0.5",
+                "id": "YTV4N8",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "YTV4N8",
+                "children": [],
+                "delay": "2",
+                "description": "Leave Button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_YTV4NA.png"
+                ],
+                "id": "YTV4NA",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.556"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1A76MNA",
+        "type": "Try"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Kill Teams Process",
+                "enabled": true,
+                "file_name": [
+                    "code_1A76NEH.py"
+                ],
+                "id": "1A76NEH",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1A76MNC",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A76MNF",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A76MNH",
+        "type": "End Try"
+    }
+]

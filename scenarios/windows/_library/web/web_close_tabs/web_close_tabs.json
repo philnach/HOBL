@@ -1,0 +1,58 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-23",
+        "description": "Close tabs",
+        "enabled": true,
+        "id": "UEX0FY",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Number of tabs to close",
+        "enabled": true,
+        "id": "UEX126",
+        "name": "[num_tabs_to_close]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "id": "UT8HLM",
+        "type": "Delay",
+        "description": "",
+        "enabled": true,
+        "delay": "1",
+        "children": []
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "CTRL-w",
+                "enabled": true,
+                "id": "UEX1U5",
+                "text": "\ue009w",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "count": "[num_tabs_to_close]",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "UEX1JE",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "UEX1JF",
+        "type": "End Loop"
+    }
+]

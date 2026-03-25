@@ -1,0 +1,15 @@
+# platform: osx
+# Lastest version (includes Metal optimization) per Apple documentation: https://developer.apple.com/metal/pytorch/
+name: BUILD_2025_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip=24.0
+  - pip:
+    - torch==2.8.0 --index-url=https://download.pytorch.org/whl/nightly/cpu
+    - torchvision==0.23.0 --index-url=https://download.pytorch.org/whl/nightly/cpu
+    - torchaudio==2.8.0 --index-url=https://download.pytorch.org/whl/nightly/cpu
+    - transformers==4.56.1 --index-url=https://download.pytorch.org/whl/nightly/cpu
+
+    

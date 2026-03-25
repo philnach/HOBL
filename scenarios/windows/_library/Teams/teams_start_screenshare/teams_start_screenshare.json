@@ -1,0 +1,137 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_YV203Y.png"
+        ],
+        "h": "1",
+        "id": "YV203Y",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "YV203Y",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_YV1YUF.png"
+        ],
+        "id": "YV1YUF",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "",
+        "enabled": true,
+        "id": "YWFXHF",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Send Keys to Share Desktop",
+        "enabled": true,
+        "id": "YV22W3",
+        "text": "\ue004\ue004\ue004\ue007",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Start PPT Video for Sharing",
+                "enabled": true,
+                "id": "103198T",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "115Y3VP",
+                "include_path": "..\\..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "val_options": "",
+                        "value": "<BACKSPACE>[presentation_video_path]"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "!=",
+        "id": "10318U9",
+        "left_term": "[teams:show_desktop]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "Show Desktop",
+                "enabled": true,
+                "id": "11F4892",
+                "include_path": "..\\..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "val_options": "",
+                        "value": "powershell -command \"& { (New-Object -ComObject shell.application).MinimizeAll() }\""
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11F4862",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10318UA",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "30",
+        "description": "",
+        "enabled": true,
+        "id": "1032RKV",
+        "type": "Delay"
+    }
+]

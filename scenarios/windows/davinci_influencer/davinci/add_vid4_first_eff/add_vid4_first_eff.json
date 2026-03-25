@@ -1,0 +1,72 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "clip4 add first effect",
+        "enabled": true,
+        "id": "10PKH4C",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open change duration box",
+        "enabled": true,
+        "id": "10UK8J9",
+        "text": "\ue009d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change number of frames",
+        "enabled": true,
+        "id": "10UK9W0",
+        "text": "5\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "go to fusion page",
+        "enabled": true,
+        "id": "10T5YLN",
+        "text": "%",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Gaussian Blur effect",
+        "enabled": false,
+        "id": "10T61KK",
+        "text": "\ue009\ue008b",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add CCTV effect",
+        "enabled": true,
+        "id": "10U7V8N",
+        "text": "\ue009\ue008c",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go back to Cut Page",
+        "enabled": true,
+        "id": "10T6246",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

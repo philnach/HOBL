@@ -1,0 +1,247 @@
+[
+    {
+        "author": "idc",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-11",
+        "description": "add effects to vid",
+        "enabled": true,
+        "id": "10U9U3N",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10TKTW8",
+        "name": "[i]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "10TKU50",
+                "name": "[i]",
+                "type": "Increment",
+                "value": "1"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10THJHT",
+                "include_path": "..\\next_clip",
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "10TM50Y",
+                        "include_path": "..\\add_vid2_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TJE18",
+                "left_term": "[i]",
+                "right_term": "2",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TJE19",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid3",
+                        "include_path": "..\\add_vid3_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TJE54",
+                "left_term": "[i]",
+                "right_term": "3",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TJE55",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid4",
+                        "include_path": "..\\add_vid4_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TKVRX",
+                "left_term": "[i]",
+                "right_term": "4",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TKVT0",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid5",
+                        "include_path": "..\\add_vid5_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TKVYJ",
+                "left_term": "[i]",
+                "right_term": "5",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TKVYL",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid6",
+                        "include_path": "..\\add_vid6_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TKW67",
+                "left_term": "[i]",
+                "right_term": "6",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TKW68",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid7",
+                        "include_path": "..\\add_vid7_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TKWCH",
+                "left_term": "[i]",
+                "right_term": "7",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TKWCK",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "auto_vid8",
+                        "include_path": "..\\add_vid8_first_eff",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10TKWKW",
+                "left_term": "[i]",
+                "right_term": "8",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10TKWKX",
+                "type": "End If"
+            }
+        ],
+        "count": "7",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10THY5W",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10THY5X",
+        "type": "End Loop"
+    }
+]

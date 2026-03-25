@@ -1,0 +1,39 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Switch to web browser",
+        "enabled": true,
+        "id": "TYHL3E",
+        "type": "Information"
+    },
+    {
+        "id": "10U1NCL",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\capture_dock",
+        "children": []
+    },
+    {
+        "id": "10U1NWT",
+        "type": "Click",
+        "description": "Safari",
+        "enabled": true,
+        "delay": "2.5",
+        "x": "0.500",
+        "y": "0.500",
+        "file_name": [
+            "image_10U1NWT.png"
+        ],
+        "exception_on": "No match",
+        "match_threshold": "",
+        "scale": "",
+        "primary": true,
+        "children": [],
+        "capture_id": "10RH3M0"
+    }
+]

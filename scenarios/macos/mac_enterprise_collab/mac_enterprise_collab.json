@@ -1,0 +1,522 @@
+[
+    {
+        "author": "hokyukang",
+        "capture_device": "Macbook Air M3",
+        "children": [],
+        "create_date": "2025-12-22",
+        "description": "MacOS Enterprise Collaborator",
+        "enabled": true,
+        "id": "1AKULKA",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ARK8H0",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1AKUWNW",
+        "name": "[background_teams]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1AMVHA3",
+        "name": "[background_timers]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ANKLL3",
+        "name": "[background_onedrive_copy]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1CFLR7T",
+        "name": "[simple_office_launch]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1AL8WHR",
+        "name": "[web_replay_run]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1AKUTLM",
+                        "name": "[teams:number_of_bots]",
+                        "type": "Set",
+                        "value": "9"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1AMAYPR",
+                        "name": "[teams:verify_bots]",
+                        "type": "Set",
+                        "value": "0"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ANKM6J",
+                        "name": "[teams:collect_MSTeams_Logs]",
+                        "type": "Set",
+                        "value": "0"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARE7R6",
+                        "name": "[teams:collect_call_health]",
+                        "type": "Set",
+                        "value": "0"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1AKUT8L",
+                        "include_path": "..\\_library\\Teams\\teams_setup",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1AKURLN",
+                "left_term": "[background_teams]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1AKURLP",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Upload timers executable from Host to DUT",
+                        "enabled": true,
+                        "id": "MAC_TIMERS_INCLUDE",
+                        "include_path": "..\\_library\\enterprise_collab\\timers_setup",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Run timers in the background",
+                        "enabled": true,
+                        "file_name": [
+                            "code_1AMVJC3.py"
+                        ],
+                        "id": "1AMVJC3",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1AMVHYC",
+                "left_term": "[background_timers]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1AMVHYE",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Create large binaries and upload to DUT",
+                        "enabled": true,
+                        "id": "1ANJY4X",
+                        "include_path": "..\\_library\\enterprise_collab\\onedrive_upload_setup",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1ANJXRW",
+                "left_term": "[background_onedrive_copy]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ANJXRX",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1ARKHNH",
+                "include_path": "..\\_library\\web\\web_setup",
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1CFLW86",
+                        "include_path": "..\\_library\\productivity\\prod_setup",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1CFLW0N",
+                "left_term": "[simple_office_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1CFLW0R",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "100",
+                "description": "",
+                "enabled": false,
+                "id": "1CAPW9N",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1AKUMUV",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "0.0",
+                                "description": "Download a large file from Internet",
+                                "enabled": true,
+                                "file_name": [
+                                    "code_1ARK9VL.py"
+                                ],
+                                "id": "1ARK9VL",
+                                "type": "Code"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "eval_method": "==",
+                        "id": "1ARK98F",
+                        "left_term": "[background_onedrive_copy]",
+                        "right_term": "1",
+                        "type": "If"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARK98H",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARKEY9",
+                        "include_path": "..\\_library\\web\\web_run_12",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "0",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1CFLY49",
+                                "include_path": "..\\_library\\productivity\\prod_open",
+                                "type": "Include"
+                            },
+                            {
+                                "children": [],
+                                "delay": "0",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1CFLY8J",
+                                "include_path": "..\\_library\\productivity\\prod_close",
+                                "type": "Include"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "eval_method": "==",
+                        "id": "1CFLXWA",
+                        "left_term": "[simple_office_launch]",
+                        "right_term": "1",
+                        "type": "If"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1CFLXWE",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARKF37",
+                        "include_path": "..\\_library\\web\\web_close_tabs",
+                        "params": [
+                            {
+                                "name": "[num_tabs_to_close]",
+                                "val_options": "",
+                                "value": "[web:tabs]"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "0.0",
+                                "description": "Delete downloaded files and folders",
+                                "enabled": true,
+                                "file_name": [
+                                    "code_1ARLLJA.py"
+                                ],
+                                "id": "1ARLLJA",
+                                "type": "Code"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "eval_method": "==",
+                        "id": "1ARLJLK",
+                        "left_term": "[background_onedrive_copy]",
+                        "right_term": "1",
+                        "type": "If"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARLJLM",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ARKFX4",
+                        "type": "Delay"
+                    }
+                ],
+                "count": "[loops]",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "1ARK7MV",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ARK7MX",
+                "type": "End Loop"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1AKUMVR",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1AKUY0M",
+                "include_path": "..\\_library\\web\\web_close_browser",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1AKUY5R",
+                "include_path": "..\\_library\\web\\web_kill",
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Terminate background timers",
+                        "enabled": true,
+                        "file_name": [
+                            "code_1AMW1R9.py"
+                        ],
+                        "id": "1AMW1R9",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1AMW13M",
+                "left_term": "[background_timers]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1AMW13P",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1CFLX9W",
+                        "include_path": "..\\_library\\productivity\\prod_kill",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1CFLX3T",
+                "left_term": "[simple_office_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1CFLX3U",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1AMCRPK",
+                        "include_path": "..\\_library\\Teams\\teams_teardown",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1AKUY7K",
+                "left_term": "[background_teams]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1AKUY7M",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1AKUMW8",
+        "type": "Teardown"
+    }
+]

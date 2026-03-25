@@ -1,0 +1,113 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Macbook_Pro_m4",
+        "children": [],
+        "create_date": "2025-09-05",
+        "description": "Runs Puget Benchmark on Premiere Pro",
+        "enabled": true,
+        "id": "1556UVR",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Benchmark Version",
+        "enabled": true,
+        "id": "1556V1L",
+        "name": "[benchmark_version]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1.1.1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "App version of Premiere Pro",
+        "enabled": true,
+        "id": "16EEJKJ",
+        "name": "[app_version]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "25.1.0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Puget License Key",
+        "enabled": true,
+        "id": "1556V65",
+        "name": "[puget_license]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Amount of Loops for Test",
+        "enabled": true,
+        "id": "1556VC3",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Set Firewall For Premiere Pro/Check Preps",
+                "enabled": true,
+                "file_name": [
+                    "code_15AVFT1.py"
+                ],
+                "id": "15AVFT1",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V07",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Run Premiere Pro Benchmark",
+                "enabled": true,
+                "file_name": [
+                    "code_1556VR9.py"
+                ],
+                "id": "1556VR9",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V0K",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Teardown Premiere Pro",
+                "enabled": true,
+                "file_name": [
+                    "code_1556VTN.py"
+                ],
+                "id": "1556VTN",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V0X",
+        "type": "Teardown"
+    }
+]

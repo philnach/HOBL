@@ -1,0 +1,175 @@
+#!/bin/sh
+# Copyright (c) Microsoft. All rights reserved.
+# Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+LOG_DIR="/Users/Shared/hobl_data"
+METRICS_FILE="$LOG_DIR/mac_opencv_build_results.csv"
+LOG_FILE="$LOG_DIR/mac_opencv_build_run.log"
+
+# Create log directory if it doesn't exist
+if [ ! -d "$LOG_DIR" ]; then
+    mkdir -p "$LOG_DIR"
+fi
+
+log() {
+    echo "$1"
+    echo "$1" >> "$LOG_FILE"
+}
+
+# Helper function for error checking
+check_status() {
+    if [ $? -ne 0 ]; then
+        log " ERROR - $1 failed"
+        exit 1
+    fi
+    log "✓ $1 successful"
+}
+
+# Helper function to verify command exists
+check_command() {
+    if command -v "$1" >/dev/null 2>&1; then
+        log "✓ $1 is available"
+        return 0
+    else
+        log " ERROR - $1 is not available"
+        return 1
+    fi
+}
+
+# Helper function to parse time output and calculate cputime
+# Args: $1 = time log file, $2 = phase name prefix (e.g., "build" or "test")
+# Sets: <prefix>_real, <prefix>_user, <prefix>_sys, <prefix>_cputime
+#
+# Time metrics explained:
+#   Real - Wall clock time from start to finish of the call. This is all elapsed time
+#          including time slices used by other processes and time the process spends
+#          blocked (for example if it is waiting for I/O to complete).
+#
+#   User - The amount of CPU time spent in user-mode code (outside the kernel) within
+#          the process. This is only actual CPU time used in executing the process.
+#          Other processes and time the process spends blocked do not count towards
+#          this figure.
+#
+#   Sys  - The amount of CPU time spent in the kernel within the process. This means
+#          executing CPU time spent in system calls within the kernel, as opposed to
+#          library code, which is still running in user-space. Like 'user', this is
+#          only CPU time used by the process.
+#
+#   User+Sys (cputime) - How much actual CPU time your process used. Note that this is
+#          across all CPUs, so if the process has multiple threads on a multi-processor
+#          system, it could potentially exceed the wall clock time reported by 'Real'.
+#          These figures include the 'User' and 'Sys' time of all child processes when
+#          they could have been collected (e.g., by wait(2) or waitpid(2)).
+#
+parse_time_output() {
+    local time_file="$1"
+    local prefix="$2"
+    
+    if [ ! -f "$time_file" ]; then
+        log " ERROR - Time log file not found: $time_file"
+        return 1
+    fi
+    
+    # Parse the -p format output (real, user, sys on separate lines)
+    local real_val=$(grep "^real" "$time_file" | awk '{print $2}')
+    local user_val=$(grep "^user" "$time_file" | awk '{print $2}')
+    local sys_val=$(grep "^sys" "$time_file" | awk '{print $2}')
+    
+    # Calculate cputime = user + sys
+    local cputime=$(echo "$user_val + $sys_val" | bc)
+    
+    # Export values using eval for dynamic variable names
+    eval "${prefix}_real=$real_val"
+    eval "${prefix}_user=$user_val"
+    eval "${prefix}_sys=$sys_val"
+    eval "${prefix}_cputime=$cputime"
+    
+    log "✓ Parsed $prefix phase: real=${real_val}s, user=${user_val}s, sys=${sys_val}s, cputime=${cputime}s"
+}
+
+echo "-- mac_opencv_build_run.sh started $(date)" > "$LOG_FILE"
+log "-- opencv run started"
+
+# Source profile
+if [ -f ~/.zprofile ]; then
+    source ~/.zprofile
+    check_status "Loading profile"
+else
+    echo " ERROR - ~/.zprofile not found"
+    exit 1
+fi
+
+# Verify required commands are available
+log "-- Verifying required commands"
+check_command "pyenv" || exit 1
+check_command "make" || exit 1
+check_command "cmake" || exit 1
+
+# Set BIN_DIR to /Users/Shared/hobl_bin
+BIN_DIR="/Users/Shared/hobl_bin"
+
+# Set Python version
+log "-- Setting Python version"
+pyenv global 3.12.10
+check_status "Setting Python global version"
+
+log "-- Changing directory to: $BIN_DIR/build_opencv"
+
+# Change to opencv build directory
+if [ ! -d "$BIN_DIR/build_opencv" ]; then
+    log " ERROR - OpenCV build directory not found: $BIN_DIR/build_opencv"
+    log "Please run mac_opencv_build_prep.sh first"
+    exit 1
+fi
+
+cd $BIN_DIR/build_opencv || {
+    log " ERROR - Failed to change to $BIN_DIR/build_opencv"
+    exit 1
+}
+log "✓ Current directory: $(pwd)"
+
+log "-- Cleaning previous build outputs"
+make clean 2>/dev/null || log "   No previous build to clean"
+
+log "-- Starting OpenCV build"
+CORES=$(sysctl -n hw.ncpu)
+log "Building with $CORES cores"
+
+/usr/bin/time -p -o "$LOG_DIR/mac_opencv_build_time.log" make -j$CORES
+check_status "OpenCV build"
+
+# Parse build phase timing
+parse_time_output "$LOG_DIR/mac_opencv_build_time.log" "build"
+
+log "-- Confirming build"
+./bin/opencv_version
+check_status "OpenCV version check"
+
+log "-- opencv build ended"
+
+# ============================================================================
+# Calculate scenario_runtime and save metrics
+# ============================================================================
+# Use real (wall clock) time for scenario_runtime as it represents actual elapsed time
+scenario_runtime=$build_real
+
+log ""
+log "========================================"
+log "OpenCV Build Metrics Summary"
+log "========================================"
+log "Build Phase: real=${build_real}s, user=${build_user}s, sys=${build_sys}s, cputime=${build_cputime}s"
+log "scenario_runtime (total real time): ${scenario_runtime}s"
+log "========================================"
+
+# Write metrics CSV file (key,value format)
+cat > "$METRICS_FILE" << EOF
+scenario_runtime,$scenario_runtime
+build_real,$build_real
+build_user,$build_user
+build_sys,$build_sys
+build_cputime,$build_cputime
+EOF
+
+log "✓ Metrics saved to: $METRICS_FILE"
+
+exit 0

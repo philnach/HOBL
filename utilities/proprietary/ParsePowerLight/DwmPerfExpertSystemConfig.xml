@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DwmPerfExpertSystem>
+    <CPUUsage Threshold = "8000000" WorstSeverity = "RedRed">
+		<Bucket Severity = "Green">8000000</Bucket>
+		<Bucket Severity = "Yellow">15000000</Bucket>
+		<Bucket Severity = "Red">32000000</Bucket>
+	</CPUUsage>
+	<CPUStarvation Threshold = "500000" WorstSeverity = "RedRed">
+		<Bucket Severity = "Green">500000</Bucket>
+		<Bucket Severity = "Yellow">3000000</Bucket>
+		<Bucket Severity = "Red">10000000</Bucket>
+	</CPUStarvation>
+	<GPUUsage Threshold = "8000000" WorstSeverity = "RedRed">
+		<Bucket Severity = "Green">8000000</Bucket>
+		<Bucket Severity = "Yellow">15000000</Bucket>
+		<Bucket Severity = "Red">32000000</Bucket>
+	</GPUUsage>
+	<GPUStarvation Threshold = "500000" WorstSeverity = "RedRed">
+		<Bucket Severity = "Green">500000</Bucket>
+		<Bucket Severity = "Yellow">3000000</Bucket>
+		<Bucket Severity = "Red">10000000</Bucket>
+	</GPUStarvation>
+</DwmPerfExpertSystem>

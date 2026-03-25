@@ -1,0 +1,79 @@
+QPushButton {
+    border: 0px solid #8f8f91;
+    border-radius: 4px;
+    /* min-width: 80px; */
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+QPushButton#okButton {
+    background-color: rgb(128, 255, 180);
+}
+
+QPushButton#cancelButton {
+    background-color: rgb(255, 180, 137);
+}
+
+QPushButton#recordButton {
+    background-color: rgb(255, 166, 159);
+}
+
+QPushButton:pressed {
+    background-color:rgb(255, 255, 255);
+}
+
+QPushButton:hover {
+    background-color:rgb(255, 255, 255);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:open { /* when the button has its menu open */
+    background-color:rgb(255, 255, 255);
+}
+
+QPushButton::menu-indicator {
+    image: url(images/chevron.png);
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    width: 12px;
+    height: 12px;
+    padding-right: 4px;
+}
+
+QMenu {
+    background-color: #ffffff; /* sets background of the menu */
+    border: 1px solid rgb(235, 235, 235);
+}
+
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent; /* reserve space for selection border */
+}
+
+QMenu::item:selected {
+    border-color: rgb(115, 189, 225);
+    background: rgb(47, 136, 239);
+    color: white;
+}
+
+QMenu::separator {
+    height: 2px;
+    background: rgb(235, 235, 235);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+/*
+QPushButton::menu-indicator:pressed, QPushButton::menu-indicator:open {
+    position: relative;
+    top: 2px; left: 2px; /* shift the arrow by 2 px */
+}
+*/

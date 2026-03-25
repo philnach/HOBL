@@ -1,0 +1,57 @@
+[
+    {
+        "id": "W9MTA5",
+        "type": "Information",
+        "description": "Param test component to be included",
+        "enabled": true,
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "create_date": "2025-04-02",
+        "children": []
+    },
+    {
+        "id": "W9MU6T",
+        "type": "Set Default",
+        "description": "",
+        "enabled": true,
+        "delay": "0.0",
+        "value": "0",
+        "name": "[my_param]",
+        "val_options": "0,1",
+        "children": []
+    },
+    {
+        "id": "W9MUTV",
+        "type": "If",
+        "description": "",
+        "enabled": true,
+        "left_term": "[my_param]",
+        "eval_method": "==",
+        "right_term": "0",
+        "children": [
+            {
+                "id": "W9MV14",
+                "type": "Capture",
+                "description": "",
+                "enabled": true,
+                "delay": "1",
+                "x": "0",
+                "y": "0",
+                "w": "1",
+                "h": "1",
+                "file_name": [
+                    "image_W9MV14.png"
+                ],
+                "recapture": false,
+                "children": []
+            }
+        ]
+    },
+    {
+        "id": "W9MUTW",
+        "type": "End If",
+        "description": "",
+        "enabled": true,
+        "children": []
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-09-05",
+        "description": "Runs Puget Benchmark on After Effects",
+        "enabled": true,
+        "id": "1556UVR",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Benchmark Version",
+        "enabled": true,
+        "id": "1556V1L",
+        "name": "[benchmark_version]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1.0.0-hobl"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Puget License Key",
+        "enabled": true,
+        "id": "1556V65",
+        "name": "[puget_license]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Amount of Loops for Test",
+        "enabled": true,
+        "id": "1556VC3",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Set Firewall/Check Prep Status",
+                "enabled": true,
+                "file_name": [
+                    "code_15AV2RL.py"
+                ],
+                "id": "15AV2RL",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V07",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Run After Effects Benchmark",
+                "enabled": true,
+                "file_name": [
+                    "code_1556VR9.py"
+                ],
+                "id": "1556VR9",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V0K",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Parse/Clean up After Effects",
+                "enabled": true,
+                "file_name": [
+                    "code_1556VTN.py"
+                ],
+                "id": "1556VTN",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1556V0X",
+        "type": "Teardown"
+    }
+]

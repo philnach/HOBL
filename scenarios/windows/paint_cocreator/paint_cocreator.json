@@ -1,0 +1,1788 @@
+[
+    {
+        "author": "Yoon",
+        "capture_device": "Surface_laptop",
+        "children": [],
+        "create_date": "2025-03-13",
+        "description": "Paint Cocreator Automation",
+        "enabled": true,
+        "id": "V9MA0A",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Launch Paint",
+                "enabled": true,
+                "file_name": [
+                    "code_VJ4V61.py"
+                ],
+                "id": "VJ4V61",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "top right of screen for copilot button",
+                "enabled": true,
+                "file_name": [
+                    "image_V9R1MW.png"
+                ],
+                "h": "0.176",
+                "id": "V9R1MW",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.354",
+                "x": "0.648",
+                "y": "0.000"
+            },
+            {
+                "capture_id": "V9R1MW",
+                "children": [],
+                "delay": "5",
+                "description": "click on copilot button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9R1V0.png"
+                ],
+                "id": "V9R1V0",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_V9R2FJ.png"
+                ],
+                "h": "0.244",
+                "id": "V9R2FJ",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.280",
+                "x": "0.558",
+                "y": "0.121"
+            },
+            {
+                "capture_id": "V9R2FJ",
+                "children": [],
+                "delay": "5",
+                "description": "Cocreator Button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9R2MW.png"
+                ],
+                "id": "V9R2MW",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "V9R2FJ",
+                "children": [],
+                "delay": "2",
+                "description": "Click Cocreator button again",
+                "enabled": true,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_V9T0UP.png"
+                ],
+                "id": "V9T0UP",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Right Part of Screen",
+                "enabled": true,
+                "file_name": [
+                    "image_VJELCP.png"
+                ],
+                "h": "0.896",
+                "id": "VJELCP",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.515",
+                "x": "0.485",
+                "y": "0.000"
+            },
+            {
+                "capture_id": "VJELCP",
+                "children": [],
+                "delay": "2",
+                "description": "Move to Cocreator Pane",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNKNLN.png"
+                ],
+                "id": "VNKNLN",
+                "match_threshold": "",
+                "type": "Move",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Scroll Down 1",
+                "direction": "down",
+                "enabled": true,
+                "id": "VJEM11",
+                "type": "Scroll",
+                "x": "0.389",
+                "y": "0.212"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Scroll Down 2",
+                "direction": "down",
+                "enabled": true,
+                "id": "VJEM18",
+                "type": "Scroll",
+                "x": "0.389",
+                "y": "0.212"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Scroll Down 3",
+                "direction": "down",
+                "enabled": true,
+                "id": "VJEM30",
+                "type": "Scroll",
+                "x": "0.695",
+                "y": "0.263"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Cocreator Side Pane",
+                "enabled": true,
+                "file_name": [
+                    "image_VJEMWJ.png"
+                ],
+                "h": "0.887",
+                "id": "VJEMWJ",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.495",
+                "x": "0.504",
+                "y": "0.002"
+            },
+            {
+                "capture_id": "VJEMWJ",
+                "children": [],
+                "delay": "2",
+                "description": "Cocreator Description Box",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9R3PL.png"
+                ],
+                "id": "V9R3PL",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "30",
+                "description": "Description for cocreator",
+                "enabled": true,
+                "id": "V9R5HW",
+                "text": "A\ue00dwine\ue00dglass\ue00dwith\ue00dred\ue00dwine\ue00don\ue00da\ue00dwooden\ue00dtable\ue00dwith\ue00da\ue00dflower\ue00dvase\ue00dfilled\ue00dwith\ue00dflowers\ue00don\ue00dthe\ue00dright\ue00dside\ue00dof\ue00dthe\ue00dtable.",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Creativity Scroll Bar",
+                "enabled": true,
+                "file_name": [
+                    "image_VJENCJ.png"
+                ],
+                "h": "0.498",
+                "id": "VJENCJ",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.487",
+                "x": "0.510",
+                "y": "0.445"
+            },
+            {
+                "capture_id": "VJENCJ",
+                "children": [],
+                "delay": "2",
+                "description": "Increase creativity scroll",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9R6C8.png"
+                ],
+                "id": "V9R6C8",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.100",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Paint Tool Bar",
+                "enabled": true,
+                "file_name": [
+                    "image_VJETL4.png"
+                ],
+                "h": "0.283",
+                "id": "VJETL4",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.992",
+                "x": "0.005",
+                "y": "0.016"
+            },
+            {
+                "children": [],
+                "delay": "3",
+                "description": "Paint Canvas Capture",
+                "enabled": true,
+                "file_name": [
+                    "image_VJFE8J.png"
+                ],
+                "h": "0.730",
+                "id": "VJFE8J",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.49",
+                "x": "0.080",
+                "y": "0.100"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "type b to switch to bucket tool",
+                "enabled": true,
+                "id": "V9VLK9",
+                "text": "b",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Light Yellow Color (150%)",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNF4Y3.png"
+                ],
+                "id": "VNF5EU",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.550",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Paint Pane",
+                "enabled": false,
+                "file_name": [
+                    "image_V9RCPV.png"
+                ],
+                "h": "0.875",
+                "id": "V9RCPV",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.60",
+                "x": "0.016",
+                "y": "0.051"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "click on canvas first time",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "V9V5X6",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Click Canvas 2nd Time",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VJF8Y2",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.690"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXNWKH",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Bucket Tool Activate",
+                "enabled": true,
+                "id": "VXNWPT",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Switch to Brush Tool",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC4VY2.png"
+                ],
+                "id": "VC4VY2",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brush Size Capture",
+                "enabled": true,
+                "file_name": [
+                    "image_VM60XL.png"
+                ],
+                "h": "0.812",
+                "id": "VM60XL",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.139",
+                "x": "0.003",
+                "y": "0.108"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Maroon Color (150%)",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNF4Y3.png"
+                ],
+                "id": "VNF4Y3",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.255",
+                "y": "0.201"
+            },
+            {
+                "capture_id": "VM60XL",
+                "children": [],
+                "delay": "2",
+                "description": "Max Brush Size",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC12U1.png"
+                ],
+                "id": "VC12U1",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VM60XL",
+                "children": [],
+                "delay": "2",
+                "description": "Click Max Brush 2nd time.",
+                "enabled": true,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_VC1C2V.png"
+                ],
+                "id": "VC1C2V",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Red Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VJFHY9",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.011",
+                "y": "0.65"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Red Circle (coor)",
+                "enabled": true,
+                "id": "VXKRHU",
+                "type": "Click Coord",
+                "x": "0.23",
+                "y": "0.40"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "5",
+                "description": "Select Brown Color (150%)",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNF4Y3.png"
+                ],
+                "id": "VKLT4F",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.255",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "7",
+                "description": "1st Click Focus Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VKM97M",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Brown Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VM6X37",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "-.400",
+                "y": "1.5"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Brown Circle 2",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC15JM",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "-0.250",
+                "y": "1.5"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Brown Circle 3",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC22KF",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.250",
+                "y": "1.5"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Brown Circle 4",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC237L",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.650",
+                "y": "1.5"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "Brown Circle 5",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC15P2",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": ".900",
+                "y": "1.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXNX8R",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 1 (coor)",
+                "enabled": true,
+                "id": "VXKT0F",
+                "type": "Click Coord",
+                "x": "0.20",
+                "y": "0.60"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 2 (coor)",
+                "enabled": true,
+                "id": "VXKT8C",
+                "type": "Click Coord",
+                "x": "0.27",
+                "y": "0.60"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 3 (coor)",
+                "enabled": true,
+                "id": "VXKTF1",
+                "type": "Click Coord",
+                "x": "0.34",
+                "y": "0.60"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 4 (coor)",
+                "enabled": true,
+                "id": "VXKTLV",
+                "type": "Click Coord",
+                "x": "0.41",
+                "y": "0.60"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 5 (coor)",
+                "enabled": true,
+                "id": "VXKTWK",
+                "type": "Click Coord",
+                "x": "0.48",
+                "y": "0.60"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for image to generate",
+                "enabled": true,
+                "id": "VC4YVF",
+                "type": "Delay"
+            },
+            {
+                "capture_id": "VM60XL",
+                "children": [],
+                "delay": "2",
+                "description": "Medium Brush Size (latest)",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM61N5.png"
+                ],
+                "id": "VM61N5",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.772"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "7",
+                "description": "Select Pink Color",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNF4Y3.png"
+                ],
+                "id": "VKRA11",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.364",
+                "y": "0.527"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "5",
+                "description": "1st Click Focus Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2F21",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2F8A",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.250",
+                "y": "0.350"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 2",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2HKX",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.375",
+                "y": "0.450"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 3",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2HYW",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.150",
+                "y": "0.450"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 4",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2JLH",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.150",
+                "y": "0.600"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 5",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2K06",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.375",
+                "y": "0.600"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 6",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VM629J.png"
+                ],
+                "id": "VC2K9K",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.250",
+                "y": "0.700"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXP00H",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 1 (coor)",
+                "enabled": true,
+                "id": "VXKU6W",
+                "type": "Click Coord",
+                "x": "0.50",
+                "y": "0.37"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 2 (coor)",
+                "enabled": true,
+                "id": "VXKUFC",
+                "type": "Click Coord",
+                "x": "0.52",
+                "y": "0.40"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 3 (coor)",
+                "enabled": true,
+                "id": "VXKUNE",
+                "type": "Click Coord",
+                "x": "0.48",
+                "y": "0.40"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 4 (coor)",
+                "enabled": true,
+                "id": "VXKUVU",
+                "type": "Click Coord",
+                "x": "0.48",
+                "y": "0.43"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 5 (coor)",
+                "enabled": true,
+                "id": "VXKV1N",
+                "type": "Click Coord",
+                "x": "0.52",
+                "y": "0.43"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Pink Circle 6 (coor)",
+                "enabled": true,
+                "id": "VXKV7U",
+                "type": "Click Coord",
+                "x": "0.50",
+                "y": "0.46"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Delay for Art Generation",
+                "enabled": true,
+                "id": "VL5318",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Art Style",
+                "enabled": true,
+                "file_name": [
+                    "image_VKT0AP.png"
+                ],
+                "h": "0.376",
+                "id": "VKT0AP",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.379",
+                "x": "0.619",
+                "y": "0.556"
+            },
+            {
+                "capture_id": "VKT0AP",
+                "children": [],
+                "delay": "5",
+                "description": "Click Style Selection",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC3M9Y.png"
+                ],
+                "id": "VC3M9Y",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Art Style Selection",
+                "enabled": true,
+                "file_name": [
+                    "image_VKT131.png"
+                ],
+                "h": "0.350",
+                "id": "VKT131",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.460",
+                "x": "0.500",
+                "y": "0.520"
+            },
+            {
+                "capture_id": "VKT131",
+                "children": [],
+                "delay": "5",
+                "description": "Select Oil Painting",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC3MRA.png"
+                ],
+                "id": "VC3MRA",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for New Image to Generate",
+                "enabled": true,
+                "id": "VC56YC",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select Whole Canvas",
+                "enabled": true,
+                "id": "VC3PEL",
+                "text": "\ue009a",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Delete Canvas",
+                "enabled": true,
+                "id": "VC3PKH",
+                "text": "\ue017",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Description",
+                "enabled": true,
+                "file_name": [
+                    "image_VKTEE6.png"
+                ],
+                "h": "0.373",
+                "id": "VKTEE6",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.380",
+                "x": "0.617",
+                "y": "0.425"
+            },
+            {
+                "capture_id": "VKTEE6",
+                "children": [],
+                "delay": "2",
+                "description": "Click on Description Box",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC3RFR.png"
+                ],
+                "id": "VC3RFR",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select All Description Text",
+                "enabled": true,
+                "id": "VC3RMR",
+                "text": "\ue009a",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "15",
+                "description": "Write new description",
+                "enabled": true,
+                "id": "VC3T22",
+                "text": "\ue003a\ue00dturtle\ue00dswimming\ue00din\ue00dthe\ue00docean\ue00dwith\ue00dcoral\ue00dand\ue00drocks.",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Blue Color",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL7F3U.png"
+                ],
+                "id": "VL7F3U",
+                "match_threshold": ".5",
+                "primary": true,
+                "type": "Click",
+                "x": "0.745",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "type b to switch to bucket tool",
+                "enabled": true,
+                "id": "V9VLK9",
+                "text": "b",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "1st Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VL8CAC",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Click on 2nd Time to Activate Bucket",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC3XL1",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.690"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXP0P9",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Bucket Tool Activate",
+                "enabled": true,
+                "id": "VXP0TV",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Switch to Brush Tool",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC4K42.png"
+                ],
+                "id": "VC4K42",
+                "match_threshold": "0.3",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Green Color",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL7F3U.png"
+                ],
+                "id": "VKTP0T",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.636",
+                "y": "0.201"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Click 1st Time to Focus on Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC436E",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC466F",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.280",
+                "y": "0.850"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 2",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC47FF",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.180",
+                "y": "0.950"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 3",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC47P7",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.180",
+                "y": "0.800"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXPHWA",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 1 (coor)",
+                "enabled": true,
+                "id": "VXM2YW",
+                "type": "Click Coord",
+                "x": "0.34",
+                "y": "0.55"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 2 (coor)",
+                "enabled": true,
+                "id": "VXM5PN",
+                "type": "Click Coord",
+                "x": "0.35",
+                "y": "0.58"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Green Circle 3 (coor)",
+                "enabled": true,
+                "id": "VXM6HY",
+                "type": "Click Coord",
+                "x": "0.31",
+                "y": "0.54"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Brown Color",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL7F3U.png"
+                ],
+                "id": "VKTYMW",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.255",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Select On Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC49FA",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXP131",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "10",
+                "description": "Brown Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC4860",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.180",
+                "y": "0.875"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Brown Circle 1 (coor)",
+                "enabled": true,
+                "id": "VXM80R",
+                "type": "Click Coord",
+                "x": "0.33",
+                "y": "0.57"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for Image Generation",
+                "enabled": true,
+                "id": "VC59JE",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Art Style",
+                "enabled": true,
+                "file_name": [
+                    "image_VKUCNF.png"
+                ],
+                "h": "0.361",
+                "id": "VKUCNF",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.373",
+                "x": "0.617",
+                "y": "0.545"
+            },
+            {
+                "capture_id": "VKUCNF",
+                "children": [],
+                "delay": "2",
+                "description": "Select Style",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC5A8M.png"
+                ],
+                "id": "VC5A8M",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VKT131",
+                "children": [],
+                "delay": "5",
+                "description": "Select No Selection",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC5C2P.png"
+                ],
+                "id": "VC5C2P",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for New Image Generation",
+                "enabled": true,
+                "id": "VC5CH9",
+                "type": "Delay"
+            },
+            {
+                "capture_id": "VJETL4",
+                "children": [],
+                "delay": "2",
+                "description": "Select Yellow",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL7F3U.png"
+                ],
+                "id": "VKUETE",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.554",
+                "y": "0.228"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Click 1st Time to Focus on Canvas",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC5YXE",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 1",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC5YHC",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.40",
+                "y": "0.300"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 2",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC662R",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "-0.250",
+                "y": "1.700"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 3",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC6677",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.000",
+                "y": "1.700"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 4",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC66CH",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.250",
+                "y": "1.700"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 5",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC66MX",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.750",
+                "y": "1.700"
+            },
+            {
+                "capture_id": "VJFE8J",
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 6",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VL8CAC.png"
+                ],
+                "id": "VC66UF",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "1.000",
+                "y": "1.700"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Canvas 1st Click",
+                "enabled": true,
+                "id": "VXP5N2",
+                "type": "Click Coord",
+                "x": "0.5",
+                "y": "0.5"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 1 (coor)",
+                "enabled": true,
+                "id": "VXM8RN",
+                "type": "Click Coord",
+                "x": "0.55",
+                "y": "0.37"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 2 (coor)",
+                "enabled": true,
+                "id": "VXM8X8",
+                "type": "Click Coord",
+                "x": "0.20",
+                "y": "0.70"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 3 (coor)",
+                "enabled": true,
+                "id": "VXMARL",
+                "type": "Click Coord",
+                "x": "0.28",
+                "y": "0.70"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 4 (coor)",
+                "enabled": true,
+                "id": "VXMAX8",
+                "type": "Click Coord",
+                "x": "0.34",
+                "y": "0.70"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 5 (coor)",
+                "enabled": true,
+                "id": "VXMC2N",
+                "type": "Click Coord",
+                "x": "0.41",
+                "y": "0.70"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Yellow Circle 6 (coor)",
+                "enabled": true,
+                "id": "VXMC7A",
+                "type": "Click Coord",
+                "x": "0.48",
+                "y": "0.70"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for Image Generation",
+                "enabled": true,
+                "id": "VC686X",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Description Box",
+                "enabled": true,
+                "file_name": [
+                    "image_VKULAK.png"
+                ],
+                "h": "0.428",
+                "id": "VKULAK",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.371",
+                "x": "0.614",
+                "y": "0.449"
+            },
+            {
+                "capture_id": "VKULAK",
+                "children": [],
+                "delay": "2",
+                "description": "Click on Description Box",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VC6CXR.png"
+                ],
+                "id": "VC6CXR",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select All Text",
+                "enabled": true,
+                "id": "VC6EF4",
+                "text": "\ue009a",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "20",
+                "description": "Type New Description",
+                "enabled": true,
+                "id": "VC6F5A",
+                "text": "\ue003a\ue00dturtle\ue00dswimming\ue00din\ue00dthe\ue00docean\ue00dwith\ue00dcorals\ue00dand\ue00drocks\ue00don\ue00dshallow\ue00dwater\ue00dwith\ue00dthe\ue00dsun\ue00doutside.",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for New Image Generation",
+                "enabled": true,
+                "id": "VC6FPC",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Region for closing",
+                "enabled": true,
+                "file_name": [
+                    "image_V9VEHX.png"
+                ],
+                "h": "0.060",
+                "id": "V9VEHX",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.104",
+                "x": "0.896",
+                "y": "0.000"
+            },
+            {
+                "capture_id": "V9VEHX",
+                "children": [],
+                "delay": "2",
+                "description": "Close button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9VEL0.png"
+                ],
+                "id": "V9VEL0",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Wait for Pop Up",
+                "enabled": true,
+                "id": "VC6MHL",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_VC6W21.png"
+                ],
+                "h": "0.630",
+                "id": "VC6W21",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.510",
+                "x": "0.182",
+                "y": "0.212"
+            },
+            {
+                "capture_id": "VC6W21",
+                "children": [],
+                "delay": "2",
+                "description": "don't save button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_V9VFNN.png"
+                ],
+                "id": "V9VFNN",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "W7382P",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Kill MSPaint",
+                "enabled": true,
+                "file_name": [
+                    "code_W72XHL.py"
+                ],
+                "id": "W72XHL",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "W72XC9",
+        "type": "Teardown"
+    }
+]

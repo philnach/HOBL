@@ -1,0 +1,69 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-24",
+        "description": "Open OneNote",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "id": "V2MPFA",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "children": []
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UHA35R",
+        "include_path": "..\\prod_onenote_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "8",
+        "description": "",
+        "enabled": true,
+        "id": "UHA2WF",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "SHIFT-F9",
+        "enabled": true,
+        "id": "UH7EXW",
+        "text": "\ue008\ue039",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "id": "V2MPJY",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "value": "prod",
+                "val_options": ""
+            },
+            {
+                "name": "[phase_name]",
+                "value": "open_onenote",
+                "val_options": ""
+            }
+        ],
+        "children": []
+    }
+]

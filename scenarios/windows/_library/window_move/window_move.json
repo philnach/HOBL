@@ -1,0 +1,75 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-07-15",
+        "description": "Conditional window move",
+        "enabled": true,
+        "id": "12JWLUL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Display to use",
+        "enabled": true,
+        "id": "12K0RM4",
+        "name": "[screen]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "12JWNF9",
+                "include_path": "..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "val_options": "",
+                        "value": "powershell.exe C:\\hobl_bin\\InputInject\\WindowMove [typing_delay] [screen]"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "12JWLVK",
+        "left_term": "[platform]",
+        "right_term": "W365",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "12L682J",
+                "screen": "[screen]",
+                "type": "Window Move",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "12JWN13",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12JWLVL",
+        "type": "End If"
+    }
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The time in seconds to call for. Default is 600s or 5min.",
+        "enabled": true,
+        "id": "1H50PHV",
+        "multiple": false,
+        "name": "[teams:duration]",
+        "type": "Set User Default",
+        "val_options": "60,120,300,600",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "1H3CFUL",
+        "include_path": "scenarios\\windows\\_library\\Teams\\teams_create_meeting",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "13AJV6F",
+        "include_path": "scenarios\\windows\\_library\\Teams\\teams_join_meeting",
+        "params": [],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Meeting is now Running",
+        "enabled": true,
+        "id": "YTVTHY",
+        "type": "Comment"
+    }
+]

@@ -1,0 +1,254 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "macbook_pro_m4max",
+        "children": [],
+        "create_date": "2025-10-30",
+        "description": "",
+        "enabled": true,
+        "id": "17XE5NL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Loops for Benchmark",
+        "enabled": true,
+        "id": "17XF99N",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Loop Counter for Starting Benchmark",
+        "enabled": true,
+        "id": "17XFTYL",
+        "name": "[loop_counter]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "30.0",
+                "description": "Launch Cyberpunk",
+                "enabled": true,
+                "file_name": [
+                    "code_17XE5WF.py"
+                ],
+                "id": "17XE5WF",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17XE5PY",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Space to Get Through 1st Cut Scene",
+                "enabled": true,
+                "id": "17XF8R2",
+                "text": "\ue00d",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Space to go Main Menu",
+                        "enabled": true,
+                        "id": "17XEPE9",
+                        "text": "\ue00d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Go to Settings Menu",
+                        "enabled": true,
+                        "id": "17XF343",
+                        "text": "\ue012\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "5",
+                                "description": "Start Benchmark",
+                                "enabled": true,
+                                "id": "17XF3PE",
+                                "text": "333b\ue007",
+                                "type": "Type",
+                                "typing_delay": "[typing_delay]"
+                            }
+                        ],
+                        "description": "1st Loops Benchmark Vs other",
+                        "enabled": true,
+                        "eval_method": "==",
+                        "id": "17XFP3V",
+                        "left_term": "[loop_counter]",
+                        "right_term": "1",
+                        "type": "If"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "2",
+                                "description": "Start Benchmark",
+                                "enabled": true,
+                                "id": "17XFPM8",
+                                "text": "b\ue007",
+                                "type": "Type",
+                                "typing_delay": "[typing_delay]"
+                            }
+                        ],
+                        "description": "If > 1st loop Benchmark",
+                        "enabled": true,
+                        "id": "17XFPHP",
+                        "type": "Else"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "17XFP3W",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "95",
+                        "description": "for Benchmark to Finish",
+                        "enabled": true,
+                        "id": "17XF4MW",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "20",
+                        "description": "Go Back to Main Menu",
+                        "enabled": true,
+                        "id": "17XF7W9",
+                        "text": "\ue00c\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.5",
+                        "description": "",
+                        "enabled": true,
+                        "id": "17XFUCC",
+                        "name": "[loop_counter]",
+                        "type": "Increment",
+                        "value": "1"
+                    }
+                ],
+                "count": "[loops]",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "17XF920",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "17XF921",
+                "type": "End Loop"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Bottom Left for Settings Button",
+                "enabled": false,
+                "file_name": [
+                    "image_17XEUL6.png"
+                ],
+                "h": "0.652",
+                "id": "17XEUL6",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.558",
+                "x": "0.009",
+                "y": "0.345"
+            },
+            {
+                "capture_id": "17XEUL6",
+                "children": [],
+                "delay": "2",
+                "description": "Settings Button",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_17XEV18.png"
+                ],
+                "id": "17XEV18",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17XE5R7",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Go to Main Menu",
+                "enabled": true,
+                "id": "17XH1K8",
+                "text": "\ue00d",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Game Gracefully",
+                "enabled": true,
+                "id": "17XH1VL",
+                "text": "\ue012\ue015\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Kill Cyberpunk",
+                "enabled": true,
+                "file_name": [
+                    "code_17XH20E.py"
+                ],
+                "id": "17XH20E",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "17XE5RL",
+        "type": "Teardown"
+    }
+]

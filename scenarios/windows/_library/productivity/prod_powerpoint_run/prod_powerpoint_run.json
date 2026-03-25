@@ -1,0 +1,376 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-01",
+        "description": "Edit PowerPoint slide",
+        "enabled": true,
+        "id": "UR7X03",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2N1M9",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "4",
+                "description": "PGDN",
+                "enabled": true,
+                "id": "V5U5A8",
+                "text": "\ue00f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "count": "4",
+        "delay": "1",
+        "description": "",
+        "enabled": true,
+        "id": "V5U549",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "V5U54A",
+        "type": "End Loop"
+    },
+    {
+        "children": [],
+        "delay": "3.5",
+        "description": "Page down 3x",
+        "enabled": true,
+        "id": "UR9CLF",
+        "text": "\ue00f\ue00f\ue00f",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Menu",
+        "enabled": true,
+        "file_name": [
+            "image_UR88P2.png"
+        ],
+        "h": "0.107",
+        "id": "UR88P2",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.164",
+        "x": "0.000",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "UR88P2",
+        "children": [],
+        "delay": "2",
+        "description": "Home",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_URA94Y.png"
+        ],
+        "id": "URA94Y",
+        "primary": true,
+        "type": "Click",
+        "x": "0.312",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "New Slide",
+        "enabled": true,
+        "file_name": [
+            "image_V12EP4.png"
+        ],
+        "h": "0.487",
+        "id": "V12EP4",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.479",
+        "x": "0.039",
+        "y": "0.040"
+    },
+    {
+        "capture_id": "V12EP4",
+        "children": [],
+        "delay": "2",
+        "description": "New slide",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UR8APC.png"
+        ],
+        "id": "UR8APC",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "capture_id": "V12EP4",
+        "children": [],
+        "delay": "1",
+        "description": "Slide content",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_V1JT0A.png"
+        ],
+        "id": "V1JT0A",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "4.5",
+        "description": "Delete content and paste",
+        "enabled": true,
+        "id": "UR969J",
+        "text": "\ue009a\ue009\ue017\ue009v",
+        "type": "Type",
+        "typing_delay": "400"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "4",
+                "description": "PGUP",
+                "enabled": true,
+                "id": "V36KLA",
+                "text": "\ue00e",
+                "type": "Type",
+                "typing_delay": "400"
+            }
+        ],
+        "count": "4",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "V36K62",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "V36K63",
+        "type": "End Loop"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "4",
+                "description": "PGDN",
+                "enabled": true,
+                "id": "V36KY4",
+                "text": "\ue00f",
+                "type": "Type",
+                "typing_delay": "400"
+            }
+        ],
+        "count": "4",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "V36KVV",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "V36KVW",
+        "type": "End Loop"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "V36LYF",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "4",
+        "description": "Select and delete slide",
+        "enabled": true,
+        "id": "UR9PPC",
+        "text": "\ue008\ue036\ue008\ue017",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "children": [],
+        "delay": "3.5",
+        "description": "Copy paste slide",
+        "enabled": true,
+        "id": "UR9UHR",
+        "text": "\ue009cv",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "children": [],
+        "delay": "2.5",
+        "description": "Undo and save",
+        "enabled": true,
+        "id": "UR9VH2",
+        "text": "\ue009z\ue009\ue009s\ue009",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "capture_id": "UR88P2",
+        "children": [],
+        "delay": "2",
+        "description": "File",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UR9XJ3.png"
+        ],
+        "id": "UR9XJ3",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "File menu",
+        "enabled": true,
+        "file_name": [
+            "image_VJFYE6.png"
+        ],
+        "h": "0.519",
+        "id": "VJFYE6",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.107",
+        "x": "0.001",
+        "y": "0.001"
+    },
+    {
+        "capture_id": "VJFYE6",
+        "children": [],
+        "delay": "2",
+        "description": "Info",
+        "enabled": false,
+        "exception_on": "No match",
+        "file_name": [
+            "image_VJH0JT.png"
+        ],
+        "id": "VJH0JT",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.347",
+        "y": "0.142"
+    },
+    {
+        "id": "W8MLF8",
+        "type": "Click",
+        "description": "",
+        "enabled": true,
+        "delay": "1",
+        "x": "0.500",
+        "y": "0.500",
+        "file_name": [
+            "image_W8MLF8.png"
+        ],
+        "exception_on": "No match",
+        "match_threshold": "",
+        "primary": true,
+        "children": [],
+        "capture_id": "VJFYE6"
+    },
+    {
+        "capture_id": "VJFYE6",
+        "children": [],
+        "delay": "1",
+        "description": "Back",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_URA116.png"
+        ],
+        "id": "URA116",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "capture_id": "UR88P2",
+        "children": [],
+        "delay": "2",
+        "description": "Insert",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_URAAAE.png"
+        ],
+        "id": "URAAAE",
+        "primary": true,
+        "type": "Click",
+        "x": "0.688",
+        "y": "0.500"
+    },
+    {
+        "capture_id": "UR88P2",
+        "children": [],
+        "delay": "2.5",
+        "description": "Home",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_URACRW.png"
+        ],
+        "id": "URACRW",
+        "primary": true,
+        "type": "Click",
+        "x": "0.312",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2N1PJ",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "prod"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "run_powerpoint"
+            }
+        ],
+        "type": "Include"
+    }
+]

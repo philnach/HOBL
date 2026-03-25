@@ -1,0 +1,276 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "clip1 add first effect",
+        "enabled": true,
+        "id": "10PKH4C",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "go to fusion page",
+        "enabled": true,
+        "id": "10T5YLN",
+        "text": "%",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Flicker addition",
+        "enabled": true,
+        "id": "112JLP8",
+        "text": "\ue009\ue00af",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "Add Gaussian Blur effect",
+        "enabled": true,
+        "id": "10T61KK",
+        "text": "\ue009\ue008b",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add digital glitch",
+        "enabled": true,
+        "id": "11T92CN",
+        "text": "D",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Settings for Merge",
+        "enabled": true,
+        "file_name": [
+            "image_11T93CM.png"
+        ],
+        "h": "0.140",
+        "id": "11T93CM",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.266",
+        "x": "0.728",
+        "y": "0.200"
+    },
+    {
+        "capture_id": "11T93CM",
+        "children": [],
+        "delay": "2",
+        "description": "X coordinate",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MV3W2.png"
+        ],
+        "id": "12MV3W2",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.745",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "select X coord",
+        "enabled": true,
+        "id": "11T93UN",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "change merge params",
+        "enabled": true,
+        "id": "11T943E",
+        "text": "\ue0030.55\ue007\ue0040.2\ue004",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Region for Nodes",
+        "enabled": true,
+        "file_name": [
+            "image_12MV4RT.png"
+        ],
+        "h": "0.201",
+        "id": "12MV4RT",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.194",
+        "x": "0.014",
+        "y": "0.707"
+    },
+    {
+        "capture_id": "12MV4RT",
+        "children": [],
+        "delay": "2",
+        "description": "on Digital Glitch node",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T964M.png"
+        ],
+        "id": "11T964M",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Large Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_11T97XW.png"
+        ],
+        "h": "0.195",
+        "id": "11T97XW",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.222",
+        "x": "0.724",
+        "y": "0.200"
+    },
+    {
+        "capture_id": "11T97XW",
+        "children": [],
+        "delay": "2",
+        "description": "Large Text Area",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T9895.png"
+        ],
+        "id": "11T9895",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.270",
+        "y": "0.245"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select All Text",
+        "enabled": true,
+        "id": "11T98CU",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Blur and Flicker",
+        "enabled": true,
+        "id": "11T98N3",
+        "text": "\ue003Blur\ue00dand\ue00dFlicker",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Small Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_12MVKXK.png"
+        ],
+        "h": "0.220",
+        "id": "12MVKXK",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.207",
+        "x": "0.724",
+        "y": "0.590"
+    },
+    {
+        "capture_id": "12MVKXK",
+        "children": [],
+        "delay": "2",
+        "description": "Small Text Area",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T99PC.png"
+        ],
+        "id": "11T99PC",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select All",
+        "enabled": true,
+        "id": "11T99WK",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Next: Montage",
+        "enabled": true,
+        "id": "11T9A1N",
+        "text": "\ue003Next:\ue00dMontage",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "12MV4RT",
+        "children": [],
+        "delay": "2",
+        "description": "DigitalGlitch",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T9H75.png"
+        ],
+        "id": "11T9H75",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go back to Cut Page",
+        "enabled": true,
+        "id": "10T6246",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

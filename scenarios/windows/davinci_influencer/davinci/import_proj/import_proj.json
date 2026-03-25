@@ -1,0 +1,83 @@
+[
+    {
+        "author": "wssi",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-23",
+        "description": "Import proj",
+        "enabled": true,
+        "id": "11ECJ2M",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open import dialog",
+        "enabled": true,
+        "id": "11ECAP3",
+        "text": "\ue009i",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Import proj archive",
+        "enabled": true,
+        "id": "11ECC7M",
+        "text": "\ue004\ue004\ue004\ue004\ue004\ue007C:\\automate\ue007\ue004\ue004\ue004\ue004\ue004\ue004\ue004bench.dra\ue007\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_11ECVJ1.png"
+        ],
+        "h": "1",
+        "id": "11ECVJ1",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "11ECVJ1",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_11EJ6V8.png"
+        ],
+        "h": "1.000",
+        "id": "11EJ6V8",
+        "timeout": "120",
+        "type": "Check Until Found",
+        "w": "1.000",
+        "x": "0.000",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "11ECVJ1",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11ECW0H.png"
+        ],
+        "id": "11ECW0H",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

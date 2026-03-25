@@ -1,0 +1,112 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Launch Teams",
+        "enabled": true,
+        "file_name": [
+            "code_172J04M.py"
+        ],
+        "id": "172J04M",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "15",
+        "description": "",
+        "enabled": true,
+        "id": "YWFYYV",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Right of Call",
+        "enabled": true,
+        "file_name": [
+            "image_172H60X.png"
+        ],
+        "h": "0.553",
+        "id": "172H60X",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.511",
+        "x": "0.489",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "172H60X",
+        "children": [],
+        "delay": "2",
+        "description": "Stop Sharing",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_172H6JA.png"
+        ],
+        "id": "172H6JA",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Stop Video Player",
+                        "enabled": true,
+                        "file_name": [
+                            "code_172LLXF.py"
+                        ],
+                        "id": "172LLXF",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "!=",
+                "id": "163XHV4",
+                "left_term": "[teams:show_desktop]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "163XHV5",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "163XHRE",
+        "left_term": "[teams:send_screen]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "163XHRF",
+        "type": "End If"
+    }
+]

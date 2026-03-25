@@ -1,0 +1,55 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-04-02",
+        "description": "",
+        "enabled": true,
+        "id": "W9NP4J",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W9NPRP",
+        "name": "[my_param]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "W9NP90",
+        "include_path": "..\\param_test_component",
+        "params": [
+            {
+                "name": "[my_param]",
+                "val_options": "0,1",
+                "value": "0"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "W9PPPT",
+        "include_path": "..\\param_test_component",
+        "params": [
+            {
+                "name": "[my_param]",
+                "val_options": "0,1",
+                "value": "[my_param]"
+            }
+        ],
+        "type": "Include"
+    }
+]

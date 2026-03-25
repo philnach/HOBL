@@ -1,0 +1,163 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-07-22",
+        "description": "Keyboard Shortcuts",
+        "enabled": true,
+        "id": "12WXHW3",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open Keyboard Customization",
+        "enabled": true,
+        "id": "12WXXX2",
+        "text": "\ue009\ue00ak",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Right of Keyboard Customization",
+        "enabled": true,
+        "file_name": [
+            "image_12WXY8N.png"
+        ],
+        "h": "0.194",
+        "id": "12WXY8N",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.202",
+        "x": "0.694",
+        "y": "0.089"
+    },
+    {
+        "capture_id": "12WXY8N",
+        "children": [],
+        "delay": "2",
+        "description": "Arrow Dropdown Menu",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12WXYMR.png"
+        ],
+        "id": "12WXYMR",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.174",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select the Hobl Preset",
+        "enabled": true,
+        "id": "12WXYV1",
+        "text": "\ue013\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Bottom Right of Keyboard Customization",
+                "enabled": true,
+                "file_name": [
+                    "image_12WY4YY.png"
+                ],
+                "h": "0.278",
+                "id": "12WY4YY",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.274",
+                "x": "0.621",
+                "y": "0.598"
+            },
+            {
+                "capture_id": "12WY4YY",
+                "children": [],
+                "delay": "2",
+                "description": "Save Button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_12WY5HK.png"
+                ],
+                "id": "12WY5HK",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.718",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "12WY0P5",
+        "type": "Try"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12WY0P6",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12WY0P7",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12WY0P8",
+        "type": "End Try"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Bottom Right Again to Close",
+        "enabled": true,
+        "file_name": [
+            "image_12WY8PW.png"
+        ],
+        "h": "0.219",
+        "id": "12WY8PW",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.221",
+        "x": "0.646",
+        "y": "0.644"
+    },
+    {
+        "capture_id": "12WY8PW",
+        "children": [],
+        "delay": "2",
+        "description": "Close",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12WY66N.png"
+        ],
+        "id": "12WY66N",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.282",
+        "y": "0.500"
+    }
+]

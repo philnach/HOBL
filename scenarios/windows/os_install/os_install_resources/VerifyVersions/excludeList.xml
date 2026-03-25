@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DataStore> 
+  <WhiteList>
+    <Exclude>
+      <DeviceName>Windows Hello</DeviceName>
+      <DeviceHWID>WindowsHello</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>Surface Ethernet Adapter</DeviceName>
+      <DeviceHWID>PID_07C6</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>USB\VID_1482</DeviceName>
+      <DeviceHWID>USB\VID_1482</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>PST button Driver</DeviceName>
+      <DeviceHWID>root\button</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>MBFW</DeviceName>
+      <DeviceHWID>MBFW</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>Root\WindowsHelloFaceSoftwareDriver</DeviceName>
+      <DeviceHWID>Root\WindowsHelloFaceSoftwareDriver</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>Dev Kit TPM</DeviceName>
+      <DeviceHWID>a7a9832a-e3f2-43b6-acfc-ca08c38583b8</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>Dev Kit TPM</DeviceName>
+      <DeviceHWID>10dedadc-31c4-497a-858a-9b74ffede705</DeviceHWID>
+    </Exclude>
+    <Exclude>
+      <DeviceName>Dev Kit TPM</DeviceName>
+      <DeviceHWID>a7a9832a-e3f2-43b6-acfc-ca08c38583b8</DeviceHWID>
+    </Exclude>
+  </WhiteList>
+</DataStore>

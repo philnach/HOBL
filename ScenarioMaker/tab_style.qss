@@ -1,0 +1,21 @@
+QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background: rgb(255, 255, 255);
+} 
+
+QTabBar::tab {
+  background: rgb(230, 230, 230); 
+  border: 1px solid rgb(230, 230, 230);
+  /*border: none;*/
+  padding: 4px;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(255, 255, 255); 
+  margin-bottom: -2px; 
+  /*
+  border: 1px solid rgb(230, 230, 230);
+  border: none;
+  */
+}

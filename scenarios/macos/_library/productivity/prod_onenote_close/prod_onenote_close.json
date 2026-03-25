@@ -1,0 +1,30 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2025-12-23",
+        "description": "Close OneNote",
+        "enabled": true,
+        "id": "UHHKAM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "CMD+Q to quit OneNote",
+        "enabled": true,
+        "id": "UHK3F8",
+        "text": "\ue03dq",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "Wait for app to close",
+        "enabled": true,
+        "id": "WAIT003",
+        "type": "Delay"
+    }
+]

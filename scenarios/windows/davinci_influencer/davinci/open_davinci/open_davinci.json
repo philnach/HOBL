@@ -1,0 +1,56 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-08",
+        "description": "Open DaVinci Resolve",
+        "enabled": true,
+        "id": "10N87M3",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "start davinci",
+        "enabled": true,
+        "file_name": [
+            "code_11RY088.py"
+        ],
+        "id": "11RY088",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_10VWJ37.png"
+        ],
+        "h": "1",
+        "id": "10VWJ37",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "10VWJ37",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_10VWJEX.png"
+        ],
+        "h": "1.000",
+        "id": "10VWJEX",
+        "timeout": "120",
+        "type": "Check Until Found",
+        "w": "1.000",
+        "x": "0.000",
+        "y": "0.000"
+    }
+]

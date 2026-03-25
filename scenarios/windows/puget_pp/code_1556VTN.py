@@ -1,0 +1,31 @@
+import logging
+import os
+
+def run(scenario):
+    logging.debug('Executing code block: code_1556VTN.py')
+
+    try:
+        scenario._kill("Adobe Premiere Pro.exe")
+    except:
+        pass
+
+    csv_path = os.path.join(scenario.result_dir, 'premiere_pro_output.log')
+
+    if not os.path.exists(csv_path):
+        raise Exception(f"Log file not found: {csv_path}. Premiere Pro possibly errored out.")
+
+    score = 0
+    with open(csv_path, "r", encoding="utf-8") as f:
+        for line in f:
+            if line.startswith("Overall Score"):
+                parts = line.strip().split(",")
+                score = parts[2]
+                break
+        else:
+            raise Exception('Overall Score Not Found. Premiere Pro possibly errored out.')
+
+    if score != 0:
+        # write score to csv file
+        output_csv_path = os.path.join(scenario.result_dir, 'benchmark_result.csv')
+        with open(output_csv_path, "w") as f:
+            f.write(f"Overall Score,{score}")

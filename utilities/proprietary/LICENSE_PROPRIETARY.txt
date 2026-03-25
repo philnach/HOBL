@@ -1,0 +1,52 @@
+MICROSOFT PROPRIETARY SOFTWARE LICENSE AGREEMENT
+Last Updated: 2026-02-03
+
+Copyright (c) Microsoft Corporation. 
+All rights reserved.
+
+This license governs your use of the following Microsoft proprietary components:
+- button
+- MonitorPowerEvents
+- OfficeDeployment
+- ParseFrameData
+- ParsePowerHeavy
+- ParsePowerLight
+- ParseUtc
+- PowerStripTool
+- radio
+- RTCWakeCore
+- sleep
+- WindowsApplicationDriver
+
+(collectively, the “Software”).
+
+1. License Grant
+Microsoft grants you a non‑exclusive, worldwide, royalty‑free license to:
+ • download, install, and use the Software solely for the purpose of exercising the functionality of the open-source project with which it is distributed; and
+ • redistribute unmodified copies of the Software only as part of that same project.
+
+2. Restrictions
+You may NOT:
+ • modify, reverse engineer, decompile, or disassemble the Software;
+ • use the Software independently from the associated open-source project;
+ • incorporate the Software into any commercial product or service;
+ • remove or alter any proprietary notices included in the Software.
+
+3. Ownership
+Microsoft retains all right, title, and interest in and to the Software. No rights are granted except those expressly stated in this Agreement.
+
+4. Disclaimer of Warranty
+THE SOFTWARE IS PROVIDED “AS IS.” MICROSOFT MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON‑INFRINGEMENT.
+
+5. Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, MICROSOFT SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THIS AGREEMENT.
+
+6. Termination
+This Agreement terminates automatically if you fail to comply with any term. Upon termination, you must cease all use and destroy all copies of the Software.
+
+7. Applicable Law
+This Agreement is governed by the laws of the State of Washington, USA, without regard to its conflict‑of‑law principles.
+
+By using the Software, you acknowledge that you have read, understood, and agree to be bound by this Agreement.
+
+© Microsoft Corporation.

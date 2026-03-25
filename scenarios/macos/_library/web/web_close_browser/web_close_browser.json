@@ -1,0 +1,22 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-23",
+        "description": "Close browser",
+        "enabled": true,
+        "id": "UEXHLW",
+        "type": "Information"
+    },
+    {
+        "id": "10U1EM5",
+        "type": "Type",
+        "description": "CMD-q",
+        "enabled": true,
+        "delay": "2",
+        "text": "\ue03dq",
+        "typing_delay": "[typing_delay]",
+        "children": []
+    }
+]

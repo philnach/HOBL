@@ -1,0 +1,126 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Default Params",
+        "enabled": true,
+        "id": "YTNUEV",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed.",
+        "enabled": true,
+        "id": "1513J8J",
+        "multiple": false,
+        "name": "[teams:maintain_bots]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1H50NJJ",
+                "include_path": "scenarios\\windows\\_library\\Teams\\teams_setup",
+                "params": [
+                    {
+                        "name": "[teams:duration]",
+                        "val_options": "",
+                        "value": "600"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXF95",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Periodically check for bots in call and add as needed.",
+                        "enabled": true,
+                        "file_name": [
+                            "code_12YEERJ.py"
+                        ],
+                        "id": "12YEERJ",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "12YEE4R",
+                "left_term": "[teams:maintain_bots]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "[teams:duration]",
+                        "description": "Call duration",
+                        "enabled": true,
+                        "id": "YTX9R3",
+                        "type": "Delay"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "12YEEEJ",
+                "type": "Else"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "12YEE4T",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTX9MY",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13LPX71",
+                "include_path": "scenarios\\windows\\_library\\Teams\\teams_teardown",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXARH",
+        "type": "Teardown"
+    }
+]

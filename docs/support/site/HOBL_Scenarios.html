@@ -1,0 +1,835 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="HOBL_Release_Notes.html">
+      
+      
+        <link rel="next" href="HOBL_Tools.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>HOBL Scenarios - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hobl-scenarios" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOBL Scenarios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL.html" class="md-nav__link">
+        HOBL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Parameters.html" class="md-nav__link">
+        HOBL Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Prep.html" class="md-nav__link">
+        HOBL Prep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Release_Notes.html" class="md-nav__link">
+        HOBL 25 Release Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOBL Scenarios
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HOBL_Scenarios.html" class="md-nav__link md-nav__link--active">
+        HOBL Scenarios
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cinebench" class="md-nav__link">
+    cinebench
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_1on1_audio" class="md-nav__link">
+    teams2_1on1_audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_1on1_video" class="md-nav__link">
+    teams2_1on1_video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_audio" class="md-nav__link">
+    teams2_3x3_audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_present" class="md-nav__link">
+    teams2_3x3_present
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_video" class="md-nav__link">
+    teams2_3x3_video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_vid_share" class="md-nav__link">
+    teams2_3x3_vid_share
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_9b_audio_desktop" class="md-nav__link">
+    teams2_9b_audio_desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_audio_desktop" class="md-nav__link">
+    teams2_audio_desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_idle" class="md-nav__link">
+    teams2_idle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube" class="md-nav__link">
+    youtube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube_nasa" class="md-nav__link">
+    youtube_nasa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comm_check" class="md-nav__link">
+    comm_check
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Tools.html" class="md-nav__link">
+        HOBL Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI.html" class="md-nav__link">
+        HOBL UI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI_Release_Notes.html" class="md-nav__link">
+        HOBL UI Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cinebench" class="md-nav__link">
+    cinebench
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_1on1_audio" class="md-nav__link">
+    teams2_1on1_audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_1on1_video" class="md-nav__link">
+    teams2_1on1_video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_audio" class="md-nav__link">
+    teams2_3x3_audio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_present" class="md-nav__link">
+    teams2_3x3_present
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_video" class="md-nav__link">
+    teams2_3x3_video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_3x3_vid_share" class="md-nav__link">
+    teams2_3x3_vid_share
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_9b_audio_desktop" class="md-nav__link">
+    teams2_9b_audio_desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_audio_desktop" class="md-nav__link">
+    teams2_audio_desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teams2_idle" class="md-nav__link">
+    teams2_idle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube" class="md-nav__link">
+    youtube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube_nasa" class="md-nav__link">
+    youtube_nasa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comm_check" class="md-nav__link">
+    comm_check
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hobl-scenarios">HOBL Scenarios</h1>
+<h2 id="cinebench">cinebench</h2>
+<p>The Cinebench benchmark.</p>
+<p><u>Parameters:</u></p>
+<p><code>duration</code> - Minimum run time in seconds <strong>Default:</strong> <code>60</code> </p>
+<p><code>workload</code> - Workload type: single_core or multi_core <strong>Default:</strong> <code>multi_core</code>  <strong>Options:</strong> <code>single_core, multi_core</code></p>
+<h2 id="teams2_1on1_audio">teams2_1on1_audio</h2>
+<p>Microsoft Teams audio call with 1 bot participant.
+Local camera is off and mic is on, other participant is a bot sending audio.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>300</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_1on1_video">teams2_1on1_video</h2>
+<p>Microsoft Teams video call with 1 bot participant.
+Local camera and mic are on, other participant is a bot sending video and audio.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>300</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_3x3_audio">teams2_3x3_audio</h2>
+<p>Microsoft Teams audio call with 9 bot participants.
+Local camera is off and mic is on, other 9 participants are bots sending audio.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>9</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>600</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_3x3_present">teams2_3x3_present</h2>
+<p>Microsoft Teams video call with 9 bot participants.
+Local camera and mic are on, other 9 participants are bots sending video and audio.
+Local users is sharing screen.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>9</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>600</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_3x3_video">teams2_3x3_video</h2>
+<p>Microsoft Teams video call with 9 bot participants.
+Local camera and mic are on, other 9 participants are bots sending video and audio.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>9</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>600</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_3x3_vid_share">teams2_3x3_vid_share</h2>
+<p>Microsoft Teams video call with 9 bot participants.
+Local camera and mic are on, other 9 participants are bots sending video and audio.
+One of the bots is sharing a video.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>9</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>600</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_9b_audio_desktop">teams2_9b_audio_desktop</h2>
+<p>Microsoft Teams audio call with 9 bot participants.
+Local camera is off and mic is on, other 9 participants are bots sending audio.
+Local user is sharing desktop.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>9</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>300</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_audio_desktop">teams2_audio_desktop</h2>
+<p>Microsoft Teams audio call with 1 bot participant.
+Local camera is off and mic is on, other participant is a bot sending audio.
+Local user is sharing desktop.</p>
+<p><u>Parameters:</u></p>
+<p><code>meeting_time</code> - Set the time in minutes that the meeting can last up to. Default is 120min. <strong>Default:</strong> <code>120</code> </p>
+<p><code>access_key</code> - The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key. <strong>Default:</strong> <code>-1</code> </p>
+<p><code>number_of_bots</code> - Sets the number of bots to have in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>1, 2, 4, 8, 9</code></p>
+<p><code>bots_send_video</code> - Set to 1 if bots should have their cameras on. Set to 0 for audio only calls. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_send_audio</code> - Set to 1 to have bots send audio. Set to 0 to have bots be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_share_screen</code> - Set to 1 to have the primary bot share its screen in the meeting. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_test_server</code> - For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>duration</code> - Sets the time in seconds for the test to run. <strong>Default:</strong> <code>300</code>  <strong>Options:</strong> <code>60, 120, 240, 300, 600, 900</code></p>
+<p><code>verify_bots</code> - Check that the expected number of bots are present <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_video</code> - Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_audio</code> - Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>send_screen</code> - Set to 1 to have the DUT share its screen in the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>presentation_video_path</code> - Sets the path to the video file to use as the presented screen when the DUT is screen sharing. <strong>Default:</strong> <code>\teams_resources\ppt.mp4</code> </p>
+<p><code>show_desktop</code> - Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>bots_force_subscribe_resolution</code> - Force the bots to subscribe to a specific video resolution <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1080, 720, 480, 360</code></p>
+<p><code>parse_MSTeams_Logs</code> - Set to 1 to parse Teams logs after collecting them. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>parser_location</code> - Sets the path to the parser to use to decode Teams logs. <strong>Default:</strong> <code>..\ScenarioAssets\Teamsdecode\bin\UnifiedLogging</code> </p>
+<p><code>collect_MSTeams_Logs</code> - Set to 1 to collect MS Teams logs of the meeting after exiting the meeting. <strong>Default:</strong> <code>1</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<p><code>maintain_bots</code> - Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed. <strong>Default:</strong> <code>0</code>  <strong>Options:</strong> <code>0, 1</code></p>
+<h2 id="teams2_idle">teams2_idle</h2>
+<p>Teams is launched and then minimized to run in the background for the duration of the test.</p>
+<p><u>Parameters:</u></p>
+<p><code>duration</code> -  <strong>Default:</strong> <code>300</code> </p>
+<p><code>minimize_all</code> -  <strong>Default:</strong> <code>1</code> </p>
+<p><code>minimize_teams_only</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="youtube">youtube</h2>
+<p>Plays a YouTube video in a web browser in Default View mode.</p>
+<p>Steps:</p>
+<ol>
+<li>Navigate to Tears of Steel YouTube video URL: <a href="https://youtu.be/41hv2tW5Lc4">youtu.be/41hv2tW5Lc4</a></li>
+<li>Change video quality to 1080p.</li>
+<li>Let video play for specified duration and loops.</li>
+<li>Close web browser.</li>
+</ol>
+<p><u>Parameters:</u></p>
+<p><code>duration</code> -  <strong>Default:</strong> <code>600</code> </p>
+<p><code>loops</code> -  <strong>Default:</strong> <code>1</code> </p>
+<h2 id="youtube_nasa">youtube_nasa</h2>
+<p>Plays a YouTube video in a web browser in Default View mode.</p>
+<p>Steps:</p>
+<ol>
+<li>Navigate to Tears of Steel YouTube video URL: <a href="http://aka.ms/AAnpaqy">aka.ms/AAnpaqy</a></li>
+<li>Change video quality to 1080p.</li>
+<li>Let video play for specified duration and loops.</li>
+<li>Close web browser.</li>
+</ol>
+<p><u>Parameters:</u></p>
+<p><code>duration</code> -  <strong>Default:</strong> <code>180</code> </p>
+<p><code>loops</code> -  <strong>Default:</strong> <code>1</code> </p>
+<p><code>full_screen</code> -  <strong>Default:</strong> <code>0</code> </p>
+<h2 id="comm_check">comm_check</h2>
+<p>Checks for valid communications between host and DUT.</p>
+<p>Steps:</p>
+<ol>
+<li>Ping DUT</li>
+<li>SimpleRemote RPC call</li>
+<li>SimpleRemote Async call</li>
+<li>WinAppDriver launch and communication</li>
+<li>Report results</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-10",
+        "description": "Move to next clip",
+        "enabled": true,
+        "id": "10T64PJ",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click on Clip",
+        "enabled": true,
+        "id": "10THEA8",
+        "type": "Click Coord",
+        "x": "0.65",
+        "y": "0.85"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go to next clip",
+        "enabled": true,
+        "id": "10THFRC",
+        "text": "\ue015",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click on next clip",
+        "enabled": true,
+        "id": "10THH5X",
+        "type": "Click Coord",
+        "x": "0.65",
+        "y": "0.85"
+    }
+]

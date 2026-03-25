@@ -1,0 +1,58 @@
+[
+    {
+        "author": "dasashutosh",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-02",
+        "description": "Open Settings from search",
+        "enabled": true,
+        "id": "2C0001",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "2C0003",
+        "include_path": "..\\etw_event_tag",
+        "params": [
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "SettingsLaunch"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Start",
+        "enabled": true,
+        "id": "2C0004",
+        "text": "\ue03d",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Settings",
+        "enabled": true,
+        "id": "2C0005",
+        "text": "Settings",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "ENTER",
+        "enabled": true,
+        "id": "2C0006",
+        "text": "\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

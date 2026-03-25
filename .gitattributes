@@ -1,0 +1,2 @@
+*.sh text eol=lf
+setup/dut_setup.sh binary

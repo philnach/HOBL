@@ -1,0 +1,23 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2025-12-22",
+        "description": "Productivity Setup",
+        "enabled": true,
+        "id": "UTAEJW",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "MacOS Productivity setup",
+        "enabled": true,
+        "file_name": [
+            "code_UTAWXA.py"
+        ],
+        "id": "UTAWXA",
+        "type": "Code"
+    }
+]

@@ -1,0 +1,13 @@
+# platform: win
+# Windows can leverage the CUDA version of PyTorch with an NVIDIA CUDA driver is present.
+name: BUILD_2025_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip=24.0
+  - pip:
+    - torch==2.8.0 --index-url=https://download.pytorch.org/whl/cu128
+    - torchvision==0.23.0 --index-url=https://download.pytorch.org/whl/cu128
+    - torchaudio==2.8.0 --index-url=https://download.pytorch.org/whl/cu128
+    - transformers==4.56.1 --index-url=https://download.pytorch.org/whl/cu128

@@ -1,0 +1,91 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-09",
+        "description": "Cleanup failed web test",
+        "enabled": true,
+        "id": "V4HU24",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Kill processes",
+        "enabled": true,
+        "file_name": [
+            "code_V4J32J.py"
+        ],
+        "id": "V4J32J",
+        "type": "Code"
+    },
+    {
+        "children": [
+            {
+                "id": "10RA44J",
+                "type": "Include",
+                "description": "",
+                "enabled": true,
+                "delay": "0",
+                "include_path": "..\\..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "value": "taskkill /IM msedge.exe /F",
+                        "val_options": ""
+                    }
+                ],
+                "children": []
+            },
+            {
+                "id": "10RENU7",
+                "type": "If",
+                "description": "",
+                "enabled": true,
+                "left_term": "[web_replay_run]",
+                "eval_method": "==",
+                "right_term": "1",
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "10HF7RX",
+                        "include_path": "..\\..\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "[web_replay_remove_args_cmd]"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ]
+            },
+            {
+                "id": "10RENU8",
+                "type": "End If",
+                "description": "",
+                "enabled": true,
+                "children": []
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "10JJYPR",
+        "left_term": "[platform]",
+        "right_term": "W365",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10JJYPT",
+        "type": "End If"
+    }
+]

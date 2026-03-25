@@ -1,0 +1,37 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-24",
+        "description": "Click OneNote icon",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UH3H04",
+        "include_path": "scenarios\\windows\\_library\\misc\\capture_taskbar",
+        "type": "Include"
+    },
+    {
+        "capture_id": "TYH95X",
+        "children": [],
+        "delay": "2.5",
+        "description": "OneNote",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1HK4HNE.png"
+        ],
+        "id": "UH76AT",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

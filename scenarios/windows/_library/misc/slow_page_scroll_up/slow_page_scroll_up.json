@@ -1,0 +1,56 @@
+[
+    {
+        "id": "UR1W56",
+        "type": "Information",
+        "description": "",
+        "enabled": true,
+        "author": "",
+        "capture_device": "",
+        "create_date": "2025-03-01",
+        "children": []
+    },
+    {
+        "id": "UR1WC2",
+        "type": "Scroll",
+        "description": "Up 5s",
+        "enabled": true,
+        "delay": "5",
+        "x": "0.5",
+        "y": "0.25",
+        "direction": "up",
+        "children": []
+    },
+    {
+        "id": "UR1X2P",
+        "type": "Scroll",
+        "description": "Up 4s",
+        "enabled": true,
+        "delay": "4",
+        "x": "0.5",
+        "y": "0.250",
+        "direction": "up",
+        "children": []
+    },
+    {
+        "id": "UR1X2W",
+        "type": "Scroll",
+        "description": "Up 3s",
+        "enabled": true,
+        "delay": "3",
+        "x": "0.5",
+        "y": "0.25",
+        "direction": "up",
+        "children": []
+    },
+    {
+        "id": "UR1X32",
+        "type": "Scroll",
+        "description": "Up 4s",
+        "enabled": true,
+        "delay": "4",
+        "x": "0.50",
+        "y": "0.25",
+        "direction": "up",
+        "children": []
+    }
+]

@@ -1,0 +1,874 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Default Params",
+        "enabled": true,
+        "id": "YTNUEV",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the DUT turn on its camera. Set to 0 to have the DUT camera off.",
+        "enabled": true,
+        "id": "151412U",
+        "multiple": false,
+        "name": "[teams:send_video]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the DUT have its mic on. Set to 0 to have the DUT be muted.",
+        "enabled": true,
+        "id": "15141W4",
+        "multiple": false,
+        "name": "[teams:send_audio]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 0 to have the DUT share its screen. Set to 0 to have the DUT not screen share.",
+        "enabled": true,
+        "id": "15142FJ",
+        "multiple": false,
+        "name": "[teams:send_screen]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Sets the path to the video file to use as the presented screen when the DUT is screen sharing.",
+        "enabled": true,
+        "id": "1514346",
+        "multiple": false,
+        "name": "[teams:presentation_video_path]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "\\\\teams_resources\\\\ppt.mp4"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the DUT screen share their desktop when screen sharing. Set to 0 to share a video of a presentation instead.",
+        "enabled": true,
+        "id": "1514480",
+        "multiple": false,
+        "name": "[teams:show_desktop]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key.",
+        "enabled": true,
+        "id": "151455U",
+        "multiple": false,
+        "name": "[teams:access_key]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "-1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use.",
+        "enabled": true,
+        "id": "15145LM",
+        "multiple": false,
+        "name": "[teams:bots_test_server]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Force the bots to subscribe to a specific video resolution",
+        "enabled": true,
+        "id": "1514603",
+        "multiple": false,
+        "name": "[teams:bots_force_subscribe_resolution]",
+        "type": "Set User Default",
+        "val_options": "0,1080,720,480,360",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Join the meeting on the DUT",
+        "enabled": true,
+        "id": "YTTHUH",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "Type out Join Meeting URL",
+        "enabled": true,
+        "id": "115Y2YR",
+        "include_path": "scenarios\\windows\\_library\\run_command",
+        "params": [
+            {
+                "name": "[command]",
+                "val_options": "",
+                "value": "[teams:join_meeting_uri]"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "5.0",
+        "description": "Wait for the Join Meeting Screen",
+        "enabled": true,
+        "id": "YTV1UW",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "30",
+        "description": "Wait for Teams window to open",
+        "enabled": true,
+        "id": "YTW374",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "YTV33V",
+        "enabled": true,
+        "file_name": [
+            "image_YTV33V.png"
+        ],
+        "h": "1",
+        "id": "YTV33V",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Restore Window to Minimized First",
+        "enabled": true,
+        "id": "163YR9H",
+        "text": "\ue00a\ue00dr",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Maxmize Window",
+        "enabled": true,
+        "id": "163WT03",
+        "text": "\ue00a\ue00dx",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "YTV33V",
+                "children": [],
+                "delay": "2",
+                "description": "Maximize the Window",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_YTV33W.png",
+                    "image_YTV33X.png"
+                ],
+                "id": "YTV33W",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": false,
+        "id": "YTV5YY",
+        "type": "Try"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "YTV33V",
+                "children": [],
+                "delay": "2",
+                "description": "Verify the window is maximized",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_YTW4PW.png"
+                ],
+                "h": "0.024",
+                "id": "YTW4PW",
+                "match_threshold": "",
+                "type": "Check",
+                "w": "0.077",
+                "x": "0.920",
+                "y": "0.001"
+            }
+        ],
+        "description": "",
+        "enabled": false,
+        "id": "YTV600",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": false,
+        "id": "YTV601",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": false,
+        "id": "YTV602",
+        "type": "End Try"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "15VUPLJ",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "YTV3WC",
+        "enabled": true,
+        "file_name": [
+            "image_YTV3WC.png"
+        ],
+        "h": "1",
+        "id": "YTV3WC",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.5",
+        "x": "0.5",
+        "y": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV3WC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Turn Mic On",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV92P.png",
+                            "image_16AU6XU.png"
+                        ],
+                        "id": "YTV3WE",
+                        "match_threshold": "",
+                        "primary": true,
+                        "type": "Click",
+                        "x": "0.669",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTV6WY",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV3WC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Verify that Mic is On",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV81C.png",
+                            "image_16AU7EH.png"
+                        ],
+                        "h": "1",
+                        "id": "YTV8NE",
+                        "match_threshold": "",
+                        "type": "Check",
+                        "w": "1",
+                        "x": "0",
+                        "y": "0"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTV6X0",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTV6X1",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTV6X2",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "YTV6AH",
+        "left_term": "[teams:send_audio]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV3WC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Turn off Mic",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV81C.png",
+                            "image_16AU7EH.png"
+                        ],
+                        "id": "YTV81C",
+                        "match_threshold": "",
+                        "primary": true,
+                        "type": "Click",
+                        "x": "0.556",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTV7FV",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV3WC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Verify that Mic is Off",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV92P.png",
+                            "image_16AU6XU.png"
+                        ],
+                        "h": "1",
+                        "id": "YTV92P",
+                        "match_threshold": "",
+                        "type": "Check",
+                        "w": "1",
+                        "x": "0",
+                        "y": "0"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTV7FW",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTV7FX",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTV7FY",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTV75M",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "YTV6AJ",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "YTV40W",
+        "enabled": true,
+        "file_name": [
+            "image_YTV40W.png"
+        ],
+        "h": "1",
+        "id": "YTV40W",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.5",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV40W",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Turn On Camera",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV40X.png",
+                            "image_16AUJH4.png"
+                        ],
+                        "id": "YTV40X",
+                        "match_threshold": "",
+                        "primary": true,
+                        "type": "Click",
+                        "x": "0.669",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTVA5J",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV40W",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Verify that Camera is On",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTVHER.png",
+                            "image_16AUKM9.png"
+                        ],
+                        "h": "1",
+                        "id": "YTVAF6",
+                        "match_threshold": "",
+                        "type": "Check",
+                        "w": "1",
+                        "x": "0",
+                        "y": "0"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTVA5K",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTVA5L",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTVA5M",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "YTV9UC",
+        "left_term": "[teams:send_video]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV40W",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Turn off Camera",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTVHER.png",
+                            "image_16AUKM9.png"
+                        ],
+                        "id": "YTVHER",
+                        "match_threshold": "",
+                        "primary": true,
+                        "type": "Click",
+                        "x": "0.613",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTVH3F",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "YTV40W",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Verify that Camera is Off",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_YTV40X.png",
+                            "image_16AUJH4.png"
+                        ],
+                        "h": "1",
+                        "id": "YTVHR4",
+                        "match_threshold": "",
+                        "type": "Check",
+                        "w": "1",
+                        "x": "0",
+                        "y": "0"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "YTVH3H",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTVH3J",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "YTVH3K",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTVFYA",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "YTV9UE",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_YTV48A.png"
+        ],
+        "h": "1",
+        "id": "YTV48A",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "YTV48A",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_YTV48C.png"
+        ],
+        "id": "YTV48C",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.556"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Meeting is now Running",
+        "enabled": true,
+        "id": "YTVTHY",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "YTX4M2",
+        "type": "Delay"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Make a request to the bots to Subscribe to the DUT at the given resolution",
+                "enabled": true,
+                "file_name": [
+                    "code_YTX59E.py"
+                ],
+                "id": "YTX59E",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "!=",
+        "id": "YTX4R5",
+        "left_term": "[teams:bots_force_subscribe_resolution]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "YTX4R6",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "YV1XH4",
+        "type": "Delay"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_YV203Y.png"
+                ],
+                "h": "1",
+                "id": "YV203Y",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "YV203Y",
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_YV1YUF.png"
+                ],
+                "id": "YV1YUF",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "",
+                "enabled": true,
+                "id": "YWFXHF",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Send Keys to Share Desktop",
+                "enabled": true,
+                "id": "YV22W3",
+                "text": "\ue004\ue004\ue004\ue007",
+                "type": "Type",
+                "typing_delay": "500"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "TODO: Add content to Share",
+                "enabled": true,
+                "id": "YV24AV",
+                "type": "Comment"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Start PPT Video for Sharing",
+                        "enabled": true,
+                        "id": "103198T",
+                        "type": "Comment"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": false,
+                        "id": "115Y3VP",
+                        "include_path": "scenarios\\windows\\_library\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "[global:dut_exec_path]"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Launch Video for Video Sharing",
+                        "enabled": true,
+                        "file_name": [
+                            "code_163V74Y.py"
+                        ],
+                        "id": "163V74Y",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "!=",
+                "id": "10318U9",
+                "left_term": "[teams:show_desktop]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Show Desktop",
+                        "enabled": true,
+                        "id": "11F4892",
+                        "include_path": "scenarios\\windows\\_library\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "powershell -command \"& { (New-Object -ComObject shell.application).MinimizeAll() }\""
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "11F4862",
+                "type": "Else"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10318UA",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "30",
+                "description": "",
+                "enabled": true,
+                "id": "1032RKV",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "YV1XVC",
+        "left_term": "[teams:send_screen]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "YV1XVE",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "Meeting is running",
+        "enabled": true,
+        "id": "YTVRVJ",
+        "type": "Delay"
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "author": "dasashutosh",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-16",
+        "description": "Switch to Teams",
+        "enabled": true,
+        "id": "1HT270E",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "1HT2759",
+        "include_path": "scenarios\\windows\\_library\\misc\\capture_taskbar",
+        "type": "Include"
+    },
+    {
+        "capture_id": "TYH95X",
+        "children": [],
+        "delay": "2",
+        "description": "Click Teams Icon",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1HT27RR.png"
+        ],
+        "id": "1HT27RR",
+        "match_threshold": "0.5",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

@@ -1,0 +1,10 @@
+site_name: Docs
+extra_css:
+  - ../extra.css
+theme:
+  name: material
+  features:
+    - search.highlight
+plugins:
+  - offline
+  - search

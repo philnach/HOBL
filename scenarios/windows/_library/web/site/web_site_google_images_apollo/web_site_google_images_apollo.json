@@ -1,0 +1,181 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-15",
+        "description": "Browse Google Images for Apollo",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "U7AK1J",
+        "name": "[new_tab]",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W1C4X8",
+        "name": "[load_only]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HY0AK2",
+        "name": "[web_site_load_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "15"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5XLM",
+        "include_path": "..\\..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Switch archive",
+        "enabled": true,
+        "file_name": [
+            "code_U1NN1X.py"
+        ],
+        "id": "U1NN1X",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UC5PAR",
+        "include_path": "..\\..\\web_enter_address",
+        "params": [
+            {
+                "name": "[web_site_address]",
+                "val_options": "",
+                "value": "images.google.com"
+            },
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "[new_tab]"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "[web_site_load_time]"
+            },
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "Google_images_apollo"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "9",
+        "description": "Apollo 11",
+        "enabled": true,
+        "id": "UEMCYT",
+        "text": "apollo\ue00d11\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "4",
+                        "description": "Down",
+                        "direction": "down",
+                        "enabled": true,
+                        "id": "UEMEXN",
+                        "type": "Scroll",
+                        "x": "0.437",
+                        "y": "0.608"
+                    }
+                ],
+                "count": "7",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "UEMEUY",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "UEMEV0",
+                "type": "End Loop"
+            },
+            {
+                "children": [],
+                "delay": "8",
+                "description": "Final delay",
+                "enabled": true,
+                "id": "UC6L36",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "W1C577",
+        "left_term": "[load_only]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "W1C578",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5XV7",
+        "include_path": "..\\..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "web"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "google_images_apollo"
+            }
+        ],
+        "type": "Include"
+    }
+]

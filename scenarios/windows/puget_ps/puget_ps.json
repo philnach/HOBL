@@ -1,0 +1,102 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-09-02",
+        "description": "Runs Puget Benchmark on Photoshop",
+        "enabled": true,
+        "id": "1515CKW",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Benchmark Version",
+        "enabled": true,
+        "id": "153N27J",
+        "name": "[benchmark_version]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1.0.5"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Puget License Key",
+        "enabled": true,
+        "id": "153P57W",
+        "name": "[puget_license]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Amount of Loops for Test",
+        "enabled": true,
+        "id": "15550CP",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Check Prep Status",
+                "enabled": true,
+                "file_name": [
+                    "code_15N8MVJ.py"
+                ],
+                "id": "15N8MVJ",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "153MTX8",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Run Photoshop",
+                "enabled": true,
+                "file_name": [
+                    "code_153N9TN.py"
+                ],
+                "id": "153N9TN",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "153MTXP",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Parse/Clean up Photoshop",
+                "enabled": true,
+                "file_name": [
+                    "code_15550V2.py"
+                ],
+                "id": "15550V2",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "153MTY2",
+        "type": "Teardown"
+    }
+]

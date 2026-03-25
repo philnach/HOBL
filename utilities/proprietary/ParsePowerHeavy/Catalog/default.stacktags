@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tag Name="">
+  <Tag Name="HTML">
+    <Tag Name="Display">
+      <Tag Name="RenderThread">
+        <Entrypoint Module="edgehtml.dll" Method="CRenderThread::*"/>
+      </Tag>
+      <Entrypoint Module="mshtml.dll" Method="CDoc::Paint*"/>
+      <Entrypoint Module="mshtml.dll" Method="CView::Render*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CDoc::Paint*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CView::Render*"/>
+    </Tag>
+    <Tag Name="Layout">
+      <Entrypoint Module="mshtml.dll" Method="CView::EnsureView"/>
+      <Entrypoint Module="mshtml.dll" Method="CView::CloseDisplayTree"/>
+      <Entrypoint Module="mshtml.dll" Method="CView::FinalizeDisplayTree"/>
+      <Entrypoint Module="mshtml.dll" Method="CLayout*"/>
+      <Entrypoint Module="mshtml.dll" Method="Ptls5::*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CView::EnsureView"/>
+      <Entrypoint Module="edgehtml.dll" Method="CView::CloseDisplayTree"/>
+      <Entrypoint Module="edgehtml.dll" Method="CView::FinalizeDisplayTree"/>
+      <Entrypoint Module="edgehtml.dll" Method="CLayout*"/>
+      <Entrypoint Module="edgehtml.dll" Method="Ptls5::*"/>
+    </Tag>
+    <Tag Name="Formatting">
+      <Entrypoint Module="mshtml.dll" Method="CView::ExecuteInvalidationTasks"/>
+      <Entrypoint Module="mshtml.dll" Method="CTreeNode::ComputeFormats"/>
+      <Entrypoint Module="mshtml.dll" Method="CStyleSheetArray::*"/>
+      <Entrypoint Module="mshtml.dll" Method="*ApplyStyle*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CView::ExecuteInvalidationTasks"/>
+      <Entrypoint Module="edgehtml.dll" Method="CTreeNode::ComputeFormats"/>
+      <Entrypoint Module="edgehtml.dll" Method="CStyleSheetArray::*"/>
+      <Entrypoint Module="edgehtml.dll" Method="*ApplyStyle*"/>
+    </Tag>
+    <Tag Name="Notifications">
+      <Entrypoint Module="mshtml.dll" Method="CMarkup::Notify"/>
+      <Entrypoint Module="edgehtml.dll" Method="CMarkup::Notify"/>
+    </Tag>
+    <Tag Name="Parsing">
+      <Tag Name="Pre">
+        <Entrypoint Module="mshtml.dll" Method="CHtmPre*"/>
+        <Entrypoint Module="mshtml.dll" Method="CPreParser*"/>
+        <Entrypoint Module="edgehtml.dll" Method="CHtmPre*"/>
+        <Entrypoint Module="edgehtml.dll" Method="CPreParser*"/>
+      </Tag>
+      <Tag Name="Post">
+        <Entrypoint Module="mshtml.dll" Method="CHtmPost*"/>
+        <Entrypoint Module="mshtml.dll" Method="CPostManager::PostManOnTimer"/>
+        <Entrypoint Module="mshtml.dll" Method="PostManExecute"/>
+        <Entrypoint Module="edgehtml.dll" Method="CHtmPost*"/>
+        <Entrypoint Module="edgehtml.dll" Method="CPostManager::PostManOnTimer"/>
+        <Entrypoint Module="edgehtml.dll" Method="PostManExecute"/>
+      </Tag>
+      <Tag Name="CSS">
+        <Entrypoint Module="mshtml.dll" Method="CStyleSheet::*Pars*"/>
+        <Entrypoint Module="mshtml.dll" Method="CSS*::RuleSet"/>
+        <Entrypoint Module="mshtml.dll" Method="ProcessCSSText"/>
+        <Entrypoint Module="edgehtml.dll" Method="CStyleSheet::*Pars*"/>
+        <Entrypoint Module="edgehtml.dll" Method="CSS*::RuleSet"/>
+        <Entrypoint Module="edgehtml.dll" Method="ProcessCSSText"/>
+      </Tag>
+      <Entrypoint Module="mshtml.dll" Method="CHtmParse*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CHtmParse*"/>
+    </Tag>
+    <Tag Name="Script">
+      <Tag Name="Init">
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::Initialize"/>
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::AddNamedItem"/>
+        <Entrypoint Module="jscript9.dll" Method="CJScriptClassFactory::CreateInstance"/>
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::SetScriptSite"/>
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::ParseScriptText"/>
+        <Entrypoint Module="jscript9.dll" Method="ScriptSite::Create"/>
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::Clone"/>
+        <Entrypoint Module="jscript9.dll" Method="__DllMainCRTStartup" />
+      </Tag>
+      <Tag Name="SaveSource">
+        <Entrypoint Module="jscript9.dll" Method="Js::ScriptContext::SaveSource"/>
+      </Tag>
+      <Tag Name="Memory">
+        <Tag Name="Root">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::RootAddRef" />
+          <Entrypoint Module="jscript9.dll" Method="Recycler::RootRelease" />
+          <Entrypoint Module="jscript9.dll" Method="Recycler::AddRef" />
+          <Entrypoint Module="jscript9.dll" Method="Recycler::Release" />
+        </Tag>
+        <Tag Name="Dispose">
+          <Tag Name="DOMDispose">
+            <Entrypoint Module="jscript9.dll" Method="Js::CustomExternalObject::Dispose"/>
+          </Tag>
+          <Tag Name="ProjectionDispose">
+            <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionObjectInstance::Dispose"/>
+          </Tag>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::DisposeObjects"/>
+        </Tag>
+        <Tag Name="RecyclerAlloc" Priority="-1">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::Alloc"/>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::AllocLeaf"/>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::AllocZero*"/>
+          <Entrypoint Module="jscript9.dll" Method="AllocateArray*Recycler*"/>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::AllocFinalizableWithAttributes"/>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::AllocWithAttributes*"/>
+        </Tag>
+        <Tag Name="Arena" Priority="-1">
+          <Entrypoint Module="jscript9.dll" Method="ArenaAllocator::*"/>
+          <Entrypoint Module="jscript9.dll" Method="ArenaAllocatorNoFreeList::*"/>
+        </Tag>
+        <Tag Name="PoolAllocator" Priority="-1">
+          <Entrypoint Module="jscript9.dll" Method="PoolAllocator::*"/>
+        </Tag>
+        <Tag Name="IdleDecommit">
+          <Entrypoint Module="jscript9.dll" Method="IdleDecommitPageAllocator::DecommitNow" />
+        </Tag>
+      </Tag>
+      <Tag Name="Frontend">
+        <Tag Name="ImmediateNoAST">
+          <Entrypoint Module="jscript9.dll" Method="Parser::ParseStmtListNoASTCore"/>
+        </Tag>
+        <Tag Name="Immediate">
+          <Entrypoint Module="jscript9.dll" Method="ScriptEngine::DefaultCompile"/>
+          <Entrypoint Module="jscript9.dll" Method="ScriptContext::DefaultLoadScript"/>
+          <Entrypoint Module="jscript9.dll" Method="ScriptContext::DefaultLoadScriptUtf8"/>
+          <Entrypoint Module="jscript9.dll" Method="GlobalObject::DefaultEvalHelper"/>
+        </Tag>
+        <Tag Name="Deferred">
+          <Entrypoint Module="jscript9.dll" Method="Parser::ParseSourceWithOffset"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptFunction::DeferredParse"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptFunction::DeferredParseCore"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptFunction::DeferredParseThunk"/>
+        </Tag>
+        <Tag Name="ByteCodeGen">
+          <Entrypoint Module="jscript9.dll" Method="ByteCodeGenerator::Generate"/>
+          <Entrypoint Module="jscript9.dll" Method="ByteCodeWriter::*"/>
+        </Tag>
+        <Tag Name="ByteCodeDeserialize">
+          <Entrypoint Module="jscript9.dll" Method="Js::ByteCodeBufferReader::*"/>
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="ScriptEngine::Compile"/>
+        <Entrypoint Module="jscript9.dll" Method="Parser::ParseSource"/>
+      </Tag>
+      <Tag Name="JIT">
+        <Tag Name="Regalloc">
+          <Entrypoint Module="jscript9.dll" Method="SCCLiveness::*"/>
+          <Entrypoint Module="jscript9.dll" Method="LinearScan::*"/>
+        </Tag>
+        <Tag Name="Lowerer">
+          <Entrypoint Module="jscript9.dll" Method="Lowerer::*"/>
+        </Tag>
+        <Tag Name="Peeps">
+          <Entrypoint Module="jscript9.dll" Method="Peeps::*"/>
+        </Tag>
+        <Tag Name="GlobalOpt">
+          <Entrypoint Module="jscript9.dll" Method="GlobOpt::Optimize"/>
+        </Tag>
+        <Tag Name="Encoder">
+          <Entrypoint Module="jscript9.dll" Method="Encoder::Encode"/>
+        </Tag>
+        <Tag Name="IRBuilder">
+          <Entrypoint Module="jscript9.dll" Method="IRBuilder::"/>
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="BackgroundCodeGenThread::StaticThreadProc"/>
+        <Entrypoint Module="jscript9.dll" Method="JsUtil::BackgroundJobProcessor::StaticThreadProc"/>
+      </Tag>
+      <Tag Name="Execute">
+        <Tag Name="FastDOM">
+          <Entrypoint Module="jscript9.dll" Method="Js::CustomExternalObject::*" />
+          <Entrypoint Module="jscript9.dll" Method="Js::DefaultScriptOperations::*" />
+        </Tag>
+        <Tag Name="Interpreter">
+          <Entrypoint Module="jscript9.dll" Method="Js::InterpreterStackFrame::Process"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::InterpreterStackFrame::OP_*"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::InterpreterStackFrame::*Thunk*"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::InterpreterStackFrame::Setup::*"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::ByteCodeReader::Setup::*"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::DynamicProfileInfo::*"/>
+          <Entrypoint Module="jscript9.dll" Method="arm_CallFunction_epilog1_start"/>
+        </Tag>
+        <Tag Name="PropertyGet">
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptOperators::PatchGet*"/>
+        </Tag>
+        <Tag Name="PropertySet">
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptOperators::PatchPutValueNoLocalFastPath"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptOperators::PatchPutValueHelper"/>
+        </Tag>
+        <Tag Name="Runtime">
+          <Entrypoint Module="jscript9.dll" Method="Js::InterpreterStackFrame::CallLoopBody"/>
+          <!-- Only CallFunction<true> here,  CallFunction<false> is only use for calling out
+                and ApplyArgs which should already correctly stack tagged already -->
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptFunction::CallFunction&lt;1&gt;"/>
+          <!-- For Win8 -->
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptFunction::CallFunction"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptOperators::CallGetter"/>
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptOperators::CallSetter"/>
+        </Tag>
+        <Tag Name="JSON">
+          <Entrypoint Module="jscript9.dll" Method="JSON::*" />
+        </Tag>
+        <Tag Name="JSDispatch">
+          <Entrypoint Module="jscript9.dll" Method="JavascriptDispatch::GetDispID"/>
+          <Entrypoint Module="jscript9.dll" Method="JavascriptDispatch::InvokeEx"/>
+        </Tag>
+        <Tag Name="RegEx">
+          <Entrypoint Module="jscript9.dll" Method="Js::JavascriptRegularExpression::*"/>
+          <Entrypoint Module="jscript9.dll" Method="regex::RegexCompiler::*"/>
+        </Tag>
+        <Tag Name="NativeCodeGen">
+          <Tag Name="CheckCodeGen">
+            <Entrypoint Module="jscript9.dll" Method="NativeCodeGenerator::CheckCodeGenThunk" />
+          </Tag>
+          <Entrypoint Module="jscript9.dll" Method="NativeCodeGenerator::Process"/>
+        </Tag>
+        <Tag Name="GenerateInterpreterThunk">
+          <Entrypoint Module="jscript9.dll" Method="Js::FunctionBody::GenerateDynamicInterpreterThunk"/>
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="ScriptSite::Execute"/>
+      </Tag>
+      <Tag Name="Recycler">
+        <Tag Name="Init">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::Initialize"/>
+        </Tag>
+        <Tag Name="StartCollect">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::DoCollect"/>
+          <Entrypoint Module="jscript9.dll" Method="Recycler::StartConcurrentMarkCollect"/>
+        </Tag>
+        <Tag Name="FinishCollect">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::FinishConcurrentCollectWrapped"/>
+        </Tag>
+        <Tag Name="BackgroundGC">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::ConcurrentMark"/>
+          <Entrypoint Module="jscript9.dll" Method="HeapInfo::ConcurrentSweep*"/>
+        </Tag>
+        <Tag Name="Collect">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::CollectNow*"/>
+        </Tag>
+        <Tag Name="PreCollect">
+          <Entrypoint Module="jscript9.dll" Method="ThreadContext::PreCollectionCallBack"/>
+        </Tag>
+        <Tag Name="PreSweep">
+          <Entrypoint Module="jscript9.dll" Method="ThreadContext::PreSweepCallback"/>
+        </Tag>
+        <Tag Name="Projection">
+          <Entrypoint Module="jscript9.dll" Method="ThreadContext::MarkExternalWeakReferencedObjects" />
+        </Tag>
+        <Tag Name="Misc" Priority="-1">
+          <Entrypoint Module="jscript9.dll" Method="Recycler::*"/>
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="ThreadContext::ExecuteRecyclerCollectionFunction" />
+      </Tag>
+      <Tag Name="Projection">
+        <Tag Name="ResolveTypeName">
+          <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionContext::ResolveTypeName"/>
+        </Tag>
+        <Tag Name="ExprConstruction">
+          <Entrypoint Module="jscript9.dll" Method="ProjectionModel::ProjectionBuilder::IntermediateExprOfToken"/>
+        </Tag>
+        <Tag Name="TryGetProjectionFastPath">
+          <Entrypoint Module="jscript9.dll" Method="Projection::TryGetProjectionFastPath"/>
+        </Tag>
+        <Tag Name="CreateNewTypeInstance">
+          <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionWriter::CreateNewTypeInstance"/>
+        </Tag>
+        <Tag Name="CreateTypeFactoryInstance">
+          <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionContext::CreateTypeFactoryInstance"/>
+        </Tag>
+        <Tag Name="Unmarshal">
+          <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionMethodInvoker::ReadOutOrThrow"/>
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="Projection::InvokeMethodByThisInfo"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::Delegate::Invoke"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::*Thunk"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::NamespaceProjection::*" />
+      </Tag>
+      <Tag Name="WinRTCallOut">
+        <Tag Name="AsyncDebug">
+          <Entrypoint Module="jscript9.dll" Method="AsyncDebug::*" />
+        </Tag>
+        <Entrypoint Module="jscript9.dll" Method="Projection::ProjectionMethodInvoker::InvokeUnknown"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::StaticFastPath*"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::FastPath*"/>
+        <Entrypoint Module="jscript9.dll" Method="Projection::AddEventListenerThunk" />
+        <Entrypoint Module="jscript9.dll" Method="arm_ProjectionCall*" />
+      </Tag>
+      <Tag Name="Other" Priority="-2">
+        <Entrypoint Module="jscript9.dll" Method="*" />
+      </Tag>
+    </Tag>
+    <Tag Name="Canvas">
+      <Entrypoint Module="mshtml.dll" Method="CCanvas*"/>
+      <Entrypoint Module="mshtml.dll" Method="CHTMLCanvasElement::*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CCanvas*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CHTMLCanvasElement::*"/>
+    </Tag>
+    <Tag Name="OM">
+      <Tag Name="Initialization">
+        <Tag Name="TypeSystem">
+          <Entrypoint Module="jscript9.dll" Method="Js::CustomExternalType::DeferredInitializer" />
+        </Tag>
+        <Entrypoint Module="mshtml.dll" Method="CJScript9Holder::InitTypes" />
+        <Entrypoint Module="edgehtml.dll" Method="CJScript9Holder::InitTypes" />
+      </Tag>
+      <Tag Name="FastDOM">
+        <Tag Name="CrossWindowCallout">
+          <Entrypoint Module="mshtml.dll" Method="CWindow*TypeOperations::*" />
+          <Entrypoint Module="edgehtml.dll" Method="CWindow*TypeOperations::*" />
+        </Tag>
+        <Entrypoint Module="mshtml.dll" Method="C*TypeOperations::*" />
+        <Entrypoint Module="mshtml.dll" Method="CFastDOM::*"/>
+        <Entrypoint Module="edgehtml.dll" Method="C*TypeOperations::*" />
+        <Entrypoint Module="edgehtml.dll" Method="CFastDOM::*"/>
+      </Tag>
+      <Entrypoint Module="mshtml.dll" Method="Method_*"/>
+      <Entrypoint Module="mshtml.dll" Method="GS_*"/>
+      <Entrypoint Module="mshtml.dll" Method="G_*"/>
+      <Entrypoint Module="edgehtml.dll" Method="Method_*"/>
+      <Entrypoint Module="edgehtml.dll" Method="GS_*"/>
+      <Entrypoint Module="edgehtml.dll" Method="G_*"/>
+    </Tag>
+    <Tag Name="ImageDecoding">
+      <Entrypoint Module="mshtml.dll" Method="CImgTask*"/>
+      <Entrypoint Module="edgehtml.dll" Method="CImgTask*"/>
+    </Tag>
+    <Tag Name="WebPlatform">
+      <Entrypoint Module="MSHTML.DLL" Method="CWebPlatform::*" />
+      <Entrypoint Module="edgehtml.DLL" Method="CWebPlatform::*" />
+    </Tag>
+  </Tag>
+  <Tag Name="WebBrowserControl">
+    <Entrypoint Module="AgWebBrowserControl.dll" Method="_DocumentThreadProc" />
+  </Tag>
+  <Tag Name="XAML">
+    <Tag Name="Device Create">
+      <Entrypoint Module="Windows.UI.XAML.DLL" Method="WindowsGraphicsDeviceManager::InitializeCallback"/>
+    </Tag>
+    <Tag Name="UI Thread">
+      <Tag Name="ProcessInput">
+        <Tag Name="EventResponse">
+          <Entrypoint Module="Windows.UI.XAML.DLL" Method="CEventManager::RaiseRoutedEvent"/>
+        </Tag>
+        <Entrypoint Module="Windows.UI.XAML.DLL" Method="CInputManager*"/>
+      </Tag>
+      <Tag Name="CreateResourceManager">
+        <Entrypoint Module="Windows.UI.XAML.DLL" Method="CJupiterControl::CreateResourceManager"/>
+      </Tag>
+      <Tag Name="ImportClassInfoFromMetadata">
+        <Entrypoint Module="Windows.UI.XAML.dll" Method="DirectUI::MetadataAPI::ImportClassInfoFromMetadataProvider"/>
+      </Tag>
+      <Tag Name="SetCoreWindow">
+        <Entrypoint Module="Windows.UI.XAML.dll" Method="DirectUI::DXamlCore::SetCoreWindow"/>
+        <Entrypoint Module="WIndows.UI.XAML.dll" Method="CJupiterControl::ConfigureCoreWindow"/>
+      </Tag>
+      <Tag Name="GetClientURI">
+        <Entrypoint Module="Windows.UI.XAML.DLL" Method="CControlBase::GetClientURI"/>
+      </Tag>
+      <Tag Name="VSM">
+        <Entrypoint Module="Windows.UI.XAML.dll" Method="CVisualStateManager::FindVisualState"/>
+      </Tag>
+      <Tag Name="Binding">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="DirectUI::DependencyObject::SetBindingCallback"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CBinding::SetBinding"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="DirectUI::FrameworkElement::NotifyOfDataContextChange"/>
+      </Tag>
+      <Tag Name="Text">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CTextBox::Create"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CTextBlock::MeasureOverride"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CTextBlock::EnterImpl"/>
+      </Tag>
+      <Tag Name="Theme Change Notification">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CDependencyObject::NotifyThemeChanged"/>
+      </Tag>
+      <Tag Name="Template Binding Refresh">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CControl::RefreshTemplateBindings"/>
+      </Tag>
+      <Tag Name="Tree Building">
+        <Tag Name="Styles">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CFrameworkElement::ApplyStyle"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CControl::ApplyBuiltInStyle"/>
+        </Tag>
+        <Tag Name="Deferral">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::SetDeferredPropertyOnCurrentInstance"/>
+        </Tag>
+        <Tag Name="Property System">
+          <Tag Name="Type Conversion">
+            <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::TypeConvertValue"/>
+          </Tag>
+          <Tag Name="Setters">
+            <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::SetValueOnCurrentInstance"/>
+            <Entrypoint Module="windows.ui.xaml.dll" Method="XamlNativeRuntime::SetValue"/>
+            <Entrypoint Module="windows.ui.xaml.dll" Method="XamlManagedRuntime::SetValue"/>
+          </Tag>
+          <Tag Name="Getters">
+            <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::GetValueFromMemberOnParentInstance"/>
+          </Tag>
+          <Tag Name="SetName">
+            <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::SetNameOnCurrentInstance"/>
+          </Tag>
+          <Tag Name="Template Binding">
+            <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::SetTemplateBindingOnCurrentInstance"/>
+          </Tag>
+        </Tag>
+        <Tag Name="Object Creation">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::CreateInstanceFromType"/>
+        </Tag>
+        <Tag Name="Deferred Resources">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CResourceDictionary::TryLoadDeferredResource"/>
+        </Tag>
+        <Tag Name="Resources">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CStaticResourceExtension::LookupResourceNoRef"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CThemeResourceExtension::ProvideValue"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::ProvideStaticResourceReference"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::ProvideValueForMarkupExtension"/>
+        </Tag>
+        <Tag Name="Localization">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::GetResourcePropertyBagForCurrentInstance"/>
+        </Tag>
+        <Tag Name="Dictionary">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::AddToDictionaryOnCurrentInstance"/>
+        </Tag>
+        <Tag Name="Collections">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::AddToCollectionOnCurrentInstance"/>
+        </Tag>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="BinaryFormatObjectWriter::*"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="*::WriteNode"/>
+      </Tag>
+      <Tag Name="Parser">
+        <Tag Name="Metadata Resolution">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="XamlBinaryMetadataReader2::LoadMetadata"/>
+        </Tag>
+        <Tag Name="File Load">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="XamlBinaryFileInfoCache::GetBinaryBuffer"/>
+        </Tag>
+        <Tag Name="Parser Overhead">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="XamlBinaryFormatSubReader2::Read"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="XamlBinaryFormatReader2::GetSubReader"/>
+        </Tag>
+      </Tag>
+      <Tag Name="BuildListViewTree">
+        <Entrypoint Module="Windows.UI.XAML.dll" Method="DirectUI::ListViewBase::BuildTreeImpl"/>
+      </Tag>
+      <Tag Name="Layout">
+        <Tag Name="Measure">
+          <Tag Name="ListViewItems">
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="DirectUI::ModernCollectionBasePanel::RunVirtualization"/>
+          </Tag>
+          <Tag Name="TextFormatting">
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="RichTextServices::Internal::LsTextFormatter*"/>
+          </Tag>
+          <Tag Name="FontIcons">
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="CFontIcon::ApplyTemplate"/>
+          </Tag>
+          <Tag Name="Enter_Leave">
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="*EnterImpl"/>
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="*LeaveImpl"/>
+          </Tag>
+          <Tag Name="TemplateLoadContent">
+            <Entrypoint Module="Windows.UI.XAML.dll" Method="CFrameworkTemplate::LoadContent"/>
+          </Tag>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CUIElement::Measure"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CLayoutManager::UpdateLayout"/>
+        </Tag>
+        <Tag Name="Arrange">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CUIElement::Arrange"/>
+        </Tag>
+      </Tag>
+      <Tag Name="Rendering">
+        <Tag Name="SubmitFrame">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::SubmitPrimitiveCompositionCommands"/>
+        </Tag>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::RenderWalk"/>
+      </Tag>
+      <Tag Name="CompositionTargetRendering">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::CallPerFrameCallback"/>
+      </Tag>
+      <Tag Name="ApplicationActivate">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="DirectUI::FrameworkView::Initialize"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="DirectUI::ApplicationFactory::Start"/>
+      </Tag>
+      <Tag Name="EventCallback">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="AgCoreCallbacks::FireEvent"/>
+      </Tag>
+      <Tag Name="ProcessInput">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CInputManager::*"/>
+      </Tag>
+      <Tag Name="Tick">
+        <Tag Name="UpdateAnimations">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CTimeManager::Tick"/>
+          <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::FlushDeferredAnimationOperationQueue"/>
+        </Tag>
+        <Tag Name="AddMemoryPressure">
+          <Entrypoint Module="windows.ui.xaml.dll" Method="ReportMemoryPressureToGC"/>
+        </Tag>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::Tick"/>
+      </Tag>
+      <Tag Name="Parsing">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::LoadXaml"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::ParseXamlWithEventRoot"/>
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CCoreServices::ParseXamlWithExistingFrameworkRoot"/>
+      </Tag>
+      <Entrypoint Module="windows.UI.XAML.dll" Method="DirectUI::FrameworkView::Run"/>
+      <Entrypoint Module="Windows.UI.dll" Method="Windows::UI::Core::CDispatcher::ProcessEvents" />
+    </Tag>
+    <Tag Name="RenderThread">
+      <Tag Name="Render">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CHardwareCompositor::Render"/>
+      </Tag>
+      <Tag Name="UpdateTextures">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="HardwareCompositionCommand::CUpdateTextureCommand::Tick"/>
+      </Tag>
+      <Tag Name="TickAnimations">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="HardwareCompositionCommand::CTimeManagerCommand::Tick"/>
+      </Tag>
+      <Tag Name="Present">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CHardwareCompositor::ExecutePresent"/>
+      </Tag>
+      <Entrypoint Module="windows.ui.xaml.dll" Method="CompositorScheduler::RenderThreadMain"/>
+    </Tag>
+    <Tag Name="WorkerThread">
+      <Tag Name="ImageDecode">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="AsyncDecodeToSurfaceTask::Execute"/>
+      </Tag>
+      <Entrypoint Module="windows.ui.xaml.dll" Method="CWinWorkItem::WorkCallback"/>
+      <Entrypoint Module="windows.ui.xaml.dll" Method="CMulticoreTaskScheduler::WorkerThread"/>
+    </Tag>
+    <Tag Name="Other">
+      <Tag Name="CWindowsDownloadRequest::_Download">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CWindowsDownloadRequest::_Download"/>
+      </Tag>
+      <Tag Name="DownloadRequest::InitDataBuffer">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="CWindowsDownloadRequest::InitializeDataBuffer"/>
+      </Tag>
+      <Tag Name="ImageCache::GotDownloadResponse">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="ImageCache::GotDownloadResponse"/>
+      </Tag>
+      <Tag Name="HWTextureManager::SubmitTextureUpdates">
+        <Entrypoint Module="windows.ui.xaml.dll" Method="HWTextureManager::SubmitTextureUpdates"/>
+      </Tag>
+    </Tag>
+  </Tag>
+  <Tag Name="CLR">
+    <Tag Name="ComInterop" Priority="-1">
+      <Entrypoint Module="*clr.dll" Method="DeleteInteropSafe*"/>
+      <Entrypoint Module="*clr.dll" Method="IsIInspectable*"/>
+      <Entrypoint Module="*clr.dll" Method="clr::winrt*"/>
+      <Entrypoint Module="*clr.dll" Method="COM*"/>
+      <Entrypoint Module="*clr.dll" Method="IsIUnknown*"/>
+      <Entrypoint Module="*clr.dll" Method="RCW*"/>
+      <Entrypoint Module="*clr.dll" Method="CCW*"/>
+      <Entrypoint Module="*clr.dll" Method="NewCCW*"/>
+      <Entrypoint Module="*clr.dll" Method="WinMD*"/>
+      <Entrypoint Module="*clr.dll" Method="GenericComCallStub*"/>
+      <Entrypoint Module="*clr.dll" Method="GetCOMIP*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::InteropServices*"/>
+    </Tag>
+    <Tag Name="Debugger_Profiler_API">
+      <Entrypoint Module="mscordbi.dll" Method="*"/>
+      <Entrypoint Module="*clr.dll" Method="EEToProf*"/>
+      <Entrypoint Module="*clr.dll" Method="MDA*"/>
+      <Entrypoint Module="*clr.dll" Method="CorProfiler*"/>
+      <Entrypoint Module="*clr.dll" Method="ProfControl*"/>
+      <Entrypoint Module="*clr.dll" Method="CorProfileData*"/>
+      <Entrypoint Module="*clr.dll" Method="Debugger*"/>
+      <Entrypoint Module="*clr.dll" Method="Profiler*"/>
+      <Entrypoint Module="*clr.dll" Method="EEToDebugger*"/>
+      <Entrypoint Module="*clr.dll" Method="ManagedDebuggingAssistants*"/>
+      <Entrypoint Module="*clr.dll" Method="IsEventDebuggerNotification*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::Debugger*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="DebugEventSource*"/>
+    </Tag>
+    <Tag Name="ExceptionHandling">
+      <Entrypoint Module="*clr.dll" Method="EEException*" />
+      <Entrypoint Module="*clr.dll" Method="EECOMException*" />
+      <Entrypoint Module="*clr.dll" Method="CheckThreadExceptionStateForInterception*" />
+      <Entrypoint Module="*clr.dll" Method="Exception*" />
+      <Entrypoint Module="*clr.dll" Method="FixupOnRethrow*" />
+      <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::EH*" />
+    </Tag>
+    <Tag Name="GC">
+      <Entrypoint Module="*clr.dll" Method="WKS::*"/>
+      <Entrypoint Module="*clr.dll" Method="SVR::*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="WKS::*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="SVR::*"/>
+      <Entrypoint Module="*clr.dll" Method="GCSlotDecoder*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="RedhawkGCInterface*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="EEMethodInfo::GetGCInfo*"/>
+    </Tag>
+    <Tag Name="JITHelper">
+      <Entrypoint Module="*clr.dll" Method="JIT_*"/>
+      <Entrypoint Module="*clr.dll" Method="JITUtil_*"/>
+    </Tag>
+    <Tag Name="JIT">
+      <Entrypoint Module="*clr.dll" Method="JIT*"/>
+      <Entrypoint Module="*clr.dll" Method="CEEJit*"/>
+      <Entrypoint Module="*clr.dll" Method="ExecutionManager*"/>
+      <Entrypoint Module="*clr.dll" Method="MulticoreJit*"/>
+      <Entrypoint Module="*clr.dll" Method="Coderegion*"/>
+      <Entrypoint Module="clrjit.dll" Method="*"/>
+      <Entrypoint Module="protojit.dll" Method="*"/>
+    </Tag>
+    <Tag Name="LoadAssembly">
+      <Entrypoint Module="*clr.dll" Method="*LoadAssembly*"/>
+      <Entrypoint Module="*clr.dll" Method="Loader*"/>
+      <Entrypoint Module="*clr.dll" Method="MemberLoader*"/>
+      <Entrypoint Module="*clr.dll" Method="IFusion*"/>
+    </Tag>
+    <Tag Name="NGEN">
+      <Entrypoint Module="*clr.dll" Method="Ngen*"/>
+      <Entrypoint Module="*clr.dll" Method="Zap*"/>
+      <Entrypoint Module="*clr.dll" Method="CerNgen*"/>
+    </Tag>
+    <Tag Name="Reflection">
+      <Entrypoint Module="mscorlib.dll" Method="*Reflection*"/>
+    </Tag>
+    <Tag Name="Security">
+     <Entrypoint Module="*clr.dll" Method="Security*"/>
+    </Tag>
+    <Tag Name="Telemetry">
+      <Entrypoint Module="*clr.dll" Method="CLRSQM*"/>
+      <Entrypoint Module="*clr.dll" Method="TypedCLRSQM*"/>
+      <Entrypoint Module="mscoreei.dll" Method="CLRSQM*"/>
+    </Tag>
+    <Tag Name="Threading">
+      <Entrypoint Module="*clr.dll" Method="Thread*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="Thread*"/>
+    </Tag>
+    <Tag Name="Tracing">
+      <Entrypoint Module="*clr.dll" Method="ETW*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="ETW*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="BulkComLogger*"/>
+      <Entrypoint Module="mrt100_app.dll" Method="BulkTypeEventLogger*"/>
+    </Tag>
+    <Tag Name="TypeConversion">
+      <Entrypoint Module="*clr.dll" Method="StubHelpers::InterfaceMarshaler__ConvertToNative"/>
+      <Entrypoint Module="*clr.dll" Method="StubHelpers::InterfaceMarshaler__ConvertToManaged"/>
+      <Entrypoint Module="*clr.dll" Method="StubHelpers::GetCOMIPFromRCW_WinRT"/>
+    </Tag>
+    <Tag Name="Typesystem">
+     <Entrypoint Module="*clr.dll" Method="MethodDesc*"/>
+     <Entrypoint Module="*clr.dll" Method="MethodTable*"/>
+     <Entrypoint Module="*clr.dll" Method="MethodImpl*"/>
+     <Entrypoint Module="*clr.dll" Method="CorType*"/>
+     <Entrypoint Module="*clr.dll" Method="Sig*"/>
+     <Entrypoint Module="*clr.dll" Method="ObjHeader*"/>
+     <Entrypoint Module="*clr.dll" Method="ExternalType*"/>
+     <Entrypoint Module="*clr.dll" Method="Token*"/>
+     <Entrypoint Module="*clr.dll" Method="EEClass*"/>
+     <Entrypoint Module="*clr.dll" Method="CGCDesc*"/>
+     <Entrypoint Module="*clr.dll" Method="TypeIDMap*"/>
+     <Entrypoint Module="*clr.dll" Method="TypeOf*"/>
+     <Entrypoint Module="*clr.dll" Method="PendingType*"/>
+     <Entrypoint Module="*clr.dll" Method="FieldDesc*"/>
+     <Entrypoint Module="*clr.dll" Method="TypeLibExporter*"/>
+     <Entrypoint Module="*clr.dll" Method="TypeKey*"/>
+     <Entrypoint Module="*clr.dll" Method="CMiniMD*"/>
+     <Entrypoint Module="*clr.dll" Method="CMetadata*"/>
+     <Entrypoint Module="*clr.dll" Method="IMetadata*"/>
+     <Entrypoint Module="*clr.dll" Method="MDTOKENMAP*"/>
+     <Entrypoint Module="*clr.dll" Method="Metadata*"/>
+     <Entrypoint Module="*clr.dll" Method="MDFormat*"/>
+     <Entrypoint Module="*clr.dll" Method="MDUpdate*"/>
+     <Entrypoint Module="*clr.dll" Method="MDFormat*"/>
+     <Entrypoint Module="*clr.dll" Method="RegMeta*"/>
+     <Entrypoint Module="mrt100_app.dll" Method="EEType*"/>
+     <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::EEType*"/>
+     <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::Type*"/>
+     <Entrypoint Module="mrt100_app.dll" Method="System::Runtime::WellKnownEETypes*"/>
+    </Tag>
+    <Tag Name="Other" Priority="-2">
+      <Entrypoint Module="*clr.dll" Method="*" />
+      <Entrypoint Module="mscoreei.dll" Method="*" />
+      <Entrypoint Module="clrjit.dll" Method="*" />
+      <Entrypoint Module="mscoree.dll" Method="*" />
+    </Tag>
+  </Tag>
+  <Tag Name="AppModel">
+    <Tag Name="ApplicationFrame" Priority="-1">
+      <Tag Name="TitleBar">
+        <Entrypoint Module="ApplicationFrame.dll" Method="CTitleBar*" />
+      </Tag>
+      <Tag Name="FrameWindow">
+        <Entrypoint Module="ApplicationFrame.dll" Method="CApplicationFrame*" />
+      </Tag>
+      <Tag Name="ImageLoaders">
+        <Entrypoint Module="ApplicationFrame.dll" Method="ImageLoaders*" />
+      </Tag>
+      <Tag Name="SplashScreen">
+        <Entrypoint Module="twinui.dll" Method="CImmersiveSplashScreen*" />
+        <Entrypoint Module="twinui.dll" Method="SplashScreen*" />
+        <Entrypoint Module="ApplicationFrame.dll" Method="SplashScreen*" />
+        <Entrypoint Module="CoreUIComponents.dll" Method="SplashScreen*" />
+      </Tag>
+      <Entrypoint Module="twinui.appcore.dll" Method="CApplicationFrameService*" />
+      <Entrypoint Module="ApplicationFrame.dll" />
+    </Tag>
+
+    <Tag Name="ViewManager/NavServer">
+      <Entrypoint Module="CoreUIComponents.dll" Method="CoreUINavigationService::NavigationServerThread"/>
+      <Entrypoint Module="sihost.exe" Method="CNavigationServerComponent::s_NavigationServerThread"/>
+      <Entrypoint Module="CoreUIComponents.dll" Method="Microsoft::CoreUI::Navigation::Server::ViewManager*"/>
+    </Tag>
+    <Tag Name="ViewManagerBridge">
+      <Entrypoint Module="twinui.appcore.dll" Method="ViewManagerBridge*"/>
+    </Tag>
+    <Tag Name="SwitchController">
+      <Entrypoint Module="twinui.dll" Method="CSwitchController*" />
+    </Tag>
+    <Tag Name="ApplicationActivationManager">
+      <Entrypoint Module="ActivationManager.dll" Method="Execution::ActivationManagerShim*" />
+      <Entrypoint Module="ActivationManager.dll" Method="CActivationBrokerManager*" />
+      <Entrypoint Module="ActivationManager.dll" Method="CApplicationActivationManager*" />
+      <Entrypoint Module="twinui.appcore.dll" Method="ApplicationActivationManagerProxy*" />
+    </Tag>
+    <Tag Name="ForegroundManager">
+      <Entrypoint Module="modernexecserver.dll" Method="*ForegroundManager*" />
+    </Tag>
+    <Tag Name="ExecutionServer">
+      <Entrypoint Module="AppXExecutionServer.dll" Method="*"/>
+    </Tag>
+    <Tag Name="ExecutionClient">
+      <Entrypoint Module="AppXExecutionClient.dll" Method="*"/>
+    </Tag>
+    <Tag Name="Pacmanserver">
+      <Tag Name="VerifyLicense">
+        <Entrypoint Module="pacmanserver.dll" Method="CLicenseManager::VerifyLicense*"/>
+      </Tag>
+      <Tag Name="TileManager">
+        <Entrypoint Module="pacmanserver.dll" Method="CPMTileManager*"/>
+      </Tag>
+      <Tag Name="EnumerationManager">
+        <Entrypoint Module="pacmanserver.dll" Method="CPMEnumerationManager*"/>
+      </Tag>
+    </Tag>
+    <Tag Name="StateRepository">
+      <Entrypoint Module="Windows.StateRepository.dll" />
+      <Entrypoint Module="StateRepository.Core.dll" />
+    </Tag>
+    <Tag Name="CoreMessaging" Priority="-1">
+      <Entrypoint Module="CoreMessaging.dll"/>
+    </Tag>
+    <Tag Name="TileObjServer">
+      <Entrypoint Module="tileobjserver.dll" />
+    </Tag>
+    <Tag Name="GetAppStorageFolder">
+      <Entrypoint Module="wpcoreutil.dll" Method="GetAppStorageFolderInternal"/>
+    </Tag>
+    <Entrypoint Module="twinui.appcore.dll" Method="CApplicationManager*" />
+    <Entrypoint Module="twinui.appcore.dll" Method="CImmersiveApp*" />
+  </Tag>
+  <Tag Name="System">
+    <Tag Name="ETW Overhead">
+      <Entrypoint Module="nt*.exe" Method="Etw*"/>
+      <Entrypoint Module="ntdll.dll" Method="Etw*"/>
+    </Tag>
+    <Tag Name="Interrupts + DPCs">
+      <Entrypoint Module="nt*.exe" Method="KiRetireDpcList"/>
+      <Entrypoint Module="nt*.exe" Method="Ki*Interrupt*"/>
+      <Entrypoint Module="nt*.exe" Method="KiExitDispatcher"/>
+      <Entrypoint Module="nt*.exe" Method="KiIpiServiceRoutine"/>
+      <Entrypoint Module="nt*.exe" Method="IopPassiveInterruptWorker"/>
+      <Entrypoint Module="hal*.dll" Method="HalpIpiHandler"/>
+    </Tag>
+    <Tag Name="ContextSwitch">
+      <Entrypoint Module="nt*.exe" Method="KiSwapThread"/>
+    </Tag>
+    <Tag Name="LoadLibrary">
+      <!-- Do not add Entrypoint Module="ntdll.dll" Method="Ldr*" as that will not work well with Allocation Stack Tags for memory analysis-->
+      <Entrypoint Module="kernel*.dll" Method="LoadLibrary*"/>
+      <Entrypoint Module="kernel*.dll" Method="FreeLibrary*"/>
+      <Entrypoint Module="kernel32.dll" Method="GetProcAddress"/>
+    </Tag>
+    <Tag Name="ThreadCreateUserStack">
+      <Entrypoint Module="nt*.exe" Method="RtlCreateUserStack"/>
+    </Tag>
+    <Tag Name="ThreadPool">
+      <Entrypoint Module="ntdll.dll" Method="Tp*"/>
+      <Entrypoint Module="ntdll.dll" Method="*Tp*Callback"/>
+    </Tag>
+    <Tag Name="Rebasing">
+      <Entrypoint Module="ntoskrnl.exe" Method="MiRelocateImage*"/>
+    </Tag>
+    <Tag Name="ProcessTermination">
+      <Entrypoint Module="dxgmms1.sys" Method="VIDMM_GLOBAL::ProcessTerminationCommand"/>
+    </Tag>
+    <Tag Name="DeferredDestruction">
+      <Entrypoint Module="dxgkrnl.sys" Method="DxgkpDeferredDestructionWork"/>
+    </Tag>
+    <Tag Name="PopulateReadList">
+      <Entrypoint Module="ntoskrnl.exe" Method="PfSnPopulateReadList"/>
+    </Tag>
+    <Tag Name="Prefetch">
+      <Entrypoint Module="ntoskrnl.exe" Method="Pf*"/>
+    </Tag>
+    <Tag Name="WorkItem">
+      <Entrypoint Module="ntoskrnl.exe" Method="*WorkItem"/>
+    </Tag>
+    <Tag Name="WorkingSetManager">
+      <Entrypoint Module="ntoskrnl.exe" Method="MmWorkingSetManager"/>
+    </Tag>
+    <Tag Name="ZeroPageThread">
+      <Entrypoint Module="ntoskrnl.exe" Method="MmZeroPageThread"/>
+    </Tag>
+    <Tag Name="MemoryCompression">
+      <Entrypoint Module="ntoskrnl.exe" Method="*CompressBuffer"/>
+    </Tag>
+    <Tag Name="CloseFile">
+      <Entrypoint Module="ntfs.sys" Method="NtfsFspCloseInternal"/>
+    </Tag>
+    <Tag Name="DelayLoadDll">
+      <Entrypoint Module="ntdll.DLL" Method="LdrResolveDelayLoadedAPI"/>
+    </Tag>
+    <Tag Name="OtherLoaderWork">
+      <Entrypoint Module="ntdll.DLL" Method="LdrpInitializeProcess"/>
+      <Entrypoint Module="ntdll.DLL" Method="LdrpInitializeThread"/>
+    </Tag>
+    <Tag Name="Registry" Priority="-1">
+      <Entrypoint Module="kernelbase.DLL" Method="Reg*"/>
+    </Tag>
+  </Tag>
+  <Tag Name="OEMPanel">
+    <Entrypoint Module="oempanel.sys" Method="*"/>
+  </Tag>
+  <Tag Name="Jet Database">
+    <Entrypoint Module="Esent.dll" Method="Jet*" />
+  </Tag>
+  <Tag Name="Diagtrack">
+    <Entrypoint Module="Diagtrack.dll" Method="*" />
+  </Tag>
+  <Tag Name="JSON">
+    <Entrypoint Module="Newtonsoft.Json.ni.dll" Method="*"/>
+    <Entrypoint Module="Newtonsoft.Json.dll" Method="*"/>
+  </Tag>
+  <Tag Name="Cortana">
+    <Tag Name="Activation">
+      <Entrypoint Module="searchui.exe" Method="_HandleActivation*" />
+    </Tag>
+    <Entrypoint Module="Windows.Cortana.dll"/>
+  </Tag>
+  <Tag Name="TileObjServer">
+    <Entrypoint Module="tileobjserver.dll" />
+  </Tag>
+  <Tag Name="Networking">
+    <Tag Name="WinINet">
+      <Entrypoint Module="wininet.dll"/>
+    </Tag>
+  </Tag>
+  <Tag Name="Direct X">
+    <Tag Name="DCompSurf">
+      <Entrypoint Module="dcomp.dll" Method="CAtlasSurfacePool::Create"/>
+    </Tag>
+    <Tag Name="DXSwapChain">
+      <Entrypoint Module="dxgi.dll" Method="CDXGIFactory::CreateSwapChain*"/>
+    </Tag>
+    <Tag Name="DXDevice">
+      <Entrypoint Module="D3D11.dll" Method="D3D11CreateDevice"/>
+    </Tag>
+    <Tag Name="D3DWarpTask">
+      <Entrypoint Module="D3D10Warp.dll" Method="Task::ExecuteTask"/>
+    </Tag>
+    <Tag Name="D3DExec">
+      <Entrypoint Module="D3D11.dll" Method="*UpdateSubresource*"/>
+      <Entrypoint Module="D3D11.dll" Method="*DrawIndexed*"/>
+    </Tag>
+    <Tag Name="DWriteTexture">
+      <Entrypoint Module="DWRITE.DLL" Method="*Texture*"/>
+    </Tag>
+    <Tag Name="D3DWarp">
+      <Entrypoint Module="d3d10warp.dll"/>
+    </Tag>
+    <Tag Name="CachedVisualImage">
+      <Entrypoint Module="dwmcore.dll" Method="CCachedVisualImage::*"/>
+    </Tag>
+    <Tag Name="RedirBitmap">
+      <Entrypoint Module="win32k.sys" Method="CreateOrGetRedirectionBitmap"/>
+    </Tag>
+
+    <!--
+         These tags will match any texture creations or mobile presents, so use priority=-1
+         so that higher-level stack tags with better semantic understanding of the stack can capture instead.
+         These will capture texture creations and mobile presents that haven't been captured
+         by higher-level tags.
+     -->
+    <Tag Name="Uncategorized Texture Allocation" Priority="-1">
+      <Entrypoint Module="D3D11.DLL" Method="CDevice::CreateTexture2D" />
+    </Tag>
+    <Tag Name="Uncategorized Mobile Present" Priority="-1">
+      <Entrypoint Module="dxgi.dll" Method="MobileCore::CDXGISwapChain::PresentEx" />
+    </Tag>
+    <Tag Name="Uncategorized DWM" Priority="-1">
+      <Entrypoint Module="dwmcore.dll" />
+      <Entrypoint Module="dwmredir.dll" />
+    </Tag>
+    <Tag Name="DXG" Priority ="-1">
+      <Entrypoint Module="dxgmms1.sys" Method="*" />
+      <Entrypoint Module="dxgmms2.sys" Method="*" />
+    </Tag>
+    <Tag Name="D3D11 Uncategorized" Priority="-1">
+      <Entrypoint Module="D3D11.DLL" Method="*" />
+    </Tag>
+    <Tag Name="D3D12 Uncategorized" Priority="-1">
+      <Entrypoint Module="D3D12.DLL" Method="*" />
+    </Tag>
+    <Tag Name="DirectML Uncategorized" Priority="-1">
+      <Entrypoint Module="DirectML.DLL" Method="*" />
+    </Tag>
+    <Tag Name="D3DCompiler Uncategorized" Priority="-1">
+      <Entrypoint Module="D3DCompiler_47.dll" Method="*" />
+    </Tag>
+  </Tag>
+  <Tag Name="Dynamic Initializers">
+    <Entrypoint Module="*" Method="*`dynamic initializer*"/>
+  </Tag>
+  <Tag Name="Explorer">
+    <Tag Name="Shell">
+      <Tag Name="Wallpaper">
+        <Tag Name="BitmapFromDiskCache">
+          <Entrypoint Module="shell32.dll" Method="CWallpaperRenderer::_LoadBitmapFromDiskCache"/>
+        </Tag>
+        <Entrypoint Module="shell32.dll" Method="*Wallpaper*"/>
+      </Tag>
+      <Tag Name="CChangeNotify">
+        <Entrypoint Module="shell32.dll" Method="CChangeNotify::*"/>
+      </Tag>
+      <Tag Name="CDesktopBrowser">
+        <Tag Name="OnWallpaperUpdate">
+          <Entrypoint Module="shell32.dll" Method="CDesktopBrowser::_OnWallpaperUpdate"/>
+        </Tag>
+        <Entrypoint Module="shell32.dll" Method="CDesktopBrowser::*"/>
+      </Tag>
+      <Tag Name="StartMenuCacheAndAppResolver">
+        <Entrypoint Module="shell32.dll" Method="CStartMenuCacheAndAppResolver_CreateInstance"/>
+      </Tag>
+    </Tag>
+    <Tag Name="SettingMonitor">
+      <Entrypoint Module="SettingMonitor.dll" Method="*"/>
+    </Tag>
+    <Tag Name="CTray">
+      <Entrypoint Module="explorer.exe" Method="CTray::*"/>
+    </Tag>
+    <Tag Name="ImmersiveShell.ServiceProvider.dll">
+      <Entrypoint Module="windows.immersiveshell.serviceprovider.dll" Method="*"/>
+    </Tag>
+    <Tag Name="SearchUI">
+      <Tag Name="Show">
+        <Tag Name="InitializeXAMLContent">
+          <Entrypoint Module="Windows.UI.Search.dll" Method="CXAMLHostWindow::_InitializeXAMLContent"/>
+        </Tag>
+        <Tag Name="InitializeServices">
+          <Entrypoint Module="Windows.UI.Search.dll" Method="CXAMLHostWindow::_InitializeServices"/>
+        </Tag>
+        <Entrypoint Module="Windows.UI.Search.dll" Method="CXAMLHostWindow::Show"/>
+      </Tag>
+      <Tag Name="Hide">
+        <Tag Name="ReleaseXAMLContent">
+          <Entrypoint Module="Windows.UI.Search.dll" Method="CXAMLHostWindow::_ReleaseXAMLContent"/>
+        </Tag>
+        <Entrypoint Module="Windows.UI.Search.dll" Method="CXAMLHostWindow::Hide"/>
+      </Tag>
+    </Tag>
+    <Tag Name="SearchFolder">
+      <Tag Name="CSearchDelegateFolder::CompareIDs">
+        <Entrypoint Module="SearchFolder.dll" Method="CSearchDelegateFolder::CompareIDs"/>
+      </Tag>
+      <Tag Name="CQueryResultSet::FetchResultAt">
+        <Entrypoint Module="SearchFolder.dll" Method="CQueryResultSet::FetchResultAt"/>
+      </Tag>
+      <Tag Name="CreateResultSets">
+        <Tag Name="ParseResults">
+          <Tag Name="ParseExtension">
+            <Entrypoint Module="SearchFolder.dll" Method="*_ParseExtension*"/>
+          </Tag>
+          <Entrypoint Module="SearchFolder.dll" Method="*_ParseResults"/>
+        </Tag>
+        <Entrypoint Module="SearchFolder.dll" Method="*::CreateResultSets"/>
+      </Tag>
+      <Tag Name="CQueryResultSet">
+        <Entrypoint Module="SearchFolder.dll" Method="CQueryResultSet::*"/>
+      </Tag>
+    </Tag>
+    <Tag Name="StructuredQuery">
+      <Entrypoint Module="StructuredQuery.dll" Method="*"/>
+    </Tag>
+  </Tag>
+  <Tag Name="Services">
+    <Tag Name="Defender">
+      <Tag Name="Svc">
+        <Entrypoint Module="MPSvc.dll"/>
+      </Tag>
+      <Tag Name="Rtp">
+        <Entrypoint Module="MPRtp.dll"/>
+      </Tag>
+      <Tag Name="Exe">
+        <Entrypoint Module="MSMpEng.exe"/>
+      </Tag>
+    </Tag>
+    <Tag Name="CtrlThread">
+      <Entrypoint Module="sechost.dll" Method="ScSvcctrlThreadW"/>
+    </Tag>
+    <Tag Name="WEvt::ProcessEventsThread">
+      <Entrypoint Module="wevtsvc.dll" Method="ProcessEventsThread"/>
+    </Tag>
+  </Tag>
+  <Tag Name="Misc">
+    <Tag Name="UpdateTextAlpha">
+      <Entrypoint Module="comctl32.dll" Method="CLVDrawItemManager::_UpdateTextAlpha"/>
+    </Tag>
+    <Tag Name="UXInit">
+      <Entrypoint Module="UXInit.dll"/>
+    </Tag>
+  </Tag>
+
+  <Tag Name="Silverlight">
+
+    <Tag Name="Graphics">
+      <Tag Name="Realize Textures">
+        <Entrypoint Module="AGCore.dll" Method="CCompositorData::RealizeTextures"/>
+        <Entrypoint Module="AGCore.dll" Method="CCompDataStream::RealizeTextures"/>
+      </Tag>
+      <Tag Name="Draw">
+        <Entrypoint Module="AGCore.dll" Method="CCompositorData::Draw" />
+      </Tag>
+      <Tag Name="Present">
+        <Entrypoint Module="NPCtrl.dll" Method="CD3DDevice::Present"/>
+      </Tag>
+      <Tag Name="WriteableBitmap">
+        <Entrypoint Module="AGCore.dll" Method="CReadbackToCpuTask::Run"/>
+        <Entrypoint Module="AGCore.dll" Method="CRenderToTargetTask::Run" />
+      </Tag>
+      <Tag Name="Release Delete List">
+        <Entrypoint Module="AGCore.dll" Method="CCompositor::CReleaseDeleteListTask::Execute" />
+      </Tag>
+      <Tag Name="Rendering">
+        <Tag Name="SubmitDataToRenderThread">
+          <Entrypoint Module="agcore.dll" Method="CCompositor::SubmitDataToRenderThread"/>
+        </Tag>
+        <Tag Name="RenderToIntermediate">
+          <Entrypoint Module="AGCore.dll" Method="CVisual::RenderToIntermediate" />
+        </Tag>
+        <Entrypoint Module="agcore.dll" Method="CCoreServices::Draw" />
+      </Tag>
+      <Tag Name="Compositor">
+        <Entrypoint Module="agcore.dll" Method="CCompositor::RenderThreadStatic" />
+      </Tag>
+      <Tag Name="Rasterization">
+        <Entrypoint Module="AGCore.dll" Method="CBandVectorBuffer::Run" />
+      </Tag>
+    </Tag>
+
+    <Tag Name="ProcessInput">
+      <Entrypoint Module="agcore.dll" Method="CInputManager::*"/>
+    </Tag>
+    <Tag Name="Tick">
+      <Entrypoint Module="npctrl.dll" Method="CXcpDispatcher::Tick"/>
+    </Tag>
+
+    <Tag Name="Misc">
+      <Tag Name="QueryDisplayProperties">
+        <Entrypoint Module="npctrl.dll" Method="CXcpControl::QueryDisplayProperties" />
+      </Tag>
+      <Tag Name="UI Thread Queue">
+        <Entrypoint Module="npctrl.dll" Method="CommonBrowserHost::ProcessExecuteMessage" />
+      </Tag>
+      <Tag Name="XcpControl Initialization">
+        <Entrypoint Module="NPCtrl.dll" Method="InitializeXcpControl" />
+        <Entrypoint Module="NPCtrl.dll" Method="CXcpControl::FinishInitialization" />
+        <Entrypoint Module="NPCtrl.dll" Method="CXcpControl::InitializeWindow" />
+      </Tag>
+      <Tag Name="Isolated Storage">
+        <Entrypoint Module="System.Windows.ni.dll" Method="System.IO.IsolatedStorage.IsolatedStorageSettings::get_ApplicationSettings*" />
+      </Tag>
+    </Tag>
+
+    <Tag Name="WriteableBitmap">
+      <Tag Name="SaveJpeg">
+        <Entrypoint Module="Microsoft.Phone.ni.dll" Method="System.Windows.Media.Imaging.Extensions::SaveJpeg" />
+      </Tag>
+      <Entrypoint Module="System.Windows.ni.dll" Method="System.Windows.Media.Imaging.WriteableBitmap*" />
+    </Tag>
+
+    <Tag Name="Networking">
+      <Entrypoint Module="NPCtrl.dll" Method="COperatingSystemWebRequest::OperatingSystemWebRequestThreadFn" />
+      <Entrypoint Module="NPCtrl.dll" Method="COperatingSystemWebRequest::Execute" />
+      <Entrypoint Module="NPCtrl.dll" Method="CAsyncDownloadRequestManager::DownloadRequests" />
+      <Entrypoint Module="NPCtrl.dll" Method="CommonBrowserHost::UnsecureDownload" />
+    </Tag>
+
+
+    <Tag Name="Animation">
+      <Entrypoint Module="agcore.dll" Method="CTimeManager::Tick"/>
+      <Entrypoint Module="agcore.dll" Method="CTimeManager::ProcessTickImpl"/>
+      <Entrypoint Module="agcore.dll" Method="CCoreServices::FlushDeferredAnimationOperationQueue"/>
+    </Tag>
+
+
+    <Tag Name="Tick Manager">
+      <Entrypoint Module="AGCore.dll" Method="CTickManager::DelayedTickThread" />
+    </Tag>
+
+    <Tag Name="Images">
+      <Tag Name="Decode">
+        <Entrypoint Module="NPCtrl.dll" Method="Decode"/>
+      </Tag>
+      <Tag Name="Cache">
+        <Entrypoint Module="AGCore.dll" Method="CBitmapCacheManager::CImageDecodedUIExecutor::*" />
+      </Tag>
+    </Tag>
+
+    <Tag Name="Elements">
+      <Tag Name="Parsing">
+        <Entrypoint Module="agcore.dll" Method="CParser::LoadXaml"/>
+        <Entrypoint Module="agcore.dll" Method="CCoreServices::LoadXaml"/>
+        <Entrypoint Module="agcore.dll" Method="CCoreServices::ParseXamlWithEventRoot"/>
+        <Entrypoint Module="agcore.dll" Method="CCoreServices::ParseXamlWithExistingFrameworkRoot"/>
+      </Tag>
+      <Tag Name="Layout">
+        <Tag Name="Measure">
+          <Entrypoint Module="agcore.dll" Method="CUIElement::Measure"/>
+        </Tag>
+        <Tag Name="Arrange">
+          <Entrypoint Module="agcore.dll" Method="CUIElement::Arrange"/>
+        </Tag>
+        <Entrypoint Module="agcore.dll" Method="CLayoutManager::UpdateLayout"/>
+      </Tag>
+    </Tag>
+
+    <Tag Name="Media">
+      <Tag Name="VideoProvider">
+        <Entrypoint Module="NPCtrl.dll" Method="CWM7VideoSource::VideoProviderMessageProcWorkerStatic" />
+      </Tag>
+      <Tag Name="MSS">
+        <Entrypoint Module="NPCtrl.dll" Method="CWM7ManagedSourceByteStream::ManagedSourceProcWorkerStatic" />
+      </Tag>
+    </Tag>
+
+
+    <Tag Name="DirectManipulation">
+      <Tag Name="Server">
+        <Entrypoint Module="NPCtrl.dll" Method="CDirectManipulationServer::ServerThreadStatic" />
+      </Tag>
+      <Tag Name="Client">
+        <Entrypoint Module="agcore.dll" Method="CDirectManipulationClient::UpdateValues" />
+      </Tag>
+    </Tag>
+
+    <Tag Name="Resources">
+      <Entrypoint Module="AGCore.dll" Method="CApplication::GetApplicationResource" />
+    </Tag>
+
+    <Tag Name="Text">
+      <Tag Name="CTextBlock::EnsureTextView">
+        <Entrypoint Module="AGCore.dll" Method="CTextBlock::EnsureTextView"/>
+      </Tag>
+      <Tag Name="Ptls5::LsCreateLineCore">
+        <Entrypoint Module="AGCore.dll" Method="Ptls5::LsCreateLineCore"/>
+      </Tag>
+      <Tag Name="BlockLayoutEngine::Measure">
+        <Entrypoint Module="AGCore.dll" Method="RichTextServices::Internal::BlockLayoutEngine::Measure"/>
+      </Tag>
+      <Tag Name="LsDisplayLine">
+        <Entrypoint Module="AGCore.dll" Method="Ptls5::LsDisplayLine"/>
+      </Tag>
+      <Tag Name="ParseOpenTypeTables">
+        <Entrypoint Module="NPCtrl.dll" Method="ParseOpenTypeTables"/>
+      </Tag>
+      <Tag Name="GlyphRun Bitmaps">
+        <Entrypoint Module="AGCore.dll" Method="V5TextDrawingContext::BuildGlyphRunBitmaps"/>
+      </Tag>
+    </Tag>
+
+    <Tag Name="Tracing">
+      <Entrypoint Module="NPCtrl.dll" Method="CXcpWinCodeTracer_etw::IsTracingEnabled" />
+    </Tag>
+
+  </Tag>
+
+  <Tag Name="Splash">
+    <Tag Name="NavigateToModern">
+      <Entrypoint Module="startmenu.dll" Method="NavigationProxy::NavigateToModern"/>
+    </Tag>
+    <Entrypoint Module="uixrender.dll" Method="*"/>
+    <Entrypoint Module="uixn.dll" Method="Microsoft::Iris*"/>
+  </Tag>
+
+  <Tag Name="CoreCLR">
+    <!--
+         This tag will match many CLR allocations, so use priority=-1 so that higher-level
+         stack tags with better semantic understanding of the stack can capture instead.
+         This tag is meant to mean "managed allocations that aren't captured by other tags"
+     -->
+    <Tag Name="Uncategorized Allocation" Priority="-1">
+      <Entrypoint Module="CORECLR.DLL" Method="Alloc" />
+      <Entrypoint Module="CORECLR.DLL" Method="CExecutionEngine::ClrVirtualAlloc" />
+      <Entrypoint Module="CORECLR.DLL" Method="EEHeapAllocInProcessHeap" />
+    </Tag>
+    <Tag Name="Garbage Collect">
+      <Entrypoint Module="CORECLR.DLL" Method="WKS::GCHeap::GarbageCollect" />
+    </Tag>
+    <Tag Name="Finalizer">
+      <Entrypoint Module="CORECLR.DLL" Method="WKS::GCHeap::FinalizerThreadStart" />
+    </Tag>
+  </Tag>
+
+  <Tag Name="LINQ">
+    <Entrypoint Module="SYSTEM.CORE.NI.DLL" Method="System.Linq.*"/>
+  </Tag>
+  <Tag Name="Newtonsoft.Json.WindowsPhone">
+    <Entrypoint Module="Newtonsoft.Json.WindowsPhone.ni.dll" Method="*"/>
+  </Tag>
+  <Tag Name="Microsoft.Web.Media.SmoothStreaming">
+    <Entrypoint Module="Microsoft.Web.Media.SmoothStreaming.ni.dll" Method="*"/>
+  </Tag>
+  <Tag Name="IdentityMine.WP.BaseViewModel">
+    <Entrypoint Module="IdentityMine.WP.BaseViewModel.ni.dll" Method="*"/>
+  </Tag>
+
+  <!-- Stacks involving COM should remain under whichever component made the COM call if possible -->
+  <!-- so we should use Priority -1 here -->
+  <Tag Name="COM" Priority="-1">
+    <Tag Name="QueryInterface" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="IUnknown_QueryInterface_Proxy" />
+      <Entrypoint Module="combase.dll" Method="CRemoteUnknown::RemQueryInterface" />
+    </Tag>
+    <Tag Name="ASTAThreadSendReceive" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="ASTAThreadSendReceive" />
+    </Tag>
+    <Tag Name="ModernSTAThreadSendReceive" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="ModernSTAThreadSendReceive" />
+    </Tag>
+    <Tag Name="ASTAThreadWaitForCall" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="ASTAThreadWaitForCall" />
+    </Tag>
+    <Tag Name="ModernSTAThreadWaitForCall" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="ModernSTAThreadWaitForCall" />
+    </Tag>
+    <Tag Name="MarshalInterface" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="CoMarshalInterface" />
+      <Entrypoint Module="rpcrt4.dll" Method="NdrPointerMarshall" />
+    </Tag>
+    <Tag Name="UnmarshalInterface" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="_CoUnmarshalInterface" />
+      <Entrypoint Module="combase.dll" Method="UnmarshalObjRef" />
+      <Entrypoint Module="rpcrt4.dll" Method="NdrpServerUnMarshal" />
+    </Tag>
+    <Tag Name="Release" Priority="-1">
+      <Entrypoint Module="combase.dll" Method="IUnknown_Release_Proxy" />
+      <Entrypoint Module="combase.dll" Method="CRemoteUnknown::RemRelease" />
+    </Tag>
+    <Tag Name="RoGetActivationFactory" Priority="-1">
+      <Entrypoint Module="COMBASE.DLL" Method="RoGetActivationFactory"/>
+    </Tag>
+    <Tag Name="GetActivationFactory" Priority="-1">
+      <Entrypoint Module="COMBASE.DLL" Method="CCGetWinRTRegisteredActivationFactory"/>
+    </Tag>
+    <Tag Name="GenerateRandomNumber" Priority="-1">
+      <Entrypoint Module="COMBASE.DLL" Method="CRandomNumberGenerator::GenerateRandomNumber"/>
+    </Tag>
+    <Tag Name="GetRuntimeClassInfo" Priority="-1">
+      <Entrypoint Module="COMBASE.DLL" Method="WinRTGetRuntimeClassInfo"/>
+    </Tag>
+    <Tag Name="ActivationProperties" Priority="-1">
+      <Entrypoint Module="COMBASE.DLL" Method="ActivationProperties*"/>
+    </Tag>
+    <!-- This is -2 priority because it sits below some of the COM methods above -->
+    <Tag Name="Uncategorized COM" Priority="-2">
+      <Entrypoint Module="combase.dll" Method="ObjectStubless*" />
+    </Tag>
+  </Tag>
+
+  <!-- The callee functions of this HintTag are real RPC server side routines. -->
+  <!-- Their module names will be automatically created as StackTags. -->
+  <HintTag Name="RPC" HintOperator="Callee" OnlyShowModule="false">
+    <Entrypoint Module="rpcrt4.dll" Method="Invoke_epilog1_start"/>
+    <Entrypoint Module="rpcrt4.dll" Method="Invoke"/>
+  </HintTag>
+  <!-- comment this caller HintTag as a sample
+  <HintTag Name="AllocateHeap" HintOperator="Caller">
+    <Entrypoint Module="ntdll.dll" Method="RtlAllocateHeap"/>
+  </HintTag>
+  -->
+
+</Tag>

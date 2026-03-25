@@ -1,0 +1,23 @@
+[
+    {
+        "id": "W1W7VT",
+        "type": "Information",
+        "description": "Call TestBeginEarlyCallback for tools.  This allow them to execute at the beginnign of Setup",
+        "enabled": true,
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "create_date": "2025-03-27",
+        "children": []
+    },
+    {
+        "id": "W1W8FC",
+        "type": "Code",
+        "description": "Call early callbacks",
+        "enabled": true,
+        "delay": "0.0",
+        "file_name": [
+            "code_W1W8FC.py"
+        ],
+        "children": []
+    }
+]

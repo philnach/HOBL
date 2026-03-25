@@ -1,0 +1,236 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-15",
+        "description": "Play NASA YouTube video",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "U7AK1J",
+        "name": "[new_tab]",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W1UV48",
+        "name": "[load_only]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HVKTNC",
+        "name": "[web_site_load_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "15"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5XLM",
+        "include_path": "..\\..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Switch archive",
+        "enabled": true,
+        "file_name": [
+            "code_U1NN1X.py"
+        ],
+        "id": "U1NN1X",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UC5PAR",
+        "include_path": "..\\..\\web_enter_address",
+        "params": [
+            {
+                "name": "[web_site_address]",
+                "val_options": "",
+                "value": "aka.ms/AAnpaqy"
+            },
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "[new_tab]"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "[web_site_load_time]"
+            },
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "Youtube_nasa"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "10",
+                "description": "CTRL-r",
+                "enabled": true,
+                "id": "UCKUHE",
+                "text": "\ue009r",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "NASA Settings",
+                "enabled": true,
+                "file_name": [
+                    "image_UEJKHN.png"
+                ],
+                "h": "0.400",
+                "id": "UEJKHN",
+                "recapture": true,
+                "type": "Capture",
+                "w": "0.500",
+                "x": "0.400",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "UEJKHN",
+                "children": [],
+                "delay": "1",
+                "description": "Settings on vid",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_UEJ8ET.png",
+                    "image_V8FEX4.png"
+                ],
+                "id": "UEJ8ET",
+                "match_threshold": "0.3",
+                "primary": true,
+                "type": "Click",
+                "x": "0.758",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2.0",
+                "description": "10 down",
+                "enabled": true,
+                "id": "UCKWY3",
+                "text": "\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "120"
+            },
+            {
+                "children": [],
+                "delay": "2.0",
+                "description": "6 up",
+                "enabled": true,
+                "id": "UCKX4E",
+                "text": "\ue013\ue013\ue013\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "120"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Move cursor off video",
+                "enabled": true,
+                "file_name": [
+                    "code_UCL6HH.py"
+                ],
+                "id": "UCL6HH",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "87",
+                "description": "Watch video",
+                "enabled": true,
+                "id": "UCL4U1",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "k to pause video",
+                "enabled": true,
+                "id": "UCL478",
+                "text": "k",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2.5",
+                "description": "Final delay",
+                "enabled": true,
+                "id": "UC6L36",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "W1UVAH",
+        "left_term": "[load_only]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "W1UVAK",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5XV7",
+        "include_path": "..\\..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "web"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "youtube_nasa"
+            }
+        ],
+        "type": "Include"
+    }
+]

@@ -1,0 +1,246 @@
+[
+    {
+        "author": "wssi",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-18",
+        "description": "Render",
+        "enabled": true,
+        "id": "11526UP",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1FL9ALL",
+        "name": "[render_delay]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "60"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to deliver tab",
+        "enabled": true,
+        "id": "11X685V",
+        "text": "*",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_11T224W.png"
+        ],
+        "h": "0.724",
+        "id": "11T224W",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.283",
+        "x": "0.001",
+        "y": "0.200"
+    },
+    {
+        "capture_id": "11T224W",
+        "children": [],
+        "delay": "2",
+        "description": "on Format dropdown",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T1YYA.png"
+        ],
+        "id": "11T1YYA",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.781",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change to MP4",
+        "enabled": true,
+        "id": "11T203W",
+        "text": "m\ue015\ue015\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "11T224W",
+        "children": [],
+        "delay": "2",
+        "description": "on Codec",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T23PX.png"
+        ],
+        "id": "11T23PX",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.806",
+        "y": "0.526"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change to H.264",
+        "enabled": true,
+        "id": "11T2496",
+        "text": "h\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "11T224W",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11EJNHN.png"
+        ],
+        "id": "11EJNHN",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Change location",
+        "enabled": true,
+        "id": "11EJPL0",
+        "text": "%TEMP%\\bench.mp4\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "11T224W",
+        "children": [],
+        "delay": "2",
+        "description": "on Add to render queue",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1152LX1.png"
+        ],
+        "id": "1152LX1",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Render Queue",
+        "enabled": true,
+        "file_name": [
+            "image_11T26U5.png"
+        ],
+        "h": "0.5",
+        "id": "11T26U5",
+        "recapture": true,
+        "type": "Capture",
+        "w": "0.280",
+        "x": "0.720",
+        "y": "0.030"
+    },
+    {
+        "capture_id": "11T26U5",
+        "children": [],
+        "delay": "2",
+        "description": "on render all",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1152N8E.png"
+        ],
+        "id": "1152N8E",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "[render_delay]",
+        "description": "",
+        "enabled": true,
+        "id": "1FL9CHF",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Render Queue Region Again",
+        "enabled": true,
+        "file_name": [
+            "image_12Y458J.png"
+        ],
+        "h": "0.45",
+        "id": "12Y458J",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.263",
+        "x": "0.737",
+        "y": "0.038"
+    },
+    {
+        "capture_id": "12Y458J",
+        "children": [],
+        "delay": "2",
+        "description": "If Render Completed Before Delay Finished",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12Y4W0F.png"
+        ],
+        "h": "0.043",
+        "id": "12Y4W0F",
+        "match_threshold": ".80",
+        "scale": "",
+        "type": "Check",
+        "w": "0.087",
+        "x": "0.758",
+        "y": "0.379"
+    },
+    {
+        "capture_id": "11T26U5",
+        "children": [],
+        "delay": "10",
+        "description": "Render Completion",
+        "enabled": true,
+        "file_name": [
+            "image_11533LW.png"
+        ],
+        "h": "0.3",
+        "id": "11533LW",
+        "match_threshold": ".80",
+        "timeout": "400",
+        "type": "Check Until Found",
+        "w": "0.280",
+        "x": "0.720",
+        "y": "0.030"
+    }
+]

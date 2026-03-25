@@ -1,0 +1,27 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Capture the Taskbar",
+        "enabled": true,
+        "id": "TYH82P",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Taskbar",
+        "enabled": true,
+        "file_name": [
+            "image_TYH95X.png"
+        ],
+        "h": "0.100",
+        "id": "TYH95X",
+        "type": "Capture",
+        "w": "1.000",
+        "x": "0.000",
+        "y": "0.900"
+    }
+]

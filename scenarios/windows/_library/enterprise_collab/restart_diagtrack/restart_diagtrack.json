@@ -1,0 +1,21 @@
+[
+    {
+        "author": "dasashutosh",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-19",
+        "description": "",
+        "enabled": true,
+        "id": "1HX827R",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "command": "cmd /c net stop DiagTrack && net start DiagTrack",
+        "delay": "2",
+        "description": "restart diagtrack",
+        "enabled": true,
+        "id": "1HX82MY",
+        "type": "Command"
+    }
+]

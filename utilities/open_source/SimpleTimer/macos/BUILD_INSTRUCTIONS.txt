@@ -1,0 +1,55 @@
+macOS SimpleTimer - Build Instructions
+======================================
+
+IMPORTANT: This code must be compiled on macOS. It uses macOS-specific APIs.
+
+High-resolution timer utility using mach_wait_until for precise periodic
+timing with configurable busy-work periods.
+
+BUILD ON macOS:
+--------------
+
+1. Transfer this entire folder to a macOS machine
+
+2. Open Terminal and navigate to the project directory:
+   cd /path/to/Timers_macOS
+
+3. Build:
+   make
+
+4. Run the program:
+   ./timers <timer_period_ms> <busy_period_ms> <total_duration_s>
+
+TROUBLESHOOTING:
+---------------
+
+If you get compiler errors, ensure you have Xcode Command Line Tools:
+   xcode-select --install
+
+ALTERNATIVE BUILD (manual):
+--------------------------
+
+   clang++ -std=c++11 -Wall -Wextra -O2 -o timers timers.cpp
+
+EXAMPLE USAGE:
+-------------
+
+# 1000ms period, 100ms busy work, run for 60 seconds
+./timers 1000 100 60
+
+# 10ms period, 3ms busy work, run for 30 seconds
+./timers 10 3 30
+
+FILES:
+-----
+  timers.cpp     - Complete macOS implementation (single file)
+  Makefile       - Build configuration
+  README.txt     - Usage documentation
+
+WINDOWS USERS:
+-------------
+This code cannot be compiled on Windows as it uses macOS-specific APIs:
+- pthread (POSIX threads)
+- mach kernel APIs (mach_wait_until, mach_absolute_time)
+
+To build, transfer it to a Mac and follow the build instructions above.

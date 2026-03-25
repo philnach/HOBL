@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+  <settings pass="generalize" wasPassProcessed="true">
+    <component name="Microsoft-Windows-Pnp-Sysprep" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <PersistAllDeviceInstalls>false</PersistAllDeviceInstalls>
+    </component>
+  </settings>
+  <settings pass="specialize">
+    <component name="Security-Malware-Windows-Defender" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <TrustedImageIdentifier>422b32ce-2526-41b5-9bca-128441bb8bdf</TrustedImageIdentifier>
+    </component>
+    <component name="Microsoft-Windows-GPIOButtons" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <ConvertibleSlateMode>1</ConvertibleSlateMode>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <ComputerName>DCARV-Default</ComputerName>
+      <DesktopOptimization>
+        <ShowWindowsStoreAppsOnTaskbar>true</ShowWindowsStoreAppsOnTaskbar>
+      </DesktopOptimization>
+      <NotificationArea>
+        <PromotedIcon1>
+          <Path>c:\windows\System32\SurfaceDTX.exe</Path>
+          <GUID>{89d16bf3-bb3b-406e-adce-891235666e37}</GUID>
+        </PromotedIcon1>
+      </NotificationArea>
+      <ShowPowerButtonOnStartScreen>true</ShowPowerButtonOnStartScreen>
+      <SignInMode>1</SignInMode>
+      <ConvertibleSlateModePromptPreference>1</ConvertibleSlateModePromptPreference>
+    </component>
+  </settings>
+  <settings pass="oobeSystem">
+    <component name="Microsoft-Windows-International-Core" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <InputLocale>en-US</InputLocale>
+      <SystemLocale>en-US</SystemLocale>
+      <UILanguage>en-US</UILanguage>
+      <UserLocale>en-US</UserLocale>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="AMD64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <TimeZone>Pacific Standard Time</TimeZone>
+      <OEMInformation>
+        <HelpCustomized>false</HelpCustomized>
+        <Logo>c:\HCKClient\WTT_Core\dcarv-oem.jpg</Logo>
+        <Manufacturer>PLE</Manufacturer>
+        <SupportURL>http://127.0.0.1</SupportURL>
+      </OEMInformation>
+      <StartTiles>
+        <PromoteOEMTiles>true</PromoteOEMTiles>
+        <WideTiles>
+          <WideTile1>
+            <AppId>Microsoft.SurfaceHub_8wekyb3d8bbwe!App</AppId>
+            <FirstRunTask>
+            </FirstRunTask>
+          </WideTile1>
+        </WideTiles>
+      </StartTiles>
+      <Themes>
+        <ThemeName>DC</ThemeName>
+        <DesktopBackground>c:\HCKClient\WTT_Core\dcarv.jpg</DesktopBackground>
+      </Themes>
+      <FirstLogonCommands>
+        <SynchronousCommand>
+          <Description>WTT CLient Install</Description>
+          <Order>1</Order>
+          <CommandLine>%SystemDrive%\HCKClient\PostOS.cmd</CommandLine>
+        </SynchronousCommand>
+      </FirstLogonCommands>
+      <OOBE>
+        <HideEULAPage>true</HideEULAPage>
+        <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+        <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+        <ProtectYourPC>3</ProtectYourPC>
+        <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+        <NetworkLocation>Work</NetworkLocation>
+        <SkipMachineOOBE>true</SkipMachineOOBE>
+        <SkipUserOOBE>true</SkipUserOOBE>
+        <HideLocalAccountScreen>true</HideLocalAccountScreen>
+      </OOBE>
+      <UserAccounts>
+        <LocalAccounts>
+          <LocalAccount>
+            <Password>Test-Execution</Password>
+            <Description>Lab Account</Description>
+            <DisplayName>Local Admin</DisplayName>
+            <Group>Administrators</Group>
+            <Name>Administrator</Name>
+          </LocalAccount>
+        </LocalAccounts>
+        <AdministratorPassword>Test-Execution</AdministratorPassword>
+      </UserAccounts>
+      <AutoLogon>
+        <Enabled>true</Enabled>
+        <UserName>Administrator</UserName>
+        <Password>Test-Execution</Password>
+        <LogonCount>9999</LogonCount>
+      </AutoLogon>
+    </component>
+  </settings>
+</unattend>

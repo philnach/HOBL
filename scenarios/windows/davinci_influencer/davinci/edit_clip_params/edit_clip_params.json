@@ -1,0 +1,347 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "edit clip inspect parameters",
+        "enabled": true,
+        "id": "10PFCHC",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click in timeline region",
+        "enabled": true,
+        "id": "10PFEEJ",
+        "type": "Click Coord",
+        "x": "0.6",
+        "y": "0.85"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to first clip",
+        "enabled": true,
+        "id": "10PFLL1",
+        "text": "\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click on first clip",
+        "enabled": true,
+        "id": "10PFN34",
+        "type": "Click Coord",
+        "x": "0.7",
+        "y": "0.85"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open Inspector",
+        "enabled": true,
+        "id": "10PFTVR",
+        "text": "\ue0099",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_10VXKKL.png"
+        ],
+        "h": "0.250",
+        "id": "10VXKKL",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.240",
+        "x": "0.717",
+        "y": "0.150"
+    },
+    {
+        "capture_id": "10VXKKL",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_10VXL3W.png"
+        ],
+        "id": "10VXL3W",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.456",
+        "y": "0.106"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Edit car params",
+        "enabled": true,
+        "id": "10PJ3K7",
+        "text": "2.090\ue007\ue004\ue004-124\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10RUT23",
+        "name": "[j]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "10RUTT7",
+                "name": "[j]",
+                "type": "Increment",
+                "value": "1"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Click in timeline region",
+                "enabled": true,
+                "id": "10PJKV2",
+                "type": "Click Coord",
+                "x": "0.6",
+                "y": "0.85"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Move to next clip",
+                "enabled": true,
+                "id": "10PJL8E",
+                "text": "\ue015",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Click on the next clip",
+                "enabled": true,
+                "id": "10PJLH6",
+                "type": "Click Coord",
+                "x": "0.6",
+                "y": "0.85"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Open Inspector",
+                "enabled": true,
+                "id": "10RUUC5",
+                "text": "\ue0099",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_10VYM10.png"
+                ],
+                "h": "0.250",
+                "id": "10VYM10",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.227",
+                "x": "0.729",
+                "y": "0.150"
+            },
+            {
+                "capture_id": "10VYM10",
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_10VYMJK.png"
+                ],
+                "id": "10VYMJK",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.456",
+                "y": "0.063"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Clip panda params",
+                        "enabled": true,
+                        "id": "10PJRY8",
+                        "text": "\ue004\ue00450\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RUUTC",
+                "left_term": "[j]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RUUTE",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "rhino clip params",
+                        "enabled": true,
+                        "id": "10PJU46",
+                        "text": "1.01\ue007\ue004\ue00422\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RV0XE",
+                "left_term": "[j]",
+                "right_term": "2",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RV0XF",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "leopard clip params",
+                        "enabled": true,
+                        "id": "10PJVCY",
+                        "text": "\ue004\ue004-234\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RV180",
+                "left_term": "[j]",
+                "right_term": "3",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RV181",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "flower clip params",
+                        "enabled": true,
+                        "id": "10PK0UF",
+                        "text": "0.6\ue007\ue004\ue00466\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RV1H0",
+                "left_term": "[j]",
+                "right_term": "6",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RV1H1",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "mask clip params",
+                        "enabled": true,
+                        "id": "10PK1J6",
+                        "text": "\ue004\ue004-199\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RV1WH",
+                "left_term": "[j]",
+                "right_term": "7",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RV1WK",
+                "type": "End If"
+            }
+        ],
+        "count": "7",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10PJKHM",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10PJKHN",
+        "type": "End Loop"
+    }
+]

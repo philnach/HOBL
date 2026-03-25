@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution solutionVersion="1.0.0.188" PIVersion="1.0.0.0" href="file:///PerfSignature.xsn" name="urn:schemas-microsoft-com:office:infopath:PerfSig:" language="en-us" productVersion="12.0.0" ?>
+<?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<PerformanceSignatureSet>
+  <PerformanceSignature>
+    <SignatureId>66E46A77-EE57-4D89-ACA4-1083E3449DD7</SignatureId>
+    <SignatureVersion>1</SignatureVersion>
+    <Title>UserCrit</Title>
+    <SignatureType>Basic</SignatureType>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!EnterCrit</Frame>
+            <Frame>nt!ExpWaitForResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!EnterCrit</Frame>
+            <Frame>nt!ExpWaitForFastResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!EnterSharedCrit</Frame>
+            <Frame>nt!ExpWaitForResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!EnterSharedCrit</Frame>
+            <Frame>nt!ExpWaitForFastResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!DxgkEngEnterUserCrit</Frame>
+            <Frame>nt!ExpWaitForResource</Frame>
+            <Frame>nt!KeWaitForSingleObject</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!DxgkEngEnterUserCrit</Frame>
+            <Frame>nt!ExpWaitForFastResource</Frame>
+            <Frame>nt!KeWaitForSingleObject</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!PrivateAPI::`anonymous namespace'::EnterCritInternal</Frame>
+            <Frame>nt!ExpWaitForResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!PrivateAPI::`anonymous namespace'::EnterCritInternal</Frame>
+            <Frame>nt!ExpWaitForFastResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!PrivateAPI::`anonymous namespace'::EnterSharedCritInternal</Frame>
+            <Frame>nt!ExpWaitForResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <CSwitchStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!PrivateAPI::`anonymous namespace'::EnterSharedCritInternal</Frame>
+            <Frame>nt!ExpWaitForFastResource</Frame>
+          </FrameBlocks>
+        </CSwitchStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!UserSessionSwitchLeaveCrit</Frame>
+            <Frame>nt!ExpReleaseResourceForThreadLite</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!UserSessionSwitchLeaveCrit</Frame>
+            <Frame>nt!ExReleaseFastResource</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!NtUserSystemParametersInfo</Frame>
+            <Frame>nt!ExReleaseFastResource</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!UserLeaveUserCritSec</Frame>
+            <Frame>nt!ExReleaseFastResource</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!UserSessionSwitchLeaveCritWithNonPaged</Frame>
+            <Frame>nt!ExReleaseFastResource</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition>
+      <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>win32kbase.sys!NtUserGetHDevName</Frame>
+            <Frame>nt!ExReleaseFastResource</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <AdditionalComments>This signature identifies stacks that will be treated as UserCrit.</AdditionalComments>
+  </PerformanceSignature>
+</PerformanceSignatureSet>

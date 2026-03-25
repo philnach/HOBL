@@ -1,0 +1,79 @@
+{
+    "weights":{
+        "system on":{
+            "percent": 75,
+            "activity":{
+                "screen on": {
+                    "percent": 60,
+                    "categories":{
+                        "abl_active":{
+                            "percent": 88,
+                            "scenarios":{
+                                "abl_active": 100
+                            }
+                        },
+                        "communications":{
+                            "percent": 4,
+                            "scenarios":{
+                                "teams2_3x3_mep1": 70, 
+                                "teams2_1on1_audio": 30
+                            }
+                        },
+                        "entertainment":{
+                            "percent": 4,
+                            "scenarios":{
+                                "minecraft": 0,
+                                "lvp": 0,
+                                "halo2": 0,
+                                "netflix": 66,
+                                "youtube_lt": 34
+                            }
+                        },
+                        "active ai":{
+                            "percent": 4,
+                            "scenarios":{
+                                "copilot": 50,
+                                "recall": 50
+                            }
+                        }
+                    }
+                },
+                "screen off":{
+                    "percent": 40,
+                    "categories":{
+                        "modern standby":{
+                            "percent": 100,
+                            "scenarios":{
+                                "cs_floor": 0,
+                                "abl_standby": 100
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "system charging":{
+            "percent": 25
+        }
+    },
+    "score card headers":{
+        "Modern Standby Floor (Wi-Fi)": "cs_floor",
+        "Local Video Playback (Airplane)": "lvp",
+        "Idle Desktop": "idle_desktop",
+        "ABL Active":  "abl_active",
+        "ABL Standby": "abl_standby",
+        "Idle Applications": "abl_active.idle",
+        "Productivity": "abl_active.prod",
+        "Web Browsing (EdgeChromium)": "abl_active.web",
+        "Teams Video Conference":  "teams2_3x3_mep1",
+        "Teams Audio Call": "teams2_1on1_audio",
+        "Teams Idle": "teams2_idle",
+        "Halo 2 Video (Movies & TV)": "halo2", 
+        "Netflix Full Screen (EdgeChromium)": "netflix", 
+        "YouTube Default View with Live Translation": "youtube_lt", 
+        "Copilot": "copilot",
+        "Recall": "recall",
+        "Minecraft": "minecraft",
+        "Hibernate": "hibernate"
+    }
+}

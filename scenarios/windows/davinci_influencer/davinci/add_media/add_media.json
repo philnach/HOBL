@@ -1,0 +1,349 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-08",
+        "description": "add media to media pool",
+        "enabled": true,
+        "id": "10N99V1",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Right of Program",
+        "enabled": true,
+        "file_name": [
+            "image_12MUV29.png"
+        ],
+        "h": "0.580",
+        "id": "12MUV29",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.496",
+        "x": "0.001",
+        "y": "0.029"
+    },
+    {
+        "capture_id": "12MUV29",
+        "children": [],
+        "delay": "2",
+        "description": "On Media Pool Region",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MUVHF.png"
+        ],
+        "id": "12MUVHF",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click in media pool region",
+        "enabled": false,
+        "id": "10PE0K7",
+        "type": "Click Coord",
+        "x": "0.25",
+        "y": "0.45"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Open dialog",
+        "enabled": true,
+        "id": "10PE16Y",
+        "text": "\ue009i",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "20",
+        "description": "Add car",
+        "enabled": true,
+        "id": "10PE260",
+        "text": "\ue004\ue004\ue004\ue004\ue004\ue004\ue007C:\\hobl_bin\\davinci_resources\\bench_source_vids\ue007\ue004\ue004\ue004\ue004\ue004\ue004car_desert.mp4\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "4",
+        "description": "Add to timeline",
+        "enabled": true,
+        "id": "11423TW",
+        "text": "\ue004\ue014\ue039",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10RU86E",
+        "name": "[i]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "10RU9TE",
+                "name": "[i]",
+                "type": "Increment",
+                "value": "1"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Open dialog",
+                "enabled": true,
+                "id": "10PE2VH",
+                "text": "\ue009i",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": false,
+                "id": "112C28V",
+                "type": "Click Coord",
+                "x": "0.046",
+                "y": "0.465"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add panda",
+                        "enabled": true,
+                        "id": "10PE3HN",
+                        "text": "\ue003\ue003panda.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RTY27",
+                "left_term": "[i]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RTY29",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add rhino",
+                        "enabled": true,
+                        "id": "10PE3TU",
+                        "text": "rhino.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RTYX3",
+                "left_term": "[i]",
+                "right_term": "2",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RTYX4",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add leopard",
+                        "enabled": true,
+                        "id": "10PE4KY",
+                        "text": "leopard.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RU071",
+                "left_term": "[i]",
+                "right_term": "3",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RU072",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add orungutan",
+                        "enabled": true,
+                        "id": "10PE59R",
+                        "text": "orungutan.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RU0FX",
+                "left_term": "[i]",
+                "right_term": "4",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RU0FY",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add skateboard",
+                        "enabled": true,
+                        "id": "10PEAPV",
+                        "text": "skateboard.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RU0R4",
+                "left_term": "[i]",
+                "right_term": "5",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RU0R5",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add flower",
+                        "enabled": true,
+                        "id": "10PEC5A",
+                        "text": "flower.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RU14P",
+                "left_term": "[i]",
+                "right_term": "6",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RU14R",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Add masked person",
+                        "enabled": true,
+                        "id": "10PEE16",
+                        "text": "mask.mp4\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RU1CR",
+                "left_term": "[i]",
+                "right_term": "7",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RU1CT",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Add to timeline",
+                "enabled": true,
+                "id": "1142575",
+                "text": "\ue039",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "count": "7",
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "10N9EYL",
+        "type": "Loop"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10N9EYM",
+        "type": "End Loop"
+    }
+]

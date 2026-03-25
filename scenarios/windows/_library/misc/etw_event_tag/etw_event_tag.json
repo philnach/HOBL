@@ -1,0 +1,34 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Laptop 7 Intel 15\"",
+        "children": [],
+        "create_date": "2025-10-30",
+        "description": "Send ETW Tags",
+        "enabled": true,
+        "id": "17XH5EE",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "17XM5RU",
+        "name": "[event_tag]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Mark with tag",
+        "enabled": true,
+        "file_name": [
+            "code_17XH5PK.py"
+        ],
+        "id": "17XH5PK",
+        "type": "Code"
+    }
+]

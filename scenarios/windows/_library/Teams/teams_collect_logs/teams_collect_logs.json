@@ -1,0 +1,177 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to parse Teams logs after collecting them.",
+        "enabled": true,
+        "id": "1514H02",
+        "multiple": false,
+        "name": "[teams:parse_MSTeams_Logs]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Sets the path to the parser to use to decode Teams logs.",
+        "enabled": true,
+        "id": "1514J5W",
+        "multiple": false,
+        "name": "[teams:parser_location]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "..\\\\ScenarioAssets\\\\Teamsdecode\\\\bin\\\\UnifiedLogging"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Delete previously collected logs",
+        "enabled": true,
+        "id": "12HNFCA",
+        "include_path": "..\\..\\run_command",
+        "params": [
+            {
+                "name": "[command]",
+                "val_options": "",
+                "value": "powershell.exe Remove-Item -Force -Recurse -Path \"~\\Downloads\\MSTeams*\""
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "",
+        "enabled": true,
+        "id": "12HNHCT",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Open the main Teams window",
+        "enabled": true,
+        "id": "12HNK1M",
+        "include_path": "..\\..\\run_command",
+        "params": [
+            {
+                "name": "[command]",
+                "val_options": "",
+                "value": "powershell.exe start msteams:"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "12HNKK9",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Ctrl-Alt-Shift-1 to collect logs",
+        "enabled": true,
+        "id": "12HNL1M",
+        "text": "\ue009\ue00a\ue0081",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "60",
+        "description": "Wait for logs to generate",
+        "enabled": true,
+        "id": "12HNP9X",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Move logs to folder.",
+        "enabled": true,
+        "file_name": [
+            "code_12MYEMV.py"
+        ],
+        "id": "12MYEMV",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "12HNVRH",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "12HNVXJ",
+        "include_path": "..\\..\\run_command",
+        "params": [
+            {
+                "name": "[command]",
+                "val_options": "",
+                "value": "powershell Get-Process | Where-Object {$_.ProcessName -Like 'ms-teams'} | Stop-Process"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "30",
+        "description": "Copy logs back from DUT",
+        "enabled": true,
+        "file_name": [
+            "code_12VL6EA.py"
+        ],
+        "id": "12VL6EA",
+        "type": "Code"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Parse Teams logs with given parser",
+                "enabled": true,
+                "file_name": [
+                    "code_12VL960.py"
+                ],
+                "id": "12VL960",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "12VL539",
+        "left_term": "[teams:parse_MSTeams_Logs]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12VL53A",
+        "type": "End If"
+    }
+]

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution solutionVersion="1.0.0.188" PIVersion="1.0.0.0" href="file:///PerfSignature.xsn" name="urn:schemas-microsoft-com:office:infopath:PerfSig:" language="en-us" productVersion="12.0.0" ?>
+<?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<PerformanceSignatureSet>
+  <PerformanceSignature>
+    <SignatureId>B749F0B9-06A4-49D3-9CD6-216E3FA3A346</SignatureId>
+    <SignatureVersion>1</SignatureVersion>
+    <Title>NetworkDPC</Title>
+    <SignatureType>Basic</SignatureType>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>ndis.sys!ndisMiniportDpc</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>tcpip.sys!TcpPeriodicTimeoutHandler</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>ndis.sys!NdisMIndicateReceiveNetBufferLists</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <AdditionalComments>This signature identifies stacks that will be treated as Network DPCs.</AdditionalComments>
+  </PerformanceSignature>
+  
+  <PerformanceSignature>
+    <SignatureId>94486DD1-E5C7-431D-844A-D0098B50F6A6</SignatureId>
+    <SignatureVersion>1</SignatureVersion>
+    <Title>NeuralProcessingUnitDPC</Title>
+    <SignatureType>Basic</SignatureType>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>qcnspmcdm8380.sys!*</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <AdditionalComments>This signature identifies stacks that will be treated as NPU DPCs.</AdditionalComments>
+  </PerformanceSignature>
+  
+  <PerformanceSignature>
+    <SignatureId>F6C04950-C25E-46A9-8EE0-D08825C1DFDA</SignatureId>
+    <SignatureVersion>1</SignatureVersion>
+    <Title>DevicesDPC</Title>
+    <SignatureType>Basic</SignatureType>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>Wdf01000.sys!FxInterrupt::_InterruptDpcThunk</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <AdditionalComments>This signature identifies stacks that will be treated as Device Drivers DPCs.</AdditionalComments>
+  </PerformanceSignature>
+
+  <PerformanceSignature>
+    <SignatureId>46FD82F5-9618-4949-942B-531759E1E4CE</SignatureId>
+    <SignatureVersion>1</SignatureVersion>
+    <Title>TimerDPC</Title>
+    <SignatureType>Basic</SignatureType>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>nt!KiProcessExpiredTimerList</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <Recognition> <!-- all frames have to be true -->
+      <Wait>
+        <ReadyThreadStack>
+          <FrameBlocks>
+            <AllowSkippingFrames>true</AllowSkippingFrames>
+            <Frame>nt!KiTimer2Expiration</Frame>
+          </FrameBlocks>
+        </ReadyThreadStack>
+      </Wait>
+    </Recognition>
+    <AdditionalComments>This signature identifies stacks that will be treated as timer DPCs.</AdditionalComments>
+  </PerformanceSignature>
+</PerformanceSignatureSet>

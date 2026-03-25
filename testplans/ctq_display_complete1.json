@@ -1,0 +1,456 @@
+{
+    "StudyVars": {
+        "TR": {
+            "AdaptiveBacklight": "",
+            "AdaptiveRefreshRate": "",
+            "BacklightSlider": "",
+            "HDR": ""
+        },
+        "Brightness": {
+            "0": "display_brightness:brightness=0",
+            "5": "display_brightness:brightness=5",
+            "10": "display_brightness:brightness=10",
+            "18": "display_brightness:brightness=18",
+            "24": "display_brightness:brightness=24",
+            "36": "display_brightness:brightness=36",
+            "44": "display_brightness:brightness=44",
+            "50": "display_brightness:brightness=50",
+            "56": "display_brightness:brightness=56",
+            "61": "display_brightness:brightness=61",
+            "65": "display_brightness:brightness=65",
+            "69": "display_brightness:brightness=69",
+            "72": "display_brightness:brightness=72",
+            "76": "display_brightness:brightness=76",
+            "79": "display_brightness:brightness=79",
+            "82": "display_brightness:brightness=82",
+            "84": "display_brightness:brightness=84",
+            "87": "display_brightness:brightness=87",
+            "89": "display_brightness:brightness=89",
+            "92": "display_brightness:brightness=92",
+            "94": "display_brightness:brightness=94",
+            "96": "display_brightness:brightness=96",
+            "98": "display_brightness:brightness=98",
+            "100": "display_brightness:brightness=100"
+        },
+        "AdaptiveBacklight": {
+            "Off": "",
+            "On": ""
+        },
+        "RefreshRate": {
+            "60": "",
+            "120": "",
+            "Adaptive": ""
+        },
+        "HDR": {
+            "Off": "",
+            "On": ""
+        }
+    },
+    "PlanBasedStudyVars": [],
+    "StudyType": "CTQ_Display",
+    "AutoResubmit": 0,
+    "Scenarios": [
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "daily_prep",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Prep global:delay_between_runs=0"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "config_check",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": ""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_off",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc global:delay_between_runs=900"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "lvp",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveBacklight",
+                "AdaptiveBacklight"
+            ],
+            "Iterations": 1,
+            "Parameters": ""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveBacklight",
+                "AdaptiveBacklight"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "test_analysis",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveBacklight"
+            ],
+            "Iterations": 1,
+            "Parameters": "test_analysis:ado_top_of_tree=\"5214264\" test_analysis:ado_test_name=\"Adaptive Backlight Power Savings (DPST/CABC)\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "idle_desktop",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "cs_floor",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+powercfg power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "abl_active",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "web",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power web:web_workload=reddit global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "idle_apps",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "productivity",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "netflix",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "youtube",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "lvp",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_video",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_idle",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate",
+                "RefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "test_analysis",
+            "Enabled": true,
+            "Expand": [
+                "TR.AdaptiveRefreshRate"
+            ],
+            "Iterations": 1,
+            "Parameters": "test_analysis:ado_top_of_tree=\"5214264\" test_analysis:ado_test_name=\"Adaptive Refresh Rate Power Impact\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "idle_desktop",
+            "Enabled": true,
+            "Expand": [
+                "TR.BacklightSlider",
+                "Brightness"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:tools=\"+display_brightness\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "TR.BacklightSlider",
+                "Brightness"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "test_analysis",
+            "Enabled": true,
+            "Expand": [
+                "TR.BacklightSlider"
+            ],
+            "Iterations": 1,
+            "Parameters": "test_analysis:ado_top_of_tree=\"5214264\" test_analysis:ado_test_name=\"Backlight Slider vs Power (NITs check)\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "idle_desktop",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "web",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power web:web_workload=reddit global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "idle_apps",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "productivity",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "netflix",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "youtube",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "lvp",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_video",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_idle",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR",
+                "HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "test_analysis",
+            "Enabled": true,
+            "Expand": [
+                "TR.HDR"
+            ],
+            "Iterations": 1,
+            "Parameters": "test_analysis:ado_top_of_tree=\"5214264\" test_analysis:ado_test_name=\"HDR ON and HDR OFF impact\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_on",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": ""
+        }
+    ]
+}

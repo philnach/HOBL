@@ -1,0 +1,5 @@
+# THIRD-PARTY NOTICES
+
+These binaries contain **no third-party components**.
+
+This file is provided for compliance completeness.

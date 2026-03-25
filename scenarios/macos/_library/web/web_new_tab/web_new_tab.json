@@ -1,0 +1,46 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-23",
+        "description": "Open New Tab",
+        "enabled": true,
+        "id": "UEW4WX",
+        "type": "Information"
+    },
+    {
+        "id": "10U19MT",
+        "type": "Capture",
+        "description": "New tab",
+        "enabled": true,
+        "delay": "0.5",
+        "x": "0.911",
+        "y": "0.013",
+        "w": "0.089",
+        "h": "0.093",
+        "file_name": [
+            "image_10U19MT.png"
+        ],
+        "recapture": false,
+        "children": []
+    },
+    {
+        "id": "10U19VE",
+        "type": "Click",
+        "description": "New tab",
+        "enabled": true,
+        "delay": "2",
+        "x": "0.500",
+        "y": "0.500",
+        "file_name": [
+            "image_10U19VE.png"
+        ],
+        "exception_on": "No match",
+        "match_threshold": "",
+        "scale": "",
+        "primary": true,
+        "children": [],
+        "capture_id": "10U19MT"
+    }
+]

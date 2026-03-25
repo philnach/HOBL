@@ -1,0 +1,164 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-08",
+        "description": "Change timeline settings",
+        "enabled": true,
+        "id": "10N8PU0",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "click in media region",
+        "enabled": false,
+        "id": "10N8R3P",
+        "type": "Click Coord",
+        "x": "0.2",
+        "y": "0.5"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open dialog",
+        "enabled": true,
+        "id": "10N8RT5",
+        "text": "(",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_12MUT8X.png"
+        ],
+        "h": "0.829",
+        "id": "12MUT8X",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.546",
+        "x": "0.343",
+        "y": "0.126"
+    },
+    {
+        "capture_id": "12MUT8X",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MURPP.png"
+        ],
+        "id": "12MURPP",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.690"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "In settings dialog",
+        "enabled": false,
+        "id": "1127JN6",
+        "type": "Click Coord",
+        "x": "0.3",
+        "y": "0.4"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change resolution",
+        "enabled": true,
+        "id": "10W0X3K",
+        "text": "\ue004\ue0031080\ue0041920\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_10W09FN.png"
+        ],
+        "h": "0.255",
+        "id": "10W09FN",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.253",
+        "x": "0.356",
+        "y": "0.286"
+    },
+    {
+        "capture_id": "12MUT8X",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_10W0FYR.png"
+        ],
+        "id": "10W0FYR",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "10N8V40",
+        "text": "3\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_10W0TCV.png"
+        ],
+        "h": "0.111",
+        "id": "10W0TCV",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.219",
+        "x": "0.651",
+        "y": "0.790"
+    },
+    {
+        "capture_id": "12MUT8X",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_10W0TVF.png"
+        ],
+        "id": "10W0TVF",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

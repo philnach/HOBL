@@ -1,0 +1,73 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-03-02",
+        "description": "Productivity Setup",
+        "enabled": true,
+        "id": "UTAEJW",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "id": "114NFJK",
+                "include_path": "..\\..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "val_options": "",
+                        "value": "cmd /c \"[global:onedrive_path]\\hobl_upload\\copy_abl_docs.cmd\" \""
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Sleep while files copy and sync",
+                "enabled": true,
+                "id": "114NJJ4",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "114NEY6",
+        "left_term": "[global:platform]",
+        "right_term": "W365",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Productivity setup",
+                "enabled": true,
+                "file_name": [
+                    "code_UTAWXA.py"
+                ],
+                "id": "UTAWXA",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "114NF70",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "114NEY7",
+        "type": "End If"
+    }
+]

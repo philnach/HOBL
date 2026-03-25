@@ -1,0 +1,17 @@
+# Portions Copyright (c) 2026 Microsoft Corporation
+
+*~
+Makefile
+*.pc
+LibVNCServer*.tar.gz
+build/
+build_x64/
+build_ARM64/
+doc/html/
+.ccls-cache
+.cachexs
+.log
+compile_commands.json
+deps/libjpeg
+deps/libpng
+deps/zlib

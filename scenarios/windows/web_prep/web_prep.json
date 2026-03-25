@@ -1,0 +1,412 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-31",
+        "description": "Prepare Edge web browser",
+        "enabled": true,
+        "id": "W721M2",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Set registry settings",
+        "enabled": true,
+        "file_name": [
+            "code_W74E8F.py"
+        ],
+        "id": "W74E8F",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "15",
+        "description": "",
+        "enabled": true,
+        "id": "W722HN",
+        "include_path": "scenarios\\windows\\_library\\web\\web_setup",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_W73YM7.png"
+        ],
+        "h": "1",
+        "id": "W73YM7",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "W73YM7",
+        "children": [],
+        "delay": "2",
+        "description": "Maximize",
+        "enabled": true,
+        "exception_on": "Never",
+        "file_name": [
+            "image_W73YY0.png"
+        ],
+        "id": "W73YY0",
+        "match_threshold": "0.95",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "",
+        "enabled": true,
+        "id": "WAWCN5",
+        "include_path": "scenarios\\windows\\_library\\web\\web_new_tab",
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "1",
+                "description": "CTRL-l",
+                "enabled": true,
+                "id": "137LA7V",
+                "text": "\ue009l",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "clearBrowserData URL",
+                "enabled": true,
+                "id": "137LARU",
+                "text": "chrome://settings/clearBrowserData\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Dialog",
+                "enabled": true,
+                "file_name": [
+                    "image_137LECA.png"
+                ],
+                "h": "0.699",
+                "id": "137LECA",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.502",
+                "x": "0.262",
+                "y": "0.174"
+            },
+            {
+                "capture_id": "137LECA",
+                "children": [],
+                "delay": "1",
+                "description": "Drop down",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_137LF12.png"
+                ],
+                "id": "137LF12",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Dialog dropdown",
+                "enabled": true,
+                "file_name": [
+                    "image_137LHPP.png"
+                ],
+                "h": "0.666",
+                "id": "137LHPP",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.481",
+                "x": "0.263",
+                "y": "0.201"
+            },
+            {
+                "capture_id": "137LHPP",
+                "children": [],
+                "delay": "1",
+                "description": "All time",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_137LK0T.png"
+                ],
+                "id": "137LK0T",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "137LHPP",
+                "children": [],
+                "delay": "5",
+                "description": "Delete data",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_137LLRL.png"
+                ],
+                "id": "137LLRL",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Chrome",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "137L8A5",
+        "left_term": "[global:browser]",
+        "right_term": "Chrome",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Top right corner",
+                "enabled": true,
+                "file_name": [
+                    "image_W72474.png"
+                ],
+                "h": "0.20",
+                "id": "W72474",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.3",
+                "x": "0.7",
+                "y": "0.075"
+            },
+            {
+                "capture_id": "W72474",
+                "children": [],
+                "delay": "1",
+                "description": "Settings",
+                "edge_thresholds": "5,50",
+                "enabled": true,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_W724A2.png"
+                ],
+                "id": "W724A2",
+                "match_threshold": "0.6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Settings menu",
+                "enabled": true,
+                "file_name": [
+                    "image_W724NE.png"
+                ],
+                "h": "0.876",
+                "id": "W724NE",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.288",
+                "x": "0.702",
+                "y": "0.066"
+            },
+            {
+                "capture_id": "W724NE",
+                "children": [],
+                "delay": "1",
+                "description": "Full page",
+                "enabled": true,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_W7251L.png"
+                ],
+                "id": "W7251L",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "W724NE",
+                "children": [],
+                "delay": "1",
+                "description": "Settings",
+                "enabled": true,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_W725YW.png"
+                ],
+                "id": "W725YW",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.863",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "CTRL-l",
+                "enabled": true,
+                "id": "W729PT",
+                "text": "\ue009l",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "clearBrowserData URL",
+                "enabled": true,
+                "id": "W72A3F",
+                "text": "edge://settings/clearBrowserData\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Dialog",
+                "enabled": true,
+                "file_name": [
+                    "image_W72E48.png"
+                ],
+                "h": "0.660",
+                "id": "W72E48",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.390",
+                "x": "0.309",
+                "y": "0.193"
+            },
+            {
+                "capture_id": "W72E48",
+                "children": [],
+                "delay": "1",
+                "description": "Drop down",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_W72FX3.png",
+                    "image_1HRCY5V.png"
+                ],
+                "id": "W72FX3",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_W72JNJ.png"
+                ],
+                "h": "0.582",
+                "id": "W72JNJ",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.371",
+                "x": "0.315",
+                "y": "0.236"
+            },
+            {
+                "capture_id": "W72JNJ",
+                "children": [],
+                "delay": "1",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_W72HV7.png"
+                ],
+                "id": "W72HV7",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "W72JNJ",
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_W72JW2.png"
+                ],
+                "id": "W72JW2",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "137L8CF",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "137L8A6",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "W72LCT",
+        "include_path": "scenarios\\windows\\_library\\web\\web_close_browser",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "3",
+        "description": "",
+        "enabled": true,
+        "id": "W72M2L",
+        "include_path": "scenarios\\windows\\_library\\web\\web_kill",
+        "type": "Include"
+    }
+]

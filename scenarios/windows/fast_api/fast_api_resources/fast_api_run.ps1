@@ -1,0 +1,456 @@
+param(
+    [string]$logFile = "",
+    [string]$startTime = (Get-Date).ToString("o")
+)
+# Require PowerShell > 7
+$required = [version]"7.0"
+if (-not $PSVersionTable.PSVersion) {
+    Write-Host "Cannot determine PowerShell version; aborting." -ForegroundColor Red
+    Exit 1
+}
+if ([version]$PSVersionTable.PSVersion -le $required) {
+    Write-Host "This script requires PowerShell greater than $required. Current: $($PSVersionTable.PSVersion)" -ForegroundColor Yellow
+    Write-Host "Please install PowerShell 7 or later from https://aka.ms/powershell" -ForegroundColor Yellow
+    Exit 1
+}
+
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+# 9F0F6E2E-8D06-4D2F-B8F5-6F1F2D5A1C01 is a custom provider we use to emit phase markers from the scenario script (optional, may not be present)
+if (-not ('HoblRunPhaseProvider' -as [type])) {
+    Add-Type -TypeDefinition @"
+using System.Diagnostics.Tracing;
+
+[EventSource(Name = "HOBL-Scenario-Phases", Guid = "9f0f6e2e-8d06-4d2f-b8f5-6f1f2d5a1c01")]
+public sealed class HoblRunPhaseProvider : EventSource
+{
+    public static readonly HoblRunPhaseProvider Log = new HoblRunPhaseProvider();
+
+    [Event(1, Level = EventLevel.Informational)]
+    public void Phase(string marker, string scenario)
+    {
+        WriteEvent(1, marker, scenario);
+    }
+}
+"@
+}
+
+function Write-RunPhaseMarker {
+    param([string]$Marker)
+
+    try {
+        [HoblRunPhaseProvider]::Log.Phase($Marker, "fast_api")
+    } catch {
+    }
+}
+
+$scriptDrive = Split-Path -Qualifier $PSScriptRoot
+
+if (-not (Test-Path "$scriptDrive\hobl_data")) {
+    Write-Host " ERROR - Required directory not found: $scriptDrive\hobl_data" -ForegroundColor Red
+    Exit 1
+}
+if (-not (Test-Path "$scriptDrive\hobl_bin")) {
+    Write-Host " ERROR - Required directory not found: $scriptDrive\hobl_bin" -ForegroundColor Red
+    Exit 1
+}
+
+$timeTraceFile = "$scriptDrive\hobl_data\result_time.trace"
+
+# Determine processor architecture and set appropriate Python version
+$osInfo = Get-CimInstance Win32_OperatingSystem
+$arch = $osInfo.OSArchitecture
+$processorArch = $env:PROCESSOR_ARCHITECTURE
+
+if ($arch -eq "64-bit" -and $processorArch -eq "AMD64") {
+    $pythonVersion = "3.11.9"
+    $logSuffix = "x64"
+} elseif ($arch -match "ARM" -or $processorArch -match "ARM") {
+    $pythonVersion = "3.11.9-arm"
+    $logSuffix = "ARM64"
+} else {
+    Write-Host " ERROR - Unsupported architecture: $arch (Processor: $processorArch)" -ForegroundColor Red
+    Exit 1
+}
+
+Write-Host "Detected architecture: $arch (Processor: $processorArch)" -ForegroundColor Green
+Write-Host "Using Python version: $pythonVersion for $logSuffix" -ForegroundColor Green
+
+$LOG_DIR = "$scriptDrive\hobl_data"
+$METRICS_FILE = "$LOG_DIR\fast_api_results.csv"
+
+Write-RunPhaseMarker "phase.run_prep.start"
+
+# Create log directory if it doesn't exist
+if (-not (Test-Path $LOG_DIR)) {
+    New-Item -ItemType Directory -Path $LOG_DIR -Force | Out-Null
+}
+
+if (-not $logFile) { $logFile = "$LOG_DIR\fast_api_run.log" }
+function log {
+    [CmdletBinding()] Param([Parameter(ValueFromPipeline)] $msg)
+    process {
+        if ($msg -Match " ERROR - ") {
+            Write-Host $msg -ForegroundColor Red
+        } else {
+            Write-Host $msg
+        }
+        Add-Content -Path $logFile -encoding utf8 "$msg"
+    }
+}
+Set-Content -Path $logFile -encoding utf8 "-- fast_api run started"
+
+# Fix Windows Store Python PATH issue by prioritizing pyenv paths permanently
+"Optimizing Python PATH priority permanently..." | log
+
+$pyenvPaths = @(
+    "$env:USERPROFILE\.pyenv\pyenv-win\shims",
+    "$env:USERPROFILE\.pyenv\pyenv-win\bin"
+)
+
+# Function to optimize PATH order permanently
+function Set-OptimizedPathOrder {
+    Write-Host "`n=== Optimizing PATH Permanently ===" -ForegroundColor Magenta
+
+    function ConvertTo-NormalizedPathEntry {
+        param([string]$Entry)
+
+        if (-not $Entry) { return $null }
+        $value = $Entry.Trim().Trim('"')
+        if (-not $value) { return $null }
+
+        if ($value.Length -gt 3 -and $value.EndsWith("\")) {
+            $value = $value.TrimEnd("\\")
+        }
+
+        return $value
+    }
+
+    function Get-PathEntries {
+        param([string]$PathValue)
+
+        $entries = New-Object System.Collections.Generic.List[string]
+        if (-not $PathValue) { return $entries }
+
+        foreach ($segment in ($PathValue -split ';')) {
+            $normalized = ConvertTo-NormalizedPathEntry -Entry $segment
+            if ($normalized) {
+                $entries.Add($normalized)
+            }
+        }
+
+        return $entries
+    }
+
+    function Add-UniquePathEntry {
+        param(
+            [System.Collections.Generic.List[string]]$List,
+            [hashtable]$Seen,
+            [string]$Entry
+        )
+
+        $normalized = ConvertTo-NormalizedPathEntry -Entry $Entry
+        if (-not $normalized) { return }
+
+        $key = $normalized.ToLowerInvariant()
+        if (-not $Seen.ContainsKey($key)) {
+            $List.Add($normalized)
+            $Seen[$key] = $true
+        }
+    }
+    
+    # Check if running as administrator
+    $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+    
+    # Get current User PATH
+    $currentUserPath = [System.Environment]::GetEnvironmentVariable('PATH', 'User')
+    Write-Host "Original User PATH length: $($currentUserPath.Length) characters" -ForegroundColor Gray
+
+    $windowsAppsCanonical = ConvertTo-NormalizedPathEntry -Entry "$env:LOCALAPPDATA\Microsoft\WindowsApps"
+    $windowsAppsCanonicalKey = $windowsAppsCanonical.ToLowerInvariant()
+    $windowsAppsEnvKey = "%localappdata%\microsoft\windowsapps"
+
+    $pyenvPathKeys = @{}
+    foreach ($pyenvPath in $pyenvPaths) {
+        $normalizedPyenv = ConvertTo-NormalizedPathEntry -Entry $pyenvPath
+        if ($normalizedPyenv) {
+            $pyenvPathKeys[$normalizedPyenv.ToLowerInvariant()] = $true
+        }
+    }
+
+    $userEntries = Get-PathEntries -PathValue $currentUserPath
+    $cleanUserEntries = New-Object System.Collections.Generic.List[string]
+    $cleanUserSeen = @{}
+    $hadWindowsAppsInUserPath = $false
+
+    foreach ($entry in $userEntries) {
+        $entryKey = $entry.ToLowerInvariant()
+
+        if ($entryKey -eq $windowsAppsCanonicalKey -or $entryKey -eq $windowsAppsEnvKey) {
+            $hadWindowsAppsInUserPath = $true
+            continue
+        }
+
+        if ($pyenvPathKeys.ContainsKey($entryKey)) {
+            Write-Host "Removing existing pyenv path: $entry" -ForegroundColor Gray
+            continue
+        }
+
+        Add-UniquePathEntry -List $cleanUserEntries -Seen $cleanUserSeen -Entry $entry
+    }
+
+    $newUserEntries = New-Object System.Collections.Generic.List[string]
+    $newUserSeen = @{}
+
+    foreach ($pyenvPath in $pyenvPaths) {
+        Add-UniquePathEntry -List $newUserEntries -Seen $newUserSeen -Entry $pyenvPath
+    }
+
+    foreach ($entry in $cleanUserEntries) {
+        Add-UniquePathEntry -List $newUserEntries -Seen $newUserSeen -Entry $entry
+    }
+
+    if ($hadWindowsAppsInUserPath -or (Test-Path $windowsAppsCanonical)) {
+        Add-UniquePathEntry -List $newUserEntries -Seen $newUserSeen -Entry $windowsAppsCanonical
+    }
+
+    $newUserPath = ($newUserEntries -join ';')
+    
+    try {
+        # Update User PATH permanently
+        Write-Host "Updating User PATH permanently..." -ForegroundColor Yellow
+        [System.Environment]::SetEnvironmentVariable('PATH', $newUserPath, 'User')
+        Write-Host "New User PATH length: $($newUserPath.Length) characters" -ForegroundColor Gray
+        
+        if ($isAdmin) {
+            Write-Host "Running as Administrator - also updating Machine PATH" -ForegroundColor Green
+            
+            # Get and clean Machine PATH
+            $machinePath = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine')
+            $machineEntries = Get-PathEntries -PathValue $machinePath
+            $cleanMachineEntries = New-Object System.Collections.Generic.List[string]
+            $cleanMachineSeen = @{}
+
+            foreach ($entry in $machineEntries) {
+                if ($pyenvPathKeys.ContainsKey($entry.ToLowerInvariant())) {
+                    continue
+                }
+                Add-UniquePathEntry -List $cleanMachineEntries -Seen $cleanMachineSeen -Entry $entry
+            }
+
+            $newMachineEntries = New-Object System.Collections.Generic.List[string]
+            $newMachineSeen = @{}
+            foreach ($pyenvPath in $pyenvPaths) {
+                Add-UniquePathEntry -List $newMachineEntries -Seen $newMachineSeen -Entry $pyenvPath
+            }
+            foreach ($entry in $cleanMachineEntries) {
+                Add-UniquePathEntry -List $newMachineEntries -Seen $newMachineSeen -Entry $entry
+            }
+
+            $newMachinePath = ($newMachineEntries -join ';')
+            
+            Write-Host "Updating Machine PATH permanently..." -ForegroundColor Yellow
+            [System.Environment]::SetEnvironmentVariable('PATH', $newMachinePath, 'Machine')
+        }
+        
+        # Update current session PATH to match Windows standard: Machine + User
+        $machinePath = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine')
+        $env:PATH = $machinePath + ";" + $newUserPath
+        
+        Write-Host "PATH optimization complete!" -ForegroundColor Green
+        Write-Host "pyenv paths have FIRST priority" -ForegroundColor Green
+        if ($hadWindowsAppsInUserPath -or (Test-Path $windowsAppsCanonical)) {
+            Write-Host "Windows Store Python moved to LAST priority" -ForegroundColor Green
+        }
+        if ($isAdmin) {
+            Write-Host "Changes applied system-wide for all users" -ForegroundColor Green
+        }
+        
+    } catch {
+        Write-Host "Failed to update PATH: $($_.Exception.Message)" -ForegroundColor Red
+        Exit 1
+    }
+}
+
+# Optimize PATH permanently
+Set-OptimizedPathOrder
+
+# PATH is now optimized: pyenv first (from User PATH), then system dirs (from Machine PATH)
+# Windows Store Python is at the end with lowest priority
+
+Set-Location "$scriptDrive\FastAPI"
+
+"Setting Python global version to $pythonVersion..." | log
+pyenv global $pythonVersion
+if ($LASTEXITCODE -ne 0) {
+    " ERROR - Failed to set Python version $pythonVersion. Make sure it's installed via pyenv." | log
+    "Run the FastAPI prep script first to install the correct Python version." | log
+    Exit 1
+}
+
+"Current Python version:" | log
+pyenv version
+
+"Location of python:" | log
+pyenv which python
+
+"Location of python3:" | log
+pyenv which python3
+
+"Dump environment variables:" | log
+Get-ChildItem Env:
+
+# Comprehensive Python detection function
+function Find-AllPython {
+    "=== Python Detection Report ===" | log
+    
+    # Check PATH
+    "`n1. Python in PATH:" | log
+    try {
+        $pathPython = Get-Command python -ErrorAction SilentlyContinue
+        if ($pathPython) {
+            "  Found: $($pathPython.Source)" | log
+            & python --version 2>&1
+        } else {
+            "  No python in PATH" | log
+        }
+    } catch {
+        "  No python in PATH" | log
+    }
+    
+    # Check file system
+    "`n2. Python installations on disk:" | log
+    $searchPaths = @(
+        "${env:ProgramFiles}\Python*",
+        "${env:ProgramFiles(x86)}\Python*",
+        "${env:LOCALAPPDATA}\Programs\Python\Python*",
+        "${env:APPDATA}\Python\Python*"
+    )
+    
+    foreach ($path in $searchPaths) {
+        $found = Get-ChildItem $path -ErrorAction SilentlyContinue
+        foreach ($dir in $found) {
+            $pythonExe = Join-Path $dir.FullName "python.exe"
+            if (Test-Path $pythonExe) {
+                "  Found: $pythonExe" | log
+                try {
+                    & $pythonExe --version 2>&1
+                } catch {}
+            }
+        }
+    }
+    
+    # Check Windows Store
+    "`n3. Windows Store Python:" | log
+    $storePython = "${env:LOCALAPPDATA}\Microsoft\WindowsApps\python.exe"
+    if (Test-Path $storePython) {
+        "  Found: $storePython" | log
+        & $storePython --version 2>&1
+    } else {
+        "  Not installed" | log
+    }
+    
+    # Check pyenv
+    "`n4. pyenv-win managed Python:" | log
+    if (Get-Command pyenv -ErrorAction SilentlyContinue) {
+        "  pyenv is available" | log
+        pyenv versions
+    } else {
+        "  pyenv not found" | log
+    }
+}
+
+# Run the detection
+Find-AllPython
+
+# Verify pyenv Python is being used
+"`n=== Python Resolution Verification ===" | log
+$whichPython = Get-Command python -ErrorAction SilentlyContinue
+if ($whichPython) {
+    "Resolved python.exe: $($whichPython.Source)" | log
+        if ($whichPython.Source -like "*pyenv*") {
+        "SUCCESS: pyenv Python is being used" | log
+    } else {
+        "WARNING: Non-pyenv Python is being used" | log
+        "This may cause version conflicts" | log
+    }
+    } else {
+    " ERROR - No python found in PATH" | log
+}
+
+"Building FastAPI..." | log
+Write-RunPhaseMarker "phase.run_prep.end"
+Write-RunPhaseMarker "phase.run_build.start"
+$buildTime = (Measure-Command {
+    python -m build
+}).TotalSeconds
+$buildExitCode = $LASTEXITCODE
+Write-RunPhaseMarker "phase.run_build.end"
+if ($buildExitCode -ne 0) {
+    " ERROR - Build failed" | log
+    Exit 1
+}
+$buildTime = [math]::Round($buildTime, 2)
+"Build completed in ${buildTime}s" | log
+
+"Setting environment variables..." | log
+$env:PYTHONPATH = "./docs_src"
+$env:PYTHONIOENCODING = "utf-8"
+
+"Running tests with coverage..." | log
+Write-RunPhaseMarker "phase.run_test.start"
+$testTime = (Measure-Command {
+    coverage run -m pytest tests
+}).TotalSeconds
+$testExitCode = $LASTEXITCODE
+Write-RunPhaseMarker "phase.run_test.end"
+Write-RunPhaseMarker "phase.run_results.start"
+$testTime = [math]::Round($testTime, 2)
+
+if ($testExitCode -eq 0) {
+    "FastAPI tests completed successfully!" | log
+} else {
+    "Tests failed with exit code: $testExitCode" | log
+}
+"Tests completed in ${testTime}s" | log
+
+# ============================================================================
+# Calculate scenario_runtime and save metrics
+# ============================================================================
+$scenarioRuntime = [math]::Round($buildTime + $testTime, 2)
+
+"" | log
+"========================================" | log
+"Fast API Metrics Summary" | log
+"========================================" | log
+"Build Time:  ${buildTime}s" | log
+"Test Time:   ${testTime}s" | log
+"scenario_runtime (total): ${scenarioRuntime}s" | log
+"========================================" | log
+
+# Write metrics CSV file (key,value format)
+$metricsContent = @"
+scenario_runtime,$scenarioRuntime
+build_time,$buildTime
+test_time,$testTime
+"@
+
+Set-Content -Path $METRICS_FILE -Value $metricsContent -NoNewline
+"Metrics saved to: $METRICS_FILE" | log
+
+$elapsedTime = ((Get-Date) - [DateTime]$startTime).TotalSeconds
+# Append to .trace files for timeline correlation (key,value format)
+if (-not (Test-Path $timeTraceFile)) {
+    "Creating trace file with header: $timeTraceFile" | log
+    Set-Content -Path $timeTraceFile -Value "Timestamp,build_time, test_time, total_time" -Encoding UTF8
+}
+
+$traceContent = @"
+$elapsedTime,$buildTime,$testTime,$scenarioRuntime
+"@
+"Appending time info to trace file: $timeTraceFile" | log  
+Add-Content -Path $timeTraceFile -Value $traceContent -Encoding UTF8
+
+Write-RunPhaseMarker "phase.run_results.end"
+
+Exit $testExitCode

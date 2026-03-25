@@ -1,0 +1,288 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-15",
+        "description": "Browse Reddit",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "U7AK1J",
+        "name": "new_tab",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W193AJ",
+        "name": "[load_only]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HUHTL4",
+        "name": "[web_site_load_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "20"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9NMP",
+        "include_path": "..\\..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Switch archive",
+        "enabled": true,
+        "file_name": [
+            "code_U1NN1X.py"
+        ],
+        "id": "U1NN1X",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UC5PAR",
+        "include_path": "..\\..\\web_enter_address",
+        "params": [
+            {
+                "name": "[web_site_address]",
+                "val_options": "",
+                "value": "aka.ms/AAnowz2"
+            },
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "[new_tab]"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "[web_site_load_time]"
+            },
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "Reddit"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Upper left",
+        "enabled": true,
+        "file_name": [
+            "image_U0Y8Y7.png"
+        ],
+        "h": "0.500",
+        "id": "U0Y8Y7",
+        "recapture": true,
+        "type": "Capture",
+        "w": "0.500",
+        "x": "0.000",
+        "y": "0.000"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Move mouse ptr off video to hide controls",
+        "enabled": true,
+        "id": "U0YA0T",
+        "type": "Comment"
+    },
+    {
+        "capture_id": "U0Y8Y7",
+        "children": [],
+        "delay": "1",
+        "description": "Going back to the office",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_U0Y9JR.png"
+        ],
+        "id": "U0Y9JR",
+        "type": "Move",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "60",
+                "description": "Watch video 60s",
+                "enabled": true,
+                "id": "UC69K4",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LJL",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LK1",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LKF",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LL2",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LLJ",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "More comments",
+                "enabled": false,
+                "file_name": [
+                    "image_U0XT6F.png"
+                ],
+                "h": "0.350",
+                "id": "U0XT6F",
+                "recapture": true,
+                "type": "Capture",
+                "w": "0.322",
+                "x": "0.172",
+                "y": "0.600"
+            },
+            {
+                "capture_id": "U0XT6F",
+                "children": [],
+                "delay": "1",
+                "description": "More comments",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_U0XR2M.png"
+                ],
+                "id": "U0XR2M",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "3",
+                "description": "",
+                "direction": "down",
+                "enabled": true,
+                "id": "U10LMA",
+                "type": "Scroll",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Final delay",
+                "enabled": true,
+                "id": "UC6L36",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "W191J1",
+        "left_term": "[load_only]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "W191J2",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9NRA",
+        "include_path": "..\\..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "web"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "reddit"
+            }
+        ],
+        "type": "Include"
+    }
+]

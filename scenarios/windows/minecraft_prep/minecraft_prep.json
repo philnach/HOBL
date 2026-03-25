@@ -1,0 +1,590 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "surface_pro_13in",
+        "children": [],
+        "create_date": "2026-02-03",
+        "description": "",
+        "enabled": true,
+        "id": "1ER7HMP",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ERJU3A",
+        "name": "[signed_in]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "100.0",
+        "description": "Download Minecraft w/ Winget",
+        "enabled": true,
+        "file_name": [
+            "code_1ER7N09.py"
+        ],
+        "id": "1ER7N09",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "maximize window",
+        "enabled": true,
+        "id": "1ER90YY",
+        "text": "\ue00a\ue00dx",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "1st Launch Sign in Page",
+                "enabled": true,
+                "file_name": [
+                    "image_1ERAH4Y.png"
+                ],
+                "h": "0.822",
+                "id": "1ERAH4Y",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.751",
+                "x": "0.129",
+                "y": "0.097"
+            },
+            {
+                "capture_id": "1ERAH4Y",
+                "children": [],
+                "delay": "5",
+                "description": "Sign in with msft account",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1ERAHF4.png"
+                ],
+                "id": "1ERAHF4",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1ERAFVX",
+        "type": "Try"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "1ERJUC4",
+                "name": "[signed_in]",
+                "type": "Set",
+                "value": "1"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1ERAFW0",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1ERAFW1",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1ERAFW2",
+        "type": "End Try"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Maximize Sign in Page",
+                "enabled": true,
+                "id": "1ERAC93",
+                "text": "\ue00a\ue00dx",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Msft Sign in Page",
+                "enabled": true,
+                "file_name": [
+                    "image_1ERAJKX.png"
+                ],
+                "h": "1",
+                "id": "1ERAJKX",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "1ERAJKX",
+                "children": [],
+                "delay": "2",
+                "description": "Sign in Account Appears",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1ERAJTU.png"
+                ],
+                "h": "0.375",
+                "id": "1ERAJTU",
+                "match_threshold": "",
+                "scale": "",
+                "type": "Check",
+                "w": "0.301",
+                "x": "0.349",
+                "y": "0.270"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "msa account",
+                "enabled": true,
+                "id": "1ERAMK0",
+                "text": "\ue00d[global:msa_account]",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Enter to go to Password Field",
+                "enabled": true,
+                "id": "1ERANP9",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Sign in Option",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1ERC1JW.png"
+                        ],
+                        "h": "1",
+                        "id": "1ERC1JW",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "1",
+                        "x": "0",
+                        "y": "0"
+                    },
+                    {
+                        "capture_id": "1ERC1JW",
+                        "children": [],
+                        "delay": "5",
+                        "description": "Use Password",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ERC2N2.png"
+                        ],
+                        "id": "1ERC2N2",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETR7KY",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Check for Other Password Option",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1ETR7W4.png"
+                        ],
+                        "h": "0.864",
+                        "id": "1ETR7W4",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.653",
+                        "x": "0.166",
+                        "y": "0.068"
+                    },
+                    {
+                        "capture_id": "1ETR7W4",
+                        "children": [],
+                        "delay": "5",
+                        "description": "Use Password",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ETR81Y.png"
+                        ],
+                        "id": "1ETR81Y",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETR7L0",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETR7L1",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETR7L2",
+                "type": "End Try"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Password",
+                "enabled": true,
+                "id": "1ERAPR7",
+                "text": "[global:dut_password]",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Enter to Sign in ",
+                "enabled": true,
+                "id": "1ERAR4N",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Xbox Sign In",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1ERCEKL.png"
+                        ],
+                        "h": "0.801",
+                        "id": "1ERCEKL",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.464",
+                        "x": "0.266",
+                        "y": "0.126"
+                    },
+                    {
+                        "capture_id": "1ERCEKL",
+                        "children": [],
+                        "delay": "10",
+                        "description": "Let's go",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ETU5CJ.png"
+                        ],
+                        "id": "1ETU5CJ",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    },
+                    {
+                        "capture_id": "1ERCEKL",
+                        "children": [],
+                        "delay": "10",
+                        "description": "Let's go",
+                        "enabled": false,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ERCEW9.png"
+                        ],
+                        "id": "1ERCEW9",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ERK0NP",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "New Xbox Account",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1ETR927.png"
+                        ],
+                        "h": "0.819",
+                        "id": "1ETR927",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.609",
+                        "x": "0.183",
+                        "y": "0.071"
+                    },
+                    {
+                        "capture_id": "1ETR927",
+                        "children": [],
+                        "delay": "10",
+                        "description": "Save and Continue",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ETR9EH.png"
+                        ],
+                        "id": "1ETR9EH",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Xbox Sign in",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1ETRA7C.png"
+                        ],
+                        "h": "0.774",
+                        "id": "1ETRA7C",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.590",
+                        "x": "0.193",
+                        "y": "0.093"
+                    },
+                    {
+                        "capture_id": "1ETRA7C",
+                        "children": [],
+                        "delay": "10",
+                        "description": "Let's go",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1ETU5CJ.png"
+                        ],
+                        "id": "1ETRAEM",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ERK0NR",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ERK0NT",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ERK0NU",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "1ERJXV1",
+        "left_term": "[signed_in]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1ERJXV3",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Top Portion of Launcher",
+        "enabled": true,
+        "file_name": [
+            "image_1ERCFYC.png"
+        ],
+        "h": "0.146",
+        "id": "1ERCFYC",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.634",
+        "x": "0.224",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "1ERCFYC",
+        "children": [],
+        "delay": "2",
+        "description": "Play Demo",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1ERCH6F.png"
+        ],
+        "id": "1ERCH6F",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "180",
+        "description": "Wait for Download to Complete",
+        "enabled": true,
+        "id": "1ERCJ76",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_1ERCJYF.png"
+        ],
+        "h": "0.210",
+        "id": "1ERCJYF",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.228",
+        "x": "0.005",
+        "y": "0.789"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Game Launched",
+        "enabled": true,
+        "file_name": [
+            "image_1ERCKPR.png"
+        ],
+        "h": "0.602",
+        "id": "1ERCKPR",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.541",
+        "x": "0.209",
+        "y": "0.160"
+    },
+    {
+        "capture_id": "1ERCKPR",
+        "children": [],
+        "delay": "2",
+        "description": "Maximize Game",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_1ERCL78.png"
+        ],
+        "id": "1ERCL78",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "Accessibility Pop Up",
+        "enabled": true,
+        "id": "1ERHYWX",
+        "text": "\ue015\ue015\ue015\ue015\ue015\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Close Game",
+        "enabled": true,
+        "id": "1ERKHEP",
+        "type": "Click Coord",
+        "x": "0.98",
+        "y": "0.02"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Close Launcher",
+        "enabled": true,
+        "id": "1ERKKC0",
+        "type": "Click Coord",
+        "x": "0.98",
+        "y": "0.02"
+    }
+]

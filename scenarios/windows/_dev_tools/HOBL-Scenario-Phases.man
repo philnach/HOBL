@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instrumentationManifest
+    xmlns="http://schemas.microsoft.com/win/2004/08/events"
+    xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <instrumentation>
+    <events>
+      <provider
+          name="HOBL-Scenario-Phases"
+          guid="{9f0f6e2e-8d06-4d2f-b8f5-6f1f2d5a1c01}"
+          symbol="HOBLScenarioPhases">
+        <channels>
+          <channel
+              chid="Operational"
+              name="HOBL-Scenario-Phases/Operational"
+              type="Operational"
+              enabled="true" />
+        </channels>
+
+        <templates>
+          <template tid="PhaseTemplate">
+            <data name="Marker" inType="win:UnicodeString" />
+            <data name="Scenario" inType="win:UnicodeString" />
+          </template>
+        </templates>
+
+        <events>
+          <event
+              value="1"
+              version="0"
+              level="win:Informational"
+              symbol="Phase"
+              template="PhaseTemplate"
+              channel="Operational"
+              message="$(string.event.phase.message)" />
+        </events>
+      </provider>
+    </events>
+  </instrumentation>
+
+  <localization>
+    <resources culture="en-US">
+      <stringTable>
+        <string id="event.phase.message" value="Marker=%1; Scenario=%2" />
+      </stringTable>
+    </resources>
+  </localization>
+</instrumentationManifest>

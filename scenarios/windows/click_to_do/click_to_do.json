@@ -1,0 +1,584 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_Laptop_13in",
+        "children": [],
+        "create_date": "2025-04-04",
+        "description": "click to do",
+        "enabled": true,
+        "id": "WEME2M",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Upload seattle_test.pdf",
+                "enabled": true,
+                "file_name": [
+                    "code_1E1K8YM.py"
+                ],
+                "id": "1E1K8YM",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1E1K8WT",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Launch PDF",
+                "enabled": true,
+                "file_name": [
+                    "code_WEMJ0P.py"
+                ],
+                "id": "WEMJ0P",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Wait for PDF Load",
+                "enabled": true,
+                "id": "WEMJJC",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Launch Click To Do (summarize)",
+                "enabled": true,
+                "id": "WXTTTC",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Click To Do Screen",
+                "enabled": true,
+                "file_name": [
+                    "image_WXTY10.png"
+                ],
+                "h": "1",
+                "id": "WXTY10",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "WXTY10",
+                "children": [],
+                "delay": "2",
+                "description": "Right Click Text",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WXUMF4.png"
+                ],
+                "id": "WXUMF4",
+                "match_threshold": "",
+                "primary": false,
+                "type": "Click",
+                "x": "0.088",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "For Text Options to Appear",
+                "enabled": true,
+                "id": "WXTWU7",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Summarize Section",
+                "enabled": true,
+                "id": "X00W36",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "4",
+                "description": "Select Summarize",
+                "enabled": true,
+                "id": "WXU0Y5",
+                "text": "\ue013\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "45",
+                "description": "Wait For Summarize To Finish",
+                "enabled": true,
+                "id": "WXU1R1",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Summarize",
+                "enabled": true,
+                "id": "WXU1WK",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Bullet Point Section",
+                "enabled": true,
+                "id": "X00WHX",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Launch Click To Do (bullet point)",
+                "enabled": true,
+                "id": "WXU2Y6",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "WXTY10",
+                "children": [],
+                "delay": "2",
+                "description": "Right Click Same Text",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WXUMF4.png"
+                ],
+                "id": "WXU3N9",
+                "match_threshold": "",
+                "primary": false,
+                "type": "Click",
+                "x": "0.088",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Go To Bullet Point",
+                "enabled": true,
+                "id": "WXU4W0",
+                "text": "\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "45",
+                "description": "Wait For Bullet Point",
+                "enabled": true,
+                "id": "WXU4LL",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Bullet Point",
+                "enabled": true,
+                "id": "WXU5A6",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Rewrite Refine Section",
+                "enabled": true,
+                "id": "X00W09",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Launch Click To Do (rewrite)",
+                "enabled": true,
+                "id": "WXU5J8",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "WXTY10",
+                "children": [],
+                "delay": "2",
+                "description": "Right Click Same Text",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WXUMF4.png"
+                ],
+                "id": "WXU69T",
+                "match_threshold": "",
+                "primary": false,
+                "type": "Click",
+                "x": "0.088",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select Rewrite (refine)",
+                "enabled": true,
+                "id": "WXU7C8",
+                "text": "\ue013\ue013\ue014\ue015\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "60",
+                "description": "Wait for Rewrite To Finish",
+                "enabled": true,
+                "id": "WXU7NR",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Rewrite",
+                "enabled": true,
+                "id": "WXU888",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Rewrite Formal Section",
+                "enabled": true,
+                "id": "X00W52",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Launch Click To Do (rewrite)",
+                "enabled": true,
+                "id": "WXU5W1",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "capture_id": "WXTY10",
+                "children": [],
+                "delay": "2",
+                "description": "Right Click Same Text",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WXUMF4.png"
+                ],
+                "id": "WXU91F",
+                "match_threshold": "",
+                "primary": false,
+                "type": "Click",
+                "x": "0.088",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select Rewrite (formall)",
+                "enabled": true,
+                "id": "WXUAD4",
+                "text": "\ue013\ue013\ue014\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "60",
+                "description": "Wait for Rewrite To Finish",
+                "enabled": true,
+                "id": "WXU7PM",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Rewrite",
+                "enabled": true,
+                "id": "WXUO17",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Image Edit",
+                "enabled": true,
+                "id": "X00WW3",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Launch Click To Do Image Edit",
+                "enabled": true,
+                "id": "WXT902",
+                "text": "\ue03dq",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Click To Do Window",
+                "enabled": true,
+                "file_name": [
+                    "image_WEN2LV.png"
+                ],
+                "h": "1",
+                "id": "WEN2LV",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "WEN2LV",
+                "children": [],
+                "delay": "2",
+                "description": "Select Image",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WEN2YV.png"
+                ],
+                "id": "WEN2YV",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "id": "WEN3N6",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Capture Options for Click To Do (images)",
+                "enabled": true,
+                "file_name": [
+                    "image_WEN36K.png"
+                ],
+                "h": "1",
+                "id": "WEN36K",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "WEN36K",
+                "children": [],
+                "delay": "3",
+                "description": "Select Blur background ",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WEN3HX.png"
+                ],
+                "id": "WEN3HX",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "4",
+                "description": "Click Start Menu",
+                "enabled": true,
+                "id": "WXTLN6",
+                "type": "Click Coord",
+                "x": "0.01",
+                "y": "0.98"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "WXTM9F",
+                "include_path": "..\\_library\\misc\\capture_taskbar",
+                "type": "Include"
+            },
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "5",
+                "description": "Switch To Photos App",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WXTMMA.png"
+                ],
+                "id": "WXTMMA",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Photos Window",
+                "enabled": true,
+                "file_name": [
+                    "image_WEN89F.png"
+                ],
+                "h": "0.847",
+                "id": "WEN89F",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.871",
+                "x": "0.041",
+                "y": "0.064"
+            },
+            {
+                "capture_id": "WEN89F",
+                "children": [],
+                "delay": "2",
+                "description": "Select Remove",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WENLPU.png"
+                ],
+                "id": "WENLPU",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Wait for Background Remove",
+                "enabled": true,
+                "id": "WENLU5",
+                "type": "Delay"
+            },
+            {
+                "capture_id": "WEN89F",
+                "children": [],
+                "delay": "2",
+                "description": "Select Replace",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WENLYU.png"
+                ],
+                "id": "WENLYU",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Wait for Background Replace",
+                "enabled": true,
+                "id": "WENM1E",
+                "type": "Delay"
+            },
+            {
+                "capture_id": "WEN89F",
+                "children": [],
+                "delay": "2",
+                "description": "Close Photo App",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_WEN8LW.png"
+                ],
+                "id": "WEN8LW",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.854",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Press Enter to Not Save",
+                "enabled": true,
+                "id": "WEN9MM",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Edge Browser",
+                "enabled": true,
+                "id": "WEP7NR",
+                "type": "Click Coord",
+                "x": "0.98",
+                "y": "0.0"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "WEMEEJ",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Kill Processes",
+                "enabled": true,
+                "file_name": [
+                    "code_WENW7R.py"
+                ],
+                "id": "WENW7R",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "WEMEEY",
+        "type": "Teardown"
+    }
+]

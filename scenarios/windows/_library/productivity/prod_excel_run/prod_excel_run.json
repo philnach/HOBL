@@ -1,0 +1,241 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-02",
+        "description": "Edit Excel document",
+        "enabled": true,
+        "id": "URX997",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2MYXP",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Menu",
+        "enabled": true,
+        "file_name": [
+            "image_URXCVT.png"
+        ],
+        "h": "0.120",
+        "id": "URXCVT",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.200",
+        "x": "0.000",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "URXCVT",
+        "children": [],
+        "delay": "1",
+        "description": "Home",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_URXECH.png"
+        ],
+        "id": "URXECH",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Tabs",
+        "enabled": true,
+        "file_name": [
+            "image_URXF0R.png"
+        ],
+        "h": "0.125",
+        "id": "URXF0R",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.575",
+        "x": "0.000",
+        "y": "0.875"
+    },
+    {
+        "capture_id": "URXF0R",
+        "children": [],
+        "delay": "3",
+        "description": "Monthly Expenses",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_VJFRRX.png",
+            "image_VJFRRY.png"
+        ],
+        "id": "VJFRRX",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.449",
+        "y": "0.551"
+    },
+    {
+        "capture_id": "URXF0R",
+        "children": [],
+        "delay": "2",
+        "description": "Test Data",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_VJFT9C.png",
+            "image_VJFT9D.png"
+        ],
+        "id": "VJFT9C",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.909",
+        "y": "0.551"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Enter data",
+        "enabled": true,
+        "file_name": [
+            "code_URXKA1.py"
+        ],
+        "id": "URXKA1",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "2.5",
+        "description": "Select all",
+        "enabled": true,
+        "id": "UT29MF",
+        "text": "\ue014\ue013\ue009\ue008\ue011",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "URXCVT",
+        "children": [],
+        "delay": "2",
+        "description": "Insert",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UT2E23.png"
+        ],
+        "id": "UT2E23",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Chart menu",
+        "enabled": true,
+        "file_name": [
+            "image_UT2ERT.png"
+        ],
+        "h": "0.176",
+        "id": "UT2ERT",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.350",
+        "x": "0.208",
+        "y": "0.074"
+    },
+    {
+        "capture_id": "UT2ERT",
+        "children": [],
+        "delay": "2",
+        "description": "Charts",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UT2F4E.png"
+        ],
+        "id": "UT2F4E",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Scatter choices",
+        "enabled": true,
+        "file_name": [
+            "image_UT2K52.png"
+        ],
+        "h": "0.332",
+        "id": "UT2K52",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.257",
+        "x": "0.299",
+        "y": "0.099"
+    },
+    {
+        "capture_id": "UT2K52",
+        "children": [],
+        "delay": "3",
+        "description": "Scatte plot",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UT2FCP.png",
+            "image_UT2FCQ.png"
+        ],
+        "id": "UT2FCP",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "CTRL-c",
+        "enabled": true,
+        "id": "UT2L0K",
+        "text": "\ue009c",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2N019",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "prod"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "run_excel"
+            }
+        ],
+        "type": "Include"
+    }
+]

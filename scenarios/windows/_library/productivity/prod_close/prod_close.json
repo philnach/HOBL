@@ -1,0 +1,132 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-02",
+        "description": "Close productivity apps",
+        "enabled": true,
+        "id": "UTHKMH",
+        "type": "Information"
+    },
+    {
+        "id": "V2MYAA",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "children": []
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHME9",
+        "include_path": "..\\prod_outlook_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHLNT",
+        "include_path": "..\\prod_outlook_close",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHMHY",
+        "include_path": "..\\prod_excel_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHLVY",
+        "include_path": "..\\prod_excel_close",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHMMF",
+        "include_path": "..\\prod_word_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHLYE",
+        "include_path": "..\\prod_word_close",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHMPW",
+        "include_path": "..\\prod_powerpoint_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHM1K",
+        "include_path": "..\\prod_powerpoint_close",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTP2P3",
+        "include_path": "..\\prod_onenote_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHM4W",
+        "include_path": "..\\prod_onenote_close",
+        "type": "Include"
+    },
+    {
+        "id": "V2MYFJ",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "value": "prod",
+                "val_options": ""
+            },
+            {
+                "name": "[phase_name]",
+                "value": "close",
+                "val_options": ""
+            }
+        ],
+        "children": []
+    }
+]

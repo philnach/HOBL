@@ -1,0 +1,123 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Default Params",
+        "enabled": true,
+        "id": "YTNUEV",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set the time in minutes that the meeting can last up to. Default is teams:duration + 30 min.",
+        "enabled": true,
+        "id": "1513PM2",
+        "multiple": false,
+        "name": "[teams:meeting_time]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key.",
+        "enabled": true,
+        "id": "1513RT4",
+        "multiple": false,
+        "name": "[teams:access_key]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "-1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Sets the number of bots to have in the meeting.",
+        "enabled": true,
+        "id": "1513TP0",
+        "multiple": false,
+        "name": "[teams:number_of_bots]",
+        "type": "Set User Default",
+        "val_options": "1,2,4,8,9",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 if bots should have their cameras on. Set to 0 for audio only calls.",
+        "enabled": true,
+        "id": "1513UCJ",
+        "multiple": false,
+        "name": "[teams:bots_send_video]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have bots send audio. Set to 0 to have bots be muted.",
+        "enabled": true,
+        "id": "1513V6X",
+        "multiple": false,
+        "name": "[teams:bots_send_audio]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the primary bot share its screen in the meeting.",
+        "enabled": true,
+        "id": "1513VV8",
+        "multiple": false,
+        "name": "[teams:bots_share_screen]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "For advanced use. Set to 1 to use the testing instance of the bots server. Not Recomended for general use.",
+        "enabled": true,
+        "id": "1513WHY",
+        "multiple": false,
+        "name": "[teams:bots_test_server]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Create Request to Bots Server",
+        "enabled": true,
+        "id": "YTP4L6",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "30",
+        "description": "Build the request to the Bots Service. ",
+        "enabled": true,
+        "file_name": [
+            "code_YTPC34.py"
+        ],
+        "id": "YTPC34",
+        "type": "Code"
+    }
+]

@@ -1,0 +1,347 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Web setup",
+        "enabled": true,
+        "id": "TYHL3E",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Disable web_replay Delay",
+        "enabled": true,
+        "id": "1A4VYXP",
+        "name": "[disable_delay]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5.0",
+                "description": "Web Replay without Delay",
+                "enabled": true,
+                "file_name": [
+                    "code_U00YNT.py"
+                ],
+                "id": "U00YNT",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "1A4WE3H",
+        "left_term": "[disable_delay]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Web Replay with Delay",
+                "enabled": true,
+                "file_name": [
+                    "code_1A4WEFJ.py"
+                ],
+                "id": "1A4WEFJ",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1A4WE4H",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1A4WE3J",
+        "type": "End If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10JLUEE",
+                "include_path": "..\\..\\run_command",
+                "params": [
+                    {
+                        "name": "[command]",
+                        "val_options": "",
+                        "value": "taskkill /IM msedge.exe /F"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "10H87V2",
+                        "include_path": "..\\..\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "[web_replay_set_args_cmd]"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "10RENAV",
+                "left_term": "[web_replay_run]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "10RENAW",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "10JJY5T",
+        "left_term": "[platform]",
+        "right_term": "W365",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "10JJY5U",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "2.0",
+        "description": "",
+        "enabled": true,
+        "id": "TYHUPJ",
+        "include_path": "..\\..\\misc\\capture_taskbar",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Tag browser launch",
+        "enabled": true,
+        "id": "17XU0KJ",
+        "include_path": "..\\..\\misc\\etw_event_tag",
+        "params": [
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "BrowserLaunch"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ15K.png",
+                    "image_edge_bus.png"
+                ],
+                "id": "TYJ15K",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHU0X",
+        "left_term": "[global:browser]",
+        "right_term": "Edge",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Dev",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ1T6.png"
+                ],
+                "id": "TYJ1T6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Dev",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHX3N",
+        "left_term": "[global:browser]",
+        "right_term": "Edge Dev",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Beta",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ1W5.png"
+                ],
+                "id": "TYJ1W5",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Beta",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHXMV",
+        "left_term": "[global:browser]",
+        "right_term": "Edge Beta",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Canary",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ898.png"
+                ],
+                "id": "TYJ898",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Canary",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHY2W",
+        "left_term": "[global:browser]",
+        "right_term": "Edge Canary",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Chrome",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ8CH.png"
+                ],
+                "id": "TYJ8CH",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Chrome",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHYPJ",
+        "left_term": "[global:browser]",
+        "right_term": "Chrome",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Unsupported browser [global:browser]",
+                "enabled": true,
+                "id": "TYJ0F8",
+                "type": "Fail"
+            }
+        ],
+        "description": "Fail",
+        "enabled": true,
+        "id": "TYHYXY",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "TYHU0Y",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Maximize window",
+        "enabled": true,
+        "id": "18YK78A",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "18YKLEU",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Browser",
+        "enabled": true,
+        "id": "1ER66JH",
+        "type": "Window Maximize"
+    }
+]

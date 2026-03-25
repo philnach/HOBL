@@ -1,0 +1,274 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-09",
+        "description": "Assessment of Battery Life with combined web, idle, and productivity",
+        "enabled": true,
+        "id": "V4K4CK",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W1X0Y4",
+        "name": "[web_replay_run]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Idle time between each app switch, - 3s",
+        "enabled": true,
+        "id": "V4KER3",
+        "name": "[idle_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "111"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W5E34L",
+        "name": "[phase_reporting]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K5RP",
+                "include_path": "..\\_library\\web\\web_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K656",
+                "include_path": "..\\_library\\productivity\\prod_setup",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "V4K5E8",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Open Office apps",
+                "enabled": true,
+                "id": "V5MRK3",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V5MRFU",
+                "include_path": "..\\_library\\productivity\\prod_open",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Web section",
+                "enabled": true,
+                "id": "V4KRW9",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V5NJXL",
+                "include_path": "..\\_library\\web\\web_switchto",
+                "type": "Include"
+            },
+            {
+                "id": "W8WX4F",
+                "type": "Include",
+                "description": "",
+                "enabled": true,
+                "delay": "0",
+                "include_path": "..\\_library\\web\\web_run",
+                "params": [
+                    {
+                        "name": "[load_only]",
+                        "value": "0",
+                        "val_options": "0,1"
+                    }
+                ],
+                "children": []
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Idle section",
+                "enabled": true,
+                "id": "V4KT37",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W8WC7T",
+                "include_path": "..\\_library\\misc\\recording_phase_begin",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "[idle_time]",
+                "description": "",
+                "enabled": true,
+                "id": "V4KHJ7",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4KPAF",
+                "include_path": "..\\_library\\productivity\\prod_idle",
+                "params": [
+                    {
+                        "name": "[idle_time]",
+                        "val_options": "",
+                        "value": "[idle_time]"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W8WCEM",
+                "include_path": "..\\_library\\misc\\recording_phase_end",
+                "params": [
+                    {
+                        "name": "[phase_category]",
+                        "val_options": "",
+                        "value": "idle"
+                    },
+                    {
+                        "name": "[phase_name]",
+                        "val_options": "",
+                        "value": "idle"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Productivity section",
+                "enabled": true,
+                "id": "V4KT70",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4KTMJ",
+                "include_path": "..\\_library\\productivity\\prod_run",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Cleanup",
+                "enabled": true,
+                "id": "V4KU3P",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K70M",
+                "include_path": "..\\_library\\productivity\\prod_close",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K6PC",
+                "include_path": "..\\_library\\web\\web_close_tabs",
+                "params": [
+                    {
+                        "name": "[num_tabs_to_close]",
+                        "val_options": "",
+                        "value": "1"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "V4K5EX",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K6TH",
+                "include_path": "..\\_library\\web\\web_close_browser",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K6VU",
+                "include_path": "..\\_library\\web\\web_kill",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4K74H",
+                "include_path": "..\\_library\\productivity\\prod_kill",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "V4K5FJ",
+        "type": "Teardown"
+    }
+]

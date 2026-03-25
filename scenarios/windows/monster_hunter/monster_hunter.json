@@ -1,0 +1,331 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 7 15-in",
+        "children": [],
+        "create_date": "2025-05-06",
+        "description": "Monster Hunter Wilds Benchmark",
+        "enabled": true,
+        "id": "Y22EP8",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "45",
+                "description": "Launch Monster Hunter",
+                "enabled": true,
+                "file_name": [
+                    "code_1137MJ6.py"
+                ],
+                "id": "1137MJ6",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Language selection",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22YJ6.png"
+                ],
+                "h": "1",
+                "id": "Y22YJ6",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "Y22YJ6",
+                "children": [],
+                "delay": "2",
+                "description": "Language",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22H89.png"
+                ],
+                "h": "1.000",
+                "id": "Y22H89",
+                "match_threshold": "0.900",
+                "timeout": "120",
+                "type": "Check Until Found",
+                "w": "1.000",
+                "x": "0.000",
+                "y": "0.000"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "F",
+                "enabled": true,
+                "id": "Y22K8J",
+                "text": "f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "F",
+                "enabled": true,
+                "id": "Y22KMY",
+                "text": "f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Enable frame generation",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22L54.png"
+                ],
+                "h": "1",
+                "id": "Y22L54",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "Y22L54",
+                "children": [],
+                "delay": "2",
+                "description": "Yes",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_Y22L7U.png"
+                ],
+                "id": "Y22L7U",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Frame generation notice",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22LC6.png"
+                ],
+                "h": "1",
+                "id": "Y22LC6",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "Y22LC6",
+                "children": [],
+                "delay": "2",
+                "description": "Close",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_Y22LEK.png"
+                ],
+                "id": "Y22LEK",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Wait for key",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22YM0.png"
+                ],
+                "h": "1",
+                "id": "Y22YM0",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "Y22YM0",
+                "children": [],
+                "delay": "2",
+                "description": "Press Any Key",
+                "enabled": true,
+                "file_name": [
+                    "image_Y22MK5.png"
+                ],
+                "h": "1.000",
+                "id": "Y22MK5",
+                "timeout": "120",
+                "type": "Check Until Found",
+                "w": "1.000",
+                "x": "0.000",
+                "y": "0.000"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "",
+                "enabled": true,
+                "id": "1138EN7",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "4",
+                "description": "Space",
+                "enabled": true,
+                "id": "Y22MVF",
+                "text": "\ue00d",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "F",
+                "enabled": true,
+                "id": "1138FC5",
+                "text": "f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11378HT",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "370",
+                "description": "",
+                "enabled": true,
+                "id": "1138UCV",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_1138PE6.png"
+                ],
+                "h": "0.15",
+                "id": "1138PE6",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.4",
+                "x": "0.6",
+                "y": "0.8"
+            },
+            {
+                "capture_id": "1138PE6",
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "edge_thresholds": "5,50",
+                "enabled": true,
+                "file_name": [
+                    "image_1138R0H.png"
+                ],
+                "h": "0.15",
+                "id": "1138R0H",
+                "timeout": "120",
+                "type": "Check Until Found",
+                "w": "0.4",
+                "x": "0.6",
+                "y": "0.8"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "113793P",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Score",
+                "enabled": true,
+                "file_name": [
+                    "image_1138TP7.png"
+                ],
+                "h": "0.089",
+                "id": "1138TP7",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.211",
+                "x": "0.112",
+                "y": "0.239"
+            },
+            {
+                "id": "113CLTV",
+                "type": "Comment",
+                "description": "TODO: OCR to read score",
+                "enabled": true,
+                "delay": "0.0",
+                "children": []
+            },
+            {
+                "capture_id": "1138PE6",
+                "children": [],
+                "delay": "2",
+                "description": "Exit Benchmark",
+                "edge_thresholds": "5,50",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_113C52T.png"
+                ],
+                "id": "113C52T",
+                "match_threshold": "",
+                "scale": "",
+                "type": "Move",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "1138PE6",
+                "children": [],
+                "delay": "2",
+                "description": "Exit Benchmark",
+                "edge_thresholds": "5,50",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1138RUN.png"
+                ],
+                "id": "1138RUN",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11379A0",
+        "type": "Teardown"
+    }
+]

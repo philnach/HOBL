@@ -1,0 +1,76 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Web setup",
+        "enabled": true,
+        "id": "TYHL3E",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "5.0",
+        "description": "Start Web Replay",
+        "enabled": true,
+        "file_name": [
+            "code_U00YNT.py"
+        ],
+        "id": "U00YNT",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "10RH500",
+        "include_path": "..\\..\\misc\\capture_dock",
+        "type": "Include"
+    },
+    {
+        "capture_id": "10RH3M0",
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_10RH680.png"
+        ],
+        "id": "10RH680",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Maximize window",
+        "enabled": true,
+        "id": "18YKXJU",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "",
+        "enabled": true,
+        "id": "18YKXP4",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Ctrl-Fn-f",
+        "enabled": true,
+        "id": "18YKY1W",
+        "text": "\ue009\ue03ef",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

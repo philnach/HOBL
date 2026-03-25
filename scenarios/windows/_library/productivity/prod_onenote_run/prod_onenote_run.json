@@ -1,0 +1,142 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-01",
+        "description": "Edit OneNote",
+        "enabled": true,
+        "id": "UR54HJ",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2N0JN",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Add page",
+        "enabled": true,
+        "file_name": [
+            "image_UR56C5.png"
+        ],
+        "h": "0.333",
+        "id": "UR56C5",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.333",
+        "x": "0.000",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "UR56C5",
+        "children": [],
+        "delay": "2",
+        "description": "Add page",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UR57ET.png"
+        ],
+        "id": "UR57ET",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "6",
+        "description": "Hummingbird Wing Pattern",
+        "enabled": true,
+        "id": "UR5839",
+        "text": "Hummingbird\ue00dWing\ue00dPattern\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "14",
+        "description": "ALT-npf",
+        "enabled": true,
+        "id": "UR59UN",
+        "text": "\ue00a\ue00anpf",
+        "type": "Type",
+        "typing_delay": "800"
+    },
+    {
+        "children": [],
+        "delay": "7",
+        "description": "Hummingbird.png",
+        "enabled": true,
+        "id": "UR5E2J",
+        "text": "c:\\abl_docs\\Hummingbird.png\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "42",
+        "description": "Notes",
+        "enabled": true,
+        "id": "UR5LT0",
+        "text": "Hummingbirds\ue00dproduce\ue00d\ue00a\ue00ahi\ue00775\ue00dpercent\ue00a\ue00ahin\ue00dof\ue00dtheir\ue00dweight\ue00dsupport\ue00dduring\ue00dthe\ue00ddown\ue00dstroke\ue00dand\ue00d\ue00a\ue00ahi\ue00725\ue00dpercent\ue00a\ue00ahin\ue00dduring\ue00dthe\ue00dupstroke.\ue00dThe\ue00dwings\ue00d\ue00a\ue00ahi\ue007make\ue00da\ue00dfigure\ue00d8\ue00a\ue00ahin\ue00dmotion.\n",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select page",
+        "enabled": true,
+        "id": "UR5P71",
+        "text": "\ue009\ue008a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "1",
+        "description": "Delete page",
+        "enabled": true,
+        "id": "UR5R3F",
+        "text": "\ue017",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "4",
+        "description": "Sync page",
+        "enabled": true,
+        "id": "UR5R8T",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "V2N0M9",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "prod"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "run_onenote"
+            }
+        ],
+        "type": "Include"
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2025-12-22",
+        "description": "Cleanup failed productivity test",
+        "enabled": true,
+        "id": "V4HU24",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "ESC-ESC",
+        "enabled": true,
+        "id": "V4J5NM",
+        "text": "\ue00c\ue00c",
+        "type": "Type",
+        "typing_delay": "400"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Kill processes",
+        "enabled": true,
+        "file_name": [
+            "code_V4J32J.py"
+        ],
+        "id": "V4J32J",
+        "type": "Code"
+    }
+]

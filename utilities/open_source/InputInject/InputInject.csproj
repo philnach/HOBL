@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <OutputType>Exe</OutputType>
+    <NuGetAudit>false</NuGetAudit>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseAppHost>true</UseAppHost>
+    <DisableMacOSAppBundle>true</DisableMacOSAppBundle>
+    <CreatePkgInstaller>false</CreatePkgInstaller>
+
+		<!-- App Identifier -->
+		<ApplicationId>InputInject</ApplicationId>
+    <SelfContained>false</SelfContained>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+
+    <!-- <PublishSingleFile>true</PublishSingleFile> -->
+    <!-- <UseAppHost>true</UseAppHost> -->
+    <!-- <PublishReadyToRun>true</PublishReadyToRun> -->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(OS)' == 'MacOS'">
+    <TargetFramework>net8.0-macos</TargetFramework>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>partial</TrimMode>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(OS)' == 'Windows'">
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
+    <PackageReference Include="Vortice.Direct3D11" Version="3.8.2" />
+    <PackageReference Include="Vortice.DXGI" Version="3.8.2" />
+    <PackageReference Include="Vortice.Mathematics" Version="2.1.0" />
+    <!-- <PackageReference Include="System.Windows.Forms" Version="8.0.0.0" /> -->
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+  </ItemGroup> -->
+
+  <PropertyGroup>
+    <DefineConstants Condition=" '$(OS)' == 'MacOS' ">$(DefineConstants);MACOS</DefineConstants>
+    <DefineConstants Condition=" '$(OS)' == 'Windows' ">$(DefineConstants);WINDOWS</DefineConstants>
+  </PropertyGroup>
+</Project>

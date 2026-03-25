@@ -1,0 +1,115 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15 DV",
+        "children": [],
+        "create_date": "2025-08-14",
+        "description": "",
+        "enabled": true,
+        "id": "1427LFM",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select URL bar",
+        "enabled": true,
+        "id": "1428CLP",
+        "text": "\ue009l",
+        "type": "Type",
+        "typing_delay": "40"
+    },
+    {
+        "children": [],
+        "delay": "15",
+        "description": "Type in YouTube loging URL",
+        "enabled": true,
+        "id": "1427RFA",
+        "text": "https://accounts.google.com/ServiceLogin?service=youtube\ue007",
+        "type": "Type",
+        "typing_delay": "40"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "Enter the Google account email",
+        "enabled": true,
+        "id": "1427T80",
+        "text": "[google_account]\ue007",
+        "type": "Type",
+        "typing_delay": "40"
+    },
+    {
+        "children": [],
+        "delay": "20",
+        "description": "Enter the Google account password",
+        "enabled": true,
+        "id": "1427WEK",
+        "text": "[google_password]\ue007",
+        "type": "Type",
+        "typing_delay": "40"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_1427XK1.png"
+        ],
+        "h": "0.452",
+        "id": "1427XK1",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.565",
+        "x": "0.446",
+        "y": "0.000"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "1427XK1",
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1427XTN.png"
+                ],
+                "id": "1427XTN",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1427X59",
+        "type": "Try"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1427X5A",
+        "type": "Except"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1427X5C",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "1427X5F",
+        "type": "End Try"
+    }
+]

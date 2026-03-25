@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-infoPathSolution solutionVersion="1.0.0.188" PIVersion="1.0.0.0" href="file:///PerfSignature.xsn" name="urn:schemas-microsoft-com:office:infopath:PerfSig:" language="en-us" productVersion="12.0.0" ?>
+<?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?>
+<PerformanceSignature SchemaVersion="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2010-02-10T03:14:31" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+  <SignatureId>6BFC88F9-735E-4307-BCC5-BAB7D45B8C8A</SignatureId>
+  <Title>CritSec</Title>
+  <SignatureType>Basic</SignatureType>
+  <Description>CritSec Stacks</Description>
+  <TraceType>
+    <Type>Common</Type>
+  </TraceType>
+  <Category>Wait (All Wait Classes) [Wait]</Category>
+  <Component></Component>
+  <AuthorAlias>xperf</AuthorAlias>
+  <Recognition>
+    <Wait>
+      <CSwitchStack>
+        <FrameBlocks>
+          <AllowSkippingFrames>true</AllowSkippingFrames>
+          <Frame>nt!RtlpWaitOnCriticalSection</Frame>
+        </FrameBlocks>
+      </CSwitchStack>
+    </Wait>
+  </Recognition>
+  <AdditionalComments>This signature identifies wait on Critical Section</AdditionalComments>
+</PerformanceSignature>

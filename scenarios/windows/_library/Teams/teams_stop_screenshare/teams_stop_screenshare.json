@@ -1,0 +1,137 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "115Y4A0",
+        "include_path": "..\\..\\run_command",
+        "params": [
+            {
+                "name": "[command]",
+                "val_options": "",
+                "value": "[teams:join_meeting_uri]"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "15",
+        "description": "",
+        "enabled": true,
+        "id": "YWFYYV",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "YV2C09",
+        "enabled": true,
+        "file_name": [
+            "image_YV2C09.png"
+        ],
+        "h": "1",
+        "id": "YV2C09",
+        "recapture": false,
+        "type": "Capture",
+        "w": "1",
+        "x": "0",
+        "y": "0"
+    },
+    {
+        "capture_id": "YV2C09",
+        "children": [],
+        "delay": "2",
+        "description": "Stop Sharing the Screen",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_YV2CEL.png"
+        ],
+        "id": "YV2CEL",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "163XKWJ",
+                        "include_path": "..\\..\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "taskkill /F /IM Microsoft.Media.Player.exe"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "163YAE1",
+                        "include_path": "..\\..\\run_command",
+                        "params": [
+                            {
+                                "name": "[command]",
+                                "val_options": "",
+                                "value": "taskkill /F /IM Video.UI.exe"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "!=",
+                "id": "163XHV4",
+                "left_term": "[teams:show_desktop]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "163XHV5",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "163XHRE",
+        "left_term": "[teams:send_screen]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "163XHRF",
+        "type": "End If"
+    }
+]

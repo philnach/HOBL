@@ -1,0 +1,465 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-05-12",
+        "description": "Runs Minecraft Bedrock Version",
+        "enabled": true,
+        "id": "Y9UY20",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Duration Of Test",
+        "enabled": true,
+        "id": "Y9VN4U",
+        "name": "[duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "300"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Duration of Each Loop",
+        "enabled": true,
+        "id": "1A1LN95",
+        "name": "[loop_duration]",
+        "type": "Set",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1A2TWUL",
+        "name": "[final_loop_duration]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1A2RHPP",
+        "name": "[loops]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1A2TWM5",
+        "name": "[loop_counter]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Minecraft Scaling Factor to Match Template",
+        "enabled": true,
+        "id": "16AYU3F",
+        "name": "[global:dut_scaling_override]",
+        "type": "Set",
+        "value": "1.5"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "10.0",
+                "description": "Launch Minecraft",
+                "enabled": true,
+                "file_name": [
+                    "code_X47XLY.py"
+                ],
+                "id": "X47XLY",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for Game to Load",
+                "enabled": true,
+                "id": "Y9VCHR",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Maximize window",
+                "enabled": true,
+                "id": "176N815",
+                "text": "\ue00a\ue00dx",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "3",
+                        "description": "Menu Capture",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1036HJ3.png"
+                        ],
+                        "h": "0.888",
+                        "id": "1036HJ3",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.694",
+                        "x": "0.129",
+                        "y": "0.055"
+                    },
+                    {
+                        "capture_id": "1036HJ3",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Play button",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_185AC44.png"
+                        ],
+                        "h": "0.090",
+                        "id": "185AC44",
+                        "match_threshold": "",
+                        "scale": "0.66, 0.83, 1.0, 1.16, 1.32",
+                        "type": "Check",
+                        "w": "0.343",
+                        "x": "0.328",
+                        "y": "0.444"
+                    },
+                    {
+                        "capture_id": "1036HJ3",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Play Button",
+                        "enabled": false,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1036J1P.png"
+                        ],
+                        "h": "0.108",
+                        "id": "1036J1P",
+                        "match_threshold": "",
+                        "scale": "0.66, 0.83, 1.0, 1.16, 1.32",
+                        "type": "Check",
+                        "w": "0.355",
+                        "x": "0.321",
+                        "y": "0.439"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "Y9VCNC",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Close Pop Up",
+                        "enabled": true,
+                        "id": "Y9VF0U",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "Y9VCNE",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "Y9VCNF",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "Y9VCNH",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "Y9UYWF",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Minecraft Home Page Again",
+                "enabled": true,
+                "file_name": [
+                    "image_16FPJCH.png"
+                ],
+                "h": "0.849",
+                "id": "16FPJCH",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.572",
+                "x": "0.202",
+                "y": "0.104"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Click Off Play Button If there",
+                "enabled": true,
+                "id": "16FPKR0",
+                "type": "Click Coord",
+                "x": "0.05",
+                "y": "0.05"
+            },
+            {
+                "capture_id": "16FPJCH",
+                "children": [],
+                "delay": "2",
+                "description": "Play Button",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_185AC44.png"
+                ],
+                "id": "16FKERR",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "0.66, 0.83, 1.0, 1.16, 1.32",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Enter For Play Button",
+                "enabled": true,
+                "id": "Y9VFRW",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "3",
+                "description": "Wait to Get to World Selector",
+                "enabled": true,
+                "id": "Y9VH1Y",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Select World",
+                "enabled": true,
+                "id": "Y9VHJ9",
+                "text": "\ue015\ue015\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "30",
+                "description": "Wait For World to Load",
+                "enabled": true,
+                "id": "Y9VHR3",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "World Loaded",
+                "enabled": true,
+                "file_name": [
+                    "image_1036KN2.png"
+                ],
+                "h": "1",
+                "id": "1036KN2",
+                "recapture": false,
+                "type": "Capture",
+                "w": "1",
+                "x": "0",
+                "y": "0"
+            },
+            {
+                "capture_id": "1036KN2",
+                "children": [],
+                "delay": "2",
+                "description": "Item Bar",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1036KV6.png"
+                ],
+                "h": "0.081",
+                "id": "1036KV6",
+                "match_threshold": "",
+                "scale": "0.66, 0.83, 1.0, 1.16, 1.32",
+                "type": "Check",
+                "w": "0.438",
+                "x": "0.278",
+                "y": "0.870"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Move Forward",
+                "enabled": true,
+                "id": "Y9VMPV",
+                "text": "wwwwww",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "[duration]",
+                "description": "",
+                "enabled": false,
+                "id": "10321M5",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Calculate Loops",
+                "enabled": true,
+                "file_name": [
+                    "code_1A2RJ6A.py"
+                ],
+                "id": "1A2RJ6A",
+                "type": "Code"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": false,
+                        "file_name": [
+                            "code_1A1LKMY.py"
+                        ],
+                        "id": "1A1LKMY",
+                        "type": "Code"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "[loop_duration]",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1A1LV1T",
+                                "type": "Delay"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "eval_method": "<",
+                        "id": "1A2TYLP",
+                        "left_term": "[loop_counter]",
+                        "right_term": "[loops]",
+                        "type": "If"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "[final_loop_duration]",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1A2U0AF",
+                                "type": "Delay"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1A2U058",
+                        "type": "Else"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1A2TYLR",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Keep Character \"active\"",
+                        "enabled": true,
+                        "id": "1A2P7KC",
+                        "text": "ww",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1A2TYFJ",
+                        "name": "[loop_counter]",
+                        "type": "Increment",
+                        "value": "1"
+                    }
+                ],
+                "count": "[loops]",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "1A1LJ61",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1A1LJ62",
+                "type": "End Loop"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "Y9UYWY",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Kill Minecraft",
+                "enabled": true,
+                "file_name": [
+                    "code_X8JJAP.py"
+                ],
+                "id": "X8JJAP",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "Y9UYXH",
+        "type": "Teardown"
+    }
+]

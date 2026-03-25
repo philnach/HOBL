@@ -1,0 +1,23 @@
+[
+    {
+        "author": "copilot",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-02-03",
+        "description": "Upload macOS timers executable from Host to DUT",
+        "enabled": true,
+        "id": "MAC_TIMERS_SETUP",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Upload timers executable and set permissions",
+        "enabled": true,
+        "file_name": [
+            "code_mac_timers_upload.py"
+        ],
+        "id": "MAC_TIMERS_UPLOAD",
+        "type": "Code"
+    }
+]

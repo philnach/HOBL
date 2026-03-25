@@ -1,0 +1,181 @@
+[
+    {
+        "author": "haluchsi",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The access key for the Teams Bots Server. Contact HOBL Support to inquire for a key.",
+        "enabled": true,
+        "id": "1514A8P",
+        "multiple": false,
+        "name": "[teams:access_key]",
+        "type": "Set User Default",
+        "val_options": "",
+        "value": "-1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the DUT share its screen in the meeting.",
+        "enabled": true,
+        "id": "1514EE8",
+        "multiple": false,
+        "name": "[teams:send_screen]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the call health data collected.",
+        "enabled": true,
+        "id": "195NMJY",
+        "multiple": false,
+        "name": "[teams:collect_call_health]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "195NN6P",
+                "include_path": "..\\teams_collect_call_health",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "id": "195P338",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "195NMYW",
+        "left_term": "[teams:collect_call_health]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "195NMYX",
+        "type": "End If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1398KN4",
+                "include_path": "..\\teams_stop_screenshare",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Delay stopping screen share",
+                "enabled": true,
+                "id": "16J5WR4",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "YV24TM",
+        "left_term": "[teams:send_screen]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "YV24TP",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "16J5VTF",
+        "include_path": "..\\teams_verify_bots",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "Send Request to delete Bots Meeting",
+        "enabled": true,
+        "file_name": [
+            "code_YTVVTX.py"
+        ],
+        "id": "YTVVTX",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "10",
+        "description": "",
+        "enabled": true,
+        "id": "YTW1E6",
+        "type": "Delay"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_172H82U.png"
+        ],
+        "h": "0.629",
+        "id": "172H82U",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.553",
+        "x": "0.447",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "172H82U",
+        "children": [],
+        "delay": "2",
+        "description": "Leave Call",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_172H8ER.png",
+            "image_176NHRU.png"
+        ],
+        "id": "172H8ER",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

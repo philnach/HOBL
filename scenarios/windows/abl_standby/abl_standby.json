@@ -1,0 +1,202 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-27",
+        "description": "Opens apps then goes into standby",
+        "enabled": true,
+        "id": "W11LP5",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "The time to be in standby, in seconds",
+        "enabled": true,
+        "id": "W33XAV",
+        "name": "[standby_duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "2348"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W33T5E",
+        "name": "[sleep_mode]",
+        "type": "Set Default",
+        "val_options": "Standby, S1, S3",
+        "value": "Standby"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W1VVTM",
+        "name": "[web_replay_run]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W1W9K5",
+                "include_path": "..\\_library\\misc\\call_early_callback",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11MXJ",
+                "include_path": "..\\_library\\web\\web_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11NL3",
+                "include_path": "..\\_library\\productivity\\prod_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W1VWW1",
+                "include_path": "..\\_library\\productivity\\prod_open",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W1X1N9",
+                "include_path": "..\\_library\\web\\web_switchto",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W13H65",
+                "include_path": "..\\_library\\web\\web_run",
+                "params": [
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "W11MFY",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W33WVT",
+                "include_path": "..\\_library\\misc\\standby",
+                "params": [
+                    {
+                        "name": "[standby_duration]",
+                        "val_options": "",
+                        "value": "[standby_duration]"
+                    },
+                    {
+                        "name": "[sleep_mode]",
+                        "val_options": "Standby, S1, S3",
+                        "value": "[sleep_mode]"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "W11MHP",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11P66",
+                "include_path": "..\\_library\\web\\web_close_tabs",
+                "params": [
+                    {
+                        "name": "[num_tabs_to_close]",
+                        "val_options": "",
+                        "value": "6"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11P88",
+                "include_path": "..\\_library\\web\\web_close_browser",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11Y1X",
+                "include_path": "..\\_library\\web\\web_kill",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11NXV",
+                "include_path": "..\\_library\\productivity\\prod_close",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W11Y5K",
+                "include_path": "..\\_library\\productivity\\prod_kill",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "W11MJC",
+        "type": "Teardown"
+    }
+]

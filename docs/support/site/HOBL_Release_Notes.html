@@ -1,0 +1,642 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="HOBL_Prep.html">
+      
+      
+        <link rel="next" href="HOBL_Scenarios.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>HOBL 25 Release Notes - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hobl-25-release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOBL 25 Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL.html" class="md-nav__link">
+        HOBL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Parameters.html" class="md-nav__link">
+        HOBL Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Prep.html" class="md-nav__link">
+        HOBL Prep
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOBL 25 Release Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HOBL_Release_Notes.html" class="md-nav__link md-nav__link--active">
+        HOBL 25 Release Notes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#202550-release-10112025" class="md-nav__link">
+    2025.5.0 Release (10/11/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202540-release-1022025" class="md-nav__link">
+    2025.4.0 Release (10/2/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202530-release-9192025" class="md-nav__link">
+    2025.3.0 Release (9/19/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202520-release-6152025" class="md-nav__link">
+    2025.2.0 Release (6/15/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202510-release-5162025" class="md-nav__link">
+    2025.1.0 Release (5/16/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202501-release-4182025" class="md-nav__link">
+    2025.0.1 Release (4/18/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202500-release-452025" class="md-nav__link">
+    2025.0.0 Release (4/5/2025)
+  </a>
+  
+    <nav class="md-nav" aria-label="2025.0.0 Release (4/5/2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    IMPORTANT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-impact" class="md-nav__link">
+    POWER IMPACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    NEW FEATURES
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Scenarios.html" class="md-nav__link">
+        HOBL Scenarios
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Tools.html" class="md-nav__link">
+        HOBL Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI.html" class="md-nav__link">
+        HOBL UI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI_Release_Notes.html" class="md-nav__link">
+        HOBL UI Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#202550-release-10112025" class="md-nav__link">
+    2025.5.0 Release (10/11/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202540-release-1022025" class="md-nav__link">
+    2025.4.0 Release (10/2/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202530-release-9192025" class="md-nav__link">
+    2025.3.0 Release (9/19/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202520-release-6152025" class="md-nav__link">
+    2025.2.0 Release (6/15/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202510-release-5162025" class="md-nav__link">
+    2025.1.0 Release (5/16/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202501-release-4182025" class="md-nav__link">
+    2025.0.1 Release (4/18/2025)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202500-release-452025" class="md-nav__link">
+    2025.0.0 Release (4/5/2025)
+  </a>
+  
+    <nav class="md-nav" aria-label="2025.0.0 Release (4/5/2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important" class="md-nav__link">
+    IMPORTANT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-impact" class="md-nav__link">
+    POWER IMPACT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    NEW FEATURES
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hobl-25-release-notes">HOBL 25 Release Notes</h1>
+<h2 id="202550-release-10112025">2025.5.0 Release (10/11/2025)</h2>
+<ul>
+<li>New host_setup.exe that addresses two problems:<ol>
+<li>Large transfer size - host_setup now does a shallow clone to reduce transfer time by 5x.</li>
+<li>Conflicting versions of python and/or libraries - host_setup now installs a python distribution embedded into the hobl directory itself, isolated from any system python installs.</li>
+</ol>
+</li>
+</ul>
+<h2 id="202540-release-1022025">2025.4.0 Release (10/2/2025)</h2>
+<ul>
+<li>idle_desktop has been increased to 20 minutes to better capture sporatic background activity and reduce run-to-run variation.</li>
+<li>Teams scenarios have been rewritten using image-based automation.  Since, this interactivity occurs only during setup and teardown, there is no power delta for the part of the call being measured.</li>
+</ul>
+<h2 id="202530-release-9192025">2025.3.0 Release (9/19/2025)</h2>
+<ul>
+<li>Since Microsoft is no longer supporting the purchase of movies in the Microsoft Store, the "halo2" scenario has been removed from all test plans and study reports.  Accordingly, the weighting for "netflix" has been doubled to compensate.</li>
+</ul>
+<h2 id="202520-release-6152025">2025.2.0 Release (6/15/2025)</h2>
+<ul>
+<li>web - Moved cursor position during scrolling to the left side of the screen, to match hobl 24.  May have minor power impact.</li>
+<li>Added mac_web, web scenario for Mac.</li>
+<li>Added Mac support to display_brightness, audio_volume, and screen_record tools.</li>
+</ul>
+<h2 id="202510-release-5162025">2025.1.0 Release (5/16/2025)</h2>
+<ul>
+<li>May update to Office that fixes the high power in Outlook Classic.</li>
+<li>Productivity_prep now sets reg key to keep Office in "mouse mode" even when a blade is detached, to resolve automation issues.</li>
+</ul>
+<h2 id="202501-release-4182025">2025.0.1 Release (4/18/2025)</h2>
+<ul>
+<li>Signed setup binaries.</li>
+<li>dut_scaling_override global parameter added for use in the case the DUT is not reporting its Windows Scaling factor properly.  The value is a fraction, like "2.0" to represent 200%.</li>
+<li>study_report and run_report scenarios now completely offline (don't try to communicate with DUT).</li>
+<li>host_setup_dev.exe updated with latest versions of tools.</li>
+<li>HOBL 24 scenarios and test plans are available in case you need to go back for some reason, without changing the repo.  They are designatied with "_24" in the name.</li>
+<li>Delay added to the Outlook scenario to accommodate slow devices.</li>
+<li>Larger capture added to web_prep to accommodate favorites bar.</li>
+</ul>
+<h2 id="202500-release-452025">2025.0.0 Release (4/5/2025)</h2>
+<h3 id="important">IMPORTANT</h3>
+<ul>
+<li>Additional python libraries need to be installed.  To upgrade to this release, you'll need to run the host_setup_dev.exe and select the "Python" item to install the new libraries.</li>
+<li>The HOBL UI also needs to be updated to at least version 0.81, so select that in host_setup_dev.exe as well.</li>
+<li>A new InputInject library is required on the DUT.  To get this run the setup\dut_setup.exe on the DUT.</li>
+</ul>
+<h3 id="power-impact">POWER IMPACT</h3>
+<ul>
+<li>The 2502 version of Outlook Classic has been found to have elevated power while typing, ~8W on tested platforms.  This currently results in ~90% increase of SOC power and ~30% increase to total power for the overall productivity scenario.  This is bugged, and we'll move to the fixed version of Office as soon as it's available.</li>
+<li>No other significant power impacts.</li>
+</ul>
+<h3 id="new-features">NEW FEATURES</h3>
+<ul>
+<li>HOBL 25 implements a whole new way to do UI automation, using image recognition instead of relying on accessibility tags.  This has the following benefits:<ul>
+<li>No need for training runs.  Elements are found in real-time, by taking a partial screen capture, filtering/scaling the image, and template-matching with image of desired UI element to find the appropriate click coordinates.</li>
+<li>Ability to automate MacOS, W365, and other operating systems that don't have available accessibility tags.</li>
+<li>No need for screen_check tool.  Since elements are found at runtime, checking is built-in.</li>
+<li>Hedge against WinAppDriver end of support.</li>
+<li>Greater ability to work elements not being found, resulting in less work blockage.</li>
+<li>Can automate apps that don't have tags, like Adobe products and games.</li>
+</ul>
+</li>
+<li>Initially, the scenarios implemented this new mechanism are: abl_active, abl_standby, web, idle_apps, productivity, youtube, netflix, and halo2.  Other scenarios will be converted as need arises.</li>
+<li>Activity timing for these new scenarios has also been revamped.  Timing of each event is now based on a fixed reference point, specifically the beginning of the scenario.  This prevents variability from accumulated delays in network or processing of actions.</li>
+<li>Power consumption of the new implementations of web and productivity are actually a little bit lower than before with screen_check due to optimizations in the screen capture and input injection.</li>
+<li>The old WinAppDriver based mechanism still exists and the other scenarios still use that.</li>
+<li>The web archive has been refreshed with latest copies of the sits.  Minor changes include being logged in to Instagram and a different search in Amazon.  There seems to be a small increase in power with the new pages, but generally insignificant.</li>
+<li>Office was advanced to version 2502.  Power consumption is generally a little lower, except for Outlook, which jumps to ~8W while typing.  A high-priority bug has been filed on this.</li>
+<li>Parameter overrides no longer need the section specified.  For example, instead of "lvp:duration=300", you can write "duration=300".  The infrastructure will know to apply it to the scenario you're running.  But beware of self-referencing parameters in your profile.  For example "study_report:product=[product]" will cause an infinite loop and needs to be removed.  In this case, study_report now references the global:product directly.</li>
+<li>ScenarioMaker application to easily create code-free test scenarios with point-and-click operations.</li>
+<li>Remote - In the new HOBL UI, right-clicking on a profile will show "Remote" in the context menu, which allows you to efficiently remote into the DUT for manual operations.  Copy-paste are supported, as well as transferring files to a file share.  To do the latter set up global parameters in your profile for "remote_share_path", "remote_share_username", and "remote_share_password".  A Z: share will be mounted to the specified path during your remote session.  Since Remote is not a scenario (like Quick Assist was), you are able to remote to a DUT while a test is in progress, but there is a sizeable power impact from that so you will be prompted with a warning first.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

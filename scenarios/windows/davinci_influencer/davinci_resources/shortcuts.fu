@@ -1,0 +1,14 @@
+{
+	Hotkeys {
+		SHIFT_CONTROL_B = "AddTool{ Name = 'Gaussian Blur', ShortName = 'Gaussian Blur', id = 'ofx.com.blackmagicdesign.resolvefx.GaussianBlur' }",
+		SHIFT_CONTROL_C = "AddSetting{ Name = 'CCTV', filename = 'C:\\\\Program Files\\\\Blackmagic Design\\\\DaVinci Resolve\\\\Fusion\\\\Templates\\\\Templates.drfx/Edit/Effects/CCTV.setting' }",
+		SHIFT_B = "AddTool{ Name = 'Glow', ShortName = 'Glow', id = 'ofx.com.blackmagicdesign.resolvefx.Glow' }",
+		CONTROL_ALT_F = "AddTool{ id = 'ofx.com.blackmagicdesign.resolvefx.FlickerAddition', Name = 'Flicker Addition', ShortName = 'Flicker Addition' }",
+		Target = "FuFrame",
+		SHIFT_CONTROL_F = "AddTool{ Name = 'Film Damage', ShortName = 'Film Damage', id = 'ofx.com.blackmagicdesign.resolvefx.FilmDamage' }",
+		SHIFT_M = "AddTool{ Name = 'Mirrors', ShortName = 'Mirrors', id = 'ofx.com.blackmagicdesign.resolvefx.Mirror' }",
+		SHIFT_CONTROL_ALT_SLASH = "App_CustomizeHotkeys",
+		SHIFT_D = "AddSetting{ Name = 'Digital Glitch', filename = 'C:\\\\Program Files\\\\Blackmagic Design\\\\DaVinci Resolve\\\\Fusion\\\\Templates\\\\Templates.drfx/Edit/Titles/Digital Glitch.setting' }",
+		SHIFT_P = "AddSetting{ Name = 'Blue Prints', filename = 'C:\\\\Program Files\\\\Blackmagic Design\\\\DaVinci Resolve\\\\Fusion\\\\Templates\\\\Templates.drfx/Edit/Titles/Blue Prints.setting' }",
+	},
+}

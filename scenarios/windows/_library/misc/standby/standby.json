@@ -1,0 +1,45 @@
+[
+    {
+        "id": "W33UE4",
+        "type": "Information",
+        "description": "Enter and exit standby",
+        "enabled": true,
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "create_date": "2025-03-28",
+        "children": []
+    },
+    {
+        "id": "W33VC6",
+        "type": "Set Default",
+        "description": "Time to be in standby, in seconds",
+        "enabled": true,
+        "delay": "0.0",
+        "value": "2348",
+        "name": "[standby_duration]",
+        "val_options": "",
+        "children": []
+    },
+    {
+        "id": "W33W5P",
+        "type": "Set Default",
+        "description": "Sleep mode",
+        "enabled": true,
+        "delay": "0.0",
+        "value": "Standby",
+        "name": "[sleep_mode]",
+        "val_options": "Standby, S1, S3",
+        "children": []
+    },
+    {
+        "id": "W33UMT",
+        "type": "Code",
+        "description": "Enter and exit standby",
+        "enabled": true,
+        "delay": "0.0",
+        "file_name": [
+            "code_W33UMT.py"
+        ],
+        "children": []
+    }
+]

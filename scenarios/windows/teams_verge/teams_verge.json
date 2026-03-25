@@ -1,0 +1,303 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Romulus 15-in DV",
+        "children": [],
+        "create_date": "2025-05-21",
+        "description": "Runs Teams and The Verge Website",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Default Params",
+        "enabled": true,
+        "id": "YTNUEV",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Sets the time in seconds for the test to run.",
+        "enabled": true,
+        "id": "1514842",
+        "multiple": false,
+        "name": "[teams:duration]",
+        "type": "Set User Default",
+        "val_options": "60,120,240,300,600,900",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed.",
+        "enabled": true,
+        "id": "1513J8J",
+        "multiple": false,
+        "name": "[teams:maintain_bots]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15UHY61",
+        "name": "[loops]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "4"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VVMW0",
+        "name": "[web_replay_run]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VP7ER",
+        "name": "[teams:send_screen]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VP7MP",
+        "name": "[teams:show_desktop]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VP9C7",
+        "name": "[teams:number_of_bots]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VPALR",
+        "name": "[teams:send_video]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "162ATH5",
+        "name": "[teams:send_audio]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VPXTE",
+        "name": "[teams:bots_send_video]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VPXYE",
+        "name": "[teams:bots_send_audio]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "15VPY63",
+        "name": "[teams:bots_share_screen]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "162EFJK",
+        "name": "[teams:bots_force_subscribe_resolution]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Calculate Duration of Teams Call from Loops",
+                "enabled": true,
+                "file_name": [
+                    "code_15VTJRH.py"
+                ],
+                "id": "15VTJRH",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13LPV69",
+                "include_path": "..\\_library\\Teams\\teams_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "15VP5RN",
+                "include_path": "..\\_library\\web\\web_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "15UHVN2",
+                "include_path": "..\\_library\\web\\web_clear_cache",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXF95",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "15UJ1LP",
+                        "include_path": "..\\_library\\web\\site\\web_site_the_verge",
+                        "params": [
+                            {
+                                "name": "[new_tab]",
+                                "val_options": "0, 1",
+                                "value": "0"
+                            },
+                            {
+                                "name": "[load_only]",
+                                "val_options": "0,1",
+                                "value": "0"
+                            },
+                            {
+                                "name": "[web_site_load_time]",
+                                "val_options": "",
+                                "value": "20"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ERE604",
+                        "include_path": "..\\_library\\web\\web_check",
+                        "params": [
+                            {
+                                "name": "[youtube_duration]",
+                                "val_options": "",
+                                "value": "90"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "count": "[loops]",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "15UHXWK",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "15UHXWM",
+                "type": "End Loop"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTX9MY",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "15VU9WV",
+                "include_path": "..\\_library\\web\\web_close_browser",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "15VU9KH",
+                "include_path": "..\\_library\\web\\web_kill",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13LPX71",
+                "include_path": "..\\_library\\Teams\\teams_teardown",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXARH",
+        "type": "Teardown"
+    }
+]

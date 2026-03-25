@@ -1,0 +1,32 @@
+[
+    {
+        "author": "idc",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-10-31",
+        "description": "",
+        "enabled": true,
+        "id": "17Y30P4",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Upload Timers",
+        "enabled": true,
+        "file_name": [
+            "code_19K4JWA.py"
+        ],
+        "id": "19K4JWA",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "command": "powershell.exe -Command \"(New-Object -ComObject Shell.Application).ShellExecute('C:\\hobl_bin\\SimpleTimer.exe','8 3 8400', $null, 'open', 0)\"",
+        "delay": "2",
+        "description": "Run Timers",
+        "enabled": true,
+        "id": "17Y33ME",
+        "type": "Command"
+    }
+]

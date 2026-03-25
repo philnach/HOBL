@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <NuGetAudit>false</NuGetAudit>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(OS)' == 'Windows'">
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(OS)' == 'MacOS'">
+    <TargetFramework>net8.0-macos</TargetFramework>
+    <ApplicationId>ScreenServer</ApplicationId>
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>partial</TrimMode>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(OS)' == 'Windows'">
+    <PackageReference Include="SharpDX" Version="4.2.0" />
+    <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefineConstants Condition="'$(OS)' == 'MacOS'">$(DefineConstants);MACOS</DefineConstants>
+    <DefineConstants Condition="'$(OS)' == 'Windows'">$(DefineConstants);WINDOWS</DefineConstants>
+  </PropertyGroup>
+
+</Project>

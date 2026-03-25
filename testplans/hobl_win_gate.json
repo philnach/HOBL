@@ -1,0 +1,355 @@
+{
+    "StudyVars": {
+        "charge": {
+            "off": "charge:state=off",
+            "on": "charge:state=on"
+        },
+        "energy_saver": {
+            "on": "",
+            "off": ""
+        },
+        "energy_recommendation": {
+            "on": "",
+            "off": ""
+        }
+    },
+    "PlanBasedStudyVars": [
+        "charge"
+    ],
+    "StudyType": "WinGates",
+    "AutoResubmit": 0,
+    "Scenarios": [
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "daily_prep",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Prep global:post_run_delay=0"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "config_check",
+            "Enabled": false,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": ""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_off",
+            "Enabled": false,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc global:post_run_delay=900"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc global:post_run_delay=900"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "set_state_data",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc global:tools=\"+display_brightness\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "energy_saver",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 1,
+            "Parameters": "energy_saver:state=0 global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "abl_active",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "energy_saver",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 1,
+            "Parameters": "energy_saver:state=1 global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "abl_active",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.off"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "energy_saver",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 1,
+            "Parameters": "energy_saver:state=0 global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "energy_recom",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "abl_active",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.off",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "energy_saver",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 1,
+            "Parameters": "energy_saver:state=1 global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "abl_active",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_1on1_audio",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=Power global:tools=\"+power_light\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [
+                "charge",
+                "energy_saver.on",
+                "energy_recommendation.on"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_on",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "version_report",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Prep global:post_run_delay=0"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "notify",
+            "Enabled": true,
+            "Expand": [
+                "charge"
+            ],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        }
+    ]
+}

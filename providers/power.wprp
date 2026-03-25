@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Author="czeng" Version="1.0" Copyright="Microsoft Corporation" Company="Microsoft Corporation">
+  <Profiles>
+    <SystemCollector
+      Id="WPRSystemCollector"
+      Name="NT Kernel Logger">
+      <BufferSize
+        Value="1024"/>
+      <Buffers
+        Value="300"/>
+    </SystemCollector>
+    <EventCollector
+      Id="WPREventCollector"
+      Name="WPR Event Collector">
+      <BufferSize
+        Value="1024"/>
+      <Buffers
+        Value="500"/>
+    </EventCollector>
+    <SystemProvider Id="system_provider">
+      <Keywords>
+        <Keyword Value="ProcessThread"/>
+        <Keyword Value="Loader"/>
+        <Keyword Value="Timer"/>
+        <Keyword Value="CSwitch"/>
+        <Keyword Value="DPC"/>
+        <Keyword Value="Interrupt"/>
+        <Keyword Value="HardFaults"/>
+        <Keyword Value="Power"/>
+        <Keyword Value="SampledProfile"/>
+        <Keyword Value="DiskIO"/>
+        <Keyword Value="DiskIOInit"/>
+        <Keyword Value="FileIO"/>
+        <Keyword Value="FileIOInit"/>
+        <Keyword Value="ClockInterrupt"/>
+        <Keyword Value="IdleStates"/>
+        <Keyword Value="InterProcessorInterrupt"/>
+        <Keyword Value="ReadyThread"/>
+      </Keywords>
+      <Stacks>
+        <Stack Value="CSwitch"/>
+        <Stack Value="SampledProfile"/>
+        <Stack Value="DiskReadInit"/>
+        <Stack Value="DiskWriteInit"/>
+        <Stack Value="DiskFlushInit"/>
+        <Stack Value="FileRead"/>
+        <Stack Value="FileWrite"/>
+        <Stack Value="FileFlush"/>
+        <Stack Value="TimerOneShot"/>
+        <Stack Value="TimerPeriodic"/>
+        <Stack Value="ReadyThread"/>
+      </Stacks>
+    </SystemProvider>
+    <EventProvider Id="Win32k" Name="8C416C79-D49B-4F01-A467-E56D3AA8234C" Stack="true" Strict="true" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x202e3000"/>
+      </Keywords>
+      <CaptureStateOnSave >
+        <Keyword Value="0x2e3000" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="OfficeAirSpace" Name="f562bb8e-422d-4b5c-b20e-90d710f7d11c" Stack="true" Strict="true"/>
+    <EventProvider Id="Winsock" Name="Microsoft-Windows-Winsock-AFD" Stack="true" Strict="true"/>
+    <EventProvider Id="WinINet" Name="Microsoft-Windows-WinINet" Stack="true" Strict="true"/>
+    <EventProvider Id="ThreadPool" Name="C861D0E2-A2C1-4D36-9F9C-970BAB943A12" Strict="true" CaptureStateOnly="true"/>
+    <EventProvider Id="EventProvider_Microsoft-Windows-Energy-Estimation-Engine_0_0" Level="0" Name="DDCC3826-A68A-4E0D-BCFD-9C06C27C6948" NonPagedMemory="true"/>
+    <EventProvider Id="MsoThreadPool" Name="A019725F-CFF1-47E8-8C9E-8FE2635B6388" Stack="true" Strict="true" >
+      <Keywords>
+        <Keyword Value="0x120"/>
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Office.Logging.Common" Level="0" Name="D983C416-203F-496D-AAC3-910FB89AA2DA" NonPagedMemory="true">
+      <Keywords>
+        <Keyword Value="0x1" />
+      </Keywords>
+    </EventProvider>
+    <!-- Power -->
+    <EventProvider
+        Id="EventProvider_Microsoft-Windows-Kernel-Power"
+        Name="Microsoft-Windows-Kernel-Power"
+        NonPagedMemory="true"
+        Level="6"
+        >
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0xFFFFFFFF"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+
+    <EventProvider
+       Id="EventProvider_Microsoft-Windows-Kernel-Processor-Power"
+       Name="Microsoft-Windows-Kernel-Processor-Power"
+       NonPagedMemory="true"
+       Level="6"
+        >
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0xFFFFFFFF"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+
+    <EventProvider
+      Id="EventProvider_Microsoft-Windows-Kernel-Pep"
+      Name="Microsoft-Windows-Kernel-Pep"
+      NonPagedMemory="true"
+      Level="6"
+        >
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0xFFFFFFFF"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+
+    <EventProvider Id="EventProvider_Microsoft-Windows-PDC" Name="Microsoft-Windows-PDC">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFF"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0xFFFFFFFF"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+
+    <!-- UI Rendering -->
+    <EventProvider
+      Id="EventProvider_Microsoft-Windows-Dwm-Core"
+      Name="Microsoft-Windows-Dwm-Core"
+      NonPagedMemory="true"
+      Level="6"
+        >
+      <Keywords>
+        <Keyword Value="0xFFFF"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0xFFFF"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+
+    <EventProvider
+   Id="EventProvider_DXC"
+   Name="802ec45a-1e99-4b83-9920-87c98277ba9d"
+   NonPagedMemory="true"
+   Level="5"
+        >
+      <Keywords>
+        <Keyword Value="0xA05"/>
+      </Keywords>
+      <CaptureStateOnSave>
+        <Keyword Value="0x0"/>
+      </CaptureStateOnSave>
+    </EventProvider>
+    
+    <Profile
+      Id="WPR_PowerCollector.Verbose.File"
+      Name="WPR_PowerCollector"
+      Description="Profile  to collect events for power measurement"
+      LoggingMode="File"
+      DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="WPRSystemCollector">
+          <SystemProviderId Value="system_provider"/>
+        </SystemCollectorId>
+        <EventCollectorId Value="WPREventCollector">
+          <EventProviders>
+            <EventProviderId Value="Win32k"/>
+            <EventProviderId Value="OfficeAirSpace"/>
+            <EventProviderId Value="Winsock"/>
+            <EventProviderId Value="WinINet"/>
+            <EventProviderId Value="ThreadPool"/>
+            <EventProviderId Value="MsoThreadPool"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Energy-Estimation-Engine_0_0"/>
+            <!-- Power -->
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Kernel-Power"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Kernel-Processor-Power"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-PDC"/>
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Kernel-Pep"/>
+            <!-- UI Rendering-->
+            <EventProviderId Value="EventProvider_Microsoft-Windows-Dwm-Core"/>
+            <EventProviderId Value="EventProvider_DXC"/>
+            <EventProviderId Value="Microsoft.Office.Logging.Common"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>      
+    </Profile>
+    <Profile
+      Id="WPR_PowerCollector.Verbose.Memory"
+      Name="WPR_PowerCollector"
+      Description="Profile  to collect events for power measurement"
+      Base="WPR_PowerCollector.Verbose.File"
+      LoggingMode="Memory"
+      DetailLevel="Verbose" />
+  </Profiles>
+  <TraceMergeProperties>
+    <TraceMergeProperty  Id="TraceMerge_Default" Name="TraceMerge_Default" Base="">
+      <FileCompression Value="true"/>
+      <CustomEvents>
+        <CustomEvent Value="ImageId"/>
+        <CustomEvent Value="BuildInfo"/>
+        <CustomEvent Value="VolumeMapping"/>
+        <CustomEvent Value="EventMetadata"/>
+        <CustomEvent Value="PerfTrackMetadata"/>
+        <CustomEvent Value="WinSAT"/>
+        <CustomEvent Value="NetworkInterface"/>
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+</WindowsPerformanceRecorder>

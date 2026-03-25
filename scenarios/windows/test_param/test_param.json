@@ -1,0 +1,126 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-03-23",
+        "description": "",
+        "enabled": true,
+        "id": "VV25XF",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": false,
+        "id": "VV262F",
+        "name": "[test1]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": false,
+        "id": "VV268K",
+        "name": "[web:test2]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": false,
+        "id": "VV26HE",
+        "name": "[test3]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": false,
+        "id": "VV26M4",
+        "name": "[idle_desktop:duration]",
+        "type": "Set",
+        "value": "5"
+    },
+    {
+        "children": [
+            {
+                "id": "W9NR5M",
+                "type": "Include",
+                "description": "",
+                "enabled": true,
+                "delay": "0",
+                "include_path": "..\\_library\\misc\\param_test_compnents",
+                "params": [
+                    {
+                        "name": "[my_param]",
+                        "value": "1",
+                        "val_options": "0,1"
+                    }
+                ],
+                "children": []
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Duration is [idle_desktop:duration]",
+                "enabled": true,
+                "id": "VV2L7H",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": false,
+                "id": "VV6JMC",
+                "name": "[foo]",
+                "type": "Set",
+                "value": "[idle_desktop:duration]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": false,
+                "id": "VV6JY4",
+                "name": "[bar]",
+                "type": "Set",
+                "value": "[web:test2]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": false,
+                "id": "VV6K6A",
+                "name": "[foo2]",
+                "type": "Set",
+                "value": "[test_param:test1]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": false,
+                "id": "VV6V0U",
+                "name": "[bar2]",
+                "type": "Set",
+                "value": "[test3]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "VV2KX9",
+        "type": "Run Test"
+    }
+]

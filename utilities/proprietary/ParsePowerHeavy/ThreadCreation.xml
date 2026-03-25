@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.188" PIVersion="1.0.0.0" href="file:///PerfSignature.xsn" name="urn:schemas-microsoft-com:office:infopath:PerfSig:" language="en-us" productVersion="12.0.0" ?><?mso-application progid="InfoPath.Document" versionProgid="InfoPath.Document.2"?><PerformanceSignature SchemaVersion="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2010-02-10T03:14:31" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<SignatureId>53BB20F6-7977-4FAC-95CD-7464A8BF3D84</SignatureId>
+	<SignatureVersion>1</SignatureVersion>
+	<Title>ThreadCreationStack</Title>
+	<SignatureType>Basic</SignatureType>
+	<Description>Wait Analysis Thread Creation Stacks</Description>
+	<TraceType>
+		<Type>Common</Type>
+	</TraceType>
+	<Category>Wait (All Wait Classes) [Wait]</Category>
+	<Component></Component>
+	<Recognition>
+		<Wait>
+			<ReadyThreadStack>
+				<FrameBlocks>
+					<AllowSkippingFrames>true</AllowSkippingFrames>
+					<Frame>nt!NtCreateThreadEx</Frame>
+				</FrameBlocks>
+			</ReadyThreadStack>
+		</Wait>
+	</Recognition>
+	<AdditionalComments>This signature identifies stacks that will be used to identify when a thread has been created.</AdditionalComments>
+</PerformanceSignature>

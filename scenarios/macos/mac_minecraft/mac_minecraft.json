@@ -1,0 +1,231 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Macbook_Pro_m4",
+        "children": [],
+        "create_date": "2025-07-08",
+        "description": "",
+        "enabled": true,
+        "id": "1265V5F",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Duration of Minecraft Game",
+        "enabled": true,
+        "id": "1292RWM",
+        "name": "[duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "300"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "10.0",
+                "description": "Reset Minecraft Map",
+                "enabled": true,
+                "file_name": [
+                    "code_127NPRT.py"
+                ],
+                "id": "127NPRT",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1266HEP",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Launch Minecraft",
+                "enabled": true,
+                "file_name": [
+                    "code_1266HUC.py"
+                ],
+                "id": "1266HUC",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for App to Launch",
+                "enabled": true,
+                "id": "1267J34",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Maximize Window",
+                "enabled": true,
+                "id": "12ACW2U",
+                "text": "\ue009\ue03ef",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Top Portion of Minecraft Launcher",
+                "enabled": true,
+                "file_name": [
+                    "image_1267H1Y.png"
+                ],
+                "h": "0.333",
+                "id": "1267H1Y",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.717",
+                "x": "0.172",
+                "y": "0.001"
+            },
+            {
+                "capture_id": "1267H1Y",
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_1267L0H.png"
+                ],
+                "id": "1267L0H",
+                "match_threshold": "",
+                "primary": true,
+                "scale": "",
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "45",
+                "description": "Wait for Game Launch",
+                "enabled": true,
+                "id": "1267NY6",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Maximize Minecraft Game",
+                "enabled": true,
+                "id": "12ACXH7",
+                "text": "\ue009\ue03ef",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "2nd Attempt to Maximize Window",
+                "enabled": true,
+                "id": "12AE0P1",
+                "text": "\ue009\ue03ef",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Select Play Demo",
+                "enabled": true,
+                "id": "1267PUX",
+                "text": "\ue013\ue013\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for Game to Load in",
+                "enabled": true,
+                "id": "1292UVP",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "Demo Mode Screen",
+                "enabled": true,
+                "file_name": [
+                    "image_12AE1W5.png"
+                ],
+                "h": "0.497",
+                "id": "12AE1W5",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.926",
+                "x": "0.052",
+                "y": "0.457"
+            },
+            {
+                "capture_id": "12AE1W5",
+                "children": [],
+                "delay": "2",
+                "description": "Demo Mode Screen is Opened",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_12AE26C.png"
+                ],
+                "h": "0.073",
+                "id": "12AE26C",
+                "match_threshold": "",
+                "scale": "",
+                "type": "Check",
+                "w": "0.537",
+                "x": "0.233",
+                "y": "0.666"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Demo Window",
+                "enabled": true,
+                "id": "1292V4W",
+                "text": "\ue00c",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "[duration]",
+                "description": "Duration of Minecraft Game",
+                "enabled": true,
+                "id": "1292TLF",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1266HF2",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "code_12AE9PC.py"
+                ],
+                "id": "12AE9PC",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "1266HFP",
+        "type": "Teardown"
+    }
+]

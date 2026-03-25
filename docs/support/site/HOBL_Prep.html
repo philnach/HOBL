@@ -1,0 +1,2103 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="HOBL_Parameters.html">
+      
+      
+        <link rel="next" href="HOBL_Release_Notes.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.1.15">
+    
+    
+      
+        <title>HOBL Prep - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hobl-prep" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Docs" class="md-header__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HOBL Prep
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Docs" class="md-nav__button md-logo" aria-label="Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL.html" class="md-nav__link">
+        HOBL
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Parameters.html" class="md-nav__link">
+        HOBL Parameters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HOBL Prep
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="HOBL_Prep.html" class="md-nav__link md-nav__link--active">
+        HOBL Prep
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dut_setup" class="md-nav__link">
+    dut_setup
+  </a>
+  
+    <nav class="md-nav" aria-label="dut_setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-polling-period-for-powersnap-telemetry-to-60s" class="md-nav__link">
+    Set polling period for powersnap telemetry to 60s
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-polling-period-for-surface-power-monitor-chips-to-30s-active-and-120s-standby" class="md-nav__link">
+    Set polling period for Surface power monitor chips to 30s active and 120s standby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-uac-to-never-prompt-for-running-programs-in-admin-mode" class="md-nav__link">
+    Set UAC to never prompt for running programs in Admin mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-personalization-folder-in-the-registry" class="md-nav__link">
+    Create Personalization folder in the registry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-to-disable-lock-screen-on-sleep" class="md-nav__link">
+    Settings to disable lock screen on sleep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-windows-hello-sign-in-options-so-that-we-can-ensure-auto-login" class="md-nav__link">
+    Disable Windows Hello sign-in options so that we can ensure auto-login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-require-password-on-wake-from-shutdownhibernate" class="md-nav__link">
+    Disable "Require password on wake" from shutdown/hibernate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-sleep-after" class="md-nav__link">
+    Disable Sleep After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-after" class="md-nav__link">
+    Disable Hibernate After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-system-unattended-sleep-timeout" class="md-nav__link">
+    Disable System Unattended Sleep Timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-dim-display-after" class="md-nav__link">
+    Disable Dim Display After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-turn-off-display-after" class="md-nav__link">
+    Disable Turn off Display After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-low-battery-notification" class="md-nav__link">
+    Disable Low Battery Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-als-for-consistent-backlight" class="md-nav__link">
+    Disable the ALS for consistent backlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-ac-screen-brightness-level-to-100" class="md-nav__link">
+    Set AC screen brightness Level to 100%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dc-screen-brightness-level-to-65" class="md-nav__link">
+    Set DC screen brightness Level to 65%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dut-to-sleep-on-lid-closure" class="md-nav__link">
+    Set dut to sleep on lid closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-active-scheme-to-balanced" class="md-nav__link">
+    Set active scheme to Balanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-remote-user-account-control-uac" class="md-nav__link">
+    Set remote User Account Control (UAC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-pen-first-run-experience-notification" class="md-nav__link">
+    Prevent pen First Run Experience notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-developer-mode-needed-by-winappdriver" class="md-nav__link">
+    Enable developer mode (needed by WinAppDriver)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-network-drives-mapped-in-privileged-mode-to-be-visible-in-normal-mode-and-vice-versa" class="md-nav__link">
+    Enable network drives mapped in privileged mode to be visible in normal mode, and vice versa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-the-device-if-new-name-specified" class="md-nav__link">
+    Rename the device, if new name specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-windows-update-and-configure-automatic-updates-to-disabled" class="md-nav__link">
+    Disable Windows Update and Configure Automatic Updates to Disabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-wi-fi" class="md-nav__link">
+    Set up Wi-Fi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-task-to-reconnect-wi-fi-after-reboot" class="md-nav__link">
+    Schedule task to reconnect Wi-Fi after reboot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass-feature-to-keep-system-from-sleeping-when-using-webdriver" class="md-nav__link">
+    Bypass feature to keep system from sleeping when using WebDriver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-task-for-starting-simpleremoteconsole-based-on-dut-architecture" class="md-nav__link">
+    Create task for starting SimpleRemoteConsole based on DUT architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-firewall-for-simpleremote-and-winappdriver" class="md-nav__link">
+    Open firewall for SimpleRemote and WinAppDriver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msa_prep" class="md-nav__link">
+    msa_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="msa_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-auto-login-msa-account" class="md-nav__link">
+    Set auto login MSA Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-user-password-to-never-expire" class="md-nav__link">
+    Set user password to never expire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn-off-surface-notifications" class="md-nav__link">
+    Turn off Surface notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily_prep" class="md-nav__link">
+    daily_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="daily_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-file-extensions-in-file-explorer-just-for-ease-of-use" class="md-nav__link">
+    Enable file extensions in File Explorer, just for ease of use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-certain-notifications-that-can-interfere-with-execution" class="md-nav__link">
+    Disable certain notifications that can interfere with execution:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#align-taskbar-icons-to-the-left-so-that-as-tasks-come-and-go-the-pinned-icons-dont-change-their-position" class="md-nav__link">
+    Align taskbar icons to the left, so that as tasks come and go the pinned icons don't change their position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-expandable-taskbar" class="md-nav__link">
+    Disable expandable taskbar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-pcc-to-prevent-being-limited-to-80-charge" class="md-nav__link">
+    Disable PCC to prevent being limited to 80% charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-edge-to-always-play-videos" class="md-nav__link">
+    Set Edge to always play videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-telemetry-if-specified" class="md-nav__link">
+    Enable telemetry if specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-telemetry-if-specified-default" class="md-nav__link">
+    Disable telemetry if specified (default)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-hibernate-if-specified-default" class="md-nav__link">
+    Enable hibernate if specified (default)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-if-specified" class="md-nav__link">
+    Disable hibernate if specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-sleep-after_1" class="md-nav__link">
+    Disable sleep after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-after_1" class="md-nav__link">
+    Disable hibernate after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-system-unattended-sleep-timeout_1" class="md-nav__link">
+    Disable system unattended sleep timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-dim-display-after_1" class="md-nav__link">
+    Disable dim display after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-turn-off-display-after_1" class="md-nav__link">
+    Disable turn off display after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-defender-cache-to-minimize-defender-running-during-test" class="md-nav__link">
+    Build Defender Cache to minimize Defender running during test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-als-for-consistent-backlight_1" class="md-nav__link">
+    Disable the ALS for consistent backlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-ngen-cache-to-minimize-background-activity-during-test" class="md-nav__link">
+    Build NGen Cache to minimize background activity during test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-desktop-background-image" class="md-nav__link">
+    Set desktop background image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-ac-brightness-level" class="md-nav__link">
+    Set AC brightness Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dc-brightness-level" class="md-nav__link">
+    Set DC brightness Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-balanced-profile" class="md-nav__link">
+    Set Balanced profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt-out-diagtrack-and-utc-for-non-critical-events" class="md-nav__link">
+    Opt out diagtrack and UTC for non-critical events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-process-idle-tasks-to-minimize-background-task-activity-during-test" class="md-nav__link">
+    Run Process Idle Tasks to minimize background task activity during test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge_install" class="md-nav__link">
+    edge_install
+  </a>
+  
+    <nav class="md-nav" aria-label="edge_install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-official-builds-only-get-100-allocated-configurations-from-the-server-prevents-flighting-during-test" class="md-nav__link">
+    Make official builds only get 100% allocated configurations from the server. Prevents flighting during test.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-administrative-templates-to-be-able-to-control-settings" class="md-nav__link">
+    Install administrative templates to be able to control settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-edge-policies-to-allow-autoplay-prevent-recommendations-hide-first-run-experience-and-disable-updates" class="md-nav__link">
+    Change Edge policies to: allow autoplay, prevent recommendations, hide First Run Experience, and disable updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-not-disable-popups-and-disable-offer-to-save-passwrods-popup" class="md-nav__link">
+    Set reg key to not disable popups and disable offer to save passwrods popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-prevent-full-screen-notification" class="md-nav__link">
+    Set reg key to prevent full screen notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-turn-off-opening-apps-for-certain-sites-such-as-facebook" class="md-nav__link">
+    Set reg key to turn off opening apps for certain sites, such as Facebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-auto-updating-of-chrome-and-edge" class="md-nav__link">
+    Disable auto updating of Chrome and Edge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onedrive_prep" class="md-nav__link">
+    onedrive_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="onedrive_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset-file-explorer-navigation-pane-to-default-size-to-facilitate-ui-automation" class="md-nav__link">
+    Reset File Explorer navigation pane to default size, to facilitate UI automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-deleted-files-are-removed-everywhere-reminder" class="md-nav__link">
+    Prevent "Deleted files are removed everywhere" reminder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-mass-delete-popup" class="md-nav__link">
+    Prevent mass delete popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-first-delete-popup" class="md-nav__link">
+    Prevent first delete popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-onedrive-app-change-sync-settings" class="md-nav__link">
+    In OneDrive app, change Sync settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-onedrive-app-change-notificatoin-settings" class="md-nav__link">
+    In OneDrive app, change Notificatoin settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productivity_prep" class="md-nav__link">
+    productivity_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="productivity_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-file-extensions-necessary-for-scripts-to-match-certain-window-titles-properly-like-word" class="md-nav__link">
+    Show file extensions (necessary for scripts to match certain window titles properly, like Word)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-windows-search-box-to-make-sure-there-is-room-for-all-the-taskbar-icons-we-want-to-add" class="md-nav__link">
+    Hide Windows Search box to make sure there is room for all the taskbar icons we want to add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-auto-recover-on-office-apps-this-is-necessary-to-be-able-to-recover-from-a-mishap-dropped-keys-or-mouse-clicks-in-a-subsequent-loop" class="md-nav__link">
+    Disable auto-recover on Office apps. This is necessary to be able to recover from a mishap (dropped keys or mouse clicks) in a subsequent loop.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-design-ideas-suggestions-in-powerpoint-because-of-its-indeterminant-behavior-causing-wild-power-variations" class="md-nav__link">
+    Disable Design Ideas suggestions in PowerPoint because of it's indeterminant behavior causing wild power variations.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store_prep" class="md-nav__link">
+    store_prep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#office_install" class="md-nav__link">
+    office_install
+  </a>
+  
+    <nav class="md-nav" aria-label="office_install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-activation-nag-so-that-the-free-trial-can-be-used" class="md-nav__link">
+    Disable the activation nag so that the free trial can be used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_brightness" class="md-nav__link">
+    screen_brightness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio_volume" class="md-nav__link">
+    audio_volume
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Release_Notes.html" class="md-nav__link">
+        HOBL 25 Release Notes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Scenarios.html" class="md-nav__link">
+        HOBL Scenarios
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_Tools.html" class="md-nav__link">
+        HOBL Tools
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI.html" class="md-nav__link">
+        HOBL UI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="HOBL_UI_Release_Notes.html" class="md-nav__link">
+        HOBL UI Release Notes
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dut_setup" class="md-nav__link">
+    dut_setup
+  </a>
+  
+    <nav class="md-nav" aria-label="dut_setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-polling-period-for-powersnap-telemetry-to-60s" class="md-nav__link">
+    Set polling period for powersnap telemetry to 60s
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-polling-period-for-surface-power-monitor-chips-to-30s-active-and-120s-standby" class="md-nav__link">
+    Set polling period for Surface power monitor chips to 30s active and 120s standby
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-uac-to-never-prompt-for-running-programs-in-admin-mode" class="md-nav__link">
+    Set UAC to never prompt for running programs in Admin mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-personalization-folder-in-the-registry" class="md-nav__link">
+    Create Personalization folder in the registry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings-to-disable-lock-screen-on-sleep" class="md-nav__link">
+    Settings to disable lock screen on sleep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-windows-hello-sign-in-options-so-that-we-can-ensure-auto-login" class="md-nav__link">
+    Disable Windows Hello sign-in options so that we can ensure auto-login
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-require-password-on-wake-from-shutdownhibernate" class="md-nav__link">
+    Disable "Require password on wake" from shutdown/hibernate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-sleep-after" class="md-nav__link">
+    Disable Sleep After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-after" class="md-nav__link">
+    Disable Hibernate After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-system-unattended-sleep-timeout" class="md-nav__link">
+    Disable System Unattended Sleep Timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-dim-display-after" class="md-nav__link">
+    Disable Dim Display After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-turn-off-display-after" class="md-nav__link">
+    Disable Turn off Display After
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-low-battery-notification" class="md-nav__link">
+    Disable Low Battery Notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-als-for-consistent-backlight" class="md-nav__link">
+    Disable the ALS for consistent backlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-ac-screen-brightness-level-to-100" class="md-nav__link">
+    Set AC screen brightness Level to 100%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dc-screen-brightness-level-to-65" class="md-nav__link">
+    Set DC screen brightness Level to 65%
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dut-to-sleep-on-lid-closure" class="md-nav__link">
+    Set dut to sleep on lid closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-active-scheme-to-balanced" class="md-nav__link">
+    Set active scheme to Balanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-remote-user-account-control-uac" class="md-nav__link">
+    Set remote User Account Control (UAC)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-pen-first-run-experience-notification" class="md-nav__link">
+    Prevent pen First Run Experience notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-developer-mode-needed-by-winappdriver" class="md-nav__link">
+    Enable developer mode (needed by WinAppDriver)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-network-drives-mapped-in-privileged-mode-to-be-visible-in-normal-mode-and-vice-versa" class="md-nav__link">
+    Enable network drives mapped in privileged mode to be visible in normal mode, and vice versa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-the-device-if-new-name-specified" class="md-nav__link">
+    Rename the device, if new name specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-windows-update-and-configure-automatic-updates-to-disabled" class="md-nav__link">
+    Disable Windows Update and Configure Automatic Updates to Disabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-wi-fi" class="md-nav__link">
+    Set up Wi-Fi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-task-to-reconnect-wi-fi-after-reboot" class="md-nav__link">
+    Schedule task to reconnect Wi-Fi after reboot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bypass-feature-to-keep-system-from-sleeping-when-using-webdriver" class="md-nav__link">
+    Bypass feature to keep system from sleeping when using WebDriver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-task-for-starting-simpleremoteconsole-based-on-dut-architecture" class="md-nav__link">
+    Create task for starting SimpleRemoteConsole based on DUT architecture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-firewall-for-simpleremote-and-winappdriver" class="md-nav__link">
+    Open firewall for SimpleRemote and WinAppDriver
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msa_prep" class="md-nav__link">
+    msa_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="msa_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-auto-login-msa-account" class="md-nav__link">
+    Set auto login MSA Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-user-password-to-never-expire" class="md-nav__link">
+    Set user password to never expire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turn-off-surface-notifications" class="md-nav__link">
+    Turn off Surface notifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily_prep" class="md-nav__link">
+    daily_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="daily_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-file-extensions-in-file-explorer-just-for-ease-of-use" class="md-nav__link">
+    Enable file extensions in File Explorer, just for ease of use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-certain-notifications-that-can-interfere-with-execution" class="md-nav__link">
+    Disable certain notifications that can interfere with execution:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#align-taskbar-icons-to-the-left-so-that-as-tasks-come-and-go-the-pinned-icons-dont-change-their-position" class="md-nav__link">
+    Align taskbar icons to the left, so that as tasks come and go the pinned icons don't change their position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-expandable-taskbar" class="md-nav__link">
+    Disable expandable taskbar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-pcc-to-prevent-being-limited-to-80-charge" class="md-nav__link">
+    Disable PCC to prevent being limited to 80% charge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-edge-to-always-play-videos" class="md-nav__link">
+    Set Edge to always play videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-telemetry-if-specified" class="md-nav__link">
+    Enable telemetry if specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-telemetry-if-specified-default" class="md-nav__link">
+    Disable telemetry if specified (default)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-hibernate-if-specified-default" class="md-nav__link">
+    Enable hibernate if specified (default)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-if-specified" class="md-nav__link">
+    Disable hibernate if specified
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-sleep-after_1" class="md-nav__link">
+    Disable sleep after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-hibernate-after_1" class="md-nav__link">
+    Disable hibernate after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-system-unattended-sleep-timeout_1" class="md-nav__link">
+    Disable system unattended sleep timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-dim-display-after_1" class="md-nav__link">
+    Disable dim display after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-turn-off-display-after_1" class="md-nav__link">
+    Disable turn off display after
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-defender-cache-to-minimize-defender-running-during-test" class="md-nav__link">
+    Build Defender Cache to minimize Defender running during test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-als-for-consistent-backlight_1" class="md-nav__link">
+    Disable the ALS for consistent backlight
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-ngen-cache-to-minimize-background-activity-during-test" class="md-nav__link">
+    Build NGen Cache to minimize background activity during test
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-desktop-background-image" class="md-nav__link">
+    Set desktop background image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-ac-brightness-level" class="md-nav__link">
+    Set AC brightness Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dc-brightness-level" class="md-nav__link">
+    Set DC brightness Level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-balanced-profile" class="md-nav__link">
+    Set Balanced profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opt-out-diagtrack-and-utc-for-non-critical-events" class="md-nav__link">
+    Opt out diagtrack and UTC for non-critical events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-process-idle-tasks-to-minimize-background-task-activity-during-test" class="md-nav__link">
+    Run Process Idle Tasks to minimize background task activity during test
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge_install" class="md-nav__link">
+    edge_install
+  </a>
+  
+    <nav class="md-nav" aria-label="edge_install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-official-builds-only-get-100-allocated-configurations-from-the-server-prevents-flighting-during-test" class="md-nav__link">
+    Make official builds only get 100% allocated configurations from the server. Prevents flighting during test.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-administrative-templates-to-be-able-to-control-settings" class="md-nav__link">
+    Install administrative templates to be able to control settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-edge-policies-to-allow-autoplay-prevent-recommendations-hide-first-run-experience-and-disable-updates" class="md-nav__link">
+    Change Edge policies to: allow autoplay, prevent recommendations, hide First Run Experience, and disable updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-not-disable-popups-and-disable-offer-to-save-passwrods-popup" class="md-nav__link">
+    Set reg key to not disable popups and disable offer to save passwrods popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-prevent-full-screen-notification" class="md-nav__link">
+    Set reg key to prevent full screen notification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-reg-key-to-turn-off-opening-apps-for-certain-sites-such-as-facebook" class="md-nav__link">
+    Set reg key to turn off opening apps for certain sites, such as Facebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-auto-updating-of-chrome-and-edge" class="md-nav__link">
+    Disable auto updating of Chrome and Edge
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onedrive_prep" class="md-nav__link">
+    onedrive_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="onedrive_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reset-file-explorer-navigation-pane-to-default-size-to-facilitate-ui-automation" class="md-nav__link">
+    Reset File Explorer navigation pane to default size, to facilitate UI automation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-deleted-files-are-removed-everywhere-reminder" class="md-nav__link">
+    Prevent "Deleted files are removed everywhere" reminder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-mass-delete-popup" class="md-nav__link">
+    Prevent mass delete popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prevent-first-delete-popup" class="md-nav__link">
+    Prevent first delete popup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-onedrive-app-change-sync-settings" class="md-nav__link">
+    In OneDrive app, change Sync settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-onedrive-app-change-notificatoin-settings" class="md-nav__link">
+    In OneDrive app, change Notificatoin settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productivity_prep" class="md-nav__link">
+    productivity_prep
+  </a>
+  
+    <nav class="md-nav" aria-label="productivity_prep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#show-file-extensions-necessary-for-scripts-to-match-certain-window-titles-properly-like-word" class="md-nav__link">
+    Show file extensions (necessary for scripts to match certain window titles properly, like Word)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hide-windows-search-box-to-make-sure-there-is-room-for-all-the-taskbar-icons-we-want-to-add" class="md-nav__link">
+    Hide Windows Search box to make sure there is room for all the taskbar icons we want to add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-auto-recover-on-office-apps-this-is-necessary-to-be-able-to-recover-from-a-mishap-dropped-keys-or-mouse-clicks-in-a-subsequent-loop" class="md-nav__link">
+    Disable auto-recover on Office apps. This is necessary to be able to recover from a mishap (dropped keys or mouse clicks) in a subsequent loop.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-design-ideas-suggestions-in-powerpoint-because-of-its-indeterminant-behavior-causing-wild-power-variations" class="md-nav__link">
+    Disable Design Ideas suggestions in PowerPoint because of it's indeterminant behavior causing wild power variations.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store_prep" class="md-nav__link">
+    store_prep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#office_install" class="md-nav__link">
+    office_install
+  </a>
+  
+    <nav class="md-nav" aria-label="office_install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-activation-nag-so-that-the-free-trial-can-be-used" class="md-nav__link">
+    Disable the activation nag so that the free trial can be used
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screen_brightness" class="md-nav__link">
+    screen_brightness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio_volume" class="md-nav__link">
+    audio_volume
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hobl-prep">HOBL Prep</h1>
+<p>The goal of HOBL is to test a device in the same way that a typical customer would use it, and therefore attempts to minimze any changes from the default setup of the device.  However, some changes need to be made in order to facilitate reliable automation.  Below is the list of scenarios and tools that make such changes to the system, and the changes they make.</p>
+<h2 id="dut_setup">dut_setup</h2>
+<p>This is run to set up the device whenever it is re-imaged, either explicitly by the user or automatically as part of os_install.  Dut_setup makes the following changes to the system:</p>
+<h4 id="set-polling-period-for-powersnap-telemetry-to-60s">Set polling period for powersnap telemetry to 60s</h4>
+<pre><code>reg add &quot;HKLM\Software\Microsoft\Windows NT\CurrentVersion\SRUM\Telemetry&quot; /v IntervalTimerInSeconds /t REG_DWORD /d 60 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\Software\Microsoft\Windows NT\CurrentVersion\SRUM\Telemetry&quot; /v MinimumIntervalInSeconds /t REG_DWORD /d 60 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="set-polling-period-for-surface-power-monitor-chips-to-30s-active-and-120s-standby">Set polling period for Surface power monitor chips to 30s active and 120s standby</h4>
+<pre><code>reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SRUM\\Parameters&quot; /v Tier1Period /t REG_DWORD /d 30 /f &gt; null 2&gt;&amp;1   
+reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SRUM\\Parameters&quot; /v Tier2Period /t REG_DWORD /d 120 /f &gt; null 2&gt;&amp;1   
+reg add &quot;HKLM\\SYSTEM\\CurrentControlSet\\Services\\intelpep\\Parameters&quot; /v ActiveAccountingIntervalInMs /t REG_DWORD /d 0x2710 /f &gt; null 2&gt;&amp;1   
+</code></pre>
+<h4 id="set-uac-to-never-prompt-for-running-programs-in-admin-mode">Set UAC to never prompt for running programs in Admin mode</h4>
+<pre><code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="create-personalization-folder-in-the-registry">Create Personalization folder in the registry</h4>
+<pre><code>reg add HKLM\Software\Policies\Microsoft\Windows\Personalization /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="settings-to-disable-lock-screen-on-sleep">Settings to disable lock screen on sleep</h4>
+<pre><code>reg add HKLM\Software\Policies\Microsoft\Windows\Personalization /v NolockScreen /t REG_DWORD /d 1 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="disable-windows-hello-sign-in-options-so-that-we-can-ensure-auto-login">Disable Windows Hello sign-in options so that we can ensure auto-login</h4>
+<pre><code>reg add HKLM\SOFTWARE\Microsoft\PolicyManager\default\Settings\AllowSignInOptions /v value /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="disable-require-password-on-wake-from-shutdownhibernate">Disable "Require password on wake" from shutdown/hibernate</h4>
+<pre><code>powercfg -setdcvalueindex 381b4222-f694-41f0-9685-ff5bb260df2e fea3413e-7e05-4911-9a71-700331f1c294 0e796bdb-100d-47d6-a2d5-f7d2daa51f51 0
+powercfg -setacvalueindex 381b4222-f694-41f0-9685-ff5bb260df2e fea3413e-7e05-4911-9a71-700331f1c294 0e796bdb-100d-47d6-a2d5-f7d2daa51f51 0
+</code></pre>
+<h4 id="disable-sleep-after">Disable Sleep After</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+</code></pre>
+<h4 id="disable-hibernate-after">Disable Hibernate After</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 9d7815a6-7ee4-497e-8888-515a05f02364 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 9d7815a6-7ee4-497e-8888-515a05f02364 0
+</code></pre>
+<h4 id="disable-system-unattended-sleep-timeout">Disable System Unattended Sleep Timeout</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 0
+</code></pre>
+<h4 id="disable-dim-display-after">Disable Dim Display After</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_video 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_video 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+</code></pre>
+<h4 id="disable-turn-off-display-after">Disable Turn off Display After</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_video 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_video 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+</code></pre>
+<h4 id="disable-low-battery-notification">Disable Low Battery Notification</h4>
+<pre><code>powercfg -SETDCVALUEINDEX SCHEME_CURRENT e73a048d-bf27-4f12-9731-8b2076e8891f bcded951-187b-4d05-bccc-f7e51960c258 0
+</code></pre>
+<h4 id="disable-the-als-for-consistent-backlight">Disable the ALS for consistent backlight</h4>
+<pre><code>Powercfg -setacvalueindex scheme_current sub_video adaptbright 0
+Powercfg -setdcvalueindex scheme_current sub_video adaptbright 0
+Powercfg -setactive scheme_current
+</code></pre>
+<h4 id="set-ac-screen-brightness-level-to-100">Set AC screen brightness Level to 100%</h4>
+<pre><code>powercfg -SETACVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb 100
+</code></pre>
+<h4 id="set-dc-screen-brightness-level-to-65">Set DC screen brightness Level to 65%</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb 65
+</code></pre>
+<h4 id="set-dut-to-sleep-on-lid-closure">Set dut to sleep on lid closure</h4>
+<pre><code>powercfg -SETACVALUEINDEX scheme_balanced SUB_BUTTONS 5ca83367-6e45-459f-a27b-476b1d01c936 001
+powercfg -SETDCVALUEINDEX scheme_balanced SUB_BUTTONS 5ca83367-6e45-459f-a27b-476b1d01c936 001
+</code></pre>
+<h4 id="set-active-scheme-to-balanced">Set active scheme to Balanced</h4>
+<pre><code>powercfg -SETACTIVE scheme_balanced
+</code></pre>
+<h4 id="set-remote-user-account-control-uac">Set remote User Account Control (UAC)</h4>
+<pre><code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+</code></pre>
+<h4 id="prevent-pen-first-run-experience-notification">Prevent pen First Run Experience notification</h4>
+<pre><code>reg add HKCU\Software\Microsoft\Windows\CurrentVersion\PenWorkspace /v PenDetachFREComplete /t REG_DWORD /d 1 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="enable-developer-mode-needed-by-winappdriver">Enable developer mode (needed by WinAppDriver)</h4>
+<pre><code>reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock /v AllowDevelopmentWithoutDevLicense /t REG_DWORD /d 1 /f
+start ms-settings:developers
+</code></pre>
+<h4 id="enable-network-drives-mapped-in-privileged-mode-to-be-visible-in-normal-mode-and-vice-versa">Enable network drives mapped in privileged mode to be visible in normal mode, and vice versa</h4>
+<pre><code>reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLinkedConnections /t REG_DWORD /d 1 /f
+</code></pre>
+<h4 id="rename-the-device-if-new-name-specified">Rename the device, if new name specified</h4>
+<pre><code>powershell -Command rename-computer -NewName &quot;%dut_name%&quot;
+</code></pre>
+<h4 id="disable-windows-update-and-configure-automatic-updates-to-disabled">Disable Windows Update and Configure Automatic Updates to Disabled</h4>
+<pre><code>sc stop wuauserv
+SCHTASKS /Change /TN &quot;\Microsoft\Windows\WindowsUpdate\Scheduled Start&quot; /Disable
+reg add HKLM\SYSTEM\CurrentControlSet\Services\wuauserv /v Start /t REG_DWORD /d 3 /f
+powershell.exe Set-ExecutionPolicy Unrestricted -Force
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\Sysnative\GroupPolicy\Machine\registry.pol&quot; -Key SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -ValueName NoAutoUpdate -Data 1 -Type DWord
+powershell.exe Get-PolicyFileEntry -Path &quot;$env:windir\Sysnative\GroupPolicy\Machine\registry.pol&quot; -All
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\System32\GroupPolicy\Machine\registry.pol&quot; -Key SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU -ValueName NoAutoUpdate -Data 1 -Type DWord
+powershell.exe Get-PolicyFileEntry -Path &quot;$env:windir\System32\GroupPolicy\Machine\registry.pol&quot; -All
+gpupdate
+</code></pre>
+<h4 id="set-up-wi-fi">Set up Wi-Fi</h4>
+<pre><code>netsh wlan add profile filename=%usb_drive%%dut_setup_folder%\wifi.xml
+netsh wlan connect name=%dut_wifi_name% interface=&quot;Wi-Fi&quot;
+netsh wlan set profileparameter name=%dut_wifi_name% connectionmode=auto
+</code></pre>
+<h4 id="schedule-task-to-reconnect-wi-fi-after-reboot">Schedule task to reconnect Wi-Fi after reboot</h4>
+<pre><code>copy %usb_drive%\%dut_setup_folder%\connect_wifi_task.cmd %hobl_bin_path% /v /Y
+SCHTASKS /Delete /TN connectWifi /F
+SCHTASKS /Create /TN connectWifi /TR %hobl_bin_path%\connect_wifi_task.cmd /SC onlogon
+</code></pre>
+<h4 id="bypass-feature-to-keep-system-from-sleeping-when-using-webdriver">Bypass feature to keep system from sleeping when using WebDriver</h4>
+<pre><code>setx WEBDRIVER_USE_DEFAULT_APP_PROCESS_BEHAVIOR 1
+</code></pre>
+<h4 id="create-task-for-starting-simpleremoteconsole-based-on-dut-architecture">Create task for starting SimpleRemoteConsole based on DUT architecture</h4>
+<pre><code>if &quot;%dut_architecture%&quot; EQU &quot;arm64&quot; (
+    set this_string=&quot;%hobl_bin_path%\SimpleRemoteServer-arm64\start_admin_console.bat&quot;
+    set this_srs=&quot;%hobl_bin_path%\SimpleRemoteServer-arm64\SimpleRemoteConsole.exe&quot;
+) else (
+    set this_string=&quot;%hobl_bin_path%\SimpleRemoteServer-x64\start_admin_console.bat&quot;
+    set this_srs=&quot;%hobl_bin_path%\SimpleRemoteServer-x64\SimpleRemoteConsole.exe&quot;
+)
+</code></pre>
+<h4 id="open-firewall-for-simpleremote-and-winappdriver">Open firewall for SimpleRemote and WinAppDriver</h4>
+<pre><code>netsh.exe advfirewall firewall add rule name=&quot;SimpleRemoteConsole TCP&quot; program=%this_srs% dir=in action=allow enable=yes localport=any protocol=TCP profile=public,private,domain
+netsh.exe advfirewall firewall add rule name=&quot;SimpleRemoteConsole UDP&quot; program=%this_srs% dir=in action=allow enable=yes localport=any protocol=UDP profile=public,private,domain
+netsh.exe advfirewall firewall add rule name=&quot;Allow 4723,17556&quot; dir=in action=allow enable=yes localport=4723,17556 protocol=TCP profile=public,private,domain
+netsh.exe advfirewall firewall add rule name=&quot;Allow ICMPv4&quot; dir=in action=allow enable=yes protocol=icmpv4:8,any profile=public,private,domain
+</code></pre>
+<h2 id="msa_prep">msa_prep</h2>
+<p>This is part of the hobl_prep and abl_prep test plans, and sets the MSA account for the device.  Msa_prep makes the following changes to the system:</p>
+<h4 id="set-auto-login-msa-account">Set auto login MSA Account</h4>
+<pre><code>reg add &quot;HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot; /v DefaultUserName /t REG_SZ /d ' + self.msa_account + ' /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot; /v DefaultPassword /t REG_SZ /d ' + self.dut_password + ' /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon&quot; /v AutoAdminlogon /t REG_SZ /d 1 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="set-user-password-to-never-expire">Set user password to never expire</h4>
+<pre><code>powershell Set-LocalUser -Name $env:UserName -PasswordNeverExpires 1
+</code></pre>
+<h4 id="turn-off-surface-notifications">Turn off Surface notifications</h4>
+<pre><code>reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Microsoft.SurfaceHub_8wekyb3d8bbwe!App&quot; /v Enabled /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h2 id="daily_prep">daily_prep</h2>
+<p>Daily_prep is generally run at the beginning of a study (part of hobl and rundown_abl test plans), to quiesce the device and re-set any setting that may have a tendency to change on their own.  daily_prep makes the following changes to the system:</p>
+<h4 id="enable-file-extensions-in-file-explorer-just-for-ease-of-use">Enable file extensions in File Explorer, just for ease of use</h4>
+<pre><code>reg add &quot;HKCU\\software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot; /v HideFileExt /t REG_DWORD /d 00000000 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="disable-certain-notifications-that-can-interfere-with-execution">Disable certain notifications that can interfere with execution:</h4>
+<pre><code>reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement&quot; /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager&quot; /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager&quot; /v SubscribedContent-310093Enabled /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\PushNotifications&quot; /v ToastEnabled /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="align-taskbar-icons-to-the-left-so-that-as-tasks-come-and-go-the-pinned-icons-dont-change-their-position">Align taskbar icons to the left, so that as tasks come and go the pinned icons don't change their position</h4>
+<pre><code>reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot; /v TaskbarAl /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="disable-expandable-taskbar">Disable expandable taskbar</h4>
+<pre><code>reg add &quot;HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced&quot; /v ExpandableTaskbar /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+</code></pre>
+<h4 id="disable-pcc-to-prevent-being-limited-to-80-charge">Disable PCC to prevent being limited to 80% charge</h4>
+<pre><code>try:
+    smonitoruap.exe /battpccenable 1 0
+except:
+    logging.warning(&quot;SMonitor not found, so PCC not disabled.&quot;)
+</code></pre>
+<h4 id="set-edge-to-always-play-videos">Set Edge to always play videos</h4>
+<pre><code>powershell Set-PolicyFileEntry -Path &quot;$env:windir\\' + system_path + '\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Edge -ValueName AutoplayAllowed -Data 1 -Type DWord
+gpupdate /wait:1200
+</code></pre>
+<h4 id="enable-telemetry-if-specified">Enable telemetry if specified</h4>
+<pre><code>reg add &quot;HKLM\\SOFTWARE\\Microsoft\\SQMClient&quot; /v IsTestlab /t REG_DWORD /d 0 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection&quot; /v AllowTelemetry /t REG_DWORD /d 3 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection&quot; /v MaxTelemetryAllowed /t REG_DWORD /d 3 /f &gt; null 2&gt;&amp;1
+reg add &quot;HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection&quot; /v AllowTelemetry /t REG_DWORD /d 3 /f &gt; null 2&gt;&amp;1
+powershell Set-PolicyFileEntry -Path &quot;$env:windir\\' + system_path + '\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection -ValueName AllowTelemetry -Data 3 -Type DWord
+gpupdate /wait:1200
+</code></pre>
+<h4 id="disable-telemetry-if-specified-default">Disable telemetry if specified (default)</h4>
+<pre><code>reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\TestHooks&quot; /v SkipTelemetryServiceRules /t REG_DWORD /d 1 /f &gt; null 2&gt;&amp;1   
+reg add &quot;HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Diagnostics\\DiagTrack\\TestHooks&quot; /v SkipDownloadedSettings /t REG_DWORD /d 1 /f &gt; null 2&gt;&amp;1   
+</code></pre>
+<h4 id="enable-hibernate-if-specified-default">Enable hibernate if specified (default)</h4>
+<pre><code>powercfg.exe /H ON
+</code></pre>
+<h4 id="disable-hibernate-if-specified">Disable hibernate if specified</h4>
+<pre><code>powercfg.exe /H OFF
+powercfg.exe /setdcvalueindex scheme_current sub_presence STANDBYRESERVETIME 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence STANDBYRESETPERCENT 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence NSENINPUTPRETIME 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence NSENINPUTPRETIME 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence STANDBYBUDGETGRACEPERIOD 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence USERPRESENCEPREDICTION 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence standbybudgetpercent 0
+powercfg.exe /setdcvalueindex scheme_current sub_presence STANDBYRESERVEGRACEPERIOD 0
+</code></pre>
+<h4 id="disable-sleep-after_1">Disable sleep after</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 29f6c1db-86da-48c5-9fdb-f2b67b1f44da 0
+</code></pre>
+<h4 id="disable-hibernate-after_1">Disable hibernate after</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 9d7815a6-7ee4-497e-8888-515a05f02364 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 9d7815a6-7ee4-497e-8888-515a05f02364 0
+</code></pre>
+<h4 id="disable-system-unattended-sleep-timeout_1">Disable system unattended sleep timeout</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_sleep 7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_sleep 7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 0
+</code></pre>
+<h4 id="disable-dim-display-after_1">Disable dim display after</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_video 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_video 17aaa29b-8b43-4b94-aafe-35f64daaf1ee 0
+</code></pre>
+<h4 id="disable-turn-off-display-after_1">Disable turn off display after</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced sub_video 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+powercfg -SETACVALUEINDEX scheme_balanced sub_video 3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e 0
+powercfg -SETACTIVE scheme_balanced
+</code></pre>
+<h4 id="build-defender-cache-to-minimize-defender-running-during-test">Build Defender Cache to minimize Defender running during test</h4>
+<pre><code>start-process &quot;c:\program files\Windows Defender\mpcmdrun.exe&quot; (&quot;BuildSFC -Timeout 7200000&quot;) -Wait
+</code></pre>
+<h4 id="disable-the-als-for-consistent-backlight_1">Disable the ALS for consistent backlight</h4>
+<pre><code>Powercfg.exe -setacvalueindex scheme_current sub_video adaptbright 0
+Powercfg.exe -setdcvalueindex scheme_current sub_video adaptbright 0
+Powercfg.exe -setactive scheme_current
+</code></pre>
+<h4 id="build-ngen-cache-to-minimize-background-activity-during-test">Build NGen Cache to minimize background activity during test</h4>
+<pre><code>start-process &quot;$env:windir\Microsoft.NET\Framework\v4.0.30319\ngen.exe&quot; (&quot;ExecuteQueuedItems&quot;) -Wait
+</code></pre>
+<h4 id="set-desktop-background-image">Set desktop background image</h4>
+<pre><code>Add-Type @&quot;
+using System;
+using System.Runtime.InteropServices;
+using Microsoft.Win32;
+namespace Wallpaper
+{
+public enum Style : int
+{
+Center, Stretch
+}
+public class Setter {
+public const int SetDesktopWallpaper = 20;
+public const int UpdateIniFile = 0x01;
+public const int SendWinIniChange = 0x02;
+[DllImport(&quot;user32.dll&quot;, SetLastError = true, CharSet = CharSet.Auto)]
+private static extern int SystemParametersInfo (int uAction, int uParam, string lpvParam, int fuWinIni);
+public static void SetWallpaper ( string path, Wallpaper.Style style ) {
+SystemParametersInfo( SetDesktopWallpaper, 0, path, UpdateIniFile | SendWinIniChange );
+RegistryKey key = Registry.CurrentUser.OpenSubKey(&quot;Control Panel\\Desktop&quot;, true);
+switch( style )
+{
+case Style.Stretch :
+key.SetValue(@&quot;WallpaperStyle&quot;, &quot;2&quot;) ; 
+key.SetValue(@&quot;TileWallpaper&quot;, &quot;0&quot;) ;
+break;
+case Style.Center :
+key.SetValue(@&quot;WallpaperStyle&quot;, &quot;1&quot;) ; 
+key.SetValue(@&quot;TileWallpaper&quot;, &quot;0&quot;) ; 
+break;
+}
+key.Close();
+}
+}
+}
+&quot;@
+
+$Path = (split-path -parent $MyInvocation.MyCommand.Definition) + &quot;\DesktopImages\&quot; + &quot;$wallpaper&quot;
+$Style = 'Stretch'
+[Wallpaper.Setter]::SetWallpaper( $Path, $Style )
+</code></pre>
+<h4 id="set-ac-brightness-level">Set AC brightness Level</h4>
+<pre><code>powercfg -SETACVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb 100
+</code></pre>
+<h4 id="set-dc-brightness-level">Set DC brightness Level</h4>
+<pre><code>powercfg -SETDCVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb 65
+</code></pre>
+<h4 id="set-balanced-profile">Set Balanced profile</h4>
+<pre><code>powercfg -SETACTIVE scheme_balanced
+</code></pre>
+<h4 id="opt-out-diagtrack-and-utc-for-non-critical-events">Opt out diagtrack and UTC for non-critical events</h4>
+<pre><code>if ($telemetry_enabled -eq &quot;0&quot;){
+    Copy .\telemetry.ASM-WindowsDefault.json $env:ProgramData\Microsoft\diagnosis\sideload -Force
+    Copy .\utc.app.json $env:ProgramData\Microsoft\diagnosis\sideload -Force
+}
+</code></pre>
+<h4 id="run-process-idle-tasks-to-minimize-background-task-activity-during-test">Run Process Idle Tasks to minimize background task activity during test</h4>
+<pre><code>start &quot;rundll32.exe&quot; (&quot;advapi32.dll,ProcessIdleTasks&quot;) -Wait
+</code></pre>
+<h2 id="edge_install">edge_install</h2>
+<p>Edge_install is part of the prep plans and installs the latest version of Edge.  Edge_install makes the following changes to the system:</p>
+<h4 id="make-official-builds-only-get-100-allocated-configurations-from-the-server-prevents-flighting-during-test">Make official builds only get 100% allocated configurations from the server.  Prevents flighting during test.</h4>
+<pre><code>setx /m EDGE_FEATURE_OVERRIDES_SOURCE server_default
+</code></pre>
+<h4 id="install-administrative-templates-to-be-able-to-control-settings">Install administrative templates to be able to control settings</h4>
+<pre><code>self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\msedge.admx&quot;, &quot;c:\\Windows\\PolicyDefinitions&quot;)
+self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\msedgeupdate.admx&quot;, &quot;c:\\Windows\\PolicyDefinitions&quot;)
+self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\msedgewebview2.admx&quot;, &quot;c:\\Windows\\PolicyDefinitions&quot;)
+self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\en-US\\msedge.adml&quot;, &quot;c:\\Windows\\PolicyDefinitions\\en-US&quot;)
+self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\en-US\\msedgeupdate.adml&quot;, &quot;c:\\Windows\\PolicyDefinitions\\en-US&quot;)
+self._upload(&quot;utilities\\MicrosoftEdgePolicyTemplates\\windows\\admx\\en-US\\msedgewebview2.adml&quot;, &quot;c:\\Windows\\PolicyDefinitions\\en-US&quot;)
+</code></pre>
+<h4 id="change-edge-policies-to-allow-autoplay-prevent-recommendations-hide-first-run-experience-and-disable-updates">Change Edge policies to: allow autoplay, prevent recommendations, hide First Run Experience, and disable updates</h4>
+<pre><code>powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Edge -ValueName AutoplayAllowed -Data 1 -Type DWord
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Edge -ValueName ShowRecommendationsEnabled -Data 0 -Type DWord
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Edge -ValueName HideFirstRunExperience -Data 1 -Type DWord
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\Edge -ValueName HideRestoreDialogEnabled -Data 1 -Type DWord
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\EdgeUpdate -ValueName AutoUpdateCheckPeriodMinutes -Data 0 -Type DWord
+powershell.exe Set-PolicyFileEntry -Path &quot;$env:windir\\system32\\GroupPolicy\\Machine\\registry.pol&quot; -Key SOFTWARE\\Policies\\Microsoft\\EdgeUpdate -ValueName UpdateDefault -Data 0 -Type DWord
+cmd.exe /C gpupdate /wait:1200
+</code></pre>
+<h4 id="set-reg-key-to-not-disable-popups-and-disable-offer-to-save-passwrods-popup">Set reg key to not disable popups and disable offer to save passwrods popup</h4>
+<pre><code>cmd.exe /C reg add &quot;HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\New Windows&quot; /v PopupMgr /t REG_SZ /d no /f   
+cmd.exe /C reg add &quot;HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\Main&quot; /v &quot;FormSuggest passwords&quot; /t REG_SZ /d no /f   
+</code></pre>
+<h4 id="set-reg-key-to-prevent-full-screen-notification">Set reg key to prevent full screen notification</h4>
+<pre><code>cmd.exe /C reg add &quot;HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\FullScreen\\AllowDomains&quot; /v netflix.com /t REG_DWORD /d 1 /f   
+cmd.exe /C reg add &quot;HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\FullScreen\\AllowDomains&quot; /v youtube.com /t REG_DWORD /d 1 /f   
+</code></pre>
+<h4 id="set-reg-key-to-turn-off-opening-apps-for-certain-sites-such-as-facebook">Set reg key to turn off opening apps for certain sites, such as Facebook</h4>
+<pre><code>cmd.exe /C reg add &quot;HKCU\\SOFTWARE\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\CurrentVersion\\AppContainer\\Storage\\microsoft.microsoftedge_8wekyb3d8bbwe\\MicrosoftEdge\\AppLinks&quot; /v Enabled /d 0 /f 
+</code></pre>
+<h4 id="disable-auto-updating-of-chrome-and-edge">Disable auto updating of Chrome and Edge</h4>
+<pre><code>cmd.exe /C reg add &quot;HKLM\\Software\\Policies\\Microsoft\\EdgeUpdateDev&quot; /v AutoUpdateCheckPeriodMinutes /d 0 /f
+cmd.exe /C reg add &quot;HKLM\\Software\\WOW6432Node\\Microsoft\\EdgeUpdateDev&quot; /v AutoUpdateCheckPeriodMinutes /t REG_DWORD /d 0 /f
+cmd.exe /C reg add &quot;HKLM\\Software\\WOW6432Node\\Microsoft\\EdgeUpdateDev&quot; /v IsEnrolledToDomain /t REG_DWORD /d 1 /f
+</code></pre>
+<h2 id="onedrive_prep">onedrive_prep</h2>
+<h4 id="reset-file-explorer-navigation-pane-to-default-size-to-facilitate-ui-automation">Reset File Explorer navigation pane to default size, to facilitate UI automation</h4>
+<pre><code>reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Modules\GlobalSettings\Sizer /v PageSpaceControlSizer /t REG_BINARY /d a0000000010000000000000056050000 /f
+</code></pre>
+<h4 id="prevent-deleted-files-are-removed-everywhere-reminder">Prevent "Deleted files are removed everywhere" reminder</h4>
+<pre><code>reg add HKLM\SOFTWARE\Policies\Microsoft\OneDrive /v DisableFirstDeleteDialog /t REG_DWORD /d 1 /f
+</code></pre>
+<h4 id="prevent-mass-delete-popup">Prevent mass delete popup</h4>
+<pre><code>reg add HKCU\Software\Microsoft\OneDrive\Accounts\Personal /v MassDeleteNotificationDisabled /t REG_DWORD /d 1 /f
+</code></pre>
+<h4 id="prevent-first-delete-popup">Prevent first delete popup</h4>
+<pre><code>reg add HKCU\Software\Microsoft\OneDrive /v FirstDeleteDialogsShown /t REG_DWORD /d 1 /f
+</code></pre>
+<h4 id="in-onedrive-app-change-sync-settings">In OneDrive app, change Sync settings</h4>
+<pre><code>Uncheck &quot;battery saver mode&quot;
+Uncheck &quot;metered&quot;
+</code></pre>
+<h4 id="in-onedrive-app-change-notificatoin-settings">In OneDrive app, change Notificatoin settings</h4>
+<pre><code>Uncheck &quot;Notify me when syncing is paused&quot;
+Uncheck &quot;share with me or edit my shared&quot;
+Uncheck &quot;files are deleted in the cloud&quot;
+Uncheck &quot;memories&quot;
+Uncheck &quot;removed from the cloud&quot;
+</code></pre>
+<h2 id="productivity_prep">productivity_prep</h2>
+<p>Productivity_prep is part of the prep plans and prepares the Office apps, documents, and Outlook inbox for test.  Productivity_prep makes the following changes to the system:</p>
+<h4 id="show-file-extensions-necessary-for-scripts-to-match-certain-window-titles-properly-like-word">Show file extensions (necessary for scripts to match certain window titles properly, like Word)</h4>
+<pre><code>reg add HKCU\software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /f /d 00000000
+</code></pre>
+<h4 id="hide-windows-search-box-to-make-sure-there-is-room-for-all-the-taskbar-icons-we-want-to-add">Hide Windows Search box to make sure there is room for all the taskbar icons we want to add</h4>
+<pre><code>reg add HKCU\software\Microsoft\Windows\CurrentVersion\Search /v SearchboxTaskbarMode /t REG_DWORD /f /d 00000000
+</code></pre>
+<h4 id="disable-auto-recover-on-office-apps-this-is-necessary-to-be-able-to-recover-from-a-mishap-dropped-keys-or-mouse-clicks-in-a-subsequent-loop">Disable auto-recover on Office apps.  This is necessary to be able to recover from a mishap (dropped keys or mouse clicks) in a subsequent loop.</h4>
+<pre><code>reg add HKCU\Software\Microsoft\office\16.0\excel\options /v AutoRecoverEnabled /t REG_DWORD /f /d 00000000
+reg add HKCU\Software\Microsoft\office\16.0\PowerPoint\options /v SaveAutoRecoveryInfo /t REG_DWORD /f /d 00000000
+reg add HKCU\Software\Microsoft\office\16.0\Word\options /v KeepUnsavedChanges /t REG_DWORD /f /d 00000000
+</code></pre>
+<h4 id="disable-design-ideas-suggestions-in-powerpoint-because-of-its-indeterminant-behavior-causing-wild-power-variations">Disable Design Ideas suggestions in PowerPoint because of it's indeterminant behavior causing wild power variations.</h4>
+<pre><code>reg add HKCU\Software\Microsoft\office\16.0\PowerPoint\options /v EnableSuggestionServiceUserSetting /t REG_DWORD /f /d 00000000
+</code></pre>
+<h2 id="store_prep">store_prep</h2>
+<p>Store_prep is part of the prep plans and installs the latest app updates.  Afterwards, store_prep disables automatic app updates in the Settings menu to prevent updates from happening during test.</p>
+<h2 id="office_install">office_install</h2>
+<p>Office_install is part of the prep plans and installs the specified version of Microsoft 365.  Office_install makes the following changes to the system:</p>
+<h4 id="disable-the-activation-nag-so-that-the-free-trial-can-be-used">Disable the activation nag so that the free trial can be used</h4>
+<pre><code>reg add HKLM\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Licensing /v DisableActivationUI /t REG_DWORD /f /d 00000001
+reg add HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\16.0\\Common\\Licensing /v DisableActivationUI /t REG_DWORD /f /d 00000001
+</code></pre>
+<h2 id="screen_brightness">screen_brightness</h2>
+<p>Screen_brightness is a tool that runs with tests to set the screen brightness to the specified perentage level.</p>
+<pre><code>Powercfg.exe -SETDCVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb &quot; + str(brightness_val)
+Powercfg.exe -SETACVALUEINDEX scheme_balanced SUB_VIDEO aded5e82-b909-4619-9949-f5d71dac0bcb &quot; + str(brightness_val)
+Powercfg.exe -SETACTIVE scheme_balanced
+</code></pre>
+<h2 id="audio_volume">audio_volume</h2>
+<p>Audio_volume is a tool that runs with tests to set the audio volume to the specified percentage level.</p>
+<pre><code>Add-Type -TypeDefinition @'
+using System.Runtime.InteropServices;
+[Guid(&quot;5CDF2C82-841E-4546-9722-0CF74078229A&quot;), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface IAudioEndpointVolume {
+  // f(), g(), ... are unused COM method slots. 
+  int f(); int g(); int h(); int i();
+  int SetMasterVolumeLevelScalar(float fLevel, System.Guid pguidEventContext);
+  int j();
+  int GetMasterVolumeLevelScalar(out float pfLevel);
+  int k(); int l(); int m(); int n();
+  int SetMute([MarshalAs(UnmanagedType.Bool)] bool bMute, System.Guid pguidEventContext);
+  int GetMute(out bool pbMute);
+}
+[Guid(&quot;D666063F-1587-4E43-81F1-B948E807363F&quot;), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface IMMDevice {
+  int Activate(ref System.Guid id, int clsCtx, int activationParams, out IAudioEndpointVolume aev);
+}
+[Guid(&quot;A95664D2-9614-4F35-A746-DE8DB63617E6&quot;), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+interface IMMDeviceEnumerator {
+  int f(); // Unused
+  int GetDefaultAudioEndpoint(int dataFlow, int role, out IMMDevice endpoint);
+}
+[ComImport, Guid(&quot;BCDE0395-E52F-467C-8E3D-C4579291692E&quot;)] class MMDeviceEnumeratorComObject { }
+public class Audio {
+  static IAudioEndpointVolume Vol() {
+    var enumerator = new MMDeviceEnumeratorComObject() as IMMDeviceEnumerator;
+    IMMDevice dev = null;
+    Marshal.ThrowExceptionForHR(enumerator.GetDefaultAudioEndpoint(/*eRender*/ 0, /*eMultimedia*/ 1, out dev));
+    IAudioEndpointVolume epv = null;
+    var epvid = typeof(IAudioEndpointVolume).GUID;
+    Marshal.ThrowExceptionForHR(dev.Activate(ref epvid, /*CLSCTX_ALL*/ 23, 0, out epv));
+    return epv;
+  }
+  public static float Volume {
+    get {float v = -1; Marshal.ThrowExceptionForHR(Vol().GetMasterVolumeLevelScalar(out v)); return v;}
+    set {Marshal.ThrowExceptionForHR(Vol().SetMasterVolumeLevelScalar(value, System.Guid.Empty));}
+  }
+  public static bool Mute {
+    get { bool mute; Marshal.ThrowExceptionForHR(Vol().GetMute(out mute)); return mute; }
+    set { Marshal.ThrowExceptionForHR(Vol().SetMute(value, System.Guid.Empty)); }
+  }
+}
+
+'@
+
+
+[audio]::mute = $mute
+[audio]::volume = $audio
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["search.highlight"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>

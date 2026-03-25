@@ -1,0 +1,104 @@
+{
+    "StudyVars": {},
+    "PlanBasedStudyVars": [],
+    "StudyType": "AI_Teams",
+    "AutoResubmit": 0,
+    "Scenarios": [
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "config_check",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": ""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_off",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc global:delay_between_runs=60"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=baseline3x3 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=framing3x3 mep_toggle:framing=1 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=eyestandard3x3 mep_toggle:eye_gaze=1 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=standardblur3x3 mep_toggle:blur=1 mep_toggle:standardblur=1 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=portraitblur3x3 mep_toggle:blur=1 mep_toggle:portraitblur=1 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "teams2_3x3_video",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 3,
+            "Parameters": "global:attempts=2 global:run_type=NewTeamsAI global:module_name=all3x3 mep_toggle:framing=1 mep_toggle:eye_gaze=1 mep_toggle:blur=1 mep_toggle:portraitblur=1 teams:new_teams=1 global:tools=\"+power_light mep_toggle\""
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "charge_on",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "study_report",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "version_report",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Prep global:delay_between_runs=0"
+        },
+        {
+            "Command": ".\\hobl.cmd",
+            "Scenario": "notify",
+            "Enabled": true,
+            "Expand": [],
+            "Iterations": 1,
+            "Parameters": "global:run_type=Misc"
+        }
+    ]
+}

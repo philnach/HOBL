@@ -1,0 +1,120 @@
+[
+    {
+        "author": "wssi",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-30",
+        "description": "Delete bench if present",
+        "enabled": true,
+        "id": "11RXN7V",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.5",
+                "description": "",
+                "enabled": true,
+                "file_name": [
+                    "image_12LJ8EW.png"
+                ],
+                "h": "0.265",
+                "id": "12LJ8EW",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.236",
+                "x": "0.242",
+                "y": "0.185"
+            },
+            {
+                "capture_id": "12LJ8EW",
+                "children": [],
+                "delay": "2",
+                "description": "Look for Old Project",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_12LHXE5.png"
+                ],
+                "h": "0.035",
+                "id": "12LHXE5",
+                "match_threshold": "",
+                "scale": "",
+                "type": "Check",
+                "w": "0.052",
+                "x": "0.327",
+                "y": "0.371"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "12LJ97F",
+        "type": "Try"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12LJ97H",
+        "type": "Except"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Delete ",
+                "enabled": true,
+                "id": "11RXPVW",
+                "text": "\ue014\ue017\ue014\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "12LJ97J",
+        "type": "On Success"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "12LJ97K",
+        "type": "End Try"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_11RXNRY.png"
+        ],
+        "h": "0.045",
+        "id": "11RXNRY",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.123",
+        "x": "0.293",
+        "y": "0.361"
+    },
+    {
+        "capture_id": "11RXNRY",
+        "children": [],
+        "delay": "2",
+        "description": "old project",
+        "enabled": false,
+        "file_name": [
+            "image_11RXP1J.png"
+        ],
+        "h": "1.000",
+        "id": "11RXP1J",
+        "timeout": "120",
+        "type": "Check Until Found",
+        "w": "1.000",
+        "x": "0.000",
+        "y": "0.000"
+    }
+]

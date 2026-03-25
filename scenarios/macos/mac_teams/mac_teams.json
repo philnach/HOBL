@@ -1,0 +1,142 @@
+[
+    {
+        "author": "yoonkim",
+        "capture_device": "macbook_pro",
+        "children": [],
+        "create_date": "2025-10-09",
+        "description": "",
+        "enabled": true,
+        "id": "YTN8NX",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set Default Params",
+        "enabled": true,
+        "id": "YTNUEV",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Periodically check the count of bots in the call and add additional if needed.",
+        "enabled": false,
+        "id": "12YE8NX",
+        "name": "[teams:maintain_bots]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Sets the time in seconds for the test to run.",
+        "enabled": true,
+        "id": "1514842",
+        "multiple": false,
+        "name": "[teams:duration]",
+        "type": "Set User Default",
+        "val_options": "60,120,240,300,600,900",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Set to 1 to have the test peridically check that all bots are present in the call and add bots if needed.",
+        "enabled": true,
+        "id": "1513J8J",
+        "multiple": false,
+        "name": "[teams:maintain_bots]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13LPV69",
+                "include_path": "..\\_library\\Teams\\teams_setup",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXF95",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Periodically check for bots in call and add as needed.",
+                        "enabled": true,
+                        "file_name": [
+                            "code_12YEERJ.py"
+                        ],
+                        "id": "12YEERJ",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "12YEE4R",
+                "left_term": "[teams:maintain_bots]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "[teams:duration]",
+                        "description": "Call duration",
+                        "enabled": true,
+                        "id": "YTX9R3",
+                        "type": "Delay"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "12YEEEJ",
+                "type": "Else"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "12YEE4T",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTX9MY",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "13LPX71",
+                "include_path": "..\\_library\\Teams\\teams_teardown",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "YTXARH",
+        "type": "Teardown"
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-24",
+        "description": "Open Outlook",
+        "enabled": true,
+        "id": "UFMKAM",
+        "type": "Information"
+    },
+    {
+        "id": "V2MREH",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_begin",
+        "children": []
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UHA3YA",
+        "include_path": "..\\prod_outlook_switchto",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "11",
+        "description": "",
+        "enabled": true,
+        "id": "UHA3TN",
+        "type": "Delay"
+    },
+    {
+        "id": "V2MRHL",
+        "type": "Include",
+        "description": "",
+        "enabled": true,
+        "delay": "0",
+        "include_path": "..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "value": "prod",
+                "val_options": ""
+            },
+            {
+                "name": "[phase_name]",
+                "value": "open_outlook",
+                "val_options": ""
+            }
+        ],
+        "children": []
+    }
+]

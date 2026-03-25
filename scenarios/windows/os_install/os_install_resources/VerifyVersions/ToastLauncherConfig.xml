@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Name>VerifyVersions</Name>
+  <Description>VerifyVersions</Description>
+  <TestConfigs>
+  <TestConfig DefaultTest="True">
+	  <Name>Verify Image</Name>
+	  <Description>Verify Image</Description>
+	  <Launcher>VerifyOemDrivers.cmd</Launcher>
+    </TestConfig>  
+  </TestConfigs>
+</Configuration>

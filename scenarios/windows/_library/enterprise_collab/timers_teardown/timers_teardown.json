@@ -1,0 +1,21 @@
+[
+    {
+        "author": "idc",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-10-31",
+        "description": "",
+        "enabled": true,
+        "id": "17Y38YA",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "command": "cmd /c taskkill /IM SimpleTimer.exe /F",
+        "delay": "2",
+        "description": "Kill Timers Process",
+        "enabled": true,
+        "id": "17Y392K",
+        "type": "Command"
+    }
+]

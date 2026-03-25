@@ -1,0 +1,8 @@
+# ignore generated pyc files,
+.vscode**
+/hobl_version.txt
+/scenarios/cinebench_resources/**
+.vs/**
+__pycache__
+/downloads/**
+/scenarios/windows/enterprise_collab/resources/large/**

@@ -1,0 +1,42 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "Add clips to timeline",
+        "enabled": true,
+        "id": "10PEP38",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click in media pool region",
+        "enabled": true,
+        "id": "10PEPL3",
+        "type": "Click Coord",
+        "x": "0.25",
+        "y": "0.45"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add first three",
+        "enabled": true,
+        "id": "10PEY7P",
+        "text": "\ue004\ue014\ue014\ue039\ue012\ue012\ue009\ue014",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add other videos",
+        "enabled": true,
+        "id": "10PJC9L",
+        "text": "\ue039\ue014\ue014\ue014\ue014\ue014\ue014\ue039\ue00d\ue012\ue039\ue012\ue039\ue012\ue039\ue012\ue039",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

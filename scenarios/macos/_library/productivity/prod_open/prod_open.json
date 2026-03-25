@@ -1,0 +1,57 @@
+[
+    {
+        "author": "Soupik Chowdhury",
+        "capture_device": "MacBook",
+        "children": [],
+        "create_date": "2025-12-22",
+        "description": "Open productivity apps",
+        "enabled": true,
+        "id": "UTHH70",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "QBP9XE6",
+        "include_path": "scenarios\\MacOS\\_library\\productivity\\prod_outlook_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJJ2",
+        "include_path": "scenarios\\MacOS\\_library\\productivity\\prod_excel_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJLM",
+        "include_path": "scenarios\\MacOS\\_library\\productivity\\prod_word_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHJWC",
+        "include_path": "scenarios\\MacOS\\_library\\productivity\\prod_powerpoint_open",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UTHK4N",
+        "include_path": "scenarios\\MacOS\\_library\\productivity\\prod_onenote_open",
+        "type": "Include"
+    }
+]

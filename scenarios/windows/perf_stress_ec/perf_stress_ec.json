@@ -1,0 +1,1668 @@
+[
+    {
+        "author": "ojhavarun",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-08",
+        "description": "Performance Stress Workload",
+        "enabled": true,
+        "id": "19K3NWN",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "19K5VX0",
+        "name": "[background_teams]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "19K5WA4",
+        "name": "[background_onedrive_copy]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "19MUEJ4",
+        "name": "[simple_office_launch]",
+        "type": "Set Default",
+        "val_options": "1,0",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "PSECSP00",
+        "name": "[shell_probes]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "PSECSLP0",
+        "name": "[sleep_resume_midrun]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "PSECECR0",
+        "name": "[edge_close_relaunch]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "PSECPTR0",
+        "name": "[perftrack_app_launch]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HVX33L",
+        "name": "[bg_edge_tabs]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "19K7X90",
+        "name": "[web_replay_run]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "19K7XML",
+        "name": "[phase_reporting]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1EN17N6",
+        "name": "[stress_run]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "command": "cmd /c net stop DiagTrack && net start DiagTrack",
+                        "delay": "2",
+                        "description": "Restart DiagTrack",
+                        "enabled": true,
+                        "id": "1EPL382",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Upload trace files and start collection early",
+                        "enabled": true,
+                        "file_name": [
+                            "code_PSECTRC.py"
+                        ],
+                        "id": "PSECTRC",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1EN189V",
+                "left_term": "[stress_run]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1EN189W",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19V8920",
+                        "name": "[teams:number_of_bots]",
+                        "type": "Set",
+                        "value": "9"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1FKC02P",
+                        "name": "[teams:collect_MSTeams_Logs]",
+                        "type": "Set",
+                        "value": "0"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19K4CEU",
+                        "include_path": "scenarios\\windows\\_library\\Teams\\teams_setup",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19K41HR",
+                "left_term": "[background_teams]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19K41HT",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1HVX4Y4",
+                        "include_path": "scenarios\\windows\\_library\\web\\web_setup",
+                        "params": [
+                            {
+                                "name": "[disable_delay]",
+                                "val_options": "0,1",
+                                "value": "0"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1HX9T55",
+                        "include_path": "scenarios\\windows\\_library\\web\\web_bg_tabs",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "!=",
+                "id": "1HVX4A6",
+                "left_term": "[bg_edge_tabs]",
+                "right_term": "0",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1HVX4A7",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1H2VHHH",
+                        "include_path": "scenarios\\windows\\_library\\productivity\\prod_setup",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19MUF2P",
+                "left_term": "[simple_office_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19MUF2R",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Upload Perf Files",
+                        "enabled": true,
+                        "file_name": [
+                            "code_1EN194J.py"
+                        ],
+                        "id": "1EN194J",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1EN19ZZ",
+                "left_term": "[stress_run]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1EN19ZY",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "19K3TWR",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Powershell Download",
+                        "enabled": true,
+                        "file_name": [
+                            "code_19K4MXK.py"
+                        ],
+                        "id": "19K4MXK",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19K5HEY",
+                "left_term": "[background_onedrive_copy]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19K5HF0",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "",
+                "enabled": true,
+                "id": "1A4X1TN",
+                "type": "Delay"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "command": "cmd /c if not exist \"%USERPROFILE%\\Desktop\" mkdir \"%USERPROFILE%\\Desktop\" > nul 2>&1 & if not exist \"%USERPROFILE%\\Desktop\\test.txt\" echo test > \"%USERPROFILE%\\Desktop\\test.txt\" & exit /b 0",
+                        "delay": "2",
+                        "description": "Create test.txt on Desktop for context menu test",
+                        "enabled": true,
+                        "id": "PSECPTRC1",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB1",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT1",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "FileExplorerLaunch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRF1",
+                        "include_path": "scenarios\\windows\\_library\\misc\\capture_taskbar",
+                        "type": "Include"
+                    },
+                    {
+                        "capture_id": "TYH95X",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Launch File Explorer from taskbar",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_1H2N106.png"
+                        ],
+                        "id": "PSECPTRK1",
+                        "primary": true,
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Wait for File Explorer to fully render",
+                        "enabled": true,
+                        "id": "PSECPTRD1",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRN1",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "app_launch"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "file_explorer_launch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB2",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT2",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "ContextMenuOpen"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c start \"\" explorer.exe /select,\"%USERPROFILE%\\Desktop\\test.txt\"",
+                        "delay": "0",
+                        "description": "Open File Explorer with test.txt selected",
+                        "enabled": true,
+                        "id": "PSECPTRC2",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "3",
+                        "description": "Wait for selection to focus",
+                        "enabled": true,
+                        "id": "PSECPTRD2",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Maximize File Explorer (Win+Up)",
+                        "enabled": true,
+                        "id": "PSECPTRM0",
+                        "text": "\ue03d\ue013",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB2M",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT2M",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "ContextMenuOpen"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\hobl_bin\\Right_Click_Context_Menu.ps1\"",
+                        "delay": "0",
+                        "description": "Open context menu (mouse right-click)",
+                        "enabled": true,
+                        "id": "PSECPTRM1",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Wait for Context Menu to render (mouse)",
+                        "enabled": true,
+                        "id": "PSECPTRD2M",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRN2M",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "app_launch"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "context_menu_mouse"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Dismiss context menu via Escape (mouse pass)",
+                        "enabled": true,
+                        "id": "PSECPTRK2M",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB2K",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT2K",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "ContextMenuOpen"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Open context menu (Shift+F10)",
+                        "enabled": true,
+                        "id": "PSECPTRK2",
+                        "text": "\ue008\ue03a",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Wait for Context Menu to render",
+                        "enabled": true,
+                        "id": "PSECPTRD3",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRN2",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "app_launch"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "context_menu_shift_f10"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Dismiss context menu via Escape",
+                        "enabled": true,
+                        "id": "PSECPTRK3",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Close File Explorer via Alt+F4",
+                        "enabled": true,
+                        "id": "PSECPTRK4",
+                        "text": "\ue00a\ue034",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "3",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB3",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT3",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "SnippingToolLaunch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Launch Snipping Tool overlay (Win+Shift+S)",
+                        "enabled": true,
+                        "id": "PSECPTRK5",
+                        "text": "\ue03d\ue008s",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Wait for Snipping Tool overlay to appear",
+                        "enabled": true,
+                        "id": "PSECPTRD4",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRN3",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "app_launch"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "snipping_tool_launch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Dismiss Snipping Tool overlay via Escape",
+                        "enabled": true,
+                        "id": "PSECPTRK6",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "3",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRB4",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRT4",
+                        "include_path": "scenarios\\windows\\_library\\misc\\etw_event_tag",
+                        "params": [
+                            {
+                                "name": "[event_tag]",
+                                "val_options": "",
+                                "value": "SettingsLaunch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c start \"\" ms-settings:home",
+                        "delay": "0",
+                        "description": "Launch Settings app to Home",
+                        "enabled": true,
+                        "id": "PSECPTRC3",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Wait for Settings to fully render",
+                        "enabled": true,
+                        "id": "PSECPTRD5",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPTRN4",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "app_launch"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "settings_launch"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Close Settings via Alt+F4",
+                        "enabled": true,
+                        "id": "PSECPTRK7",
+                        "text": "\ue00a\ue034",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c del /f \"%USERPROFILE%\\Desktop\\test.txt\" > nul 2>&1 & exit /b 0",
+                        "delay": "2",
+                        "description": "Delete test.txt from Desktop",
+                        "enabled": true,
+                        "id": "PSECPTRC4",
+                        "type": "Command"
+                    }
+                ],
+                "description": "PerfTrack app-launch probes (9475/210/9971/9474)",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "PSECPTRIF",
+                "left_term": "[perftrack_app_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "PSECPTRIE",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19K5834",
+                        "include_path": "scenarios\\windows\\_library\\productivity\\prod_open",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Enable short typing for perf_stress",
+                        "enabled": true,
+                        "id": "PSECST20",
+                        "name": "[short_typing]",
+                        "type": "Set",
+                        "value": "1"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1PSEC0R",
+                        "include_path": "scenarios\\windows\\_library\\productivity\\prod_run_no_onenote",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19K59V7",
+                        "include_path": "scenarios\\windows\\_library\\productivity\\prod_close",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1CFNENY",
+                        "include_path": "scenarios\\windows\\_library\\web\\web_switchto",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19MUFJ9",
+                "left_term": "[simple_office_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19MUFJC",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1A4W5AL",
+                "include_path": "scenarios\\windows\\_library\\web\\web_setup",
+                "params": [
+                    {
+                        "name": "[disable_delay]",
+                        "val_options": "0,1",
+                        "value": "1"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "19K57MP",
+                "include_path": "scenarios\\windows\\_library\\web\\web_run_12",
+                "params": [
+                    {
+                        "name": "[load_only]",
+                        "val_options": "0,1",
+                        "value": "0"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECSLPB",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Sleep/resume checkpoint before Start Menu launches",
+                        "enabled": true,
+                        "file_name": [
+                            "code_PSECSLP1.py"
+                        ],
+                        "id": "PSECSLP1",
+                        "type": "Code"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECSLPE",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "power"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "sleep_resume_midrun"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "PSECSLPIF",
+                "left_term": "[sleep_resume_midrun]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "PSECSLPEN",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB01",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM01",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Stabilize Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM01D",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch Excel from Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM02",
+                        "text": "excel\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB02",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "shell"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "startmenu_launch_excel"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "8",
+                        "description": "Wait for Excel window",
+                        "enabled": true,
+                        "id": "PSECSM03",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c taskkill /IM EXCEL.EXE /F > nul 2>&1 & exit /b 0",
+                        "delay": "0",
+                        "description": "Close Excel",
+                        "enabled": true,
+                        "id": "PSECSM04",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB03",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM05",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Stabilize Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM05D",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch Outlook from Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM06",
+                        "text": "outlook\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB04",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "shell"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "startmenu_launch_outlook"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "8",
+                        "description": "Wait for Outlook window",
+                        "enabled": true,
+                        "id": "PSECSM07",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c taskkill /IM OUTLOOK.EXE /IM olk.exe /F > nul 2>&1 & exit /b 0",
+                        "delay": "0",
+                        "description": "Close Outlook",
+                        "enabled": true,
+                        "id": "PSECSM08",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB05",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM09",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Stabilize Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM09D",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch Word from Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM10",
+                        "text": "word\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB06",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "shell"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "startmenu_launch_word"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "8",
+                        "description": "Wait for Word window",
+                        "enabled": true,
+                        "id": "PSECSM11",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c taskkill /IM WINWORD.EXE /F > nul 2>&1 & exit /b 0",
+                        "delay": "0",
+                        "description": "Close Word",
+                        "enabled": true,
+                        "id": "PSECSM12",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB07",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM13",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Stabilize Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM13D",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch PowerPoint from Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM14",
+                        "text": "powerpoint\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB08",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "shell"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "startmenu_launch_powerpoint"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "8",
+                        "description": "Wait for PowerPoint window",
+                        "enabled": true,
+                        "id": "PSECSM15",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c taskkill /IM POWERPNT.EXE /F > nul 2>&1 & exit /b 0",
+                        "delay": "0",
+                        "description": "Close PowerPoint",
+                        "enabled": true,
+                        "id": "PSECSM16",
+                        "type": "Command"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB09",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECSM17",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch OneNote from Start Menu",
+                        "enabled": false,
+                        "id": "PSECSM18",
+                        "text": "onenote\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": false,
+                        "id": "PSECSB10",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "shell"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "startmenu_launch_onenote"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "8",
+                        "description": "Wait for OneNote window",
+                        "enabled": false,
+                        "id": "PSECSM19",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c taskkill /IM ONENOTE.EXE /F > nul 2>&1 & exit /b 0",
+                        "delay": "0",
+                        "description": "Close OneNote",
+                        "enabled": false,
+                        "id": "PSECSM20",
+                        "type": "Command"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "PSECSMIF",
+                "left_term": "[shell_probes]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "PSECSMEN",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB10",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Open Start Menu",
+                        "enabled": true,
+                        "id": "PSECEK01",
+                        "text": "\ue03d",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Stabilize Start Menu",
+                        "enabled": true,
+                        "id": "PSECEK01D",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Launch additional Edge instance",
+                        "enabled": true,
+                        "id": "PSECPB11",
+                        "text": "microsoft edge\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECEK02",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB12",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Switch to Edge",
+                        "enabled": true,
+                        "id": "PSECEK03",
+                        "include_path": "scenarios\\windows\\_library\\web\\web_switchto",
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECEK04",
+                        "include_path": "scenarios\\windows\\_library\\web\\web_run_12",
+                        "params": [
+                            {
+                                "name": "[load_only]",
+                                "val_options": "0,1",
+                                "value": "1"
+                            }
+                        ],
+                        "type": "Include"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "PSECPB13",
+                        "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
+                        "params": [
+                            {
+                                "name": "[phase_category]",
+                                "val_options": "",
+                                "value": "web"
+                            },
+                            {
+                                "name": "[phase_name]",
+                                "val_options": "",
+                                "value": "edge_launch_additional_instance"
+                            }
+                        ],
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "PSECEKIF",
+                "left_term": "[edge_close_relaunch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "PSECEKEN",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1A7H7A8",
+                "include_path": "scenarios\\windows\\_library\\web\\web_check",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "19K59KV",
+                "include_path": "scenarios\\windows\\_library\\web\\web_close_tabs",
+                "params": [
+                    {
+                        "name": "[num_tabs_to_close]",
+                        "val_options": "",
+                        "value": "12"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Kill Powershell Download",
+                        "enabled": true,
+                        "file_name": [
+                            "code_19K5K7L.py"
+                        ],
+                        "id": "19K5K7L",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19K5J8C",
+                "left_term": "[background_onedrive_copy]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19K5J8E",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "19K42E3",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "19K5ENF",
+                "include_path": "scenarios\\windows\\_library\\web\\web_kill",
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19K5FCT",
+                        "include_path": "scenarios\\windows\\_library\\productivity\\prod_kill",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19MUFWM",
+                "left_term": "[simple_office_launch]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19MUFWN",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "19K8C22",
+                        "include_path": "scenarios\\windows\\_library\\Teams\\teams_teardown",
+                        "type": "Include"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "19L6E7K",
+                "left_term": "[background_teams]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "19L6E7L",
+                "type": "End If"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "15",
+                        "enabled": true,
+                        "id": "1EUEFL4",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0",
+                        "description": "Disable perf/UTC settings (non-UI)",
+                        "enabled": true,
+                        "file_name": [
+                            "code_1EN1A44.py"
+                        ],
+                        "id": "1EN1A44",
+                        "type": "Code"
+                    },
+                    {
+                        "children": [],
+                        "command": "cmd /c net stop DiagTrack && net start DiagTrack",
+                        "delay": "2",
+                        "description": "Restart DiagTrack",
+                        "enabled": true,
+                        "id": "1EPL51E",
+                        "type": "Command"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "1EN19HM",
+                "left_term": "[stress_run]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1EN19HN",
+                "type": "End If"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "19K42JX",
+        "type": "Teardown"
+    }
+]

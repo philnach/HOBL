@@ -1,0 +1,41 @@
+[
+    {
+        "author": "dasashutosh",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2026-03-19",
+        "description": "perf teardown",
+        "enabled": true,
+        "id": "1HX83YY",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "delete perf files",
+        "enabled": true,
+        "file_name": [
+            "code_1HX84KW.py"
+        ],
+        "id": "1HX84KW",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": false,
+        "id": "1HX852F",
+        "include_path": "scenarios\\windows\\_library\\enterprise_collab\\diagnostics_disable",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "1HX84YP",
+        "include_path": "scenarios\\windows\\_library\\enterprise_collab\\restart_diagtrack",
+        "type": "Include"
+    }
+]

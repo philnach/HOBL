@@ -1,0 +1,547 @@
+[
+    {
+        "author": "Yoon Kim",
+        "capture_device": "Surface_laptop_15in",
+        "children": [],
+        "create_date": "2025-07-03",
+        "description": "Minecraft Java Scenario",
+        "enabled": true,
+        "id": "11Y0EYA",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Duration of Minecraft Game",
+        "enabled": true,
+        "id": "11Y6NYP",
+        "name": "[duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "300"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ETW3LY",
+        "name": "[loop_duration]",
+        "type": "Set",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ETW3W9",
+        "name": "[final_loop_duration]",
+        "type": "Set",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ETW462",
+        "name": "[loops]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1ETW49J",
+        "name": "[loop_counter]",
+        "type": "Set",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Launch Minecraft Java Demo",
+                "enabled": true,
+                "id": "11Y3P3R",
+                "type": "Comment"
+            },
+            {
+                "children": [],
+                "delay": "20.0",
+                "description": "Reset Minecraft Java World",
+                "enabled": true,
+                "file_name": [
+                    "code_11Y0HPU.py"
+                ],
+                "id": "11Y0HPU",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Windows Key for Search",
+                "enabled": false,
+                "id": "11Y2YUL",
+                "text": "\ue03d",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Launch Minecraft Launcher from Start Menu",
+                "enabled": false,
+                "id": "11Y2M4W",
+                "text": "minecraft\ue00dlauncher\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "Wait for Minecraft Launcher",
+                "enabled": true,
+                "id": "11Y2V2N",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Maximize Minecraft Launcher",
+                "enabled": true,
+                "id": "11Y2W4N",
+                "text": "\ue00a\ue00dx",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Capture Upper Region",
+                        "enabled": true,
+                        "file_name": [
+                            "image_11Y3PHC.png"
+                        ],
+                        "h": "0.186",
+                        "id": "11Y3PHC",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.864",
+                        "x": "0.133",
+                        "y": "0.000"
+                    },
+                    {
+                        "capture_id": "11Y3PHC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Launch Game Demo",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_11Y3PWK.png"
+                        ],
+                        "id": "11Y3PWK",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETVW8H",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "90",
+                        "description": "Launcher May Need Update",
+                        "enabled": true,
+                        "id": "1ETVWFV",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "2nd Attempt Capture Region",
+                        "enabled": true,
+                        "file_name": [
+                            "image_11Y3PHC.png"
+                        ],
+                        "h": "0.186",
+                        "id": "11Y3PHT",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.864",
+                        "x": "0.133",
+                        "y": "0.000"
+                    },
+                    {
+                        "capture_id": "11Y3PHT",
+                        "children": [],
+                        "delay": "2",
+                        "description": "2nd Attempt Launch Game Demo",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_11Y3PWK.png"
+                        ],
+                        "id": "11Y3PWO",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETVW8J",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETVW8K",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETVW8L",
+                "type": "End Try"
+            },
+            {
+                "children": [],
+                "delay": "45",
+                "description": "Wait for Game to Launch",
+                "enabled": true,
+                "id": "11Y3R2M",
+                "type": "Delay"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Top Right for Screen for Minecraft Maximizing",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1F1RLVM.png"
+                        ],
+                        "h": "0.486",
+                        "id": "1F1RLVM",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.731",
+                        "x": "0.142",
+                        "y": "0.134"
+                    },
+                    {
+                        "capture_id": "1F1RLVM",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Maximize Minecraft Game",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_124W079.png"
+                        ],
+                        "id": "124W079",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETW1TE",
+                "type": "Try"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "140",
+                        "description": "Game May Need Update",
+                        "enabled": true,
+                        "id": "1ETW1WK",
+                        "type": "Delay"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "2nd Attempt Top Right for Screen for Minecraft Maximizing",
+                        "enabled": true,
+                        "file_name": [
+                            "image_1F1RLVM.png"
+                        ],
+                        "h": "0.486",
+                        "id": "124VXWV",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.731",
+                        "x": "0.142",
+                        "y": "0.134"
+                    },
+                    {
+                        "capture_id": "124VXWV",
+                        "children": [],
+                        "delay": "2",
+                        "description": "2nd Attempt Maximize Minecraft Game",
+                        "enabled": true,
+                        "exception_on": "No match",
+                        "file_name": [
+                            "image_124W079.png"
+                        ],
+                        "id": "124W07L",
+                        "match_threshold": "",
+                        "primary": true,
+                        "scale": "",
+                        "type": "Click",
+                        "x": "0.500",
+                        "y": "0.500"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "1ETW1TH",
+                "type": "Except"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETW1TJ",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETW1TK",
+                "type": "End Try"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11Y0F1U",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "5",
+                "description": "Go Up to Play Demo",
+                "enabled": true,
+                "id": "11Y3T94",
+                "text": "\ue013\ue013\ue013\ue013\ue013\ue013\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "15",
+                "description": "Wait for World to Load",
+                "enabled": true,
+                "id": "1ETWEME",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Region for Demo Pop Up",
+                "enabled": false,
+                "file_name": [
+                    "image_124WC60.png"
+                ],
+                "h": "0.602",
+                "id": "124WC60",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.920",
+                "x": "0.055",
+                "y": "0.373"
+            },
+            {
+                "capture_id": "124WC60",
+                "children": [],
+                "delay": "2",
+                "description": "For Demo Pop Up",
+                "enabled": false,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_124WCAM.png",
+                    "image_1EP4CWF.png"
+                ],
+                "h": "0.071",
+                "id": "124WCAM",
+                "match_threshold": "",
+                "scale": "0.66, 0.83, 1.0, 1.16, 1.32",
+                "type": "Check",
+                "w": "0.557",
+                "x": "0.221",
+                "y": "0.654"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Close Demo Menu",
+                "enabled": true,
+                "id": "11Y3UTL",
+                "text": "\ue00c",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2.0",
+                "description": "Calculate Loops",
+                "enabled": true,
+                "file_name": [
+                    "code_1ETW680.py"
+                ],
+                "id": "1ETW680",
+                "type": "Code"
+            },
+            {
+                "children": [
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "[loop_duration]",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1ETW851",
+                                "type": "Delay"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "eval_method": "<",
+                        "id": "1ETW7UC",
+                        "left_term": "[loop_counter]",
+                        "right_term": "[loops]",
+                        "type": "If"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "delay": "[final_loop_duration]",
+                                "description": "",
+                                "enabled": true,
+                                "id": "1ETW8AL",
+                                "type": "Delay"
+                            }
+                        ],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ETW898",
+                        "type": "Else"
+                    },
+                    {
+                        "children": [],
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ETW7UE",
+                        "type": "End If"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Keep Character \"active\"",
+                        "enabled": true,
+                        "id": "1ETW8NE",
+                        "text": "ww",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "",
+                        "enabled": true,
+                        "id": "1ETW8YK",
+                        "name": "[loop_counter]",
+                        "type": "Increment",
+                        "value": "1"
+                    }
+                ],
+                "count": "[loops]",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "1ETW7M7",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "1ETW7M9",
+                "type": "End Loop"
+            },
+            {
+                "children": [],
+                "delay": "[duration]",
+                "description": "Duration of Minecraft In Game",
+                "enabled": false,
+                "id": "11Y6P7J",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "",
+                "enabled": false,
+                "id": "1EP4HCY",
+                "type": "Click Coord",
+                "x": "0.02",
+                "y": "0.98"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11Y0F2V",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Kill Minecraft",
+                "enabled": true,
+                "file_name": [
+                    "code_11Y3VWL.py"
+                ],
+                "id": "11Y3VWL",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "11Y0F39",
+        "type": "Teardown"
+    }
+]

@@ -1,0 +1,335 @@
+[
+    {
+        "author": "idc",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-11",
+        "description": "DaVinci Resolve Shorts scenario",
+        "enabled": true,
+        "id": "10UP29T",
+        "type": "Information"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Upload Necessary Files",
+                "enabled": true,
+                "file_name": [
+                    "code_12VL141.py"
+                ],
+                "id": "12VL141",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "15",
+                "description": "",
+                "enabled": true,
+                "id": "11T2RYY",
+                "include_path": "davinci\\open_davinci",
+                "type": "Include"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "0.5",
+                        "description": "",
+                        "enabled": true,
+                        "file_name": [
+                            "image_11UACUC.png"
+                        ],
+                        "h": "0.274",
+                        "id": "11UACUC",
+                        "recapture": false,
+                        "type": "Capture",
+                        "w": "0.420",
+                        "x": "0.289",
+                        "y": "0.364"
+                    },
+                    {
+                        "capture_id": "11UACUC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Check for Software Update",
+                        "enabled": true,
+                        "file_name": [
+                            "image_11UAERF.png"
+                        ],
+                        "h": "1.000",
+                        "id": "11UAERF",
+                        "timeout": "10",
+                        "type": "Check Until Found",
+                        "w": "1.000",
+                        "x": "0.000",
+                        "y": "0.000"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "11UACE4",
+                "type": "Try"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "11UACE5",
+                "type": "Except"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Cancel Update",
+                        "enabled": true,
+                        "id": "11UAFE0",
+                        "text": "\ue012\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "11UACE6",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "11UACE7",
+                "type": "End Try"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "",
+                "enabled": true,
+                "id": "12WYAKN",
+                "include_path": "davinci\\keyboard_customization",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "11T2TR3",
+                "include_path": "davinci\\delete_bench",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "10WH2C7",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "New proj dialog",
+                "enabled": true,
+                "id": "11T2TUR",
+                "text": "\ue009\ue00a\ue008n",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "5",
+                "description": "create new proj",
+                "enabled": true,
+                "id": "11T2U2R",
+                "text": "bench\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "capture_id": "11UACUC",
+                        "children": [],
+                        "delay": "2",
+                        "description": "Check for Software Update",
+                        "enabled": true,
+                        "file_name": [
+                            "image_11UAERF.png"
+                        ],
+                        "h": "1.000",
+                        "id": "11W6580",
+                        "timeout": "10",
+                        "type": "Check Until Found",
+                        "w": "1.000",
+                        "x": "0.000",
+                        "y": "0.000"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "11W64W1",
+                "type": "Try"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "11W64W2",
+                "type": "Except"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Cancel Update",
+                        "enabled": true,
+                        "id": "11W65WH",
+                        "text": "\ue012\ue007",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "id": "11W64W3",
+                "type": "On Success"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "11W64W4",
+                "type": "End Try"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10UPH10",
+                "include_path": "davinci\\edit_timeline_settings",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10UPH31",
+                "include_path": "davinci\\add_media",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10UPH89",
+                "include_path": "davinci\\edit_clip_params",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Click in timeline region",
+                "enabled": true,
+                "id": "112CCK0",
+                "type": "Click Coord",
+                "x": "0.65",
+                "y": "0.8"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Move to first clip",
+                "enabled": true,
+                "id": "112CCW8",
+                "text": "\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Click on first clip",
+                "enabled": true,
+                "id": "112CE38",
+                "type": "Click Coord",
+                "x": "0.65",
+                "y": "0.85"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10UPJ40",
+                "include_path": "davinci\\add_vid1_first_eff",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "10UPJCR",
+                "include_path": "davinci\\add_effects",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "11UYL0N",
+                "include_path": "davinci\\add_music",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "1FR9FAA",
+                "include_path": "davinci\\render2",
+                "params": [
+                    {
+                        "name": "[render_delay]",
+                        "val_options": "",
+                        "value": "60"
+                    }
+                ],
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "10WH2LU",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Close DaVinci",
+                "enabled": true,
+                "file_name": [
+                    "code_11W5X8N.py"
+                ],
+                "id": "11W5X8N",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "12PA8HY",
+        "type": "Teardown"
+    }
+]

@@ -1,0 +1,45 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-02-23",
+        "description": "Record phase",
+        "enabled": true,
+        "id": "UE53UN",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5H4T",
+        "name": "[phase_category]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "invalid"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "UE5HVN",
+        "name": "[phase_name]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "invalid"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Record phase",
+        "enabled": true,
+        "file_name": [
+            "code_UE54XE.py"
+        ],
+        "id": "UE54XE",
+        "type": "Code"
+    }
+]

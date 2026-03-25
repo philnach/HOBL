@@ -1,0 +1,152 @@
+[
+    {
+        "author": "wssi",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-07-01",
+        "description": "Add music",
+        "enabled": true,
+        "id": "11UV5C0",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to first clip",
+        "enabled": true,
+        "id": "11UVN1J",
+        "text": "\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013\ue013",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Open media dialog",
+        "enabled": true,
+        "id": "11UVMHR",
+        "text": "\ue009i",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add music",
+        "enabled": true,
+        "id": "11UT2AH",
+        "text": "music.mp3\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add music to timeline",
+        "enabled": true,
+        "id": "11UTN33",
+        "text": "\ue039",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click in timeline region",
+        "enabled": true,
+        "id": "11UYJ31",
+        "type": "Click Coord",
+        "x": "0.6",
+        "y": "0.85"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Click in timeline region",
+        "enabled": true,
+        "id": "11UYJJT",
+        "type": "Click Coord",
+        "x": "0.6",
+        "y": "0.85"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "select audio track and extra vid",
+        "enabled": true,
+        "id": "11UXWTF",
+        "text": "$\ue012",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "lock ",
+        "enabled": true,
+        "id": "11UY5LY",
+        "text": "\ue032#\ue00a\ue008v",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Delete extra track",
+        "enabled": true,
+        "id": "11UXWVP",
+        "text": "\ue017",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Unlock audio track",
+        "enabled": true,
+        "id": "11UXXNY",
+        "text": "$\ue032#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to end of clip",
+        "enabled": true,
+        "id": "11UUM57",
+        "text": "\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015\ue015",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to edit page and cut clip",
+        "enabled": true,
+        "id": "11UUWTX",
+        "text": "$\ue009\\",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select last clip",
+        "enabled": true,
+        "id": "11UUY2M",
+        "text": "\ue014\ue00a\ue008v",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Delete last audio clip",
+        "enabled": true,
+        "id": "11UV0C5",
+        "text": "\ue017",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

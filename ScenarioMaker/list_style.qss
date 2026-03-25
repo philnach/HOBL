@@ -1,0 +1,32 @@
+QTreeView {
+  border: none;
+  font: 10pt 'Segoe UI';
+}
+QTreeView::branch {
+    border-image: url(none.png)
+}
+QTreeView::item {
+    border: 1px solid #d9d9d9; 
+    border-radius: 5px;
+    height: 26px;
+    margin: 1px;
+    /* color: #505050; */
+    /* border-bottom-color: red;
+    color: #fff */
+}
+QTreeView {
+    background: #ffffff;
+}
+QTreeView::item:selected { 
+    /* border-color:green; 
+    border-style:outset; 
+    border-width:2px;
+    color:black;
+    */
+}
+QTreeView::item:selected:!active {
+    background: transparent;
+}
+QTreeView::item:selected:active {
+    background: transparent;
+}

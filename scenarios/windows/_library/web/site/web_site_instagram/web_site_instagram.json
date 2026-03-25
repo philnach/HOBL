@@ -1,0 +1,324 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-16",
+        "description": "Browse Instagram",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "UCFK6R",
+        "name": "[new_tab]",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W19572",
+        "name": "[load_only]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "1HVH2A2",
+        "name": "[web_site_load_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "20"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9N1X",
+        "include_path": "..\\..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Switch archive",
+        "enabled": true,
+        "file_name": [
+            "code_U1NN1X.py"
+        ],
+        "id": "U1NN1X",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UCFJKH",
+        "include_path": "..\\..\\web_enter_address",
+        "params": [
+            {
+                "name": "[web_site_address]",
+                "val_options": "",
+                "value": "aka.ms/AAle9to"
+            },
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "[new_tab]"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "[web_site_load_time]"
+            },
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "Instagram"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "1",
+                "description": "ESC",
+                "enabled": true,
+                "id": "UCHL2P",
+                "text": "\ue00c",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "ESC",
+                "enabled": true,
+                "id": "UCHLJT",
+                "text": "\ue00c",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Down",
+                        "direction": "down",
+                        "enabled": true,
+                        "id": "UCHMM6",
+                        "type": "Scroll",
+                        "x": "0.1",
+                        "y": "0.3"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "ESC",
+                        "enabled": true,
+                        "id": "UCHN5C",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "count": "3",
+                "delay": "0.0",
+                "description": "Scroll down 3 times",
+                "enabled": true,
+                "id": "UCHLY4",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "UCHLY5",
+                "type": "End Loop"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "Up",
+                        "direction": "up",
+                        "enabled": true,
+                        "id": "UCHNT7",
+                        "type": "Scroll",
+                        "x": "0.1",
+                        "y": "0.3"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "ESC",
+                        "enabled": true,
+                        "id": "UCHP3E",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    }
+                ],
+                "count": "4",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "UCHNER",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "UCHNET",
+                "type": "End Loop"
+            },
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Lower half",
+                "enabled": true,
+                "file_name": [
+                    "image_UCHFX3.png"
+                ],
+                "h": "0.500",
+                "id": "UCHFX3",
+                "recapture": true,
+                "type": "Capture",
+                "w": "1.000",
+                "x": "0.004",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "UCHFX3",
+                "children": [],
+                "delay": "1",
+                "description": "Dismiss login prompt",
+                "enabled": false,
+                "exception_on": "Never",
+                "file_name": [
+                    "image_UCHUKW.png"
+                ],
+                "id": "UCHUKW",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "capture_id": "UCHFX3",
+                "children": [],
+                "delay": "1",
+                "description": "First reel",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_VNXM1F.png"
+                ],
+                "id": "VNXM1F",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.311",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "30",
+                "description": "30s",
+                "enabled": true,
+                "id": "UCJ082",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "RIGHT",
+                "enabled": true,
+                "id": "UCHWM1",
+                "text": "\ue014",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "30",
+                "description": "30s",
+                "enabled": true,
+                "id": "UCHYN5",
+                "type": "Delay"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "ESC",
+                "enabled": true,
+                "id": "UCHXPR",
+                "text": "\ue00c",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "Final delay",
+                "enabled": true,
+                "id": "UCJ21L",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "W1963H",
+        "left_term": "[load_only]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "W1963J",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9N53",
+        "include_path": "..\\..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "web"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "instagram"
+            }
+        ],
+        "type": "Include"
+    }
+]

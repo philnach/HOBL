@@ -1,0 +1,45 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-03-02",
+        "description": "Close Excel",
+        "enabled": true,
+        "id": "UTA3P4",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Excel Close Button",
+        "enabled": true,
+        "file_name": [
+            "image_UTA59H.png"
+        ],
+        "h": "0.042",
+        "id": "UTA59H",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.032",
+        "x": "0.968",
+        "y": "0.000"
+    },
+    {
+        "capture_id": "UTA59H",
+        "children": [],
+        "delay": "1",
+        "description": "Excel Close Button",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_UTA5JV.png"
+        ],
+        "id": "UTA5JV",
+        "match_threshold": "",
+        "primary": true,
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    }
+]

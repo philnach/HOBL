@@ -1,0 +1,250 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-15",
+        "description": "Browse Amazon BSG",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "U7AK1J",
+        "name": "new_tab",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W199V7",
+        "name": "[load_only]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9NMP",
+        "include_path": "..\\..\\..\\misc\\recording_phase_begin",
+        "type": "Include"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Switch archive",
+        "enabled": true,
+        "file_name": [
+            "code_U1NN1X.py"
+        ],
+        "id": "U1NN1X",
+        "type": "Code"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UC5PAR",
+        "include_path": "..\\..\\web_enter_address",
+        "params": [
+            {
+                "name": "[web_site_address]",
+                "val_options": "",
+                "value": "aka.ms/AAnpar4"
+            },
+            {
+                "name": "[new_tab]",
+                "val_options": "0, 1",
+                "value": "[new_tab]"
+            },
+            {
+                "name": "[web_site_load_time]",
+                "val_options": "",
+                "value": "15"
+            },
+            {
+                "name": "[event_tag]",
+                "val_options": "",
+                "value": "amazon_bsg"
+            }
+        ],
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "Search bar",
+                "enabled": true,
+                "file_name": [
+                    "image_UEKWV4.png"
+                ],
+                "h": "0.280",
+                "id": "UEKWV4",
+                "type": "Capture",
+                "recapture": true,
+                "w": "0.396",
+                "x": "0.000",
+                "y": "0.000"
+            },
+            {
+                "capture_id": "UEKWV4",
+                "children": [],
+                "delay": "1",
+                "description": "Search bar",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_UEKXH7.png"
+                ],
+                "id": "UEKXH7",
+                "primary": true,
+                "type": "Click",
+                "x": "0.707",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "10",
+                "description": "bsg",
+                "enabled": true,
+                "id": "UEKYFL",
+                "text": "bsg\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "CTRL-l",
+                "enabled": true,
+                "id": "UEL1WP",
+                "text": "\ue009l",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "6",
+                "description": "season 1 url",
+                "enabled": true,
+                "id": "UEL2K7",
+                "text": "aka.ms/AAszv68\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "6",
+                        "description": "Down",
+                        "direction": "down",
+                        "enabled": true,
+                        "id": "UEL45C",
+                        "type": "Scroll",
+                        "x": "0.1",
+                        "y": "0.3"
+                    }
+                ],
+                "count": "3",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "UEL43L",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "UEL43M",
+                "type": "End Loop"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "5",
+                        "description": "Up",
+                        "direction": "up",
+                        "enabled": true,
+                        "id": "UEL49X",
+                        "type": "Scroll",
+                        "x": "0.1",
+                        "y": "0.3"
+                    }
+                ],
+                "count": "3",
+                "delay": "0.0",
+                "description": "",
+                "enabled": true,
+                "id": "UEL487",
+                "type": "Loop"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "UEL488",
+                "type": "End Loop"
+            },
+            {
+                "children": [],
+                "delay": "12",
+                "description": "Final delay",
+                "enabled": true,
+                "id": "UC6L36",
+                "type": "Delay"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "W19AC4",
+        "left_term": "[load_only]",
+        "right_term": "0",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "W19AC5",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "UE9NRA",
+        "include_path": "..\\..\\..\\misc\\recording_phase_end",
+        "params": [
+            {
+                "name": "[phase_category]",
+                "val_options": "",
+                "value": "web"
+            },
+            {
+                "name": "[phase_name]",
+                "val_options": "",
+                "value": "amazon_bsg"
+            }
+        ],
+        "type": "Include"
+    }
+]

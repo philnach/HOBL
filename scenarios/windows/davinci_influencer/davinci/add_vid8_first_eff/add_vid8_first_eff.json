@@ -1,0 +1,382 @@
+[
+    {
+        "author": "",
+        "capture_device": "",
+        "children": [],
+        "create_date": "2025-06-09",
+        "description": "clip6 add first effect",
+        "enabled": true,
+        "id": "10PKH4C",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "5",
+        "description": "go to fusion page",
+        "enabled": true,
+        "id": "10T5YLN",
+        "text": "%",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Digital Glitch",
+        "enabled": true,
+        "id": "11UNPA4",
+        "text": "D",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Merge Setting",
+        "enabled": true,
+        "file_name": [
+            "image_12MYEYX.png"
+        ],
+        "h": "0.191",
+        "id": "12MYEYX",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.242",
+        "x": "0.750",
+        "y": "0.171"
+    },
+    {
+        "capture_id": "12MYEYX",
+        "children": [],
+        "delay": "2",
+        "description": "X Coordinate",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_12MYF9M.png"
+        ],
+        "id": "12MYF9M",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.718",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Select x coordinate",
+        "enabled": true,
+        "id": "11UPLRP",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change merge params",
+        "enabled": true,
+        "id": "11UPMFH",
+        "text": "\ue0030.7\ue004\ue0040.5",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Timeline Nodes",
+        "enabled": true,
+        "file_name": [
+            "image_12MYH2T.png"
+        ],
+        "h": "0.204",
+        "id": "12MYH2T",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.179",
+        "x": "0.008",
+        "y": "0.698"
+    },
+    {
+        "capture_id": "12MYH2T",
+        "children": [],
+        "delay": "2",
+        "description": "on Digital Glitch",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UPPK1.png"
+        ],
+        "id": "11UPPK1",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": false,
+        "file_name": [
+            "image_11UR1JW.png"
+        ],
+        "h": "0.676",
+        "id": "11UR1JW",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.247",
+        "x": "0.727",
+        "y": "0.219"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "Large Text Region",
+        "enabled": true,
+        "file_name": [
+            "image_12MYK7Y.png"
+        ],
+        "h": "0.340",
+        "id": "12MYK7Y",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.259",
+        "x": "0.732",
+        "y": "0.169"
+    },
+    {
+        "capture_id": "12MYK7Y",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UPT5W.png"
+        ],
+        "id": "11UPT5W",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UPTM2",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Zoom",
+        "enabled": true,
+        "id": "11UPTRJ",
+        "text": "\ue003Zoom",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "12MYK7Y",
+        "children": [],
+        "delay": "2",
+        "description": "Changing Color",
+        "enabled": false,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UR8U5.png"
+        ],
+        "id": "11UR8U5",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.602",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change color to blue",
+        "enabled": false,
+        "id": "11UR9YR",
+        "text": "\ue004\ue004\ue004\ue004\ue004\ue004\ue004\ue004\ue004\ue004#0000cd\ue007",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_12MYKNL.png"
+        ],
+        "h": "0.220",
+        "id": "12MYKNL",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.207",
+        "x": "0.724",
+        "y": "0.590"
+    },
+    {
+        "capture_id": "12MYKNL",
+        "children": [],
+        "delay": "2",
+        "description": "Click on Sample",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11UPXF7.png"
+        ],
+        "id": "11UPXF7",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "id": "11UPXRJ",
+        "text": "\ue009a",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Remove extra",
+        "enabled": true,
+        "id": "11UPXV3",
+        "text": "\ue003",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "12MYH2T",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11URW9M.png"
+        ],
+        "id": "11URW9M",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Add Gaussian Blur effect",
+        "enabled": false,
+        "id": "10T61KK",
+        "text": "\ue009\ue008b",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Go back to Cut Page",
+        "enabled": true,
+        "id": "10T6246",
+        "text": "#",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [],
+        "delay": "0.5",
+        "description": "",
+        "enabled": true,
+        "file_name": [
+            "image_11T6L0H.png"
+        ],
+        "h": "0.280",
+        "id": "11T6L0H",
+        "recapture": false,
+        "type": "Capture",
+        "w": "0.258",
+        "x": "0.720",
+        "y": "0.100"
+    },
+    {
+        "capture_id": "11T6L0H",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T6M1C.png"
+        ],
+        "id": "11T6M1C",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.959",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Move to end of clip",
+        "enabled": true,
+        "id": "11T6MAF",
+        "text": "\ue015\ue012\ue012",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "capture_id": "11T6L0H",
+        "children": [],
+        "delay": "2",
+        "description": "",
+        "enabled": true,
+        "exception_on": "No match",
+        "file_name": [
+            "image_11T6P85.png"
+        ],
+        "id": "11T6P85",
+        "match_threshold": "",
+        "primary": true,
+        "scale": "",
+        "type": "Click",
+        "x": "0.500",
+        "y": "0.500"
+    },
+    {
+        "children": [],
+        "delay": "2",
+        "description": "Change zoom",
+        "enabled": true,
+        "id": "11T7RE6",
+        "text": "1.840\ue004\ue004\ue004-359\ue004\ue004-666\ue004",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    }
+]

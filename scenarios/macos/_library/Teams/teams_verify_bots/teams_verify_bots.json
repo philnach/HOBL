@@ -1,0 +1,53 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "MacBook Air M3 15-in",
+        "children": [],
+        "create_date": "2025-10-02",
+        "description": "",
+        "enabled": true,
+        "id": "16HNL7X",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Check that the expected number of bots are present",
+        "enabled": true,
+        "id": "16HNLJF",
+        "multiple": false,
+        "name": "[teams:verify_bots]",
+        "type": "Set User Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Check bots",
+                "enabled": true,
+                "file_name": [
+                    "code_16HNN2C.py"
+                ],
+                "id": "16HNN2C",
+                "type": "Code"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "16HP3YR",
+        "left_term": "[teams:verify_bots]",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "16HP3YT",
+        "type": "End If"
+    }
+]

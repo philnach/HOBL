@@ -1,0 +1,138 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15in",
+        "children": [],
+        "create_date": "2025-02-16",
+        "description": "Enter web address",
+        "enabled": true,
+        "id": "U015LL",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "U79YK8",
+        "name": "web_site_address",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "about:blank"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "U7A1MM",
+        "name": "new_tab",
+        "type": "Set Default",
+        "val_options": "0, 1",
+        "value": "0"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "",
+        "enabled": true,
+        "id": "U7A1MN",
+        "name": "[web_site_load_time]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "20"
+    },
+    {
+        "children": [],
+        "delay": "1.0",
+        "description": "CMD-l",
+        "enabled": true,
+        "id": "U01C51",
+        "text": "\ue03dl",
+        "type": "Type",
+        "typing_delay": "500"
+    },
+    {
+        "children": [],
+        "delay": "0",
+        "description": "[web_site_address]",
+        "enabled": true,
+        "id": "U01FVT",
+        "text": "[web_site_address]",
+        "type": "Type",
+        "typing_delay": "[typing_delay]"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "CMD-SHIFT-ENTER",
+                "enabled": true,
+                "id": "U7A56C",
+                "text": "\ue03d\ue008\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "U7A3W3",
+        "left_term": "[new_tab]",
+        "name": "",
+        "right_term": "1",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "ENTER",
+                "enabled": true,
+                "id": "U7A5P5",
+                "text": "\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "U7A40X",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "U7A3W4",
+        "type": "End If"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "Subtract 1 to accommodate 1s delay after CTRL-l",
+        "enabled": true,
+        "id": "UCJNKX",
+        "type": "Comment"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "UCJN7W",
+        "name": "[web_site_load_time]",
+        "type": "Decrement",
+        "value": "1"
+    },
+    {
+        "children": [],
+        "delay": "[web_site_load_time]",
+        "description": "[web_site_load_time]",
+        "enabled": true,
+        "id": "U7K606",
+        "type": "Delay"
+    }
+]

@@ -1,0 +1,388 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-15",
+        "description": "Watch a Netflix video",
+        "enabled": true,
+        "id": "U14J6M",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W5LE1V",
+        "name": "[duration]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": "600"
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W5NTHE",
+        "name": "[netflix_username]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W5NTV6",
+        "name": "[netflix_password]",
+        "type": "Set Default",
+        "val_options": "",
+        "value": ""
+    },
+    {
+        "children": [],
+        "delay": "0.0",
+        "description": "",
+        "enabled": true,
+        "id": "W5PXT1",
+        "name": "[enable_info_collection]",
+        "type": "Set Default",
+        "val_options": "0,1",
+        "value": "1"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Early tool callback",
+                "enabled": true,
+                "file_name": [
+                    "code_11539J1.py"
+                ],
+                "id": "11539J1",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "UC6NK7",
+                "include_path": "..\\_library\\web\\web_setup",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W5KVUU",
+                "include_path": "..\\_library\\web\\web_clear_cache",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W5MTC9",
+                "include_path": "..\\_library\\web\\web_enter_address",
+                "params": [
+                    {
+                        "name": "web_site_address",
+                        "val_options": "",
+                        "value": "netflix.com/SignOut"
+                    },
+                    {
+                        "name": "new_tab",
+                        "val_options": "0, 1",
+                        "value": "0"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "10"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W5NXC9",
+                "include_path": "..\\_library\\web\\web_enter_address",
+                "params": [
+                    {
+                        "name": "web_site_address",
+                        "val_options": "",
+                        "value": "netflix.com/login"
+                    },
+                    {
+                        "name": "new_tab",
+                        "val_options": "0, 1",
+                        "value": "0"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "20"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Sign In",
+                "enabled": true,
+                "file_name": [
+                    "image_W5P3TA.png"
+                ],
+                "h": "0.823",
+                "id": "W5P3TA",
+                "recapture": false,
+                "type": "Capture",
+                "w": "0.514",
+                "x": "0.250",
+                "y": "0.067"
+            },
+            {
+                "capture_id": "W5P3TA",
+                "children": [],
+                "delay": "2",
+                "description": "Username",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_W5P46P.png",
+                    "image_W8A7RF.png"
+                ],
+                "id": "W5P46P",
+                "match_threshold": "",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "CTRL-a",
+                "enabled": true,
+                "id": "W5P55M",
+                "text": "\ue009a",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "15",
+                "description": "Netflix username and password",
+                "enabled": true,
+                "id": "W5P5M4",
+                "text": "[netflix_username]\ue004[netflix_password]\ue007",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "U14L2R",
+        "type": "Setup"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "W5P848",
+                "include_path": "..\\_library\\web\\web_enter_address",
+                "params": [
+                    {
+                        "name": "web_site_address",
+                        "val_options": "",
+                        "value": "netflix.com/watch/81147381?t=150"
+                    },
+                    {
+                        "name": "new_tab",
+                        "val_options": "0, 1",
+                        "value": "0"
+                    },
+                    {
+                        "name": "[web_site_load_time]",
+                        "val_options": "",
+                        "value": "20"
+                    }
+                ],
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "Move cursor off screen",
+                "enabled": true,
+                "file_name": [
+                    "code_W5MUMR.py"
+                ],
+                "id": "W5MUMR",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "1",
+                "description": "f - enter full screen",
+                "enabled": true,
+                "id": "W5PE90",
+                "text": "f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Move cursor to make it dissapear",
+                "enabled": true,
+                "file_name": [
+                    "code_W5TUH0.py"
+                ],
+                "id": "W5TUH0",
+                "type": "Code"
+            },
+            {
+                "children": [],
+                "delay": "[duration]",
+                "description": "",
+                "enabled": true,
+                "id": "W5LCT2",
+                "type": "Delay To"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "U14N1V",
+        "type": "Run Test"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "2",
+                "description": "f - exit full screen",
+                "enabled": true,
+                "id": "W5PFCM",
+                "text": "f",
+                "type": "Type",
+                "typing_delay": "[typing_delay]"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "delay": "3",
+                        "description": "CTRL-ALT-SHIFT-q",
+                        "enabled": true,
+                        "id": "W5PYV0",
+                        "text": "\ue009\ue00a\ue008q",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "ESC",
+                        "enabled": true,
+                        "id": "W5TNRN",
+                        "text": "\ue00c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "Middle of screen",
+                        "enabled": true,
+                        "id": "W5TP15",
+                        "type": "Click Coord",
+                        "x": "0.5",
+                        "y": "0.5"
+                    },
+                    {
+                        "children": [],
+                        "delay": "2",
+                        "description": "CTRL-a",
+                        "enabled": true,
+                        "id": "W5R1TK",
+                        "text": "\ue009a",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "1",
+                        "description": "CTRL-c",
+                        "enabled": true,
+                        "id": "W5R1VX",
+                        "text": "\ue009c",
+                        "type": "Type",
+                        "typing_delay": "[typing_delay]"
+                    },
+                    {
+                        "children": [],
+                        "delay": "0.0",
+                        "description": "Write HUD info",
+                        "enabled": true,
+                        "file_name": [
+                            "code_W5RP33.py"
+                        ],
+                        "id": "W5RP33",
+                        "type": "Code"
+                    }
+                ],
+                "description": "",
+                "enabled": true,
+                "eval_method": "==",
+                "id": "W5PY62",
+                "left_term": "[enable_info_collection]",
+                "right_term": "1",
+                "type": "If"
+            },
+            {
+                "children": [],
+                "description": "",
+                "enabled": true,
+                "id": "W5PY63",
+                "type": "End If"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "UEY3W9",
+                "include_path": "..\\_library\\web\\web_close_browser",
+                "type": "Include"
+            },
+            {
+                "children": [],
+                "delay": "0",
+                "description": "",
+                "enabled": true,
+                "id": "V4JFP1",
+                "include_path": "..\\_library\\web\\web_kill",
+                "type": "Include"
+            }
+        ],
+        "description": "",
+        "enabled": true,
+        "id": "UEY3NM",
+        "type": "Teardown"
+    }
+]

@@ -1,0 +1,179 @@
+[
+    {
+        "author": "Jeff Wilder",
+        "capture_device": "Surface Laptop 8 15-in",
+        "children": [],
+        "create_date": "2025-02-14",
+        "description": "Switch to web browser",
+        "enabled": true,
+        "id": "TYHL3E",
+        "type": "Information"
+    },
+    {
+        "children": [],
+        "delay": "2.0",
+        "description": "",
+        "enabled": true,
+        "id": "TYHUPJ",
+        "include_path": "..\\..\\misc\\capture_taskbar",
+        "type": "Include"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ15K.png"
+                ],
+                "id": "TYJ15K",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHU0X",
+        "left_term": "[browser]",
+        "right_term": "Edge",
+        "type": "If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Dev",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ1T6.png"
+                ],
+                "id": "TYJ1T6",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Dev",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHX3N",
+        "left_term": "[browser]",
+        "right_term": "Edge Dev",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Beta",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ1W5.png"
+                ],
+                "id": "TYJ1W5",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Beta",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHXMV",
+        "left_term": "[browser]",
+        "right_term": "Edge Beta",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Edge Canary",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ898.png"
+                ],
+                "id": "TYJ898",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Edge Canary",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHY2W",
+        "left_term": "[browser]",
+        "right_term": "Edge Canary",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "capture_id": "TYH95X",
+                "children": [],
+                "delay": "2.5",
+                "description": "Chrome",
+                "enabled": true,
+                "exception_on": "No match",
+                "file_name": [
+                    "image_TYJ8CH.png"
+                ],
+                "id": "TYJ8CH",
+                "primary": true,
+                "type": "Click",
+                "x": "0.500",
+                "y": "0.500"
+            }
+        ],
+        "description": "Chrome",
+        "enabled": true,
+        "eval_method": "==",
+        "id": "TYHYPJ",
+        "left_term": "[browser]",
+        "right_term": "Chrome",
+        "type": "Else If"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "delay": "0.0",
+                "description": "Unsupported browser [browser]",
+                "enabled": true,
+                "id": "TYJ0F8",
+                "type": "Fail"
+            }
+        ],
+        "description": "Fail",
+        "enabled": true,
+        "id": "TYHYXY",
+        "type": "Else"
+    },
+    {
+        "children": [],
+        "description": "",
+        "enabled": true,
+        "id": "TYHU0Y",
+        "type": "End If"
+    }
+]

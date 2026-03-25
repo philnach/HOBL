@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaitAnalysis>
+    <Version>1.40</Version>
+    <WorkItems>%perftools%\WaitWorkItems.xml</WorkItems>
+    <WorkItemExceptions>%perftools%\WaitWorkItemExceptions.xml</WorkItemExceptions>
+    <PhonyWakeups>%perftools%\PhonyWakeups.xml</PhonyWakeups>
+    <ThreadCreation>%perftools%\ThreadCreation.xml</ThreadCreation>
+    <WorkQueue>%perftools%\WorkQueue.xml</WorkQueue>
+    <FltMessage>%perftools%\FltMessage.xml</FltMessage>
+    <CritSec>%perftools%\CritSec.xml</CritSec>
+    <ThreadPoolStartWorkFromEnqueue>%perftools%\ThreadPoolStartWorkFromEnqueue.xml</ThreadPoolStartWorkFromEnqueue>
+    <DpcSignatures>%perftools%\DpcSignatures.xml</DpcSignatures>
+    <CouplingSignatures>%perftools%\CouplingSignatures.xml</CouplingSignatures>
+    <LockSignatures>%perftools%\LockSignatures.xml</LockSignatures>
+    <IgnoreTopLevelWorkItems>FALSE</IgnoreTopLevelWorkItems>
+    <MigrateWhenNotWaiting>FALSE</MigrateWhenNotWaiting>
+    <RootCauseList></RootCauseList>
+    <SignalIgnoreList>%perftools%\SignalIgnoreList.xml</SignalIgnoreList>    
+    <HideAllAnnotations>FALSE</HideAllAnnotations>
+    <ShowWorkReadyDetails>TRUE</ShowWorkReadyDetails>
+    <TerminateCriticalPathOnMissingWorkItemHandOff>FALSE</TerminateCriticalPathOnMissingWorkItemHandOff>
+</WaitAnalysis>
