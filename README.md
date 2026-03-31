@@ -10,10 +10,11 @@
 * For questions or issues, send mail to [HOBLsupport@microsoft.com](mailto:HOBLsupport@microsoft.com).  Attach the hobl.log file and relevant screen shots for any problematic test run.
 
 ### Quick Start for experienced users
-* Clone repo (to c:\hobl, if you want to make life easy)
-* Run host_setup.exe from the root of the folder
-* Run dut_setup_\<ver\>.exe on the DUT
-* To get HOBL updates, do a "git pull"
+* Make sure Git for Windows is installed on Host.
+* Clone repo (preferrably to c:\hobl, to avoid appsettings.json tweaks).
+* Run host_setup.exe, located in the root folder.  Select both options.
+* Run downloads\setup\dut_setup_\<ver\>.exe on the DUT (via USB stick).
+* To get HOBL updates, do a "git pull".
 * To get HOBL UI updates, run host_setup.exe and only select the "User Interface" option.
 
 ### Further reading:
