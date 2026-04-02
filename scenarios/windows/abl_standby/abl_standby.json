@@ -49,7 +49,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W1W9K5",
-                "include_path": "..\\_library\\misc\\call_early_callback",
+                "include_path": "scenarios\\windows\\_library\\misc\\call_early_callback",
                 "type": "Include"
             },
             {
@@ -58,7 +58,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11MXJ",
-                "include_path": "..\\_library\\web\\web_setup",
+                "include_path": "scenarios\\windows\\_library\\web\\web_setup",
                 "type": "Include"
             },
             {
@@ -67,7 +67,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11NL3",
-                "include_path": "..\\_library\\productivity\\prod_setup",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_setup",
                 "type": "Include"
             },
             {
@@ -76,7 +76,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W1VWW1",
-                "include_path": "..\\_library\\productivity\\prod_open",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_open",
                 "type": "Include"
             },
             {
@@ -85,7 +85,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W1X1N9",
-                "include_path": "..\\_library\\web\\web_switchto",
+                "include_path": "scenarios\\windows\\_library\\web\\web_switchto",
                 "type": "Include"
             },
             {
@@ -94,7 +94,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W13H65",
-                "include_path": "..\\_library\\web\\web_run",
+                "include_path": "scenarios\\windows\\_library\\web\\web_run",
                 "params": [
                     {
                         "name": "[load_only]",
@@ -118,7 +118,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W33WVT",
-                "include_path": "..\\_library\\misc\\standby",
+                "include_path": "scenarios\\windows\\_library\\misc\\standby",
                 "params": [
                     {
                         "name": "[standby_duration]",
@@ -147,7 +147,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11P66",
-                "include_path": "..\\_library\\web\\web_close_tabs",
+                "include_path": "scenarios\\windows\\_library\\web\\web_close_tabs",
                 "params": [
                     {
                         "name": "[num_tabs_to_close]",
@@ -163,7 +163,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11P88",
-                "include_path": "..\\_library\\web\\web_close_browser",
+                "include_path": "scenarios\\windows\\_library\\web\\web_close_browser",
                 "type": "Include"
             },
             {
@@ -172,7 +172,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11Y1X",
-                "include_path": "..\\_library\\web\\web_kill",
+                "include_path": "scenarios\\windows\\_library\\web\\web_kill",
                 "type": "Include"
             },
             {
@@ -181,7 +181,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11NXV",
-                "include_path": "..\\_library\\productivity\\prod_close",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_close",
                 "type": "Include"
             },
             {
@@ -190,7 +190,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W11Y5K",
-                "include_path": "..\\_library\\productivity\\prod_kill",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_kill",
                 "type": "Include"
             }
         ],

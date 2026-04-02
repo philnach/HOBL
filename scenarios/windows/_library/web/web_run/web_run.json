@@ -27,7 +27,7 @@
         "enabled": true,
         "id": "14FF8YK",
         "multiple": true,
-        "name": "[web_workload]",
+        "name": "[web:web_workload]",
         "type": "Set User Default",
         "val_options": "amazonbsg,amazonvacuum,googleimagesapollo,googleimageslondon,googlesearchbelgium,googlesearchsuperbowl,instagram,reddit,theverge,wikipedia,youtubenasa,youtubetos",
         "value": "amazonbsg amazonvacuum googleimagesapollo googleimageslondon googlesearchbelgium googlesearchsuperbowl instagram reddit theverge wikipedia youtubenasa youtubetos"

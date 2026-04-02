@@ -48,7 +48,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K5RP",
-                "include_path": "..\\_library\\web\\web_setup",
+                "include_path": "scenarios\\windows\\_library\\web\\web_setup",
                 "type": "Include"
             },
             {
@@ -57,7 +57,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K656",
-                "include_path": "..\\_library\\productivity\\prod_setup",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_setup",
                 "type": "Include"
             }
         ],
@@ -82,7 +82,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V5MRFU",
-                "include_path": "..\\_library\\productivity\\prod_open",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_open",
                 "type": "Include"
             },
             {
@@ -99,24 +99,24 @@
                 "description": "",
                 "enabled": true,
                 "id": "V5NJXL",
-                "include_path": "..\\_library\\web\\web_switchto",
+                "include_path": "scenarios\\windows\\_library\\web\\web_switchto",
                 "type": "Include"
             },
             {
-                "id": "W8WX4F",
-                "type": "Include",
+                "children": [],
+                "delay": "0",
                 "description": "",
                 "enabled": true,
-                "delay": "0",
-                "include_path": "..\\_library\\web\\web_run",
+                "id": "W8WX4F",
+                "include_path": "scenarios\\windows\\_library\\web\\web_run",
                 "params": [
                     {
                         "name": "[load_only]",
-                        "value": "0",
-                        "val_options": "0,1"
+                        "val_options": "0,1",
+                        "value": "0"
                     }
                 ],
-                "children": []
+                "type": "Include"
             },
             {
                 "children": [],
@@ -132,7 +132,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W8WC7T",
-                "include_path": "..\\_library\\misc\\recording_phase_begin",
+                "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_begin",
                 "type": "Include"
             },
             {
@@ -149,7 +149,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4KPAF",
-                "include_path": "..\\_library\\productivity\\prod_idle",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_idle",
                 "params": [
                     {
                         "name": "[idle_time]",
@@ -165,7 +165,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "W8WCEM",
-                "include_path": "..\\_library\\misc\\recording_phase_end",
+                "include_path": "scenarios\\windows\\_library\\misc\\recording_phase_end",
                 "params": [
                     {
                         "name": "[phase_category]",
@@ -194,7 +194,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4KTMJ",
-                "include_path": "..\\_library\\productivity\\prod_run",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_run",
                 "type": "Include"
             },
             {
@@ -211,7 +211,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K70M",
-                "include_path": "..\\_library\\productivity\\prod_close",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_close",
                 "type": "Include"
             },
             {
@@ -220,7 +220,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K6PC",
-                "include_path": "..\\_library\\web\\web_close_tabs",
+                "include_path": "scenarios\\windows\\_library\\web\\web_close_tabs",
                 "params": [
                     {
                         "name": "[num_tabs_to_close]",
@@ -244,7 +244,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K6TH",
-                "include_path": "..\\_library\\web\\web_close_browser",
+                "include_path": "scenarios\\windows\\_library\\web\\web_close_browser",
                 "type": "Include"
             },
             {
@@ -253,7 +253,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K6VU",
-                "include_path": "..\\_library\\web\\web_kill",
+                "include_path": "scenarios\\windows\\_library\\web\\web_kill",
                 "type": "Include"
             },
             {
@@ -262,7 +262,7 @@
                 "description": "",
                 "enabled": true,
                 "id": "V4K74H",
-                "include_path": "..\\_library\\productivity\\prod_kill",
+                "include_path": "scenarios\\windows\\_library\\productivity\\prod_kill",
                 "type": "Include"
             }
         ],
