@@ -130,6 +130,10 @@ $env:DOTNET_INSTALL_DIR = "C:\Program Files\dotnet"
 "-- All installed SDKs:" | log
 dotnet --list-sdks 2>&1 | ForEach-Object { "   $_" | log }
 
+# Increase Playwright browser download timeout (default is too short for slow CDN)
+$env:PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT = "300000"
+"-- Set PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000 (5 minutes)" | log
+
 # ============================================================================
 # Clean phase (not timed)
 # ============================================================================

@@ -125,6 +125,10 @@ if [ ! -f "build.sh" ]; then
 fi
 log "✓ build.sh found"
 
+# Increase Playwright browser download timeout (default is too short for slow CDN)
+export PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000
+log "-- Set PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000 (5 minutes)"
+
 # ============================================================================
 # Clean phase (not timed)
 # ============================================================================
