@@ -208,6 +208,12 @@ $env:DOTNET_INSTALL_DIR = "C:\Program Files\dotnet"
 "-- Set DOTNET_INSTALL_DIR=$($env:DOTNET_INSTALL_DIR) to use system SDK" | log
 
 # -------------------------------------------------------------------
+# Increase Playwright browser download timeout (default is too short for slow CDN)
+# -------------------------------------------------------------------
+$env:PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT = "300000"
+"-- Set PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000 (5 minutes)" | log
+
+# -------------------------------------------------------------------
 # Initial restore (so run iterations only need build)
 # -------------------------------------------------------------------
 "-- Running initial dotnet restore" | log

@@ -157,6 +157,10 @@ log "-- Setting Python version"
 pyenv global 3.12.10
 check_status "Setting Python global version"
 
+# Increase Playwright browser download timeout (default is too short for slow CDN)
+export PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000
+log "-- Set PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT=300000 (5 minutes)"
+
 # Verify Python version
 PYTHON_VERSION=$(python --version 2>&1 | awk '{print $2}')
 if [ "$PYTHON_VERSION" != "3.12.10" ]; then
