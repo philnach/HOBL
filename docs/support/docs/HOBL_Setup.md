@@ -52,7 +52,7 @@ Host computer system requirements are:  Intel or AMD processor running Windows 1
 
 1. Make sure Git is intalled on your Host computer.
 1. Clone the HOBL repo to your preferred location, but note that putting it at "c:\hobl" will simplify things.  You might want to do a shallow clone if your organization has download capacity limits.
-1. Run the host_setup.exe in the root of the repo.  This will:
+1. Run the host_setup.exe in the root folder.  This will:
     1. Download various items into the /Downloads folder.  These include:
         - The approipriate dut_setup executables.
         - ffmpeg.
@@ -71,8 +71,8 @@ HOBLweb UI documentation can be found here: [HOBL UI](HOBL_UI.md)
 Set up a Device Profile for each DUT in the HOBLweb UI, giving it a unique name (typically we name it the name of the DUT), and modifying the parameters as appropriate.  Use the Parameters documentation as a guide.
 
 ## DUT Setup For Windows
-1. After running host_setup.exe, dut_setup.exe should be found in the /downloads/Setup folder.  Copy dut_setup.exe from here to a USB stick.
-1. Plug the USB stick into the DUT and execute dut_setup.exe.
+1. After running host_setup.exe, dut_setup.exe should be found in the /downloads/Setup folder.  Copy dut_setup_\<ver\>.exe from here to a USB stick.
+1. Plug the USB stick into the DUT and execute dut_setup.exe. This will install SimpleRemote and configure the DUT for communication with the HOBL Host.  HOBL can't communicate without this, and you will see errors about failed remote directory creation and communication timeouts.
 1. You will be prompted to change the name of the device if desired.  Click Next.
 1. You will be prompted to enter Wi-Fi information.  This will be saved to the USB stick so that you can set up the device again in the future, or other devices in the lab, without having to re-enter the information.
     1. This will setup various registry settings and launch simple_remote to allow communication from the host.

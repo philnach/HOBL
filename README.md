@@ -9,11 +9,12 @@
 * **Make sure your DUT is a computer that is ONLY logged in with a dedicated test account.**  Files, emails, etc, may be deleted.  A work or personal computer may be used as a "Host", but not a "DUT".
 * For questions or issues, send mail to [HOBLsupport@microsoft.com](mailto:HOBLsupport@microsoft.com).  Attach the hobl.log file and relevant screen shots for any problematic test run.
 
-### Quick Start for experienced users
-* Make sure Git for Windows is installed on Host.
+### Quick Start for experienced HOBL users (novice users please read full [Setup](docs/support/docs/HOBL_Setup.md) instructions)
+* Make sure Git for Windows is installed on HOBL Host.
 * Clone repo (preferrably to c:\hobl, to avoid appsettings.json tweaks).
 * Run host_setup.exe, located in the root folder.  Select both options.
-* Run downloads\setup\dut_setup_\<ver\>.exe on the DUT (via USB stick).
+* Copy downloads\setup\dut_setup_\<ver\>.exe to a flash drive and run it on the DUT.  This will install SimpleRemote and configure the DUT for communication with the HOBL Host.  HOBL can't communicate without this, and you will see errors about failed remote directory creation and communication timeouts.
+* Verify network connectivity by pinging the DUT from the Host and vice versa.  Then run the comm_check scenario and make sure all checks pass.
 * To get HOBL updates, do a "git pull".
 * To get HOBL UI updates, run host_setup.exe and only select the "User Interface" option.
 
