@@ -508,7 +508,7 @@ check($lastexitcode)
 
 # --- Download model ---
 "-- Setup LLM Phi-4-mini inferencing" | log
-python inference.py --setup
+python -u inference.py --setup
 check($lastexitcode)
 
 "-- pytorch_inf prep completed ($logSuffix version)" | log

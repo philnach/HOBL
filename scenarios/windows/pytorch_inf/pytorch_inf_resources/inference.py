@@ -11,7 +11,7 @@ import sys
 import shutil
 import json
 
-sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 
 def get_dir_size(path):
     """Calculate total size of directory"""
@@ -178,23 +178,30 @@ def setup_model(model_name, device):
     print(f"Setting up model: {model_name}")
     print(f"Target device: {device}")
     
-    print("Downloading tokenizer...")
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    tokenizer.pad_token = tokenizer.eos_token
-    special_tokens_dict = {"additional_special_tokens": ["<|user|>", "<|assistant|>"]}
-    tokenizer.add_special_tokens(special_tokens_dict)
-    print("✓ Tokenizer downloaded and configured")
+    try:
+        print("Downloading tokenizer...")
+        tokenizer_start = time.time()
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        tokenizer_elapsed = time.time() - tokenizer_start
+        tokenizer.pad_token = tokenizer.eos_token
+        special_tokens_dict = {"additional_special_tokens": ["<|user|>", "<|assistant|>"]}
+        tokenizer.add_special_tokens(special_tokens_dict)
+        print(f"✓ Tokenizer downloaded and configured in {tokenizer_elapsed:.1f}s")
 
-    print("Downloading model...")
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        dtype=torch.float16 if device == 'cuda' else torch.float32,
-        device_map="auto" if device == 'cuda' else None
-    )
-    # model.resize_token_embeddings(len(tokenizer))
-    print("✓ Model downloaded and configured")
+        print("Downloading model (this may take several minutes)...")
+        model_start = time.time()
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            dtype=torch.float16 if device == 'cuda' else torch.float32,
+            device_map="auto" if device == 'cuda' else None
+        )
+        model_elapsed = time.time() - model_start
+        print(f"✓ Model downloaded and configured in {model_elapsed:.1f}s")
+    except Exception as e:
+        print(f"✗ Setup failed: {type(e).__name__}: {e}")
+        sys.exit(1)
     
-    print("\n--- Setup Complete ---")
+    print(f"\n--- Setup Complete (total download: {tokenizer_elapsed + model_elapsed:.1f}s) ---")
     print(f"Model '{model_name}' is ready for inference")
     print(f"Cached location: {tokenizer.name_or_path}")
     print("You can now run inference with --prompt argument")
